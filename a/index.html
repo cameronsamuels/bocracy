@@ -1,0 +1,87 @@
+<!DOCTYPE html><html>
+	<head>
+		<title>b-Ocracy</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	  	<link rel="shortcut icon" type="image/png" href="icon.png">
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+	  	<link rel="apple-touch-icon" href="icon.png">
+	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  	<link rel="stylesheet" type="text/css" href="index.css?37">
+	  	<meta name="apple-mobile-web-app-title" content="bO Alpha">
+		<meta name="application-name" content="bO Alpha">
+
+	  	<meta property="og:url"                content="https://playbclick.com/bocracy" />
+        <meta property="og:type"               content="game" />
+        <meta property="og:title"              content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy!" />
+        <meta property="og:description"        content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
+        <meta property="og:image"              content="https://playbclick.com/bocracy/icon.png" />
+        <meta property="og:image:width"        content="512" />
+        <meta property="og:image:height"       content="512" />
+	    <meta name="description"               content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
+	    <script src="live.js?37"></script>
+		<script src="index.js?37"></script>
+	</head>
+	<body id="body">
+		<header id="header"><div id="title" ontouchend="window.location='story.html'"><font size="9">b-Ocracy</font></div></header>
+		<h3>Select a battleground to begin</h3>
+		<h5 id="homescreenTip"><green>Add to homescreen for best results!</green></h5>
+		<main>
+	<!-- 		<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?34#aonarchy\'', 'window.location = \'battle.html?34#aonarchy\'')"><div>Aonarchy</div></a>
+			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?34#aonarchy\'', 'window.location = \'battle.html?34#aonarchy+\'')"><div>Aonarchy <red>Bosses</red></div></a>
+			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?34#cortofa\'', 'window.location = \'battle.html?34#cortofa\'')"><div><green>Featured: </green>Cortofa</div></a> -->
+
+			<a ontouchend="document.getElementById('map').src='img/aritropus.png';document.getElementById('mapDiv').style.display = 'block';document.getElementById('map').useMap = '#aonarchyMap'"><div>Aritropus</div></a>
+			<a ontouchend="document.getElementById('map').src='img/cortofa.png';document.getElementById('mapDiv').style.display = 'block';document.getElementById('map').useMap = '#cortofaMap'"><div><green>New: </green>Cortofa</div></a>
+		</main>
+		<divider class="clear"></divider><font size="5">Freeplay</font>
+		<main>
+			<a ontouchend="window.location = 'battle.html?34#bictatorship'"><div>Bictatorship</div></a>
+			<a ontouchend="window.location = 'battle.html?34#bocracy'"><div>bOcracy</div></a>
+			<a ontouchend="window.location = 'battle.html?34#dinotera'"><div>Dinotera</div></a>
+			<a ontouchend="window.location = 'battle.html?34#original'"><div>bVille</div></a>
+		</main>
+		<div class="clear"></div>
+		<a class="text" ontouchend="window.location='credits.html?34'"><h4>Check out the credits</h4></a>
+		<h4><red>B-Ocracy is curently in beta</red></h4>
+		<div class="ads"><p>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- PlaybClickAds325 -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9778280788893963" data-ad-slot="2347758531" data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </p></div>
+		<audio loop autoplay><source src="snd/theme.wav" type="audio/wav"></audio>
+		<div id="mapDiv">
+			<img id="map" width="512" height="512">
+			<map name="aonarchyMap">
+			  <area shape="rect" coords="176,258,207,286" title="Capitol Battleground" ontouchend="window.location='battle.html#aonarchy'">
+			  <area shape="rect" coords="293,256,314,276" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#aonarchy'">
+			  <area shape="rect" coords="127,323,98,291" title="Boss Battleground" ontouchend="window.location='battle.html#aonarchy+'">
+			  <area shape="rect" coords="168,312,140,289" title="Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#aonarchy+'">
+			  <area shape="rect" coords="290,280,324,314" title="Capitol Store" ontouchend="window.location='store.html#aonarchy'">
+			</map>
+			<map name="cortofaMap">
+			  <area shape="rect" coords="258,256,304,304" title="Capitol Battleground" ontouchend="window.location='battle.html#cortofa'">
+			  <area shape="rect" coords="239,298,257,317" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#cortofa'">
+			  <area shape="rect" coords="315,314,353,354" title="Capitol Store" ontouchend="window.location='store.html#cortofa'">
+			  <area shape="rect" coords="376,229,399,254" title="Boss Battleground" ontouchend="window.location='battle.html#cortofa+'">
+			</map>
+		</div>
+		<div id="confirmPopup">
+            <h2>Are you sure?</h2><div class="divider"></div>
+            <h3 id="confirmText"></h3>
+            <footer>
+                <div class="divider"></div>
+                <div id="confirmYesBtn" class="button">Yes</div>
+                <div id="confirmNoBtn" class="button">No</div>
+            </footer>
+        </div>
+        <div id="popupOverlay"></div>
+        <div id="story" ontouchend="location.reload()"><marquee direction="up" scrollamount="3"><strong>b-Ocracy</strong><br /><br />In a place formerly known as <em>Earth</em>, the Z's controlled the land with an iron fist.<br /><br />Their ruler Zardanian II enslaved the natives of the Forgotten world.<br /><br />Amongst them were the A's, B's, C's, D's, E's, F's, and the great G's.<br /><br />Legend has it that the F's, and the tribes of D's drove out the Z's and a few A's who aligned them selves with their master.<br /><br />As a result the new government with representatives from all the nation's people chose the C's to be the land's capitol citizens.<br /><br />During this time a constitution was formed that limited the power of the King.<br /><br />In a peaceful 127 years, the C's lead the advancements in technology and science.<br /><br />The world seemed to be a Utopia, until an A assassin killed the nation's king, King Covaskavihn I.....<br /><br /><br /><br />The assassin's first decision as ruler was to abolish the constitution and reign terror on its subjects.<br /><br />The B's, and the D's tried to protest against the A's, G's, and E's, but they were eventually all exiled to an abandoned island.<br /><br />This caused the B's and the A's to start the Baritic War that lasted 38 years and 134 days<br /><br />During this war, some of the most famous heros of the age made their mark.<br /><br />Those heroes are<br /><br />Spiky B<br /><br />Electric B<br /><br />Shark B<br /><br />Awesome B<br /><br />Golden B<br /><br />Super B<br /><br />Knight B<br /><br />Dovahkinn B<br /><br />Classy B<br /><br />Muscle B<br /><br />Beku B<br /><br /><br /><br />With all of their efforts, in the battle of Aaolchiavit, the B's captured the city of the same name and won the war...<br /><br />They created a new constitution and peace was restored to the world once more...<br /><br />The B's led in the arts and culture, populations flourished and the Bs finally started to transform the world into ours.<br /><br />But<br /><br /><br />The<br /><br /><br />Story<br /><br /><br />Does<br /><br /><br />Not<br /><br /><br />End<br /><br /><br />There<br /><br /><br /><br /><br /><br /><br />No one.<br />Not even the other letters considered what happened to the A's.<br /><br />All of them were sent to prison, where the prisons overcrowded and many A's were forced into deep poverty, discrimination, and mistrust.<br /><br />Even the ones that had nothing to do with the terrible nonsense.<br /><br />The B's had promised that everyone got to be free and safe.<br /><br />Not only that....<br /><br />But the B's eventually started to be corrupt with the vast wealth and power they held.<br /><br />They changed the bOcracy into a centralist government.<br /><br />The B's ignored the constitution and powers of the president and tried to kill as many A's as possible.<br /><br />Finally a <em>supreme leader</em> for eternity<br /><br />Bashteviasche the XII changed the government into a Bictatorship.<br /><br />The B's encouraged letters to harass and torture any A's other citizens could find.<br /><br />The A's had enough.<br /><br /><br />It was time that the once villains, stop the true mastermind.<br /><br />It was time that Aonarchy needed to be formed.<br /><br />It was the time to fight the conquer over the A's.<br /><br />It was the time to team up with other citizens to conquer over the B's.<br /><br />It was the time to regain power over the evil Antagonists that weren't after all A's.<br /><br />It was the time to fight for your rights.<br /><br /><br /><br />It was the time to fight for your freedom, your life, and especially your country.<br /><br />So as a result, the spinoff b-Ocracy game was made to honor these poor lives of the righteous A's.<br /><br />So now.....<br /><br /><br /><br />It is the time...<br /><br /><br /><br />To fight.....<br /><br /><br /><br />For their freedom.....<br /><br />To achieve your leadership.....<br /><br />For their benefit....<br /><br /><br /><br /><br /><strong>b-Ocracy</strong><br /><br /><em>Fight the greatest uprising in the land of b-Ocracy!</em><br /><br /><br /><br /><br /><br /><em>Click anywhere to start playing</em><br /><br /><br /><br /><br /><br /><em>Click anywhere to start playing</em><br /><br /><br /><br /><br /><br /><em>Click anywhere to start playing</em><br /><br /><br /><br /><br /><br /><em>Click anywhere to start playing</em><br /><br /><br /><br /><br /><br /><em>Just click!!!!!!</em><br /><br /><br /><br /><br /><br /><em>It's a clicking game, so just click!</em><br /><br /><br /><br /><br /><br /><em>Tech support: What's your problem!!??</em><br /><br /><br /><br /><br /><br /><em>Click anywhere to answer tech support to fix your problem of not clicking to start playing</em><br /><br /><br /><br /><br /><br /><em>Do you even want to play this game?</em><br /><br /><br /><br /><br /><br /><em>Michael: WHAT THE (*&^%$#@!*&^%$^&</em><br /><br /><br /><br /><br /><br /><em>Cameron: I am not going to keep adding more stuff to this story</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Ethan: Or am I?</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Faith: Oh yes I am going to keep adding more stuff</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Cameron: Uhhh! It makes this game slow down loading</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Vishwam: Doge for prez 2020!</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Cooper: I will vote for him! Yeah!</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Jessica: I won't! Why are you Cooper?!?!</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>....</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>....</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Jacob: Uh, Cameron, you didn't program a response for Jessica to Cooper</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Cameron: Working on that now. I will be done in no time.</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Alwin: Hi!</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Skater B: What's up, my creator?</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Cameron: Shut up, I am trying to work on this glitch.</em><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><em>Done!</em>
+        </marquee></div>
+        <script>
+        	if (!isMobile.any()) id('homescreenTip').style.display = 'none';
+			if (window.navigator.standalone == true) id('homescreenTip').style.display = 'none';
+			load();
+        </script>
+	</body>
+</html>

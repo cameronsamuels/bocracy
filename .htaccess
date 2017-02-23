@@ -1,0 +1,15 @@
+# STRONG HTACCESS PROTECTION #
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+ order allow,deny
+ deny from all
+</Files>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 12 hours"
+</IfModule>
+
+# Versions #
+Redirect 307 /live /beta
+Redirect 307 /beta /b?26
+Redirect 307 /alpha /b?37

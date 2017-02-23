@@ -1,0 +1,39 @@
+0<!DOCTYPE html><html>
+    <head>
+        <title>Store | b-Ocracy</title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <link rel="shortcut icon" type="image/png" href="icon.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="icon.png">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" type="text/css" href="store.css?37">
+    </head>
+    <body id="body">
+        <header id="header">
+            <div id="coinImg"><img src="img/gold.png" height="18" width="39" /></div>
+            <div id="coins"></div>
+        </header>
+        <div id="confirmPopup">
+            <h2>Are you sure?</h2><div class="divider"></div>
+            <h3 id="confirmText"></h3>
+            <footer>
+                <div class="divider"></div>
+                <div id="confirmYesBtn" class="button">Yes</div>
+                <div id="confirmNoBtn" class="button">No</div>
+            </footer>
+        </div>
+        <div id="unlockedPopup">
+            <h2 id="youGotMail">You got mail!</h2><div class="divider"></div>
+            <h3 id="unlockedPopupText"></h3>
+            <img id="unlockedPopupImg" width="125" height="125" />
+            <footer>
+                <div class="divider"></div>
+                <div id="unlockedPopupBtn" class="button">Okay</div>
+            </footer>
+        </div>
+        <div id="popupOverlay"></div>
+        <audio id="audio" loop autoplay><source id="sound" src="snd/store.wav" type="audio/wav"></audio>
+        <script src="live.js?37"></script>
+        <script src="store.js?37"></script>
+    </body>
+</html>

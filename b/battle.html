@@ -1,0 +1,42 @@
+<!DOCTYPE html><html>
+	<head>
+		<title>b-Ocracy</title>
+	  	<link rel="shortcut icon" type="image/png" href="icon.png">
+	  	<link rel="stylesheet" type="text/css" href="battle.css" />
+
+	  	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	  	<link rel="apple-touch-icon" href="icon.png">
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body id="body">
+		<header id="header">
+			<a ontouchend="window.location='index.html'"><img id="backButton" src="btn/back.png" title="Back"/></a>
+			<div id="title">b-Ocracy</div>
+			<a ontouchend="location.reload()"><img id="refreshButton" src="btn/back.png" title="Refresh"/></a>
+			<div class="clear"></div>
+		</header>
+		<section id="bSection">
+			<div id="bButton" ontouchend="game.heal('green')"></div>
+			<div id="bName"></div>
+			<div id="bHealth"><div id="bHealthBar"></div></div>
+		</section>
+		<section id="aSection">
+			<div id="aButton" ontouchend="game.attack('green')"></div>
+			<div id="aName"></div>
+			<div id="aHealth"><div id="aHealthBar"></div></div>
+		</section>
+		<div class="clear"></div>
+		<div id="overlay" ontouchend="location.reload()"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
+		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
+		<div id="portrait">
+			<h3>Click the right image to attack. Click the left one to heal. Drain all the red side's health before yours is drained.</h3>
+			<h4 id="multiplayer"><a ontouchend="window.location='multiplayer.html'+window.location.hash">Play this battle in multiplayer mode!</a></h4>
+			<h4><red>Change your device's orientation to landscape to begin!</red></h4>
+			<img id="rotate" width="556" height="626" src="assets/rotate.png" />
+		<audio id="audio" loop autoplay><source id="sound" src="sound.wav" type="audio/wav"></audio>
+		<div id="popup"></div>
+	</body>
+	<script src="live.js"></script>
+	<script src="battle.js"></script>
+</html>
