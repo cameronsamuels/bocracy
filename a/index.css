@@ -8,6 +8,7 @@ body, html {
 	font-family: 'Syncopate', sans-serif;
 	user-select: none;
     -webkit-user-select: none;
+    overflow-x: hidden;
 }
 
 red { color: #F00; }
@@ -74,8 +75,14 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	vertical-align: middle;
 	text-align: center;
 	font-size: 80%;
-	padding: 5%;
-	max-width:90%;max-height:100px
+	padding: 2.5%;
+	width: 95%;
+	max-width:95%;min-width: 95%;
+	max-height:100px;
+}
+.ads {
+	width: 100%;
+	min-width: 100%;
 }
 #confirmPopup {
     background-color: #FFF !important;
