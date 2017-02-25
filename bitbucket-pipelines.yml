@@ -4,4 +4,4 @@ pipelines:
         script:
           - apt-get update
           - apt-get -qq install git-ftp
-          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://ftp.bocracy.com
+          - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://ftp.bocracy.com
