@@ -12,7 +12,7 @@ ExpiresDefault "access plus 12 hours"
 # Versions #
 Redirect 307 /live /beta
 Redirect 307 /beta /b?27
-Redirect 307 /alpha /a?39
+Redirect 307 /alpha /a?40
 
 # Listings and Places #
 Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers

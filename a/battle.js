@@ -135,15 +135,15 @@
 				while (b.name == a.name) {
 					b.name = goodNames[current][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
 				}
-				a.health = Math.max(Math.random() * 2000, 1000);
+				a.health = Math.min(Math.random() * 2250, 2000);
 				a.orig_health = a.health;
-				a.attack = Math.random() * 20;
-				a.speed = Math.max(Math.random() * 1000, 450);
-				a.heal = Math.random() * 20;
+				a.attack = Math.max(32, Math.random() * 40);
+				a.speed = Math.max(Math.random() * 1000, 600);
+				a.heal = Math.random() * 12;
 
-				b.health = Math.max(Math.random() * 2000, 800);
+				b.health = Math.min(Math.random() * 2500, 2000);
 				b.orig_health = b.health;
-				b.attack = Math.max(Math.random() * 10, 7);
+				b.attack = Math.max(32, Math.random() * 40);
 				b.heal = Math.random() * 15;
 			} else if (newStats == 'true') {
 				while (localStorage[b.name] == 'false') {
