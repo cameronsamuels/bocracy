@@ -104,6 +104,10 @@
 			}
 		};
 		function load() {
+			if (id('sound').src.includes("snd/loss.wav")) {
+				id('sound').src = 'snd/sound.wav';
+				id('audio').load(); id('audio').play();
+			}
 			switch (current.replace('+', '')) {
 				case "aonarchy":
 					newStats = 'true';
@@ -169,10 +173,10 @@
 			}
 
 			game.on = 'true';
-			setInterval('game.attack("red");game.heal("red")', a.speed);
-			game.refresh.all();
 		}
 
 		window.addEventListener("orientationchange", function() { location.reload(); }, false);
 
 		load();
+		setInterval('game.attack("red");game.heal("red")', a.speed);
+		game.refresh.all();

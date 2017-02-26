@@ -35,6 +35,7 @@
 			#banner img, #banner {
 				pointer-events: none;
 			}
+			@media screen and (max-width: 499px) { #banner { zoom: 50%; } }
 			div:not(#title):not(.clear):not(#banner) {
 				/*height: 100px;*/
 				background: #2E40A4;

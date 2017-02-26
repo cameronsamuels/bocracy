@@ -57,6 +57,7 @@ header {
 #banner img, #banner {
 	pointer-events: none;
 }
+@media screen and (max-width: 499px) { #banner { zoom: 50%; } }
 main div {
 	background: #2E40A4;
 	vertical-align: middle;
