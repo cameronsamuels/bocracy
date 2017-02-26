@@ -28,7 +28,7 @@ divider {
 	margin: 2.5px 9px !important;
 	border-radius: 3px;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px 15px;
     text-align: center;
     user-select: none;
@@ -137,8 +137,11 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 }
 #mapDiv {
 	background: #3F51B5;
-	zoom: 60%;
+	zoom: 65%;
 }
+@media screen and (max-height: 340px) { #mapDiv { zoom: 55%; } }
+@media screen and (min-height: 341px) and (max-height: 600px) and (min-width: 341px) and (max-width: 600px) { #mapDiv { zoom: 75%; } }
+@media screen and (min-height: 601px) and (min-width: 601px) { #mapDiv { zoom: 100%; } }
 #mapDiv img {
 	position: absolute;
 	left: calc(50% - 256px);
