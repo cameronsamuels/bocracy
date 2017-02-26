@@ -124,13 +124,13 @@ function unlockConfirmed(item) {
 	if (localStorage.coins >= 500) {
 		unlock(item);
 	} else {
-		showAlert('Not enough coins!');
+		showAlert('Not enough redbacks!');
 		id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
 	}
 }
 
 function purchase(item) {
-	showConfirm("Buy a character from " + item + " for 500 coins?", "unlockConfirmed('" + item + "')", "window.location='index.html'");
+	showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html'");
 }
 
 function unlock(item) {

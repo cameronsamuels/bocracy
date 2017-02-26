@@ -56,7 +56,7 @@
 					else { var coinsEarned = 5; }
 					if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 					else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
-					id('overlayText').innerHTML = 'WINNER: ' + side + '!!!<br /><h5>You gained ' + coinsEarned + ' coins!</h5>';
+					id('overlayText').innerHTML = 'WINNER: ' + side + '!!!<br /><h5>You gained ' + coinsEarned + ' redbacks!</h5>';
 				} else {
 					id('sound').src = "snd/loss.wav";
 					id('audio').load(); id('audio').play();
