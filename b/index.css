@@ -25,6 +25,13 @@
 				line-height: 25px;
 				background: #3F51B5;
 			}
+			#banner {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				right: 0px; top: 0px;
+				padding: 0px !important;
+			}
 			div:not(#title):not(.clear) {
 				/*height: 100px;*/
 				background: #2E40A4;
