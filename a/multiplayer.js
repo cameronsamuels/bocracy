@@ -116,10 +116,11 @@
 			}
 
 			a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
-			a.health = Math.max(Math.random() * 3000, 2000);
+			a.health = Math.min(Math.random() * 2250, 2000);
 			a.orig_health = a.health;
-			a.attack = Math.random() * 25;
-			a.heal = Math.random() * 15;
+			a.attack = Math.max(32, Math.random() * 40);
+			a.speed = Math.min(Math.random() * 1000, 500);
+			a.heal = Math.random() * 12;
 
 			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
 			while (b.name == a.name) {

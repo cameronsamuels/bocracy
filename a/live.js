@@ -92,6 +92,7 @@ good.overlapping = new object('overlapping', [40, 3200, 10], ['cortofa', 'true',
 good.triple_odd = new object('triple_odd', [40, 2500, 20], ['cortofa', 'true', 1000, 'c', 'triple_odd']);
 good.night = new object('night', [25, 1250, 20], ['cortofa', 'true', 750, 'c', 'night']);
 good.light_warrior = new object('light_warrior', [60, 2250, 15], ['cortofa', 'true', 1500, 'c', 'light_warrior']);
+good.enslaved = new object('enslaved', [25, 2250, 10], ['cortofa', 'true', 850, 'c', 'enslaved']);
 
 bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['cortofa', 'false', 1500, 'a', 'ultacrabb']);
 bad.batalifor_1D0 = new object('batalifor_1D0', [15, 2000, 5], ['cortofa', 'false', 1000, 'a', 'batalifor_1D0']);

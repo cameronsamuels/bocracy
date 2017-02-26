@@ -20,19 +20,9 @@ function load() {
 	dynamicDivSize();
 	if (localStorage.watchedStory == undefined) {
 		localStorage.watchedStory = 'true';
-		return "";
-	} else {
-		id('story').style.display = "none";
-	}
-	if (localStorage.playedBOcracy110_2 == undefined) {
-		if (localStorage.hasAonarchy == undefined) {
-			localStorage.hasAonarchy = 'true';
-			window.location = "store.html#firstTimeaonarchy";
-		} else if (localStorage.hasCortofa == undefined) {
-			localStorage.hasCortofa = 'true';
-			window.location = "store.html#firstTimecortofa";
-		} else {
-			localStorage.playedBOcracy110_2 = "true";
-		}
-	}
+		return;
+	} else id('story').style.display = "none";
+	if (localStorage.hasAonarchy == undefined) window.location = "store.html#firstTimeaonarchy";
+	else if (localStorage.hasCortofa == undefined) window.location = "store.html#firstTimecortofa";
+	else if (localStorage.playedBOcracy110_2 == undefined) localStorage.playedBOcracy110_2 = "true";
 }

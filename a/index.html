@@ -6,7 +6,7 @@
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<link rel="apple-touch-icon" href="https://bocracy.com/icon.png">
 	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	  	<link rel="stylesheet" type="text/css" href="index.css?42">
+	  	<link rel="stylesheet" type="text/css" href="index.css?43">
 
 	  	<meta property="og:url" content="https://bocracy.com" />
         <meta property="og:type" content="game" />
@@ -16,8 +16,8 @@
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-	    <script src="live.js?42"></script>
-		<script src="index.js?42"></script>
+	    <script src="live.js?43"></script>
+		<script src="index.js?43"></script>
 	</head>
 	<body id="body">
 		<div id="banner"><img width="200" height="200" src="https://bocracy.com/assets/img/alpha.png" title="This version is in alpha"/></div>
@@ -25,22 +25,22 @@
 		<h3>Select a country to begin</h3>
 		<h5 id="homescreenTip"><green>Add to homescreen for best results!</green></h5>
 		<main>
-	<!-- 		<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?42#aonarchy\'', 'window.location = \'battle.html?42#aonarchy\'')"><div>Aonarchy</div></a>
-			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?42#aonarchy\'', 'window.location = \'battle.html?42#aonarchy+\'')"><div>Aonarchy <red>Bosses</red></div></a>
-			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?42#cortofa\'', 'window.location = \'battle.html?42#cortofa\'')"><div><green>Featured: </green>Cortofa</div></a> -->
+	<!-- 		<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?43#aonarchy\'', 'window.location = \'battle.html?43#aonarchy\'')"><div>Aonarchy</div></a>
+			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?43#aonarchy\'', 'window.location = \'battle.html?43#aonarchy+\'')"><div>Aonarchy <red>Bosses</red></div></a>
+			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?43#cortofa\'', 'window.location = \'battle.html?43#cortofa\'')"><div><green>Featured: </green>Cortofa</div></a> -->
 
-			<a onclick="document.getElementById('map').src='img/aritropus.png';document.getElementById('mapDiv').style.display = 'block';document.getElementById('map').useMap = '#aonarchyMap'"><div>Aritropus</div></a>
-			<a onclick="document.getElementById('map').src='img/cortofa.png';document.getElementById('mapDiv').style.display = 'block';document.getElementById('map').useMap = '#cortofaMap'"><div><green>New: </green>Cortofa</div></a>
+			<a onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';"><div>Aritropus</div></a>
+			<a onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';"><div><green>New: </green>Cortofa</div></a>
 		</main>
 		<divider class="clear"></divider><font size="5">Freeplay</font>
 		<main>
-			<a onclick="window.location = 'battle.html?42#bictatorship'"><div>Bictatorship</div></a>
-			<a onclick="window.location = 'battle.html?42#bocracy'"><div>bOcracy</div></a>
-			<a onclick="window.location = 'battle.html?42#dinotera'"><div>Dinotera</div></a>
-			<a onclick="window.location = 'battle.html?42#original'"><div>bVille</div></a>
+			<a onclick="window.location = 'battle.html?43#bictatorship'"><div>Bictatorship</div></a>
+			<a onclick="window.location = 'battle.html?43#bocracy'"><div>bOcracy</div></a>
+			<a onclick="window.location = 'battle.html?43#dinotera'"><div>Dinotera</div></a>
+			<a onclick="window.location = 'battle.html?43#original'"><div>bVille</div></a>
 		</main>
 		<div class="clear"></div>
-		<a class="text" onclick="window.location='https://bocracy.com/credits/?42'"><h4>Check out the credits</h4></a>
+		<a class="text" onclick="window.location='https://bocracy.com/credits/?43'"><h4>Check out the credits</h4></a>
 		<div class="ads"><p>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- PlaybClickAds325 -->
@@ -55,9 +55,10 @@
         </p></div>
 		<audio loop autoplay><source src="snd/theme.wav" type="audio/wav"></audio>
 		<div id="mapDiv">
-			<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none'">Close</div>
-			<img id="map" width="512" height="512">
-			<map name="aonarchyMap">
+			<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
+			<img id="Amap" width="512" height="512" usemap="#aritropusMap" src="img/aritropus.png">
+			<img id="Cmap" width="512" height="512" usemap="#cortofaMap" src="img/cortofa.png">
+			<map name="aritropusMap">
 			  <area shape="rect" coords="176,258,207,286" title="Capitol Battleground" ontouchend="window.location='battle.html#aonarchy'">
 			  <area shape="rect" coords="293,256,314,276" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#aonarchy'">
 			  <area shape="rect" coords="127,323,98,291" title="Boss Battleground" ontouchend="window.location='battle.html#aonarchy+'">

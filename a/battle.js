@@ -53,7 +53,7 @@
 				if (side == 'green') {
 					if (current.includes('+')) { var coinsEarned = bad[a.name].info[2] * 0.05; }
 					else if (newStats == true) { var coinsEarned = bad[a.name].info[2] * 0.02; }
-					else { var coinsEarned = 20; }
+					else { var coinsEarned = 5; }
 					if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 					else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 					id('overlayText').innerHTML = 'WINNER: ' + side + '!!!<br /><h5>You gained ' + coinsEarned + ' coins!</h5>';
@@ -138,13 +138,13 @@
 				a.health = Math.min(Math.random() * 2250, 2000);
 				a.orig_health = a.health;
 				a.attack = Math.max(32, Math.random() * 40);
-				a.speed = Math.max(Math.random() * 1000, 600);
+				a.speed = Math.min(Math.random() * 1000, 500);
 				a.heal = Math.random() * 12;
 
-				b.health = Math.min(Math.random() * 2500, 2000);
+				b.health = parseFloat(a.health * 0.85);
 				b.orig_health = b.health;
-				b.attack = Math.max(32, Math.random() * 40);
-				b.heal = Math.random() * 15;
+				b.attack = parseFloat(a.attack * 0.85);
+				b.heal = parseFloat(a.heal * 0.85);
 			} else if (newStats == 'true') {
 				while (localStorage[b.name] == 'false') {
 					b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];

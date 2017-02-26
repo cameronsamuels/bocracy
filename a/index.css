@@ -148,4 +148,5 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	top: calc(50% - 256px);
 	width: 512px;
 	height: 512px;
+	display: none;
 }
