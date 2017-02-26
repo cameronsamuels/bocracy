@@ -26,13 +26,16 @@
 				background: #3F51B5;
 			}
 			#banner {
-				width: 50px;
-				height: 50px;
+				width: 200px;
+				height: 200px;
 				position: absolute;
 				right: 0px; top: 0px;
 				padding: 0px !important;
 			}
-			div:not(#title):not(.clear) {
+			#banner img, #banner {
+				pointer-events: none;
+			}
+			div:not(#title):not(.clear):not(#banner) {
 				/*height: 100px;*/
 				background: #2E40A4;
 				/*line-height: 100px;*/
