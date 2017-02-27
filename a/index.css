@@ -9,6 +9,7 @@ body, html {
 	user-select: none;
     -webkit-user-select: none;
     overflow-x: hidden;
+    color: #fff;
 }
 
 red { color: #F00; }
@@ -16,7 +17,7 @@ green { color: #64DD17; }
 .clear { clear: both; }
 divider {
 	width: 100%;
-	border: 2px #000 dashed;
+	border: 2px #fff dashed;
 	display: inline-block;
 	height: 0px;
 }
@@ -27,7 +28,6 @@ divider {
 	display: inline-block;
 	margin: 2.5px 9px !important;
 	border-radius: 3px;
-    color: white;
     font-size: 16px;
     padding: 8px 15px;
     text-align: center;
