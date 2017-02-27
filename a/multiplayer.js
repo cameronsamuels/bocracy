@@ -104,7 +104,7 @@
 					badNames.url = "b";
 					goodNames.url = "a";
 					break;
-				case "cortofa":
+				case "ciftian":
 					newStats = 'true';
 					badNames.url = "b";
 					goodNames.url = "c";

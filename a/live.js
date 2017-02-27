@@ -18,8 +18,8 @@ var goodNames = {
 			aonarchyBoss : [],
 			ammunist : [],
 			ammunistBoss : [],
-			cortofa : [],
-			cortofaBoss : [],
+			ciftian : [],
+			ciftianBoss : [],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane'],
@@ -35,8 +35,8 @@ var goodNames = {
 			aonarchyBoss : [],
 			ammunist : [],
 			ammunistBoss : [],
-			cortofa : [],
-			cortofaBoss : [],
+			ciftian : [],
+			ciftianBoss : [],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane', 'reindeer'],
@@ -76,23 +76,23 @@ bad.sharkanatorBoss = new object('sharkanatorBoss', [100, 5000, 0], ['aonarchy+'
 bad.bylo_kenBoss = new object('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 600, 'a', 'bylo_kenBoss']);
 bad.d15_cannonBoss = new object('d15_cannonBoss', [60, 2000, 5], ['aonarchy+', 'false', 1500, 'a', 'd15_cannonBoss']);
 
-good.paramedics = new object('paramedics', [20, 1250, 30], ['cortofa', 'true', 750, 'c', 'paramedics']);
-good.overlapping = new object('overlapping', [40, 3200, 10], ['cortofa', 'true', 1300, 'c', 'overlapping']);
-good.triple_odd = new object('triple_odd', [40, 2500, 20], ['cortofa', 'true', 1000, 'c', 'triple_odd']);
-good.night = new object('night', [25, 1250, 20], ['cortofa', 'true', 750, 'c', 'night']);
-good.light_warrior = new object('light_warrior', [60, 2250, 15], ['cortofa', 'true', 1500, 'c', 'light_warrior']);
-good.enslaved = new object('enslaved', [25, 2250, 10], ['cortofa', 'true', 850, 'c', 'enslaved']);
+good.paramedics = new object('paramedics', [20, 1250, 30], ['ciftian', 'true', 750, 'c', 'paramedics']);
+good.overlapping = new object('overlapping', [40, 3200, 10], ['ciftian', 'true', 1300, 'c', 'overlapping']);
+good.triple_odd = new object('triple_odd', [40, 2500, 20], ['ciftian', 'true', 1000, 'c', 'triple_odd']);
+good.night = new object('night', [25, 1250, 20], ['ciftian', 'true', 750, 'c', 'night']);
+good.light_warrior = new object('light_warrior', [60, 2250, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior']);
+good.enslaved = new object('enslaved', [25, 2250, 10], ['ciftian', 'true', 850, 'c', 'enslaved']);
 
-bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['cortofa', 'false', 1500, 'a', 'ultacrabb']);
-bad.batalifor_1D0 = new object('batalifor_1D0', [15, 2000, 5], ['cortofa', 'false', 1000, 'a', 'batalifor_1D0']);
-bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['cortofa', 'false', 750, 'a', 'f87_cannon']);
-bad.batalifor_general = new object('batalifor_general', [30, 1500, 15], ['cortofa', 'false', 550, 'a', 'batalifor_general']);
-bad.scubbars = new object('scubbars', [20, 1500, 15], ['cortofa', 'false', 500, 'a', 'scubbars']);
-bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['cortofa', 'false', 1500, 'a', 'dark_knight']);
+bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb']);
+bad.batalifor_1D0 = new object('batalifor_1D0', [15, 2000, 5], ['ciftian', 'false', 1000, 'a', 'batalifor_1D0']);
+bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['ciftian', 'false', 750, 'a', 'f87_cannon']);
+bad.batalifor_general = new object('batalifor_general', [30, 1500, 15], ['ciftian', 'false', 550, 'a', 'batalifor_general']);
+bad.scubbars = new object('scubbars', [20, 1500, 15], ['ciftian', 'false', 500, 'a', 'scubbars']);
+bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight']);
 
-bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['cortofa+', 'false', 750, 'a', 'f87_cannonBoss']);
-bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['cortofa+', 'false', 1500, 'a', 'ultacrabbBoss']);
-bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['cortofa+', 'false', 1500, 'a', 'dark_knightBoss']);
+bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss']);
+bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss']);
+bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss']);
 
 bad.batalifor_sentry = new object('batalifor_sentry', [60, 2000, 5], ['ammunist', 'false', 1500, 'a', 'batalifor_sentry']);
 bad.batalifor_2D4 = new object('batalifor_2D4', [30, 1000, 20], ['ammunist', 'false', 450, 'a', 'batalifor_2D4']);
@@ -134,7 +134,7 @@ function unlockConfirmed(item) {
 }
 
 function purchase(item) {
-	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?45'")}, 500);
+	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?46'")}, 500);
 }
 
 function unlock(item) {
@@ -173,19 +173,19 @@ function unlock(item) {
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
 			break;
-		case 'cortofa':
-			for (i = 0; i < goodNames["cortofa"].length; i++) {
-				if (localStorage[goodNames["cortofa"][i]] == "false") {
+		case 'ciftian':
+			for (i = 0; i < goodNames["ciftian"].length; i++) {
+				if (localStorage[goodNames["ciftian"][i]] == "false") {
 					break;
-				} else if (i == (goodNames["cortofa"].length) - 1) {
-					showAlert("You have unlocked all the characters in Cortofa! Wait for more characters to release!");
+				} else if (i == (goodNames["ciftian"].length) - 1) {
+					showAlert("You have unlocked all the characters in Ciftian! Wait for more characters to release!");
 					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
 					return;
 				}
 			}
-			var unlocked = goodNames["cortofa"][Math.floor(Math.random() * goodNames["cortofa"].length)];
+			var unlocked = goodNames["ciftian"][Math.floor(Math.random() * goodNames["ciftian"].length)];
 			while (localStorage[unlocked] == 'true') {
-				unlocked = goodNames["cortofa"][Math.floor(Math.random() * goodNames["cortofa"].length)];
+				unlocked = goodNames["ciftian"][Math.floor(Math.random() * goodNames["ciftian"].length)];
 			}
 			localStorage[unlocked] = 'true';
 			var characterName = unlocked;
