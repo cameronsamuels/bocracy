@@ -20,6 +20,8 @@ var goodNames = {
 			ammunistBoss : [],
 			ciftian : [],
 			ciftianBoss : [],
+			citatian : [],
+			cerotopis : ['overlapping', 'light-warrior', 'paramedics', 'triple-odd', 'night', 'enslaved'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane'],
@@ -37,6 +39,8 @@ var goodNames = {
 			ammunistBoss : [],
 			ciftian : [],
 			ciftianBoss : [],
+			citatian : [],
+			cerotopis : ['overlapping', 'light-warrior', 'paramedics', 'triple-odd', 'night', 'enslaved'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane', 'reindeer'],
@@ -67,17 +71,13 @@ good.witchcraft = new object('witchcraft', [35, 1500, 20], ['aonarchy', 'true', 
 
 bad.sharkanator = new object('sharkanator', [100, 5000, 0], ['aonarchy', 'false', 2500, 'a', 'sharkanator']);
 bad.bentacrabb_2D1 = new object('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', 'false', 1500, 'a', 'bentacrabb_2D1']);
-bad.boverr_1D2 = new object('boverr_1D2', [50, 3000, 10], ['aonarchy', 'false', 1000, 'a', 'boverr_1D2']);
 bad.bylo_ken = new object('bylo_ken', [35, 1500, 20], ['aonarchy', 'false', 600, 'a', 'bylo_ken']);
-bad.byter = new object('byter', [35, 1500, 20], ['aonarchy', 'false', 600, 'a', 'byter']);
 bad.d15_cannon = new object('d15_cannon', [60, 2000, 5], ['aonarchy', 'false', 1500, 'a', 'd15_cannon']);
 
 bad.sharkanatorBoss = new object('sharkanatorBoss', [100, 5000, 0], ['aonarchy+', 'false', 2500, 'a', 'sharkanatorBoss']);
 bad.bylo_kenBoss = new object('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 600, 'a', 'bylo_kenBoss']);
 bad.d15_cannonBoss = new object('d15_cannonBoss', [60, 2000, 5], ['aonarchy+', 'false', 1500, 'a', 'd15_cannonBoss']);
 
-good.paramedics = new object('paramedics', [20, 1250, 30], ['ciftian', 'true', 750, 'c', 'paramedics']);
-good.overlapping = new object('overlapping', [40, 3200, 10], ['ciftian', 'true', 1300, 'c', 'overlapping']);
 good.triple_odd = new object('triple_odd', [40, 2500, 20], ['ciftian', 'true', 1000, 'c', 'triple_odd']);
 good.night = new object('night', [25, 1250, 20], ['ciftian', 'true', 750, 'c', 'night']);
 good.light_warrior = new object('light_warrior', [60, 2250, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior']);
@@ -86,8 +86,6 @@ good.enslaved = new object('enslaved', [25, 2250, 10], ['ciftian', 'true', 850, 
 bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb']);
 bad.batalifor_1D0 = new object('batalifor_1D0', [15, 2000, 5], ['ciftian', 'false', 1000, 'a', 'batalifor_1D0']);
 bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['ciftian', 'false', 750, 'a', 'f87_cannon']);
-bad.batalifor_general = new object('batalifor_general', [30, 1500, 15], ['ciftian', 'false', 550, 'a', 'batalifor_general']);
-bad.scubbars = new object('scubbars', [20, 1500, 15], ['ciftian', 'false', 500, 'a', 'scubbars']);
 bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight']);
 
 bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss']);
@@ -107,6 +105,14 @@ good.jak_o_anterns = new object('jak_o_anterns', [15, 2000, 5], ['ammunist', 'tr
 bad.batalifor_sentryBoss = new object('batalifor_sentryBoss', [60, 2000, 5], ['ammunist+', 'false', 1500, 'a', 'batalifor_sentryBoss']);
 bad.b_shuttleBoss = new object('b_shuttleBoss', [50, 3000, 10], ['ammunist+', 'false', 1500, 'a', 'b_shuttleBoss']);
 bad.bentacrabb_2D1Boss = new object('bentacrabb_2D1Boss', [50, 3200, 5], ['ammunist+', 'false', 1500, 'a', 'bentacrabb_2D1Boss']);
+
+good.paramedics = new object('paramedics', [20, 1250, 30], ['citatian', 'true', 750, 'c', 'paramedics']);
+good.overlapping = new object('overlapping', [40, 3200, 10], ['citatian', 'true', 1300, 'c', 'overlapping']);
+
+bad.batalifor_general = new object('batalifor_general', [30, 1500, 15], ['citatian', 'false', 550, 'a', 'batalifor_general']);
+bad.scubbars = new object('scubbars', [20, 1500, 15], ['citatian', 'false', 500, 'a', 'scubbars']);
+bad.byter = new object('byter', [35, 1500, 20], ['citatian', 'false', 600, 'a', 'byter']);
+bad.boverr_1D2 = new object('boverr_1D2', [50, 3000, 10], ['citatian', 'false', 1000, 'a', 'boverr_1D2']);
 
 function showConfirm(text, yes, no) {
     id('confirmText').innerHTML = text;
@@ -236,6 +242,40 @@ function unlock(item) {
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://playbclick.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
+			id('unlockedPopup').style.display = "block";
+			id('popupOverlay').style.display = "block";
+			localStorage.coins -= 500;
+			break;
+		case 'citatian':
+			for (i = 0; i < goodNames["citatian"].length; i++) {
+				if (localStorage[goodNames["citatian"][i]] == "false") {
+					break;
+				} else if (i == (goodNames["citatian"].length) - 1) {
+					showAlert("You have unlocked all the characters in Citatian! Wait for more characters to release!");
+					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+					return;
+				}
+			}
+			var unlocked = goodNames["citatian"][Math.floor(Math.random() * goodNames["citatian"].length)];
+			while (localStorage[unlocked] == 'true') {
+				unlocked = goodNames["citatian"][Math.floor(Math.random() * goodNames["citatian"].length)];
+			}
+			localStorage[unlocked] = 'true';
+			var characterName = unlocked;
+			while (characterName.includes('_') || characterName.includes('-')) {
+				characterName = characterName.toString().replace('_', '-');
+				characterName = characterName.replace('--', '^');
+				characterName = characterName.replace('-', ' ');
+			}
+			while (characterName.includes('^')) {
+				characterName = characterName.replace('^', '-');
+			}
+			characterName = characterName.replace('D', '.');
+			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
+			id('youGotMail').style.display = "block";
+			id('unlockedPopupImg').style.display = "block";
+			id('unlockedPopupImg').src = 'https://playbclick.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";

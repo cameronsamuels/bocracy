@@ -114,6 +114,16 @@
 					badNames.url = "b";
 					goodNames.url = "a";
 					break;
+				case "citatian":
+					newStats = 'true';
+					badNames.url = "b";
+					goodNames.url = "c";
+					break;
+				case "cerotopis":
+					newStats = 'false';
+					badNames.url = "c";
+					goodNames.url = "c";
+					break;
 				default:
 					badNames.url = "b";
 					goodNames.url = "b";

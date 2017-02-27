@@ -124,6 +124,16 @@
 					badNames.url = "b";
 					goodNames.url = "a";
 					break;
+				case "cerotopis":
+					newStats = 'false';
+					badNames.url = "c";
+					goodNames.url = "c";
+					break;
+				case "citatian":
+					newStats = 'true';
+					badNames.url = "b";
+					goodNames.url = "c";
+					break;
 				default:
 					newStats = 'false';
 					badNames.url = "b";
@@ -147,7 +157,7 @@
 				a.health = Math.min(Math.random() * 2250, 2000);
 				a.orig_health = a.health;
 				a.attack = Math.max(32, Math.random() * 40);
-				a.speed = Math.min(Math.random() * 1000, 500);
+				a.speed = 450;
 				a.heal = Math.random() * 12;
 
 				b.health = parseFloat(a.health * 0.85);
@@ -161,7 +171,7 @@
 				a.health = bad[a.name].stats[1];
 				a.orig_health = a.health;
 				a.attack = bad[a.name].stats[0];
-				a.speed = Math.max(Math.random() * 1000, 450);
+				a.speed = 450;
 				a.heal = bad[a.name].stats[2];
 
 				b.health = good[b.name].stats[1];

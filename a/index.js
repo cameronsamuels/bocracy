@@ -25,5 +25,6 @@ function load() {
 	if (localStorage.hasAonarchy == undefined) window.location = "store.html#firstTimeaonarchy";
 	else if (localStorage.hasCiftian == undefined) window.location = "store.html#firstTimeciftian";
 	else if (localStorage.hasAmmunist == undefined) window.location = "store.html#firstTimeammunist";
+	else if (localStorage.hasCitatian == undefined) window.location = "store.html#firstTimecitatian";
 	else if (localStorage.playedBOcracy110_2 == undefined) localStorage.playedBOcracy110_2 = "true";
 }

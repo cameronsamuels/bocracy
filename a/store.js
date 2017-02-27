@@ -14,8 +14,11 @@ if (current.includes("firstTime")) {
 		localStorage.coins = 500;
 		localStorage.hasAmmunist = 'true';
 		unlock(current.replace("firstTime", ""));
-	}
-	else {
+	} else if (localStorage.hasCitatian == undefined) {
+		localStorage.coins = 500;
+		localStorage.hasCitatian = 'true';
+		unlock(current.replace("firstTime", ""));
+	} else {
 		showAlert('No silly! You can\'t get characters for free!');
 		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?46"');	
 	}
