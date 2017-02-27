@@ -130,7 +130,7 @@ function unlockConfirmed(item) {
 }
 
 function purchase(item) {
-	showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html'");
+	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?44'")}, 500);
 }
 
 function unlock(item) {

@@ -8,7 +8,7 @@
 			health: 0,
 			attack: 0,
 			speed: 0
-		}, current = 'original';
+		}, current = 'original', newStats;
 		if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 		var game = {
 			on : 'false',
@@ -52,7 +52,7 @@
 			win : function(side) {
 				if (side == 'green') {
 					if (current.includes('+')) { var coinsEarned = bad[a.name].info[2] * 0.05; }
-					else if (newStats == true) { var coinsEarned = bad[a.name].info[2] * 0.02; }
+					else if (newStats == 'true') { var coinsEarned = bad[a.name].info[2] * 0.02; }
 					else { var coinsEarned = 5; }
 					if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 					else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
