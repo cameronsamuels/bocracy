@@ -109,6 +109,11 @@
 					badNames.url = "b";
 					goodNames.url = "c";
 					break;
+				case "ammunist":
+					newStats = 'true';
+					badNames.url = "b";
+					goodNames.url = "a";
+					break;
 				default:
 					badNames.url = "b";
 					goodNames.url = "b";

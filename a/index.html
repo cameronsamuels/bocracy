@@ -6,7 +6,7 @@
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<link rel="apple-touch-icon" href="https://bocracy.com/icon.png">
 	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	  	<link rel="stylesheet" type="text/css" href="index.css?44">
+	  	<link rel="stylesheet" type="text/css" href="index.css?45">
 
 	  	<meta property="og:url" content="https://bocracy.com" />
         <meta property="og:type" content="game" />
@@ -16,8 +16,8 @@
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-	    <script src="live.js?44"></script>
-		<script src="index.js?44"></script>
+	    <script src="live.js?45"></script>
+		<script src="index.js?45"></script>
 	</head>
 	<body id="body">
 		<div id="banner"><img width="200" height="200" src="https://bocracy.com/assets/img/alpha.png" title="This version is in alpha"/></div>
@@ -25,22 +25,18 @@
 		<h3>Select a country to begin</h3>
 		<h5 id="homescreenTip"><green>Add to homescreen for best results!</green></h5>
 		<main>
-	<!-- 		<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?44#aonarchy\'', 'window.location = \'battle.html?44#aonarchy\'')"><div>Aonarchy</div></a>
-			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?44#aonarchy\'', 'window.location = \'battle.html?44#aonarchy+\'')"><div>Aonarchy <red>Bosses</red></div></a>
-			<a ontouchend="showConfirm('Open the store first?', 'window.location = \'store.html?44#cortofa\'', 'window.location = \'battle.html?44#cortofa\'')"><div><green>Featured: </green>Cortofa</div></a> -->
-
 			<a onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';"><div>Aritropus</div></a>
 			<a onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';"><div><green>New: </green>Cortofa</div></a>
 		</main>
 		<divider class="clear"></divider><font size="5">Freeplay</font>
 		<main>
-			<a onclick="window.location = 'battle.html?44#bictatorship'"><div>Bictatorship</div></a>
-			<a onclick="window.location = 'battle.html?44#bocracy'"><div>bOcracy</div></a>
-			<a onclick="window.location = 'battle.html?44#dinotera'"><div>Dinotera</div></a>
-			<a onclick="window.location = 'battle.html?44#original'"><div>bVille</div></a>
+			<a onclick="window.location = 'battle.html?45#bictatorship'"><div>Bictatorship</div></a>
+			<a onclick="window.location = 'battle.html?45#bocracy'"><div>bOcracy</div></a>
+			<a onclick="window.location = 'battle.html?45#dinotera'"><div>Dinotera</div></a>
+			<a onclick="window.location = 'battle.html?45#original'"><div>bVille</div></a>
 		</main>
 		<div class="clear"></div>
-		<a class="text" onclick="window.location='https://bocracy.com/credits/?44'"><h4>Check out the credits</h4></a>
+		<a class="text" onclick="window.location='https://bocracy.com/credits/?45'"><h4>Check out the credits</h4></a>
 		<div class="ads"><p>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- PlaybClickAds325 -->
@@ -59,11 +55,23 @@
 			<img id="Amap" width="512" height="512" usemap="#aritropusMap" src="img/aritropus.png">
 			<img id="Cmap" width="512" height="512" usemap="#cortofaMap" src="img/cortofa.png">
 			<map name="aritropusMap">
-			  <area shape="rect" coords="176,258,207,286" title="Capitol Battleground" ontouchend="window.location='battle.html#aonarchy'">
+			  <area shape="rect" coords="176,258,207,286" title="Aonarchy Battleground" ontouchend="window.location='battle.html#aonarchy'">
 			  <area shape="rect" coords="293,256,314,276" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#aonarchy'">
-			  <area shape="rect" coords="127,323,98,291" title="Boss Battleground" ontouchend="window.location='battle.html#aonarchy+'">
+			  <area shape="rect" coords="127,323,98,291" title="Aonarchy Boss Battleground" ontouchend="window.location='battle.html#aonarchy+'">
 			  <area shape="rect" coords="168,312,140,289" title="Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#aonarchy+'">
-			  <area shape="rect" coords="290,280,324,314" title="Capitol Store" ontouchend="window.location='store.html#aonarchy'">
+			  <area shape="rect" coords="290,280,324,314" title="Aonarchy Store" ontouchend="window.location='store.html#aonarchy'">
+			  <area shape="rect" coords="119,247,141,268" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
+			  <area shape="rect" coords="177,230,195,247" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
+			  <area shape="rect" coords="218,247,237,267" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
+			  <area shape="rect" coords="194,209,212,227" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
+
+			  <area shape="rect" coords="146,132,167,155" title="Ammunist Battleground" ontouchend="window.location='battle.html#ammunist'">
+			  <area shape="rect" coords="129,133,143,122" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#ammunist'">
+			  <area shape="rect" coords="220,144,264,177" title="Ammunist Boss Battleground" ontouchend="window.location='battle.html#ammunist+'">
+			  <area shape="rect" coords="183,155,170,166" title="Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#ammunist+'">
+			  <area shape="rect" coords="195,183,218,207" title="Ammunist Store" ontouchend="window.location='store.html#aonarchy'">
+			  <area shape="rect" coords="142,181,159,195" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
+			  <area shape="rect" coords="123,107,138,121" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
 			</map>
 			<map name="cortofaMap">
 			  <area shape="rect" coords="258,256,304,304" title="Capitol Battleground" ontouchend="window.location='battle.html#cortofa'">

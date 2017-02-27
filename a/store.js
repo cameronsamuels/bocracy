@@ -10,10 +10,14 @@ if (current.includes("firstTime")) {
 		localStorage.coins = 500;
 		localStorage.hasCortofa = 'true';
 		unlock(current.replace("firstTime", ""));
+	} else if (localStorage.hasAmmunist == undefined) {
+		localStorage.coins = 500;
+		localStorage.hasAmmunist = 'true';
+		unlock(current.replace("firstTime", ""));
 	}
 	else {
 		showAlert('No silly! You can\'t get characters for free!');
-		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?44"');	
+		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?45"');	
 	}
 }
 else if (current != "firstTime") purchase(current);

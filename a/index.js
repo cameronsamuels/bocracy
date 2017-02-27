@@ -24,5 +24,6 @@ function load() {
 	} else id('story').style.display = "none";
 	if (localStorage.hasAonarchy == undefined) window.location = "store.html#firstTimeaonarchy";
 	else if (localStorage.hasCortofa == undefined) window.location = "store.html#firstTimecortofa";
+	else if (localStorage.hasAmmunist == undefined) window.location = "store.html#firstTimeammunist";
 	else if (localStorage.playedBOcracy110_2 == undefined) localStorage.playedBOcracy110_2 = "true";
 }
