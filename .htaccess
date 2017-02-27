@@ -16,6 +16,7 @@ Redirect 307 /alpha /a?45
 
 # Listings and Places #
 Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
+Redirect 307 /repo https://bitbucket.org/CameronSamuels/bocracy.com
 Redirect 307 /fb https://facebook.com/bOcracy
 Redirect 307 /facebook https://facebook.com/bOcracy
 Redirect 307 /wikia http://bocracy.wikia.com/
