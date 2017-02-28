@@ -27,7 +27,7 @@
 			<div id="aHealth"><div id="aHealthBar"></div></div>
 		</section>
 		<div class="clear"></div>
-		<div id="overlay" ontouchend="document.getElementById('overlay').style.display='none';load()"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
+		<div id="overlay" ontouchend="setTimeout(function(){document.getElementById('overlay').style.display='none';load()},500)"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
 		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
 		<div id="portrait">
 			<h3>Click the right image to attack. Click the left one to heal.</h3>
