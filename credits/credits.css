@@ -4,45 +4,48 @@ body, html {
 	height: 100%;
 	margin: 0px;
 	background: #3F51B5;
-	text-transform: capitalize;
 	text-align: center;
+	color: white;
 	font-family: 'Syncopate', sans-serif;
+}
+arial {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: 200;
 }
 .button {
 	border: 1px #3F51B5 solid;
 	background-color: #2E40A4;
 	margin: 2.5px 9px !important;
 	border-radius: 3px;
-    color: white;
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px 15px;
     text-align: center;
     user-select: none;
     cursor: pointer;
     width: calc(100% - 50px);
 }
-header img { display: inline-block; }
-
-red { color: #F00; }
-green { color: #64DD17; }
+h2 { font-size: 30px; }
+divider {
+	display: inline-block;
+	border: 1px white dashed;
+	width: 120px;
+	margin: 2px 0px;
+	height: 0px;
+}
 header {
 	width: 100%;
 	height: 25px;
 	margin: 20px 0px;
 	line-height: 25px;
-	background: #3F51B5;
 }
-div:not(#title):not(.clear):not(.button) {
+div:not(#title):not(.button) {
 	background: #2E40A4;
-	line-height:25px;
-	vertical-align: middle;
 	text-align: center;
-	float: left;
-	color: white;
 	width: 80%;
 	margin: 30px 5%;
 	padding: 2.5% 5%;
+	font-size: 110%;
 }
-a  { color: white; }
-.clear { clear: both; }
+a, a:visited  { color: white; }
 #title { font-size: 30px; }
