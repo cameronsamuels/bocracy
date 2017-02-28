@@ -122,25 +122,23 @@ section {
 
 #overlay {
     display: none;
-    background: #FFF;
-    opacity: .5;
+    background: #3F51B5;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transform: rotate(90deg)
 }
 
 #overlay div {
     top: calc(50% - 80px);
     font-size: 400%;
     width: 100%;
-    position: absolute
+    position: absolute;
 }
 
 #overlay p {
-    font-size: 20px
+    font-size: 20px;
 }
 
 .theSword {
