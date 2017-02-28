@@ -103,6 +103,9 @@ bad.b_shuttle = new object('b_shuttle', [50, 3000, 10], ['ammunist', 'false', 15
 good.guardian = new object('guardian', [20, 1250, 30], ['ammunist', 'true', 500, 'a', 'guardian']);
 good.siren = new object('siren', [30, 1000, 20], ['ammunist', 'true', 450, 'a', 'siren']);
 good.jak_o_anterns = new object('jak_o_anterns', [15, 2000, 5], ['ammunist', 'true', 300, 'a', 'jak_o_anterns']);
+good.spiky = new object('spiky', [25, 1750, 5], ['ammunist', 'true', 600, 'a', 'spiky']);
+good.jetpack = new object('jetpack', [35, 2250, 15], ['ammunist', 'true', 1000, 'a', 'jetpack']);
+good.worldwar = new object('worldwar', [30, 2000, 15], ['ammunist', 'true', 800, 'a', 'worldwar']);
 
 bad.batalifor_sentryBoss = new object('batalifor_sentryBoss', [60, 2000, 5], ['ammunist+', 'false', 1500, 'a', 'batalifor_sentryBoss']);
 bad.b_shuttleBoss = new object('b_shuttleBoss', [50, 3000, 10], ['ammunist+', 'false', 1500, 'a', 'b_shuttleBoss']);
@@ -142,7 +145,7 @@ function unlockConfirmed(item) {
 }
 
 function purchase(item) {
-	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?51'")}, 500);
+	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?52'")}, 500);
 }
 
 function unlock(item) {
@@ -175,7 +178,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://playbclick.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
@@ -209,7 +212,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://playbclick.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
@@ -243,7 +246,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://playbclick.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
@@ -277,7 +280,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://playbclick.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
