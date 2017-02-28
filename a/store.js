@@ -1,4 +1,3 @@
-id('coins').innerHTML = localStorage.coins;
 var current = "aonarchy";
 if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 if (current.includes("firstTime")) {
@@ -24,3 +23,4 @@ if (current.includes("firstTime")) {
 	}
 }
 else if (current != "firstTime") purchase(current);
+id('coins').innerHTML = localStorage.coins;
