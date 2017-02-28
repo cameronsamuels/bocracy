@@ -123,6 +123,11 @@
 					newStats = 'false';
 					badNames.url = "c";
 					goodNames.url = "c";
+					break
+				case "citopia":
+					newStats = 'false';
+					badNames.url = "c";
+					goodNames.url = "c";
 					break;
 				default:
 					badNames.url = "b";
