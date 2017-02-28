@@ -11,11 +11,11 @@ body, html {
 }
 .button {
 	border: 1px #3F51B5 solid;
-	background-color: #2E40A4;
+	background-color: white;
 	margin: 2.5px 9px !important;
 	border-radius: 3px;
-    color: white;
-    font-size: 12px;
+    color: #2E40A4;
+    font-size: 16px;
     padding: 8px 15px;
     text-align: center;
     user-select: none;
