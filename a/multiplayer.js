@@ -153,7 +153,5 @@
 			game.on = 'true';
 		}
 
-		window.addEventListener("orientationchange", function() { location.reload(); }, false);
-
 		load();
 		game.refresh.all();

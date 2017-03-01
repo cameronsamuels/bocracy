@@ -195,8 +195,6 @@
 			game.on = 'true';
 		}
 
-		window.addEventListener("orientationchange", function() { location.reload(); }, false);
-
 		load();
 		setInterval('game.attack("red");game.heal("red")', a.speed);
 		game.refresh.all();
