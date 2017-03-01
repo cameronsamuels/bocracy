@@ -39,7 +39,6 @@ divider {
 	background-color: #2E40A4;
 	border: 1px #3F51B5 solid;
 }
-
 header {
 	width: 100%;
 	height: 25px;
@@ -57,26 +56,45 @@ header {
 #banner img, #banner {
 	pointer-events: none;
 }
-@media screen and (max-width: 499px) { #banner { zoom: 50%; } }
-main div {
-	background: #2E40A4;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 80%;
+@media screen and (max-width: 499px) { #banner { zoom: 50%; }}
+#wrapper {
+	height: 100%;
+	display: none;
 }
-a:not(.text) {
+@media screen and (max-width: 500px) { #countries img, #freeplay a  { width: 40%; margin: 5% !important; }}
+@media screen and (min-width: 501px) { #countries img, #freeplay a  { width: 20%; }}
+#loader {
+    border: 16px solid #2E40A4;
+    border-radius: 50%;
+    border-top: 16px solid white;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: calc(50% - 91px);
+    top: calc(50% - 91px);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#countries img, #freeplay a {
 	float: left;
 	text-decoration: none !important;
-	width: 43%;
-	margin: 1%;
-	padding: 0px 2.5%;
+	margin: 2.5%;
+	cursor: pointer;
+}
+#freeplay a {
+	padding: 2.5% 0px;
+	background: #2E40A4;
+	font-size: 70%;
 }
 a { color: white; text-decoration: underline; cursor: pointer;}
-.full {
-    width: 80% !important;
-	margin: 5% !important;
-	padding: 2.5% 5% !important;
-}
 .clear { clear: both; }
 #title { font-size: 30px; cursor: pointer;}
 
@@ -93,7 +111,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 .ads {
 	width: 100%;
 	min-width: 100%;
-    margin-bottom: 30px;
+	max-width: 100%;
 }
 #confirmPopup {
     background-color: #FFF !important;
@@ -143,8 +161,9 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 #legend {
 	width: 360px;
 	position: absolute;
-	bottom: 60px;
+	bottom: 0px;
 	left: 0px;
+	pointer-events: none;
 }
 @media screen and (max-height: 340px) { #mapDiv { zoom: 55%; } }
 @media screen and (min-height: 341px) and (max-height: 600px) and (min-width: 341px) and (max-width: 600px) { #mapDiv { zoom: 75%; } }
@@ -152,8 +171,21 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 #mapDiv img:not(#legend) {
 	position: absolute;
 	left: calc(50% - 256px);
-	top: calc(50% - 256px);
+	top: calc(25% - 128px);
 	width: 512px;
 	height: 512px;
 	display: none;
 }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #2E40A4; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #2E40A4; 
+    -webkit-box-shadow: inset 0 0 6px #2E40A4; 
+}
+::-webkit-scrollbar-thumb:window-inactive { background: #2E40A4; }
