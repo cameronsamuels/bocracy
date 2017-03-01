@@ -140,10 +140,16 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	background: #3F51B5;
 	zoom: 65%;
 }
+#legend {
+	width: 360px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
 @media screen and (max-height: 340px) { #mapDiv { zoom: 55%; } }
 @media screen and (min-height: 341px) and (max-height: 600px) and (min-width: 341px) and (max-width: 600px) { #mapDiv { zoom: 75%; } }
 @media screen and (min-height: 601px) and (min-width: 601px) { #mapDiv { zoom: 100%; } }
-#mapDiv img {
+#mapDiv img:not(#legend) {
 	position: absolute;
 	left: calc(50% - 256px);
 	top: calc(50% - 256px);
