@@ -3,9 +3,8 @@ body, html {
     width: 100%;
     height: 100%;
     margin: 0px;
-    background: url('img/wood.png') /*#3F51B5*/;
-    /*background-size: cover;*/
-    /*background-position: 100%;*/
+    background: url('img/wood.png');
+    background-color: #563f22;
     text-transform: capitalize;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
@@ -38,7 +37,7 @@ header {
     position: absolute;
     top: 0px;
     left: 0px;
-    /*background-color: #2E40A4;*/
+    background: #563f22;
     width: 100%;
     text-align: right;
 }
