@@ -176,16 +176,4 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	height: 512px;
 	display: none;
 }
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #2E40A4; 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #2E40A4; 
-    -webkit-box-shadow: inset 0 0 6px #2E40A4; 
-}
-::-webkit-scrollbar-thumb:window-inactive { background: #2E40A4; }
+::-webkit-scrollbar { width: 0px; }

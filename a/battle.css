@@ -10,6 +10,7 @@ body, html {
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
+    overflow: hidden;
 }
 
 .clear {
@@ -40,9 +41,9 @@ screen and (min-width:620px) {
     }
     #bButton,
     #aButton {
-        height: 200px!important;
-        width: 200px!important;
-        margin-left: calc(50% - 100px)!important
+        height: 180px!important;
+        width: 180px!important;
+        margin-left: calc(50% - 90px)!important
     }
     #backButton,
     #refreshButton {

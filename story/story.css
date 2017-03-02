@@ -8,6 +8,7 @@ body, html {
 	text-align: center;
 	font-family: 'Syncopate', sans-serif;
 	font-size: 20px;
+	overflow: hidden;
 }
 .button {
 	border: 1px #3F51B5 solid;
@@ -21,6 +22,9 @@ body, html {
     user-select: none;
     cursor: pointer;
     width: calc(100% - 50px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 divider {
 	width: 100%;
@@ -28,3 +32,12 @@ divider {
 	display: inline-block;
 	height: 0px;
 }
+story {
+	height: calc(100% - 39px);
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar { width: 0px; }
