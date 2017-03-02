@@ -148,8 +148,9 @@
 			// else if (localStorage.hasCiftian == undefined) window.location = "store.html#firstTimeciftian";
 			// else if (localStorage.hasAmmunist == undefined) window.location = "store.html#firstTimeammunist";
 			// else if (localStorage.hasCitatian == undefined) window.location = "store.html#firstTimecitatian";
-			if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1)] == undefined) {
+			if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
 				window.location = "store.html#firstTime" + current;
+				return;
 			} 
 
 			a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
