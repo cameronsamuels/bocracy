@@ -140,12 +140,12 @@ function unlockConfirmed(item) {
 		unlock(item);
 	} else {
 		showAlert('Not enough redbacks!');
-		id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+		id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 	}
 }
 
 function purchase(item) {
-	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='index.html?58'")}, 500);
+	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'")}, 500);
 }
 
 function unlock(item) {
@@ -156,7 +156,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["aonarchy"].length) - 1) {
 					showAlert("You have unlocked all the characters in Aonarchy! Wait for more characters to release!");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
 			}
@@ -179,7 +179,7 @@ function unlock(item) {
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -190,7 +190,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["ciftian"].length) - 1) {
 					showAlert("You have unlocked all the characters in Ciftian! Wait for more characters to release!");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
 			}
@@ -213,7 +213,7 @@ function unlock(item) {
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -224,7 +224,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["ammunist"].length) - 1) {
 					showAlert("You have unlocked all the characters in Ammunist! Wait for more characters to release!");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
 			}
@@ -247,7 +247,7 @@ function unlock(item) {
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -258,7 +258,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["citatian"].length) - 1) {
 					showAlert("You have unlocked all the characters in Citatian! Wait for more characters to release!");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='index.html'");
+					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
 			}
@@ -281,7 +281,7 @@ function unlock(item) {
 			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='index.html'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
