@@ -59,9 +59,9 @@
 				<img id="legend" src="img/legend.png" />
 				<map name="aritropusMap">
 				  <area shape="rect" coords="176,258,207,286" title="Aonarchy Battleground" ontouchend="window.location='battle.html#aonarchy'">
-				  <area shape="rect" coords="293,256,314,276" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#aonarchy'">
+				  <area shape="rect" coords="293,256,314,276" title="Aonarchy Multiplayer Battleground" ontouchend="window.location='multiplayer.html#aonarchy'">
 				  <area shape="rect" coords="127,323,98,291" title="Aonarchy Boss Battleground" ontouchend="window.location='battle.html#aonarchy+'">
-				  <area shape="rect" coords="168,312,140,289" title="Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#aonarchy+'">
+				  <area shape="rect" coords="168,312,140,289" title="Aonarchy Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#aonarchy+'">
 				  <area shape="rect" coords="290,280,324,314" title="Aonarchy Store" ontouchend="window.location='store.html#aonarchy'">
 				  <area shape="rect" coords="119,247,141,268" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
 				  <area shape="rect" coords="177,230,195,247" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
@@ -69,14 +69,25 @@
 				  <area shape="rect" coords="194,209,212,227" title="Battleground" ontouchend="window.location='battle.html#aonarchy'">
 
 				  <area shape="rect" coords="146,132,167,155" title="Ammunist Battleground" ontouchend="window.location='battle.html#ammunist'">
-				  <area shape="rect" coords="129,133,143,122" title="Multiplayer Battleground" ontouchend="window.location='multiplayer.html#ammunist'">
+				  <area shape="rect" coords="129,133,143,122" title="Ammunist Multiplayer Battleground" ontouchend="window.location='multiplayer.html#ammunist'">
 				  <area shape="rect" coords="220,144,264,177" title="Ammunist Boss Battleground" ontouchend="window.location='battle.html#ammunist+'">
-				  <area shape="rect" coords="183,155,170,166" title="Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#ammunist+'">
+				  <area shape="rect" coords="183,155,170,166" title="Ammunist Multiplayer Boss Battleground" ontouchend="window.location='multiplayer.html#ammunist+'">
 				  <area shape="rect" coords="195,183,218,207" title="Ammunist Store" ontouchend="window.location='store.html#aonarchy'">
 				  <area shape="rect" coords="142,181,159,195" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
 				  <area shape="rect" coords="123,107,138,121" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
-
 				  <area shape="rect" coords="343,362,375,393" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='battle.html#ammunist';else window.location='battle.html#aonarchy'">
+				  <area shape="rect" coords="329,68,352,1" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';">
+				  <area shape="rect" coords="142,220,156,233" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
+				  <area shape="rect" coords="221,190,233,203" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
+				  <area shape="rect" coords="169,190,180,201" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
+				  <area shape="rect" coords="148,58,161,73" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
+				  <area shape="rect" coords="200,25,211,39" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
+
+				  <area shape="rect" coords="219,48,243,76" title="Store" ontouchend="if (Math.round(Math.random()) == 1)window.location='store.html#ammunist';else window.location='store.html#aonarchy'">
+				  <area shape="rect" coords="117,73,131,86" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='battle.html#ammunist';else window.location='battle.html#aonarchy'">
+				  <area shape="rect" coords="120,35,132,48" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='battle.html#ammunist';else window.location='battle.html#aonarchy'">
+				  <area shape="rect" coords="170,42,190,58" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='battle.html#ammunist';else window.location='battle.html#aonarchy'">
+				  <area shape="rect" coords="227,25,243,40" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='battle.html#ammunist';else window.location='battle.html#aonarchy'">
 				</map>
 				<map name="cortofaMap">
 				  <area shape="rect" coords="258,256,304,304" title="Ciftian Battleground" ontouchend="window.location='battle.html#ciftian'">
@@ -91,6 +102,7 @@
 				  <area shape="rect" coords="27,142,54,166" title="Citatian Store" ontouchend="window.location='store.html#citatian'">
 				  <area shape="poly" coords="183,227,170,246,191,267,195,275,186,288,142,265,153,205,169,197,208,200,218,209,210,229" title="Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)window.location='battle.html#citopia';else if (rand < 0.2)window.location='battle.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)window.location='battle.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)window.location='battle.html#citatian';">
 				  <area shape="rect" coords="177,232,193,252" title="Multiplayer Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)window.location='multiplayer.html#citopia';else if (rand < 0.2)window.location='multiplayer.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)window.location='multiplayer.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)window.location='multiplayer.html#citatian';">
+				  <area shape="rect" coords="350,407,384,510" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block';">
 				</map>
 			</div>
 			<div id="confirmPopup">
