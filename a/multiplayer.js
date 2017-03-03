@@ -98,6 +98,11 @@
 				id('rotate').style.display = "block";
 				id('rotateInstructions').style.display = "block";
 			}
+			if (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+				id('computer').style.display = 'none';
+				id('rotate').style.display = "block";
+				id('rotateInstructions').style.display = "block";
+			}
 
 			switch (current.replace('+', '')) {
 				case "aonarchy":
