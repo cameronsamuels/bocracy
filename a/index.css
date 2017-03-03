@@ -175,5 +175,9 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	width: 512px;
 	height: 512px;
 	display: none;
+	z-index: -1;
+}
+#mapDiv .button {
+	z-index: 3;
 }
 ::-webkit-scrollbar { width: 0px; }
