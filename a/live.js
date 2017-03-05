@@ -62,17 +62,17 @@ function object(nm, stats, info, other) {
 	else badNames[info[0].replace('+', 'Boss')].push(nm);
 	if (goodNames[info[0] + 'Boss'] != undefined && info[1] == 'true') goodNames[info[0] + 'Boss'].push(nm);
 }
-good.goblin_horde = new object('goblin_horde', [50, 3200, 5], ['aonarchy', 'true', 1500, 'a', 'goblin_horde']);
-good.goblin = new object('goblin', [15, 1000, 10], ['aonarchy', 'true', 250, 'a', 'goblin']);
+good.goblin_horde = new object('goblin_horde', [50, 3200, 5], ['aonarchy', 'true', 1500, 'a', 'goblin_horde', 'goblin_sword']);
+good.goblin = new object('goblin', [15, 1000, 10], ['aonarchy', 'true', 250, 'a', 'goblin', 'gobin_sword']);
 good.warrior = new object('warrior', [50, 3000, 10], ['aonarchy', 'true', 1500, 'a', 'warrior']);
 good.archer = new object('archer', [40, 1250, 20], ['aonarchy', 'true', 750, 'a', 'archer', 'arrow']);
 good.phantom = new object('phantom', [30, 1500, 15], ['aonarchy', 'true', 550, 'a', 'phantom']);
 good.anonymous = new object('anonymous', [20, 1500, 15], ['aonarchy', 'true', 500, 'a', 'anonymous']);
 good.a87_cannon = new object('a87_cannon', [60, 2000, 5], ['aonarchy', 'true', 1500, 'a', 'a87_cannon', 'cannonball']);
-good.witchcraft = new object('witchcraft', [35, 1500, 20], ['aonarchy', 'true', 600, 'a', 'witchcraft']);
+good.witchcraft = new object('witchcraft', [35, 1500, 20], ['aonarchy', 'true', 600, 'a', 'witchcraft', 'staff']);
 
 bad.sharkanator = new object('sharkanator', [100, 5000, 0], ['aonarchy', 'false', 2500, 'a', 'sharkanator', 'cannonball']);
-bad.bentacrabb_2D1 = new object('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', 'false', 1500, 'a', 'bentacrabb_2D1']);
+bad.bentacrabb_2D1 = new object('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', 'false', 1500, 'a', 'bentacrabb_2D1', 'cannonball']);
 bad.bylo_ken = new object('bylo_ken', [35, 1500, 20], ['aonarchy', 'false', 600, 'a', 'bylo_ken']);
 bad.d15_cannon = new object('d15_cannon', [60, 2000, 5], ['aonarchy', 'false', 1500, 'a', 'd15_cannon', 'cannonball']);
 
@@ -85,14 +85,14 @@ good.night = new object('night', [25, 1250, 20], ['ciftian', 'true', 750, 'c', '
 good.light_warrior = new object('light_warrior', [60, 2250, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior']);
 good.enslaved = new object('enslaved', [25, 2250, 10], ['ciftian', 'true', 850, 'c', 'enslaved']);
 
-bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb']);
+bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb', 'cannonball']);
 bad.batalifor_1D0 = new object('batalifor_1D0', [15, 2000, 5], ['ciftian', 'false', 1000, 'a', 'batalifor_1D0']);
 bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['ciftian', 'false', 750, 'a', 'f87_cannon', 'cannonball']);
-bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight']);
+bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight', 'dark_sword']);
 
 bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss', 'cannonball']);
-bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss']);
-bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss']);
+bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss', 'cannonball']);
+bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss', 'dark_sword']);
 
 bad.batalifor_sentry = new object('batalifor_sentry', [60, 2000, 5], ['ammunist', 'false', 1500, 'a', 'batalifor_sentry']);
 bad.batalifor_2D4 = new object('batalifor_2D4', [30, 1000, 20], ['ammunist', 'false', 450, 'a', 'batalifor_2D4']);
@@ -100,11 +100,11 @@ bad.b__torv_troops = new object('b__torv_troops', [30, 1500, 15], ['ammunist', '
 bad.b__torv_commander = new object('b__torv_commander', [50, 3000, 10], ['ammunist', 'false', 1000, 'a', 'b__torv_commander']);
 bad.b_shuttle = new object('b_shuttle', [50, 3000, 10], ['ammunist', 'false', 1500, 'a', 'b_shuttle', 'cannonball']);
 
-good.guardian = new object('guardian', [20, 1250, 30], ['ammunist', 'true', 500, 'a', 'guardian']);
-good.siren = new object('siren', [30, 1000, 20], ['ammunist', 'true', 450, 'a', 'siren']);
+good.guardian = new object('guardian', [20, 1250, 30], ['ammunist', 'true', 500, 'a', 'guardian', 'fairy_dust']);
+good.siren = new object('siren', [30, 1000, 20], ['ammunist', 'true', 450, 'a', 'siren', 'music']);
 good.jak_o_anterns = new object('jak_o_anterns', [15, 2000, 5], ['ammunist', 'true', 300, 'a', 'jak_o_anterns']);
 good.spiky = new object('spiky', [25, 1750, 5], ['ammunist', 'true', 600, 'a', 'spiky']);
-good.jetpack = new object('jetpack', [35, 2250, 15], ['ammunist', 'true', 1000, 'a', 'jetpack']);
+good.jetpack = new object('jetpack', [35, 2250, 15], ['ammunist', 'true', 1000, 'a', 'jetpack', 'fireball']);
 good.worldwar = new object('worldwar', [30, 2000, 15], ['ammunist', 'true', 800, 'a', 'worldwar']);
 
 bad.batalifor_sentryBoss = new object('batalifor_sentryBoss', [60, 2000, 5], ['ammunist+', 'false', 1500, 'a', 'batalifor_sentryBoss']);
