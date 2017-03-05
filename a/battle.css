@@ -193,7 +193,7 @@ section {
 .theSword {
     display: none;
     position: absolute;
-    background-image: url(img/sword.png);
+    /*background-image: url(img/sword.png);*/
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;
