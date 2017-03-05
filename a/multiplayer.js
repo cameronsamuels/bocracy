@@ -36,6 +36,7 @@
 						aName = aName.replace('^', '-');
 					}
 					aName = aName.replace('D', '.');
+					aName = aName.replace('Boss', '');
 					id('aName').innerHTML = aName + ' ' + badNames.url;
 
 					id('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
