@@ -55,6 +55,11 @@ screen and (min-width:620px) {
         margin-left: calc(50% - 120px)!important
     }
 }
+@media screen and (max-height: 319px) {
+    #aSection, #bSection {
+        zoom: 80%;
+    }
+}
 
 @media screen and (orientation:portrait) {
     #bSection,

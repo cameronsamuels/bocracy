@@ -57,6 +57,12 @@ section {
     float: left
 }
 
+@media screen and (max-height: 567px) {
+    #aSection, #bSection {
+        zoom: 80%;
+    }
+}
+
 #bSection {
     background: #64DD17;
     transform: rotate(180deg)
