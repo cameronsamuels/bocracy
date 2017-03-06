@@ -8,7 +8,7 @@
 			health: 0,
 			attack: 0,
 			speed: 0
-		}, current = 'original';
+		}, current = 'original', newStats = 'true';
 		if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 		var game = {
 			on : 'false',
@@ -62,7 +62,9 @@
 						a.health = Math.max(0, a.health);
 						a.health = Math.min(a.orig_health, a.health);
 						var weapon  = 'sword';
-						if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5];
+						if (newStats == 'true')	{
+							if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5];
+						}
 						if (('url("img/' + weapon + '.png")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 						id('bSword').style.display = "block";
 						id('bSword').style.WebkitAnimationName = "bSword";
@@ -73,7 +75,9 @@
 						b.health = Math.max(0, b.health);
 						b.health = Math.min(b.orig_health, b.health);
 						var weapon  = 'sword';
-						if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5];
+						if (newStats == 'true')	{
+							if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5];
+						}
 						if (('url("img/' + weapon + '.png")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 						id('aSword').style.display = "block";
 						id('aSword').style.WebkitAnimationName = "aSword";
@@ -135,15 +139,18 @@
 					newStats = 'false';
 					badNames.url = "c";
 					goodNames.url = "c";
+					newStats = 'false';
 					break
 				case "citopia":
 					newStats = 'false';
 					badNames.url = "c";
 					goodNames.url = "c";
+					newStats = 'false';
 					break;
 				default:
 					badNames.url = "b";
 					goodNames.url = "b";
+					newStats = 'false';
 			}
 
 			a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];

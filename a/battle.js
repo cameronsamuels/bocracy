@@ -73,7 +73,9 @@
 						a.health = Math.max(0, a.health);
 						a.health = Math.min(a.orig_health, a.health);
 						var weapon  = 'sword';
-						if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5];
+						if (newStats == 'true')	{
+							if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5];
+						}
 						if (('url("img/' + weapon + '.png")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 						id('bSword').style.display = "block";
 						id('bSword').style.WebkitAnimationName = "bSword";
@@ -84,7 +86,9 @@
 						b.health = Math.max(0, b.health);
 						b.health = Math.min(b.orig_health, b.health);
 						var weapon  = 'sword';
-						if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5];
+						if (newStats == 'true')	{
+							if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5];
+						}
 						if (('url("img/' + weapon + '.png")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 						id('aSword').style.display = "block";
 						id('aSword').style.WebkitAnimationName = "aSword";
