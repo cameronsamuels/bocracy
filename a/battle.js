@@ -150,6 +150,11 @@
 					badNames.url = "b";
 					goodNames.url = "c";
 					break;
+				case "alinar":
+					newStats = 'false';
+					badNames.url = "b";
+					goodNames.url = "a";
+					break;
 				default:
 					newStats = 'false';
 					badNames.url = "b";
