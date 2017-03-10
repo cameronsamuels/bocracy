@@ -1,0 +1,22 @@
+Options +Indexes
+
+# SET INDEX OPTIONS
+IndexOptions IgnoreCase FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=* SuppressHTMLPreamble IconHeight=16 IconWidth=16 IconsAreLinks
+
+# SET DISPLAY ORDER
+IndexOrderDefault Ascending Name
+
+# SPECIFY HEADER AND FOOTER FILE
+HeaderName /assets/ht/header.html
+
+# IGNORE FILES
+IndexIgnore /assets/ht
+
+# ICONS
+DefaultIcon /assets/ht/file.png
+AddIcon /assets/ht/folder.png ^^DIRECTORY^^
+
+AddDescription "Sound file" .mp3 .m4a .wav
+AddDescription "Image file" .png .jpg
+AddDescription "Web page" .html .php
+AddDescription "Code file" .css .js
