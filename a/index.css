@@ -61,8 +61,8 @@ header {
 	height: 100%;
 	display: none;
 }
-@media screen and (max-width: 500px) { #countries img, #freeplay a  { width: 40%; margin: 5% !important; }}
-@media screen and (min-width: 501px) { #countries img, #freeplay a  { width: 20%; }}
+@media screen and (max-width: 500px) { #countries img, #freeplay a, #normal a  { width: 40%; margin: 5% !important; }}
+@media screen and (min-width: 501px) { #countries img, #freeplay a, #normal a  { width: 20%; }}
 #loader {
     border: 16px solid #2E40A4;
     border-radius: 50%;
@@ -83,13 +83,13 @@ header {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-#countries img, #freeplay a {
+#countries img, #freeplay a, #normal a {
 	float: left;
 	text-decoration: none !important;
 	margin: 2.5%;
 	cursor: pointer;
 }
-#freeplay a {
+#freeplay a, #normal a {
 	padding: 2.5% 0px;
 	background: #2E40A4;
 	font-size: 70%;
