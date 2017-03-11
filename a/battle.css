@@ -174,26 +174,28 @@ section {
     left: 0
 }
 
-#overlay div {
+#overlay div:not(#restartText) {
     top: calc(50% - 80px);
     font-size: 400%;
     width: 100%;
-    position: absolute
+    position: absolute;
+    color: white;
 }
 
-#overlay h5 {
-    margin: 0;
-    font-size: 30px
-}
-
-#overlay p {
-    font-size: 20px
+#restartText {
+    font-size: 40px;
+    background: #2E40A4;
+    border-radius: 20px;
+    margin: 10px calc(5% - 2px);
+    width: 90%;
+    border: 4px white solid;
+    text-align: center;
+    color: white;
 }
 
 .theSword {
     display: none;
     position: absolute;
-    /*background-image: url(img/sword.png);*/
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;

@@ -57,6 +57,8 @@
 					else { var coinsEarned = 5; }
 					if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 					else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
+					id('sound').src = "snd/victory.wav";
+					id('audio').load(); id('audio').play();
 					id('overlayText').innerHTML = 'WINNER: ' + side + '!!!<br /><h5>You gained ' + coinsEarned + ' redbacks!</h5>';
 				} else {
 					id('sound').src = "snd/loss.wav";
@@ -115,7 +117,7 @@
 			}
 		};
 		function load() {
-			if (id('sound').src.includes("snd/loss.wav")) {
+			if (id('sound').src.includes("snd/loss.wav") || id('sound').src.includes("snd/victory.wav")) {
 				id('sound').src = 'snd/sound.wav';
 				id('audio').load(); id('audio').play();
 			}
