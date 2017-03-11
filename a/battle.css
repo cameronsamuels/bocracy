@@ -170,7 +170,7 @@ section {
 
 #overlay div:not(#restartText) {
     top: calc(50% - 80px);
-    font-size: 400%;
+    font-size: 50px;
     width: 100%;
     position: absolute;
     color: white;

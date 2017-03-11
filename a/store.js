@@ -19,7 +19,7 @@ if (current.includes("firstTime")) {
 		unlock(current.replace("firstTime", ""));
 	} else {
 		showAlert('No silly! You can\'t get characters for free!');
-		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?71"');	
+		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?72"');	
 	}
 }
 else if (current != "firstTime") purchase(current);
