@@ -39,12 +39,6 @@ screen and (min-width:620px) {
     section {
         height: calc(100% - 50px)
     }
-    #bButton,
-    #aButton {
-        height: 180px!important;
-        width: 180px!important;
-        margin-left: calc(50% - 90px)!important
-    }
     #backButton,
     #refreshButton {
         width: 30px!important;
@@ -122,10 +116,10 @@ section {
 
 #aButton,
 #bButton {
-    width: 125px;
-    height: 125px;
+    width: 50%;
+    padding: 25% 0px;
     margin-top: 25px;
-    margin-left: calc(50% - 62.5px);
+    margin-left: 25%;
     background: #FFF;
     background-size: cover;
     background-position: 100%;
