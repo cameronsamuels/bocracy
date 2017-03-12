@@ -5,12 +5,10 @@ body, html {
     margin: 0px;
     background: url('img/wood.png');
     background-color: #563f22;
-    text-transform: capitalize;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
-
 }
 .button {
     border: 1px #2E40A4 solid;
@@ -21,8 +19,6 @@ body, html {
     color: white;
     font-size: 12px;
     padding: 8px 15px;
-    text-align: center;
-    user-select: none;
     cursor: pointer;
     width: calc(100% - 50px);
 }
@@ -41,9 +37,7 @@ header {
     width: 100%;
     text-align: right;
 }
-header div {
-    display: inline-block;
-}
+header div { display: inline-block; }
 #confirmPopup, #unlockedPopup {
     background-color: #FFF !important;
     box-shadow: 1px 1px 1px #2a2a2a;
@@ -65,7 +59,7 @@ header div {
     top: calc(50% - 150px);
     left: calc(50% - 125px);
 }
-#confirmPopup footer, #unlockPopup footer { position: absolute; bottom: 5px; width: 100%; }
+#confirmPopup footer, #unlockedPopup footer { position: absolute; bottom: 5px; width: 100%; }
 #confirmPopup h3 { margin: 0px; }
 #unlockedPopupImg { margin: 0px calc(50% - 62.5px); }
 #confirmYesBtn, #confirmNoBtn {
