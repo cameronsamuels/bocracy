@@ -82,6 +82,10 @@
 						id('bSword').style.display = "block";
 						id('bSword').style.WebkitAnimationName = "bSword";
 						id('bSword').style.animationName = "bSword";
+						id('aButton').innerHTML = '';
+						id('bButton').innerHTML = '';
+						id('aButton').style.padding = '25% 0px';
+						id('bButton').style.padding = '25% 0px';
 						setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
 					} else if (atk == 'red') {
 						b.health -= a.attack;
@@ -218,7 +222,7 @@
 				}
 			}
 
-			game.on = 'true';
+			// game.on = 'true';
 		}
 
 		load();
