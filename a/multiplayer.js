@@ -8,7 +8,7 @@
 			health: 0,
 			attack: 0,
 			speed: 0
-		}, current = 'original', newStats = 'true';
+		}, current = battles[Math.floor(Math.random() * battles.length)], newStats = 'true';
 		if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 		var game = {
 			on : 'false',
@@ -114,7 +114,9 @@
 				id('rotate').style.display = "block";
 				id('rotateInstructions').style.display = "block";
 			}
-
+			if (!window.location.toString().includes('#')) {
+				current = battles[Math.floor(Math.random() * battles.length)];
+			}
 			switch (current.replace('+', '')) {
 				case "aonarchy":
 					badNames.url = "b";

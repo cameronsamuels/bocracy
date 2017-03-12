@@ -8,7 +8,7 @@
 			health: 0,
 			attack: 0,
 			speed: 0
-		}, current = 'original', newStats;
+		}, current = battles[Math.floor(Math.random() * battles.length)], newStats;
 		if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 		var game = {
 			on : 'false',
@@ -122,6 +122,9 @@
 			if (id('sound').src.includes("snd/loss.wav") || id('sound').src.includes("snd/victory.wav")) {
 				id('sound').src = 'snd/sound.wav';
 				id('audio').load(); id('audio').play();
+			}
+			if (!window.location.toString().includes('#')) {
+				current = battles[Math.floor(Math.random() * battles.length)];
 			}
 			switch (current.replace('+', '')) {
 				case "aonarchy":

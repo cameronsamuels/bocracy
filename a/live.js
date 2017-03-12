@@ -49,7 +49,7 @@ var goodNames = {
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane', 'reindeer'],
 			team : ['cameron', 'faith', 'ethan', 'alwin', 'michael', 'srisha', 'cooper', 'jessica', 'vishwam']
-}, good = { }, bad = { };
+}, battles = ['dinotera', 'fantasy', 'cerotopis', 'citopia', 'alinar'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];
