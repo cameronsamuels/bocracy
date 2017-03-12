@@ -82,10 +82,8 @@
 						id('bSword').style.display = "block";
 						id('bSword').style.WebkitAnimationName = "bSword";
 						id('bSword').style.animationName = "bSword";
-						id('aButton').innerHTML = '';
-						id('bButton').innerHTML = '';
-						id('aButton').style.padding = '25% 0px';
-						id('bButton').style.padding = '25% 0px';
+						id('clickToStart').style.display = 'none';
+						id('aButton').style.marginTop = '25px';
 						setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
 					} else if (atk == 'red') {
 						b.health -= a.attack;
@@ -166,24 +164,13 @@
 					badNames.url = "b";
 					goodNames.url = "b";
 			}
-			// if (localStorage.hasAonarchy == undefined) window.location = "store.html#firstTimeaonarchy";
-			// else if (localStorage.hasCiftian == undefined) window.location = "store.html#firstTimeciftian";
-			// else if (localStorage.hasAmmunist == undefined) window.location = "store.html#firstTimeammunist";
-			// else if (localStorage.hasCitatian == undefined) window.location = "store.html#firstTimecitatian";
 			if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
 				window.location = "store.html#firstTime" + current;
 				return;
 			} 
 
 			a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
-
-			// if (localStorage.hasOwnedGood != 'true') { unlock('mystery_pack'); localStorage.hasOwnedGood = 'true'; } 
 			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
-			// if (newStats == 'true') {
-			// 	while (localStorage[b.name] != 'true') {
-			// 		b.name = goodNames[current][Math.floor(Math.random() * goodNames[current].length)];
-			// 	}
-			// }
 
 			if (newStats == 'false') {
 				while (b.name == a.name) {
@@ -220,9 +207,14 @@
 					if (stats[i] == 'speed') a.speed / 1.25;
 					else a[stats[i]] *= 1.25;
 				}
-			}
-
-			// game.on = 'true';
+			}	
+		}
+		function restart() {
+			game.on = 'false';
+			id('clickToStart').style.display = 'block';
+			id('overlay').style.display = 'none';
+			id('aButton').style.marginTop = '-2px';
+			load();
 		}
 
 		load();

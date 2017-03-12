@@ -116,18 +116,26 @@ section {
 
 #aButton, #bButton {
     width: 50%;
-    padding: calc(25% - 10px) 0px;
+    padding: 25% 0px;
     margin-top: 25px;
     margin-left: 25%;
-    font-size: 20px;
     background: #FFF;
     background-size: cover;
     background-position: 100%;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    
 }
-#aButton span {
+#clickToStart {
     background-color: white;
-    border: 2px black solid;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    top: calc(25% - 35px);
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+}
+#aButton {
+    margin-top: -2px;
 }
 
 #aHealth,
