@@ -25,10 +25,7 @@ body, html {
     font-weight: 800;
     float: left;
 }
-.full {
-	width: calc(100% - 42px);
-	float: none;
-}
+.full { width: calc(100% - 42px);float: none; }
 .big { font-size: 50px; }
 main {
 	max-width: 316px;
