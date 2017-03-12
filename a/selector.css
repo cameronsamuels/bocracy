@@ -11,17 +11,12 @@ body, html {
     overflow-x: hidden;
     color: #fff;
 }
-
-red { color: #F00; }
-green { color: #64DD17; }
 .clear { clear: both; }
 divider {
 	width: 100%;
-	border: 2px #fff dashed;
+	border: 1px #fff dashed;
 	display: inline-block;
-	height: 0px;
 }
-
 .button {
 	border: 1px #2E40A4 solid;
 	background-color: #3F51B5;
@@ -31,7 +26,6 @@ divider {
     font-size: 16px;
     padding: 8px 15px;
     text-align: center;
-    user-select: none;
     cursor: pointer;
     width: calc(100% - 50px);
 }
@@ -46,17 +40,6 @@ header {
 	line-height: 25px;
 	background: #3F51B5;
 }
-/*#banner {
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	right: 0px; top: 0px;
-	padding: 0px !important;
-}
-#banner img, #banner {
-	pointer-events: none;
-}
-@media screen and (max-width: 499px) { #banner { zoom: 50%; }}*/
 #wrapper {
 	height: 100%;
 	display: none;
@@ -95,8 +78,7 @@ header {
 	font-size: 70%;
 }
 a { color: white; text-decoration: underline; cursor: pointer;}
-#title { font-size: 30px; cursor: pointer;}
-
+#title { font-size: 30px }
 .ads p {
 	margin: 0px auto;
 	background: #2E40A4;
@@ -112,7 +94,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	min-width: 100%;
 	max-width: 100%;
 }
-#confirmPopup {
+/*#confirmPopup {
     background-color: #FFF !important;
     box-shadow: 1px 1px 1px #2a2a2a;
     border-radius: 25px;
@@ -154,10 +136,16 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 	font-weight: 200;
-}
+}*/
 #mapDiv {
 	background: #3F51B5;
-	zoom: 65%;
+	display: none;
+	width: 100%;
+    height: 100%;
+   	position: fixed;
+    top: 0px;
+    left: 0px;
+    text-align: center;
 }
 #legend {
 	width: 360px;
@@ -166,17 +154,20 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	left: 0px;
 	pointer-events: none;
 }
-@media screen and (max-height: 340px) { #mapDiv { zoom: 55%; } }
-@media screen and (min-height: 341px) and (max-height: 600px) and (min-width: 341px) and (max-width: 600px) { #mapDiv { zoom: 75%; } }
-@media screen and (min-height: 601px) and (min-width: 601px) { #mapDiv { zoom: 100%; } }
 #mapDiv img:not(#legend) {
-	position: absolute;
-	left: calc(50% - 256px);
-	top: calc(25% - 128px);
-	width: 512px;
-	height: 512px;
 	display: none;
 	z-index: -1;
+}
+@media screen and (orientation: landscape) {
+	#mapDiv img:not(#legend) {
+		height: 95%;
+		margin: auto;
+	}
+}
+@media screen and (orientation: portrait) {
+	#mapDiv img:not(#legend) {
+		width: 100%;
+	}
 }
 #mapDiv .button {
 	z-index: 3;
@@ -187,7 +178,7 @@ arial {
 	font-size: 80%;
 	font-weight: 200;
 }
-#whatsNew {
+/*#whatsNew {
 	width: 100%;
 	height: 100%;
 	z-index: 5;
@@ -201,4 +192,4 @@ arial {
 	right: 0px;
 	top: 0px;
 	cursor: pointer;
-}
+}*/

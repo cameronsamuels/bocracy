@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 	<head>
-		<title>b-Ocracy</title>
+		<title>Battle Selector | b-Ocracy</title>
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,18 +16,15 @@
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-	    <script src="live.js?77"></script>
-		<script src="selector.js?77"></script>
+	    <script src="https://bocracy.com/assets/js/imgmap.js"></script>
 	</head>
 	<body id="body">
 		<div id="wrapper">
-			<!-- <div id="banner"><img width="200" height="200" src="https://bocracy.com/assets/img/alpha.png" title="This version is in alpha"/></div> -->
-			<header id="header"><div id="title" ontouchend="window.location='https://bocracy.com/story'"><font size="9">b-Ocracy</font></div></header>
-			<h3>Select a country to begin</h3>
-			<divider class="clear"></divider><font size="5">Play</font>
+			<header id="header"><div id="title"><font size="9">b-Ocracy</font></div></header>
+			<divider class="clear"></divider><font size="5">Maps</font>
 			<main id="countries">
-				<img onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';" src="img/a-flag.png" id="aritropus" />
-				<img onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';" src="img/c-flag.png" id="cortofa"/></a>
+				<img onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/a-flag.png" id="aritropus" />
+				<img onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/c-flag.png" id="cortofa"/></a>
 			</main>
 			<divider class="clear"></divider><font size="5">Freeplay</font>
 			<main id="freeplay">
@@ -48,9 +45,6 @@
 				<a onclick="window.location = 'battle.html?77#citatian'"><div>Citatian</div></a>
 			</main>
 			<divider class="clear"></divider>
-			<!-- <a class="text" onclick="window.location='https://bocracy.com/credits/?77'"><h4>Check out the credits</h4></a> -->
-			
-			<!-- <divider></divider> -->
 			<div class="ads"><p>
 	            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	            <!-- PlaybClickAds325 -->
@@ -66,8 +60,8 @@
 			<audio loop autoplay><source src="snd/theme.wav" type="audio/wav"></audio>
 			<div id="mapDiv">
 				<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
-				<img id="Amap" width="512" height="512" usemap="#aritropusMap" src="img/aritropus.png">
-				<img id="Cmap" width="512" height="512" usemap="#cortofaMap" src="img/cortofa.png">
+				<img id="Amap" usemap="#aritropusMap" src="img/aritropus.png">
+				<img id="Cmap" usemap="#cortofaMap" src="img/cortofa.png">
 				<img id="legend" src="img/legend.png" />
 				<map name="aritropusMap">
 				  <area shape="rect" coords="176,258,207,286" title="Aonarchy Battleground" ontouchend="window.location='battle.html#aonarchy'">
@@ -117,7 +111,7 @@
 				  <area shape="rect" coords="350,407,384,510" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block';">
 				</map>
 			</div>
-			<div id="confirmPopup">
+<!-- 			<div id="confirmPopup">
 	            <h2>Are you sure?</h2><div class="divider"></div>
 	            <h3 id="confirmText"></h3>
 	            <footer>
@@ -125,10 +119,10 @@
 	                <div id="confirmYesBtn" class="button">Yes</div>
 	                <div id="confirmNoBtn" class="button">No</div>
 	            </footer>
-	        </div>
-	        <div id="popupOverlay"></div>
-	        <div id="story" ontouchend="window.location='https://bocracy.com/story'"></div>
-	    	<div id="whatsNew">
+	        </div> -->
+	        <!-- <div id="popupOverlay"></div> -->
+	        <!-- <div id="story" ontouchend="window.location='https://bocracy.com/story'"></div> -->
+	    	<!-- <div id="whatsNew">
 	    		<img id="exit" src="btn/exit.png" width="32" height="32" ontouchend="document.getElementById('whatsNew').style.display='none'" />
 	    		<h2>What's New?</h2>
 	    		<divider></divider>
@@ -136,9 +130,10 @@
 	    			<h3>v1.1.0</h3>
 	    			<arial>World Map<br />Stores<br />7 new battlegrounds<br />A story line<br />New music<br />New cortofa continent<br />Brand new characters<br />Country Flags<br />Other major and minor things<br />Sped up loading<br />Many bug fixes and improvements<br /></ul></arial>
 	    		</div>
-	    	</div>
+	    	</div> -->
 	    </div>
 	    <div id="loader"></div>
-        <script>load();</script>
+	    <script src="live.js?77"></script>
+		<script src="selector.js?77"></script>
 	</body>
 </html>
