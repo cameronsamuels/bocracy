@@ -19,7 +19,6 @@ body, html {
     font-size: 15px;
     padding: 8px;
     margin: 4.5px 5px;
-    text-align: center;
     cursor: pointer;
     width: calc(50% - 42px);
     color: #2E40A4;
@@ -30,60 +29,25 @@ body, html {
 	width: calc(100% - 42px);
 	float: none;
 }
-.big {
-	font-size: 50px;
-}
+.big { font-size: 50px; }
 main {
 	max-width: 316px;
 	width: 100%;
 	margin: auto;
 }
 header {
-	width: 100%;
 	height: 25px;
 	margin: 20px 0px;
 	line-height: 25px;
-	background: #3F51B5;
 }
-#counter {
-	border: 8px #2E40A4 solid;
-}
+#counter { border: 8px #2E40A4 solid; }
 #banner {
 	width: 200px;
 	height: 200px;
 	position: absolute;
 	right: 0px; top: 0px;
-	padding: 0px !important;
 }
-#banner img, #banner {
-	pointer-events: none;
-}
+#banner img, #banner { pointer-events: none; }
 @media screen and (max-width: 499px) { #banner { zoom: 50%; }}
-#wrapper {
-	height: 100%;
-	display: none;
-}
 a { color: white; text-decoration: underline; cursor: pointer;}
-#title { font-size: 30px; cursor: pointer;}
-
-.ads p {
-	margin: 0px auto;
-	background: #2E40A4;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 80%;
-	padding: 2.5%;
-	width: 95%;
-	max-width:95%;min-width: 95%;
-}
-.ads {
-	width: 100%;
-	min-width: 100%;
-	max-width: 100%;
-}
-::-webkit-scrollbar { width: 0px; }
-arial {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 80%;
-	font-weight: 200;
-}
+#title { font-size: 30px }
