@@ -44,7 +44,7 @@ var goodNames = {
 			citatian : [],
 			cerotopis : ['overlapping', 'triple-odd', 'night'],
 			citopia : ['light-warrior', 'paramedics', 'enslaved'],
-			alinar : ['byter', 'bylo-ken', 'santa', 'killer', 'scubbars'],
+			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane', 'reindeer'],
