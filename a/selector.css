@@ -37,7 +37,6 @@ header {
 	width: 100%;
 	height: 25px;
 	margin: 20px 0px;
-	line-height: 25px;
 	background: #3F51B5;
 }
 #wrapper {
@@ -94,6 +93,16 @@ a { color: white; text-decoration: underline; cursor: pointer;}
 	min-width: 100%;
 	max-width: 100%;
 }
+#backButton {
+    width: 37px;
+    margin-top: 5px;
+    float: left
+}
+#title {
+    float: left;
+    margin-left: calc(50% - 141px);
+    font-size: 37px;
+}
 /*#confirmPopup {
     background-color: #FFF !important;
     box-shadow: 1px 1px 1px #2a2a2a;
@@ -148,7 +157,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     text-align: center;
 }
 #legend {
-	width: 360px;
+	width: 150px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;

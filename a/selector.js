@@ -1,4 +1,3 @@
-
 	// if (localStorage.loadedBOcracy == undefined) {
 	// 	localStorage.loadedBOcracy = 'true';
 	// 	window.location = 'battle.html#alinar';
@@ -15,5 +14,5 @@
 	// 		localStorage.whatsNew110 = 'true';
 	// 	}
 	// }
-	id('wrapper').style.display = 'block';
-	id('loader').style.display = 'none';
+id('wrapper').style.display = 'block';
+id('loader').style.display = 'none';
