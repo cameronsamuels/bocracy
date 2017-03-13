@@ -48,8 +48,7 @@ main {
 	.button { padding: 15% 8px !important; font-size: 25px;}
 }
 @media screen and (min-height: 740px) {
-	.big { font-size: 70px !important; }
-	.button { font-size: 50px; }
+	.big { font-size: 70px !important; } .button { font-size: 50px; }
 	main { max-width: 700px; }
 }
 @media screen and (min-height: 600px) and (max-width: 1024px) and (orientation: landscape) {
