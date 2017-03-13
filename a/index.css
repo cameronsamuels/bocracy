@@ -37,17 +37,22 @@ main {
 @media screen and (min-height: 370px) {
 	.button { padding: 3% 8px; }
 }
-@media screen and (min-height: 370px) and (max-height: 599px) and (orientation: portrait) {
+@media screen and (min-height: 550px) and (max-height: 599px) and (orientation: portrait) {
 	.button { padding: 10% 8px !important; }
 }
-@media screen and (min-height: 600px) and (orientation: portrait) {
+@media screen and (min-height: 600px) and (max-width: 450px) and (orientation: portrait) {
 	.button { padding: 15% 8px !important; font-size: 25px;}
 }
+@media screen and (min-height: 740px) {
+	.big { font-size: 70px !important; }
+	.button { font-size: 50px; }
+}
 @media screen and (min-height: 600px) and (max-width: 1024px) and (orientation: landscape) {
-	.button { padding: 10% 8px !important; font-size: 30px; }
+	.button { padding: 5% 8px !important; font-size: 30px; }
 }
 @media screen and (min-width: 1025px) {
-	.button { padding: 5% 8px !important; font-size: 30px; }
+	.button { padding: 5% 8px !important; font-size: 50px; }
+	.big { font-size: 70px !important; }
 }
 header {
 	height: 45px;
