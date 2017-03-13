@@ -50,8 +50,8 @@ main {
 	.button { padding: 5% 8px !important; font-size: 30px; }
 }
 header {
-	height: 50px;
-	font-size: 50px;
+	height: 45px;
+	font-size: 45px;
 	background-color: #b30005;
 	white-space: nowrap;
 }
