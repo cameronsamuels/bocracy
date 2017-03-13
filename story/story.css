@@ -31,7 +31,7 @@ body, html {
 }
 divider {
 	width: 100%;
-	border: 2px #000 dashed;
+	border: 2px white dashed;
 	display: inline-block;
 	height: 0px;
 }
