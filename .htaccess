@@ -29,6 +29,8 @@ Redirect 307 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangk
 Redirect 307 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
 Redirect 307 /crunchbase https://www.crunchbase.com/product/b-ocracy
 Redirect 307 /indievideogames http://www.indievideogames.com/pages/project.php?project=231
+Redirect 307 /plus https://plus.google.com/communities/113037141930394908339
+Redirect 307 /googleplus https://plus.google.com/communities/113037141930394908339
 
 # Pages #
 Redirect 307 /team /credits
