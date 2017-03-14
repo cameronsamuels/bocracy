@@ -22,7 +22,7 @@ a { color: white }
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
 @media screen and (orientation:portrait) {
-    #bSection, #aSection, #overlay { display: none }
+    #bSection, #aSection { display: none }
     #portrait { display: block!important }
     .theSword { display: none!important }
     #overlay { display: none!important }

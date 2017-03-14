@@ -2,7 +2,7 @@
 	<head>
 		<title>Battle | b-Ocracy</title>
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/assets/ico/icon-crest.png">
-	  	<link rel="stylesheet" type="text/css" href="battle.css?84" />
+	  	<link rel="stylesheet" type="text/css" href="battle.css?85" />
 
 	  	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	  	<link rel="apple-touch-icon" href="https://bocracy.com/assets/ico/icon-crest.png">
@@ -11,7 +11,7 @@
 	</head>
 	<body id="body">
 		<header id="header">
-			<a ontouchend="window.location='index.html?84'"><img id="backButton" src="btn/back.png"/></a>
+			<a ontouchend="window.location='index.html?85'"><img id="backButton" src="btn/back.png"/></a>
 			<div id="title">b-Ocracy</div>
 			<a ontouchend="restart()"><img id="refreshButton" src="btn/refresh.png"/></a>
 			<div class="clear"></div>
@@ -20,7 +20,7 @@
 			<div id="bButton" ontouchend="game.heal('green')"></div><div id="bName"></div><div id="bHealth"><div id="bHealthBar"></div></div>
 		</section>
 		<section id="aSection">
-			<div id="clickToStart">Click to start</div><div id="aButton" ontouchend="game.on='true';game.attack('green')"></div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div></div>
+			<div id="clickToStart" ontouchend="game.on='true';game.attack('green')">Click to start</div><div id="aButton" ontouchend="game.on='true';game.attack('green')"></div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div></div>
 		</section>
 		<div class="clear"></div>
 		<div id="overlay"><div id="overlayText"></div><div id="restartText" ontouchend="restart()">PLAY AGAIN</div></div>
@@ -33,6 +33,6 @@
 		<audio id="audio" loop autoplay><source id="sound" src="snd/sound.wav" type="audio/wav"></audio>
 		<div id="popup"></div>
 	</body>
-	<script src="live.js?84"></script>
-	<script src="battle.js?84"></script>
+	<script src="live.js?85"></script>
+	<script src="battle.js?85"></script>
 </html>

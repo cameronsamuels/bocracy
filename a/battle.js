@@ -82,6 +82,14 @@ var game = { on : 'false',
 	}
 };
 function load() {
+	if (!isMobile.any()) {
+		id('portrait').style.display = 'none';
+		id('bSection').style.display = 'block';
+		id('aSection').style.display = 'block';
+		id('bSword').style.display = '';
+		id('aSword').style.display = '';
+		id('overlay').style.display = '';
+	}
 	if (id('sound').src.includes("snd/loss.wav") || id('sound').src.includes("snd/victory.wav")) {
 		id('sound').src = 'snd/sound.wav';
 		id('audio').load(); id('audio').play();
