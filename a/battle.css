@@ -45,31 +45,34 @@ header {
     float: left;
     margin-left: calc(50% - 75px)
 }
-section { width: 50%; height: calc(100% - 30px); float: left }
+section { width: 50%; height: calc(100% - 30px); float: left; position: relative; }
 #bSection { background: #64DD17 }
 #aSection { background: red }
-#aButton, #bButton {
+#aButton, #bButton, #clickToStart {
     width: 50%;
     padding: 25% 0px;
-    margin-top: 25px;
-    margin-left: 25%;
     background: #FFF;
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;
-    
+    margin-top: 25px !important;
+    margin-left: 25%;
+}
+#aButton, #bButton {
 }
 #clickToStart {
-    background-color: white;
-    border-top: 2px black solid;
-    border-bottom: 2px black solid;
-    top: calc(25% - 35px);
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    opacity: 0.8;
+    background-color: #3F51B5;
+    color: white;
+    font-weight: 800;
+    margin: 0px !important;
     font-size: 20px;
-    width: 100%;
-    position: relative;
-    pointer-events: none;
+    padding: calc(25% - 10px) 0px;
+    line-height: 20px;
 }
-#aButton { margin-top: -2px; }
 #aHealth, #bHealth {
     width: 180px;
     height: 20px;

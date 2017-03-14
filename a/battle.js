@@ -53,7 +53,6 @@ var game = { on : 'false',
 				id('bSword').style.WebkitAnimationName = "bSword";
 				id('bSword').style.animationName = "bSword";
 				id('clickToStart').style.display = 'none';
-				id('aButton').style.marginTop = '25px';
 				setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
 			} else if (atk == 'red') {
 				b.health -= a.attack;
@@ -145,7 +144,6 @@ function restart() {
 	game.on = 'false';
 	id('clickToStart').style.display = 'block';
 	id('overlay').style.display = 'none';
-	id('aButton').style.marginTop = '-2px';
 	load();
 }
 load();
