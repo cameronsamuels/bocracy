@@ -21,6 +21,8 @@ a { color: white }
     #title { font-size: 30px!important; margin-left: calc(50% - 120px)!important }
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
+@media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
+@media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (orientation:portrait) {
     #bSection, #aSection { display: none }
     #portrait { display: block!important }
