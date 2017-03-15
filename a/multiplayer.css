@@ -1,4 +1,9 @@
-@import "https://fonts.googleapis.com/css?family=Syncopate";
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+}
 body, html {
     width: 100%;
     height: 100%;
@@ -16,7 +21,6 @@ body, html {
 .clear { clear: both }
 red { color: red }
 green { color: #64DD17 }
-a { color: #88F }
 
 @media screen and (orientation:landscape) {
     #bSection, #aSection, #overlay { display: none }

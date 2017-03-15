@@ -11,7 +11,7 @@ var goodNames = {
 			url : '',
 			original : ['santa', 'skater', 'saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
 			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
-			dinotera : ['triceratops', 't--rex', 'mosasaur', 'apatosaurus', 'carnotaurus', 'shark'],
+			dinotera : ['triceratops', 't--rex', 'mosasaur', 'apatosaurus', 'carnotaurus'],
 			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			horror : ['killer', 'carnotaurus', 'trump', 'ghost', 'shark'],
 			aonarchy : [],
@@ -32,7 +32,7 @@ var goodNames = {
 			url : '',
 			original : ['saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
 			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
-			dinotera : ['apatosaurus', 'carnotaurus', 'shark'],
+			dinotera : ['triceratops', 't--rex', 'mosasaur', 'apatosaurus', 'carnotaurus'],
 			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			horror : ['killer', 'carnotaurus', 'trump', 'ghost', 'shark'],
 			aonarchy : [],
@@ -42,14 +42,14 @@ var goodNames = {
 			ciftian : [],
 			ciftianBoss : [],
 			citatian : [],
-			cerotopis : ['overlapping', 'triple-odd', 'night'],
-			citopia : ['light-warrior', 'paramedics', 'enslaved'],
+			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
+			citopia : ['byter', 'batalifor-general',' boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
 			christmas : ['santa', 'candycane', 'reindeer'],
 			team : ['cameron', 'faith', 'ethan', 'alwin', 'michael', 'srisha', 'cooper', 'jessica', 'vishwam']
-}, battles = ['dinotera', 'fantasy', 'cerotopis', 'citopia', 'alinar'], good = { }, bad = { };
+}, battles = ['dinotera', 'cerotopis', 'citopia', 'alinar'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];

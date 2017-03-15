@@ -1,4 +1,9 @@
-@import "https://fonts.googleapis.com/css?family=Syncopate";
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+}
 body, html {
     width: 100%;
     height: 100%;
@@ -13,7 +18,7 @@ body, html {
 }
 .clear { clear: both }
 red { color: red }
-a { color: white }
+a { color: white; text-decoration: underline; cursor: pointer;}
 @media screen and (min-height:351px), screen and (min-width:620px) {
     header { height: 50px!important; line-height: 50px!important }
     section { height: calc(100% - 50px) }
@@ -122,6 +127,9 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     border: 4px white solid;
     text-align: center;
     color: white;
+}
+@media screen and (max-height: 450px) {
+    #overlay div { font-size: 32px !important; }
 }
 .theSword {
     display: none;
