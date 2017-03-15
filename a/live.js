@@ -43,7 +43,7 @@ var goodNames = {
 			ciftianBoss : [],
 			citatian : [],
 			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
-			citopia : ['byter', 'batalifor-general',' boverr-1D2', 'scubbars'],
+			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
 			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
