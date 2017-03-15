@@ -1,1 +1,0 @@
-id('body').style.backgroundPosition = (Math.random() * 1000) + '%';

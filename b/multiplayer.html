@@ -1,19 +1,29 @@
 <!DOCTYPE html><html>
 	<head>
-		<title>b-Ocracy</title>
-	  	<link rel="shortcut icon" type="image/png" href="icon.png">
-	  	<link rel="stylesheet" type="text/css" href="multiplayer.css" />
+		<title>Multiplayer | b-Ocracy</title>
+	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
+	  	<link rel="stylesheet" type="text/css" href="multiplayer.css?89" />
 
 	  	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-	  	<link rel="apple-touch-icon" href="icon.png">
+	  	<link rel="apple-touch-icon" href="https://bocracy.com/icon.png">
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  	<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-50194959-4', 'auto');
+          ga('send', 'pageview');
+        
+        </script>
 	</head>
 	<body id="body">
 		<header id="header">
-			<a ontouchend="window.location='index.html'"><img id="backButton" src="btn/back.png" title="Back"/></a>
+			<a ontouchend="window.location='index.html?89'"><img id="backButton" src="btn/back.png" title="Back"/></a>
 			<div id="title">b-Ocracy</div>
-			<a ontouchend="location.reload()"><img id="refreshButton" src="btn/back.png" title="Refresh"/></a>
+			<a ontouchend="document.getElementById('overlay').style.display='none';load()"><img id="refreshButton" src="btn/refresh.png" title="Refresh"/></a>
 			<div class="clear"></div>
 		</header>
 		<section id="bSection">
@@ -37,15 +47,15 @@
 			</div>
 		</section>
 		<div class="clear"></div>
-		<div id="overlay" ontouchend="location.reload()"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
+		<div id="overlay" ontouchend="if (localStorage.refreshing != 'true'){localStorage.refreshing = 'true';setTimeout(function(){localStorage.refreshing = 'false';document.getElementById('overlay').style.display='none';load()},500)}"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
 		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
 		<div id="landscape">
-			<h3>Click the buttons to attack or heal. Drain all your opponent's health before yours is drained.</h3>
-			<h4 id="rotateInstructions"><red>Change your device's orientation to portrait to begin!</red></h4>
-			<h4 id="computer"><red>Multiplayer is only supported on touch screen devices!</red></h4>
-			<img id="rotate" width="556" height="626" src="assets/rotate.png" />
-		<audio id="audio" loop autoplay><source id="sound" src="sound.wav" type="audio/wav"></audio>
+			<h3>Click the buttons to attack or heal</h3>
+			<h4 id="rotateInstructions"><red>Change to portrait to begin</red></h4>
+			<h4 id="computer"><red>Multiplayer is only on touch screen devices</red></h4>
+			<img id="rotate" width="556" height="626" src="img/rotate.png" />
+		<audio id="audio" loop autoplay><source id="sound" src="snd/sound.wav" type="audio/wav"></audio>
 	</body>
-	<script src="live.js"></script>
-	<script src="multiplayer.js"></script>
+	<script src="live.js?89"></script>
+	<script src="multiplayer.js?89"></script>
 </html>
