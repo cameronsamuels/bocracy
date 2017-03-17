@@ -18,6 +18,12 @@
 	    <meta name="description"               content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
 		<script> 
 		    if (window.location.protocol != "https:" && window.location.protocol != "file:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+		    var isMobile = {
+				Android: function() { return navigator.userAgent.match(/Android/i); },
+				iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+			   	any: function() { return (isMobile.Android() || isMobile.iOS()); }
+			};
+		    if (window.navigator.standalone != true && !isMobile.any()) window.location = 'https://bocracy.com/live';
 		</script>
 		<style>
 			html, body {
