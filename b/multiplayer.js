@@ -24,7 +24,7 @@ var game = { on : 'false',
 		game.refresh.display();
 		window.requestAnimationFrame(game.refresh.all);
 	}},	win : function(side) {
-		id('overlayText').innerHTML = 'WINNER: ' + side + '!!!';
+		id('overlayText').innerHTML = '<div>WINNER: ' + side + '</div>';
 		id('overlay').style.display = "block";
 		game.on = 'false';
 	}, attack : function(atk) {
@@ -92,6 +92,11 @@ function load() {
 	b.attack = a.attack;
 	b.heal = a.heal;
 	game.on = 'true';
+}
+function restart() {
+	game.on = 'false';
+	id('overlay').style.display = 'none';
+	load();
 }
 load();
 game.refresh.all();

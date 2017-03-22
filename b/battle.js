@@ -32,11 +32,13 @@ var game = { on : 'false',
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 			id('sound').src = "snd/victory.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = 'WINNER: ' + side + '!!!<br /><h5>You gained ' + coinsEarned + ' redbacks!</h5>';
+			id('overlayText').innerHTML = '<div>YOU WON</div><h5>You gained ' + coinsEarned + ' redbacks!</h5>';
+			id('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			id('sound').src = "snd/loss.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = 'WINNER: ' + side + '!!!';
+			id('overlayText').innerHTML = '<div>YOU LOST</div>';
+			id('overlay').style.backgroundColor = '#b30005';
 		}
 		id('overlay').style.display = "block";
 		game.on = 'false';

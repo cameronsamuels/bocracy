@@ -141,16 +141,26 @@ section {
     top: 0;
     left: 0;
 }
-
-#overlay div {
-    top: calc(50% - 80px);
-    font-size: 400%;
+#overlay div:not(#restartText):not(#overlayText div):not(#overlayText) {
+}
+#overlay div:not(#restartText) {
+    color: white;
     width: 100%;
+    font-size: 40px;
+    top: calc(50% - 20px);
     position: absolute;
 }
-
-#overlay p {
-    font-size: 20px;
+#restartText {
+    font-size: 40px;
+    background: #2E40A4;
+    border-radius: 20px;
+    position: absolute;
+    margin: 0px calc(5% - 2px);
+    bottom: 10px;
+    width: 90%;
+    border: 4px white solid;
+    text-align: center;
+    color: white;
 }
 
 .theSword {

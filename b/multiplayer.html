@@ -47,7 +47,7 @@
 			</div>
 		</section>
 		<div class="clear"></div>
-		<div id="overlay" ontouchend="if (localStorage.refreshing != 'true'){localStorage.refreshing = 'true';setTimeout(function(){localStorage.refreshing = 'false';document.getElementById('overlay').style.display='none';load()},500)}"><div id="overlayText"></div><p>(Click anywhere to restart)</p></div>
+		<div id="overlay"><div id="overlayText"></div><div id="restartText" ontouchend="restart()">PLAY AGAIN</div></div>
 		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
 		<div id="landscape">
 			<h3>Click the buttons to attack or heal</h3>
