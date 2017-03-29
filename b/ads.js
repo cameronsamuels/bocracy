@@ -6,6 +6,7 @@
 function ad() {
 	document.getElementById('mainContainer').style.display = 'block';
 	adDisplayContainer.initialize();
+	requestAds();
 }
 // Re-use this AdsLoader instance for the entire lifecycle of your page.
 var adsLoader = new google.ima.AdsLoader(adDisplayContainer);
@@ -46,7 +47,7 @@ adsRequest.nonLinearAdSlotWidth = 640;
 adsRequest.nonLinearAdSlotHeight = 150;
 
 var playButton = document.getElementById('playButton');
-playButton.addEventListener('click', requestAds);
+playButton.addEventListener('click', ad);
 
 function requestAds() {
   adsLoader.requestAds(adsRequest);
