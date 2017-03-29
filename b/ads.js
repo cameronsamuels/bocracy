@@ -30,7 +30,10 @@ function onAdError(adErrorEvent) {
 
 // An event listener to tell the SDK that our content video
 // is completed so the SDK can play any post-roll ads.
-var contentEndedListener = function() {adsLoader.contentComplete(); localStorage.coins += 250; location.reload()};
+var contentEndedListener = function() {
+	adsLoader.contentComplete();
+	localStorage.coins = parseFloat(localStorage.coins) + 250;
+	location.reload()};
 videoContent.onended = contentEndedListener;
 
 // Request video ads.
