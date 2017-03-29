@@ -61,6 +61,8 @@ header .button {
   width: 100%;
   height: 100%;
   display: none;
+  background: #000;
+  align-content: center;
 }
 
 #content, #adContainer {

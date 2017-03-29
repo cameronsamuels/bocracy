@@ -55,6 +55,7 @@ playButton.addEventListener('click', ad);
 
 function requestAds() {
   adsLoader.requestAds(adsRequest);
+  videoContent.load();
 }
 function onAdsManagerLoaded(adsManagerLoadedEvent) {
   // Get the ads manager.
