@@ -58,22 +58,25 @@ header .button {
 }
 #mainContainer {
   position: relative;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  height: 100%;
 }
 
 #content, #adContainer {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  height: 100%;
 }
 
 #contentElement {
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+#mainContainer {
+    z-index: 10;
 }
 #confirmPopup, #unlockedPopup {
     background-color: #FFF !important;
