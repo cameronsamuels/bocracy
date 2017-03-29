@@ -3,7 +3,8 @@
 	    new google.ima.AdDisplayContainer(
 	        document.getElementById('adContainer'),
 	        videoContent);
-	    function ad() {
+function ad() {
+	document.getElementById('mainContainer').style.display = 'block';
 	adDisplayContainer.initialize();
 }
 // Re-use this AdsLoader instance for the entire lifecycle of your page.
