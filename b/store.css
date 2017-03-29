@@ -14,12 +14,13 @@ body, html {
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
+    overflow: hidden;
 }
 .button {
     border: 1px #2E40A4 solid;
     background-color: #3F51B5;
     display: inline-block;
-    margin: 2.5px 9px !important;
+    margin: 2.5px 9px;
     border-radius: 3px;
     color: white;
     font-size: 12px;
@@ -32,8 +33,9 @@ body, html {
     border: 1px #3F51B5 solid;
 }
 header {
-    height: 18px;
-    font-size: 18px;
+    font-size: 30px;
+    line-height: 36px;
+    vertical-align: middle;
     padding: 1px;
     position: absolute;
     top: 0px;
@@ -41,8 +43,19 @@ header {
     background: #563f22;
     width: 100%;
     text-align: right;
+    z-index: 5;
 }
 header div { display: inline-block; }
+header .button {
+    width: 150px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px !important;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    top: -5px;
+}
 #confirmPopup, #unlockedPopup {
     background-color: #FFF !important;
     box-shadow: 1px 1px 1px #2a2a2a;

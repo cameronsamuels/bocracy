@@ -9,7 +9,17 @@
         <link rel="stylesheet" type="text/css" href="store.css?89">
     </head>
     <body id="body">
+        <div id="mainContainer">
+          <div id="content">
+            <video id="contentElement">
+              <source src="https://rmcdn.2mdn.net/Demo/vast_inspector/android.mp4"></source>
+              <source src="https://rmcdn.2mdn.net/Demo/vast_inspector/android.webm"></source>
+            </video>
+          </div>
+          <div id="adContainer"></div>
+        </div>
         <header id="header">
+            <div id="playButton" class="button" ontouchend="ad()">FREE REDBACKS</div>
             <div id="coinImg" title="Redbacks"><img src="img/redbacks.png" height="18" width="39" /></div>
             <div id="coins"></div>
         </header>
@@ -31,5 +41,7 @@
         <audio id="audio" loop autoplay><source id="sound" src="snd/store.wav" type="audio/wav"></audio>
         <script src="live.js?89"></script>
         <script src="store.js?89"></script>
+        <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script type="text/javascript" src="ads.js"></script>
     </body>
 </html>
