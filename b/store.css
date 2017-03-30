@@ -57,12 +57,15 @@ header .button {
     top: -5px;
 }
 #mainContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
-  background: #000;
-  align-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    background: #000;
 }
 
 #content, #adContainer {

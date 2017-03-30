@@ -5,7 +5,7 @@
 	        videoContent);
 function ad() {
 	document.getElementById('audio').pause();
-	document.getElementById('mainContainer').style.display = 'block';
+	document.getElementById('mainContainer').style.display = 'flex';
 	adDisplayContainer.initialize();
 	requestAds();
 }
