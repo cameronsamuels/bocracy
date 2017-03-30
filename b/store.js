@@ -33,3 +33,4 @@ else {
 	location.reload();
 }
 id('coins').innerHTML = localStorage.coins;
+if (!isMobile.any()) id('playButton').style.display = 'none';

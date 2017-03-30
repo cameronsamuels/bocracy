@@ -40,12 +40,12 @@ header {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: #563f22;
     width: 100%;
     text-align: right;
     z-index: 5;
 }
-header div { display: inline-block; }
+header div { display: inline-block }
+#coins { background: #563f22 }
 header .button {
     width: 150px !important;
     text-align: center;
@@ -61,7 +61,6 @@ header .button {
     width: 100%;
     height: 100%;
     display: none;
-    object-fit: contain !important;
     background: #000;
 }
 
