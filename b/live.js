@@ -130,7 +130,6 @@ function showConfirm(text, yes, no) {
 }
 function showAlert(text) {
     id('unlockedPopupText').innerHTML = text;
-    id('youGotMail').style.display = "none";
     id('unlockedPopupImg').style.display = "none";
     id('unlockedPopup').style.display = "block";
     id('popupOverlay').style.display = "block";
@@ -141,7 +140,7 @@ function unlockConfirmed(item) {
 	if (localStorage.coins >= 500) {
 		unlock(item);
 	} else {
-		showAlert('Not enough redbacks!');
+		showAlert('Insufficient redbacks');
 		id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 	}
 }
@@ -157,7 +156,7 @@ function unlock(item) {
 				if (localStorage[goodNames["aonarchy"][i]] == "false") {
 					break;
 				} else if (i == (goodNames["aonarchy"].length) - 1) {
-					showAlert("You have unlocked all the characters in Aonarchy! Wait for more characters to release!");
+					showAlert("You have unlocked all the characters here");
 					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
@@ -178,7 +177,6 @@ function unlock(item) {
 			}
 			characterName = characterName.replace('D', '.');
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
-			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
@@ -191,7 +189,7 @@ function unlock(item) {
 				if (localStorage[goodNames["ciftian"][i]] == "false") {
 					break;
 				} else if (i == (goodNames["ciftian"].length) - 1) {
-					showAlert("You have unlocked all the characters in Ciftian! Wait for more characters to release!");
+					showAlert("You have unlocked all the characters here");
 					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
@@ -212,7 +210,6 @@ function unlock(item) {
 			}
 			characterName = characterName.replace('D', '.');
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
-			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
@@ -225,7 +222,7 @@ function unlock(item) {
 				if (localStorage[goodNames["ammunist"][i]] == "false") {
 					break;
 				} else if (i == (goodNames["ammunist"].length) - 1) {
-					showAlert("You have unlocked all the characters in Ammunist! Wait for more characters to release!");
+					showAlert("You have unlocked all the characters here");
 					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
@@ -246,7 +243,6 @@ function unlock(item) {
 			}
 			characterName = characterName.replace('D', '.');
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
-			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
@@ -259,7 +255,7 @@ function unlock(item) {
 				if (localStorage[goodNames["citatian"][i]] == "false") {
 					break;
 				} else if (i == (goodNames["citatian"].length) - 1) {
-					showAlert("You have unlocked all the characters in Citatian! Wait for more characters to release!");
+					showAlert("You have unlocked all the characters here");
 					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 					return;
 				}
@@ -280,7 +276,6 @@ function unlock(item) {
 			}
 			characterName = characterName.replace('D', '.');
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
-			id('youGotMail').style.display = "block";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");

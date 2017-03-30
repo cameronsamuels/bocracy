@@ -23,9 +23,13 @@ if (current.includes("firstTime")) {
 		localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] = 'true';
 		unlock(current.replace('firstTime', ''));
 	} else {
-		showAlert('No silly! You can\'t get characters for free!');
-		id('unlockedPopupBtn').setAttribute('onclick', 'window.location="index.html?89"');	
+		window.location = window.location.toString().replace('firstTime', '');
+		location.reload();	
 	}
 }
-else if (current != "firstTime") purchase(current);
+else if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] != undefined) purchase(current);
+else {
+	window.location.hash = "#firstTime" + current;
+	location.reload();
+}
 id('coins').innerHTML = localStorage.coins;

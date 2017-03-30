@@ -96,6 +96,12 @@ header .button {
     top: calc(50% - 100px);
     left: calc(50% - 125px);
 }
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    #unlockedPopup {
+        zoom: 80%;
+        top: calc(50% - 125px) !important;
+    }    
+}
 #unlockedPopup {
     height: 300px;
     width: 250px;
