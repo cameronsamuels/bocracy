@@ -1,5 +1,5 @@
-var current = "aonarchy";
-if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
+if (window.location.hash != '') {
+    var current = window.location.hash.toString().replace('#', '');
 if (current.includes("firstTime")) {
 	// if (localStorage.hasAonarchy == undefined) {
 	// 	localStorage.coins = 500;
@@ -27,10 +27,21 @@ if (current.includes("firstTime")) {
 		location.reload();	
 	}
 }
-else if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] != undefined) purchase(current);
-else {
-	window.location.hash = "#firstTime" + current;
-	location.reload();
+//else if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] != undefined) purchase(current);
+//else {
+//	window.location.hash = "#firstTime" + current;
+//	location.reload();
+//}
 }
 id('coins').innerHTML = localStorage.coins;
 if (!isMobile.iOS()) id('playButton').style.display = 'none';
+var battlegrounds = ["aonarchy","ammunist","ciftian","citatian"], m = document.querySelector('main');
+for (i = 0; i < battlegrounds.length; i++) {
+    var html = "";
+    html += "<section>";
+    for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
+        html += "<div style='background-image:url(https://bocracy.com/assets/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'>" + goodNames[battlegrounds[i]][j] + "</div>";
+    }
+    html += "</section>";
+    m.innerHTML += html;
+}

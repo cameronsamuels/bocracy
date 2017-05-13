@@ -141,12 +141,11 @@ function unlockConfirmed(item) {
 		unlock(item);
 	} else {
 		showAlert('Insufficient redbacks');
-		id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
 	}
 }
 
 function purchase(item) {
-	setTimeout(function(){showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')", "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'")}, 500);
+	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length) + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
 }
 
 function unlock(item) {
@@ -284,6 +283,34 @@ function unlock(item) {
 			localStorage.coins -= 500;
 			break;
 		default:
+            if (localStorage[goodNames[item.toString().split('.')[0]][item.toString().split('.')[1]]] == "true") {
+					showAlert("You have unlocked this characters already");
+					return;
+			}
+            var unlocked = item.toString().split('.')[1];
+            if (localStorage.coins < good[unlocked].info[2]) {
+					showAlert("Insufficient redbacks");
+					return;
+			}
+			localStorage[unlocked] = 'true';
+			var characterName = unlocked;
+			while (characterName.includes('_') || characterName.includes('-')) {
+				characterName = characterName.toString().replace('_', '-');
+				characterName = characterName.replace('--', '^');
+				characterName = characterName.replace('-', ' ');
+			}
+			while (characterName.includes('^')) {
+				characterName = characterName.replace('^', '-');
+			}
+			characterName = characterName.replace('D', '.');
+			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + good[unlocked].info[3];
+			id('unlockedPopupImg').style.display = "block";
+			id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
+			id('unlockedPopup').style.display = "block";
+			id('popupOverlay').style.display = "block";
+			localStorage.coins -= good[unlocked].info[2];
+            id('coins').innerHTML = localStorage.coins;
 	}
 }
 function convertClick() {
@@ -301,3 +328,6 @@ function loadLive() {
 	convertClick();
 }
 document.addEventListener('DOMContentLoaded', loadLive, false);
+if (!localStorage.coins) {
+    localStorage.coins = 0;
+}

@@ -14,7 +14,6 @@ body, html {
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
-    overflow: hidden;
 }
 .button {
     border: 1px #2E40A4 solid;
@@ -123,4 +122,57 @@ header .button {
     position: absolute;
     top: 0px;
     left: 0px;
+}
+header a {
+    float: left;
+    clear: both;
+    cursor: pointer;
+}
+main {
+    margin-top: 50px;
+}
+main section {
+    clear: both;
+    border-bottom: 4px black solid;
+    margin-bottom: 20px;
+    float: none;
+    color: white;
+}
+main section div {
+    border: 2px black solid;
+    margin: 10px 5px;
+    border-radius: 20px;
+    padding: 5px;
+    float: left;
+    word-wrap: break-word;
+    font-size: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-color: #563f22;
+}
+@media screen and (max-width: 500px) {
+    main section div {
+        width: calc(50vw - 24px);
+        height: calc(50vw - 24px);
+        line-height: calc(100vw - 60px);
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 750px) {
+    main section div {
+        width: calc(33vw - 24px);
+        height: calc(33vw - 24px);
+        line-height: calc(66vw - 60px);
+    }
+}
+@media screen and (min-width: 751px) {
+    main section div {
+        width: calc(25vw - 24px);
+        height: calc(25vw - 24px);
+        line-height: calc(50vw - 60px);
+    }
+}
+::-webkit-scrollbar {
+    width: 0px;
 }
