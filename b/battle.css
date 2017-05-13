@@ -109,7 +109,19 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
+    color: white;
+}
+#overlay img {
+    height: 26.56px;
+    margin: 0px 5px;
+}
+#overlay img, #overlay span {
+    vertical-align: middle;
+}
+#overlay h5 {
+    height: 26.56px;
+    line-height: 26.56px;
 }
 #overlay div:not(#restartText):not(#overlayText div):not(#overlayText) {
     top: calc(50% - 80px);
@@ -117,23 +129,26 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     position: absolute;
 }
 #overlay div:not(#restartText) {
-    color: white;
     width: 100%;
 }
 #overlayText div {
     font-size: 100px;
+    margin-top: 10px;
 }
 #restartText {
     font-size: 40px;
     background: #2E40A4;
     border-radius: 20px;
     position: absolute;
-    margin: 0px calc(5% - 2px);
+    margin: 0px auto;
+    left: 0;
+    right: 0;
     bottom: 10px;
-    width: 90%;
+    width: 70%;
     border: 4px white solid;
     text-align: center;
-    color: white;
+    line-height: 40px;
+    vertical-align: middle;
 }
 @media screen and (max-height: 450px) {
     #overlay div { font-size: 32px !important; }

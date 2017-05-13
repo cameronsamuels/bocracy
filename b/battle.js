@@ -25,14 +25,14 @@ var game = { on : 'false',
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
 		if (side == 'green') {
-			if (current.includes('+')) var coinsEarned = bad[a.name].info[2] * 0.05;
-			else if (newStats == 'true') var coinsEarned = bad[a.name].info[2] * 0.02;
-			else var coinsEarned = 5;
+			if (current.includes('+')) var coinsEarned = bad[a.name].info[2] * 0.2;
+			else if (newStats == 'true') var coinsEarned = bad[a.name].info[2] * 0.05;
+			else var coinsEarned = 10;
 			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 			id('sound').src = "snd/victory.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = '<div>YOU WON</div><h5>You gained ' + coinsEarned + ' redbacks!</h5>';
+			id('overlayText').innerHTML = '<div>YOU WON</div><h5><img src="img/redbacks.png"/><span>' + coinsEarned + '</span></h5>';
 			id('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			id('sound').src = "snd/loss.wav";
