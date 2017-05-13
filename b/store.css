@@ -9,11 +9,12 @@ body, html {
     height: 100%;
     margin: 0px;
     background: url('img/wood.png');
-    background-color: #563f22;
+    background-color: #654620;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
+    overflow: scroll;
 }
 .button {
     border: 1px #2E40A4 solid;
@@ -44,7 +45,7 @@ header {
     z-index: 5;
 }
 header div { display: inline-block }
-#coins { background: #563f22 }
+#coins { background: #654620 }
 header .button {
     width: 150px !important;
     text-align: center;
@@ -123,10 +124,6 @@ header .button {
     top: 0px;
     left: 0px;
 }
-header a span {
-    margin-left: 5px;
-    background: #563f22;
-}
 header a {
     float: left;
     clear: both;
@@ -161,6 +158,7 @@ main section div {
     background-repeat: no-repeat;
     background-position: 100%;
     background-color: #563f22;
+    cursor: pointer;
 }
 @media screen and (max-width: 500px) {
     main section div {
