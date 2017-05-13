@@ -298,7 +298,6 @@ function convertClick() {
 
 function loadLive() {
 	id('body').oncontextmenu = function(e) { e.preventDefault(); }
-	if (window.location.toString().includes('battle')) window.addEventListener("orientationchange", function() { id('body').style.display = 'none';location.reload(); }, false);
 	convertClick();
 }
 document.addEventListener('DOMContentLoaded', loadLive, false);
