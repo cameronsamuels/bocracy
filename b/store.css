@@ -123,10 +123,21 @@ header .button {
     top: 0px;
     left: 0px;
 }
+header a span {
+    margin-left: 5px;
+    background: #563f22;
+}
 header a {
     float: left;
     clear: both;
     cursor: pointer;
+}
+main .button {
+    width: 100px;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
 }
 main {
     margin-top: 50px;
