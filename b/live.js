@@ -177,6 +177,7 @@ function unlock(item) {
 	id('unlockedPopup').style.display = "block";
 	id('popupOverlay').style.display = "block";
 	id('coins').innerHTML = localStorage.coins;
+	refreshStore();
 }
 function convertClick() {
 	if (!isMobile.any()) {
