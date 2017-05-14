@@ -40,7 +40,8 @@ for (i = 0; i < battlegrounds.length; i++) {
     var html = "";
     html = html + "<section><h1>" + battlegrounds[i] + "<span class='button' onclick='window.location=\"battle.html#" + battlegrounds[i] + "\"'>Play</span></h1>";
     for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
-        html += "<div style='background-image:url(https://bocracy.com/assets/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'>" + goodNames[battlegrounds[i]][j] + "</div>";
+		var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
+        html += "<div style='background-image:url(https://bocracy.com/assets/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'>" + characterName + "</div>";
     }
     html += "</section>";
     m.innerHTML += html;

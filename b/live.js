@@ -137,15 +137,11 @@ function showAlert(text) {
 }
 
 function unlockConfirmed(item) {
-	if (localStorage.coins >= 500) {
-		unlock(item);
-	} else {
-		showAlert('Insufficient redbacks');
-	}
+	unlock(item);
 }
 
 function purchase(item) {
-	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length) + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
+	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
 }
 
 function unlock(item) {
@@ -283,11 +279,11 @@ function unlock(item) {
 			localStorage.coins -= 500;
 			break;
 		default:
-            if (localStorage[goodNames[item.toString().split('.')[0]][item.toString().split('.')[1]]] == "true") {
-					showAlert("You have unlocked this characters already");
+			var unlocked = item.toString().split('.')[1];
+            if (localStorage[good[unlocked].name] == "true") {
+					showAlert("You have unlocked this character already");
 					return;
 			}
-            var unlocked = item.toString().split('.')[1];
             if (localStorage.coins < good[unlocked].info[2]) {
 					showAlert("Insufficient redbacks");
 					return;
@@ -303,7 +299,7 @@ function unlock(item) {
 				characterName = characterName.replace('^', '-');
 			}
 			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + good[unlocked].info[3];
+			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " +  good[unlocked].info[3];
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
