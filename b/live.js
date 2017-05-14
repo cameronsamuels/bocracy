@@ -7,21 +7,6 @@ var isMobile = {
    	any: function() { return (isMobile.Android() || isMobile.iOS() || isMobile.Windows()); }
 };
 
-function neatTime(time) {
-//	var ms = time.toString().substring(time.toString().length - 3, time.toString().length);
-	var h = Math.floor(time / 3600000);
-	var m = Math.floor(time / 60000) - (h * 60);
-	var s = Math.floor(time / 1000) - (m * 60);
-          if (h > 0) s = s - (m * 60);
-	time = '';
-	if (h >= 1) { time = h + ':' }
-	if (m >= 1) { time += m + ':' }
-	time += s;
-//	for (i = 0; i < (3 - ms.length); i++) { ms = '0' + ms; }
-//	time += ms;
-	return time;
-}
-
 var goodNames = {
 			url : '',
 			original : ['santa', 'skater', 'saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
@@ -39,10 +24,7 @@ var goodNames = {
 			cerotopis : ['light-warrior', 'paramedics', 'enslaved'],
 			citopia : ['overlapping', 'triple-odd', 'night'],
 			alinar : ['color-jetpack', 'thorn', 'mammoth-rider', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0'],
-			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
-			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
-			christmas : ['santa', 'candycane'],
-			team : ['cameron', 'faith', 'ethan', 'alwin', 'michael', 'srisha', 'cooper', 'jessica', 'vishwam']
+			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
 }, badNames = {
 			url : '',
 			original : ['saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
@@ -60,10 +42,7 @@ var goodNames = {
 			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
-			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump'],
-			weaklings : ['regular', 'lowercase', 'handrawn', 'fancy', 'curved', 'thin'],
-			christmas : ['santa', 'candycane', 'reindeer'],
-			team : ['cameron', 'faith', 'ethan', 'alwin', 'michael', 'srisha', 'cooper', 'jessica', 'vishwam']
+			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
 }, battles = ['dinotera', 'cerotopis', 'citopia', 'alinar'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;

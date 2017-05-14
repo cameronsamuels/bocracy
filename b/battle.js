@@ -152,6 +152,17 @@ function restart() {
 	id('overlay').style.display = 'none';
 	load();
 }
+function neatTime(time) {
+	var h = Math.floor(time / 3600000);
+	var m = Math.floor(time / 60000) - (h * 60);
+	var s = Math.floor(time / 1000) - (m * 60);
+          if (h > 0) s = s - (m * 60);
+	time = '';
+	if (h >= 1) { time = h + ':' }
+	if (m >= 1) { time += m + ':' }
+	time += s;
+	return time;
+}
 load();
 setInterval('game.attack("red");game.heal("red")', a.speed);
 game.refresh.all();
