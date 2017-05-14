@@ -14,7 +14,7 @@ body, html {
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
-    overflow: scroll;
+    overflow: hidden;
 }
 .button {
     border: 1px #2E40A4 solid;
@@ -33,17 +33,18 @@ body, html {
     border: 1px #3F51B5 solid;
 }
 header {
-    font-size: 30px;
+    font-size: 5vw;
     line-height: 36px;
     vertical-align: middle;
     padding: 1px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+/*    position: absolute;*/
+/*    top: 0px;*/
+/*    left: 0px;*/
     width: 100%;
     text-align: right;
     z-index: 5;
 }
+@media screen and (min-width: 700px){ header{font-size:2.5vw}}
 header div { display: inline-block }
 #coins { background: #654620 }
 header .button {
@@ -137,8 +138,11 @@ main .button {
     margin: 5px auto;
 }
 main {
-    margin-top: 50px;
+	overflow-y: scroll;
+	height: calc(100% - 5vw);
+	width: 100vw;
 }
+@media screen and (min-width:700px) { main{height: calc(100% - 2.5vw);}}
 main section {
     clear: both;
     border-bottom: 4px black solid;
