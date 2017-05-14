@@ -162,169 +162,42 @@ function purchase(item) {
 }
 
 function unlock(item) {
-	switch (item) {
-		case 'aonarchy':
-			for (i = 0; i < goodNames["aonarchy"].length; i++) {
-				if (localStorage[goodNames["aonarchy"][i]] == "false") {
-					break;
-				} else if (i == (goodNames["aonarchy"].length) - 1) {
-					showAlert("You have unlocked all the characters here");
-					
-					return;
-				}
+	if (!item.includes(".")) {
+		for (i = 0; i < goodNames[item].length; i++) {
+			if (localStorage[goodNames[item][i]] == "false") {
+				break;
+			} else if (i == (goodNames[item].length) - 1) {
+				showAlert("You have unlocked all the characters here");
+				setTimeout(function(){id('popupOverlay').style.display = "block"},500);
+				return;
 			}
-			var unlocked = goodNames["aonarchy"][Math.floor(Math.random() * goodNames["aonarchy"].length)];
-			while (localStorage[unlocked] == 'true') {
-				unlocked = goodNames["aonarchy"][Math.floor(Math.random() * goodNames["aonarchy"].length)];
-			}
-			localStorage[unlocked] = 'true';
-			var characterName = unlocked;
-			while (characterName.includes('_') || characterName.includes('-')) {
-				characterName = characterName.toString().replace('_', '-');
-				characterName = characterName.replace('--', '^');
-				characterName = characterName.replace('-', ' ');
-			}
-			while (characterName.includes('^')) {
-				characterName = characterName.replace('^', '-');
-			}
-			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
-			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
-			id('unlockedPopup').style.display = "block";
-			id('popupOverlay').style.display = "block";
-			localStorage.coins -= 500;
-			break;
-		case 'ciftian':
-			for (i = 0; i < goodNames["ciftian"].length; i++) {
-				if (localStorage[goodNames["ciftian"][i]] == "false") {
-					break;
-				} else if (i == (goodNames["ciftian"].length) - 1) {
-					showAlert("You have unlocked all the characters here");
-					
-					return;
-				}
-			}
-			var unlocked = goodNames["ciftian"][Math.floor(Math.random() * goodNames["ciftian"].length)];
-			while (localStorage[unlocked] == 'true') {
-				unlocked = goodNames["ciftian"][Math.floor(Math.random() * goodNames["ciftian"].length)];
-			}
-			localStorage[unlocked] = 'true';
-			var characterName = unlocked;
-			while (characterName.includes('_') || characterName.includes('-')) {
-				characterName = characterName.toString().replace('_', '-');
-				characterName = characterName.replace('--', '^');
-				characterName = characterName.replace('-', ' ');
-			}
-			while (characterName.includes('^')) {
-				characterName = characterName.replace('^', '-');
-			}
-			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
-			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
-			id('unlockedPopup').style.display = "block";
-			id('popupOverlay').style.display = "block";
-			localStorage.coins -= 500;
-			break;
-		case 'ammunist':
-			for (i = 0; i < goodNames["ammunist"].length; i++) {
-				if (localStorage[goodNames["ammunist"][i]] == "false") {
-					break;
-				} else if (i == (goodNames["ammunist"].length) - 1) {
-					showAlert("You have unlocked all the characters here");
-					
-					return;
-				}
-			}
-			var unlocked = goodNames["ammunist"][Math.floor(Math.random() * goodNames["ammunist"].length)];
-			while (localStorage[unlocked] == 'true') {
-				unlocked = goodNames["ammunist"][Math.floor(Math.random() * goodNames["ammunist"].length)];
-			}
-			localStorage[unlocked] = 'true';
-			var characterName = unlocked;
-			while (characterName.includes('_') || characterName.includes('-')) {
-				characterName = characterName.toString().replace('_', '-');
-				characterName = characterName.replace('--', '^');
-				characterName = characterName.replace('-', ' ');
-			}
-			while (characterName.includes('^')) {
-				characterName = characterName.replace('^', '-');
-			}
-			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
-			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
-			id('unlockedPopup').style.display = "block";
-			id('popupOverlay').style.display = "block";
-			localStorage.coins -= 500;
-			break;
-		case 'citatian':
-			for (i = 0; i < goodNames["citatian"].length; i++) {
-				if (localStorage[goodNames["citatian"][i]] == "false") {
-					break;
-				} else if (i == (goodNames["citatian"].length) - 1) {
-					showAlert("You have unlocked all the characters here");
-					
-					return;
-				}
-			}
-			var unlocked = goodNames["citatian"][Math.floor(Math.random() * goodNames["citatian"].length)];
-			while (localStorage[unlocked] == 'true') {
-				unlocked = goodNames["citatian"][Math.floor(Math.random() * goodNames["citatian"].length)];
-			}
-			localStorage[unlocked] = 'true';
-			var characterName = unlocked;
-			while (characterName.includes('_') || characterName.includes('-')) {
-				characterName = characterName.toString().replace('_', '-');
-				characterName = characterName.replace('--', '^');
-				characterName = characterName.replace('-', ' ');
-			}
-			while (characterName.includes('^')) {
-				characterName = characterName.replace('^', '-');
-			}
-			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
-			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
-			id('unlockedPopup').style.display = "block";
-			id('popupOverlay').style.display = "block";
-			localStorage.coins -= 500;
-			break;
-		default:
-			var unlocked = item.toString().split('.')[1];
-            if (localStorage[good[unlocked].name] == "true") {
-					showAlert("You have unlocked this character already");
-					return;
-			}
-            if (localStorage.coins < good[unlocked].info[2]) {
-					showAlert("Insufficient redbacks");
-					return;
-			}
-			localStorage[unlocked] = 'true';
-			var characterName = unlocked;
-			while (characterName.includes('_') || characterName.includes('-')) {
-				characterName = characterName.toString().replace('_', '-');
-				characterName = characterName.replace('--', '^');
-				characterName = characterName.replace('-', ' ');
-			}
-			while (characterName.includes('^')) {
-				characterName = characterName.replace('^', '-');
-			}
-			characterName = characterName.replace('D', '.');
-			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " +  good[unlocked].info[3];
-			id('unlockedPopupImg').style.display = "block";
-			id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
-			id('unlockedPopup').style.display = "block";
-			id('popupOverlay').style.display = "block";
-			localStorage.coins -= good[unlocked].info[2];
-            id('coins').innerHTML = localStorage.coins;
+		}
+		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
+		while (localStorage[unlocked] == 'true') {
+			unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
+		}
+		localStorage.coins -= 500;
+	} else {
+		var unlocked = item.toString().split('.')[1];
+        if (localStorage[good[unlocked].name] == "true") {
+			showAlert("You have unlocked this character already");
+			return;
+		}
+        if (localStorage.coins < good[unlocked].info[2]) {
+			showAlert("Insufficient redbacks");
+			return;
+		}
+		localStorage.coins -= good[unlocked].info[2];
 	}
+	localStorage[unlocked] = 'true';
+	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
+	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
+	id('unlockedPopupImg').style.display = "block";
+	id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
+	id('unlockedPopup').style.display = "block";
+	id('popupOverlay').style.display = "block";
+	id('coins').innerHTML = localStorage.coins;
 }
 function convertClick() {
 	if (!isMobile.any()) {
