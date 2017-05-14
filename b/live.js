@@ -337,8 +337,10 @@ function convertClick() {
 function loadLive() {
 	id('body').oncontextmenu = function(e) { e.preventDefault(); }
 	convertClick();
+	setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "block";},1500)
 }
 document.addEventListener('DOMContentLoaded', loadLive, false);
 if (!localStorage.coins) {
     localStorage.coins = 0;
 }
+document.body.innerHTML="<div id='logo' style='width:100%;height:100%;background:#343838;'><img src='img/banner.png' style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0' /></div><div id='mainWrapper' style='width:100%;height:100%'>"+document.body.innerHTML+"</div>";

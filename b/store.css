@@ -145,10 +145,11 @@ main {
 @media screen and (min-width:700px) { main{height: calc(100% - 2.5vw);}}
 main section {
     clear: both;
-    border-bottom: 4px black solid;
-    margin-bottom: 20px;
     float: none;
     color: white;
+}
+main section div:last-child {
+	margin-bottom: 25px;
 }
 main section div {
     border: 2px black solid;
