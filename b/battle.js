@@ -1,5 +1,5 @@
 var newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
-b = { name: '', health: 0, attack: 0 },
+b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], newStats;
 if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 var game = { on : 'false',
@@ -32,14 +32,16 @@ var game = { on : 'false',
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 			id('sound').src = "snd/victory.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = '<div>YOU WON</div><h5><img src="img/redbacks.png"/><span>' + coinsEarned + '</span></h5>';
+			id('overlayText').innerHTML = '<div>YOU WON</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			id('sound').src = "snd/loss.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = '<div>YOU LOST</div>';
+			id('overlayText').innerHTML = '<div>YOU LOST</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#b30005';
 		}
+		id('restartText').style.display = "none";
+		setTimeout(function(){id('restartText').style.display = "block"}, 750);
 		id('overlay').style.display = "block";
 		game.on = 'false';
 	}, attack : function(atk) {
@@ -56,6 +58,7 @@ var game = { on : 'false',
 				id('bSword').style.animationName = "bSword";
 				id('clickToStart').style.display = 'none';
 				setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
+				clicks++;
 			} else if (atk == 'red') {
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
@@ -83,6 +86,7 @@ var game = { on : 'false',
 	}
 };
 function load() {
+	clicks = 0;
 	if (!isMobile.any()) {
 		id('portrait').style.display = 'none';
 		id('bSection').style.display = 'block';

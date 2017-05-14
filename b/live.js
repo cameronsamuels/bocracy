@@ -7,6 +7,21 @@ var isMobile = {
    	any: function() { return (isMobile.Android() || isMobile.iOS() || isMobile.Windows()); }
 };
 
+function neatTime(time) {
+//	var ms = time.toString().substring(time.toString().length - 3, time.toString().length);
+	var h = Math.floor(time / 3600000);
+	var m = Math.floor(time / 60000) - (h * 60);
+	var s = Math.floor(time / 1000) - (m * 60);
+          if (h > 0) s = s - (m * 60);
+	time = '';
+	if (h >= 1) { time = h + ':' }
+	if (m >= 1) { time += m + ':' }
+	time += s;
+//	for (i = 0; i < (3 - ms.length); i++) { ms = '0' + ms; }
+//	time += ms;
+	return time;
+}
+
 var goodNames = {
 			url : '',
 			original : ['santa', 'skater', 'saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],

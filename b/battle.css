@@ -112,16 +112,25 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     left: 0;
     color: white;
 }
-#overlay img {
-    height: 26.56px;
-    margin: 0px 5px;
-}
-#overlay img, #overlay span {
-    vertical-align: middle;
+#overlay img, #overlayStats span {
+    height: calc(20vh - 4px);
+	width: calc(20vh - 4px);
+	border-radius: 10vh;
+    margin: 5px 0px;
+	display: block;
+	line-height: 20vh;
+	border: 2px #fff solid;
 }
 #overlay h5 {
     height: 26.56px;
-    line-height: 26.56px;
+	display: inline-block;
+	margin-right: 10vh;
+}
+#overlayStats h5:nth-child(3) {
+	margin-right: 0px;
+}
+#overlayStats {
+	text-align: center
 }
 #overlay div:not(#restartText):not(#overlayText div):not(#overlayText) {
     top: calc(50% - 80px);
@@ -131,7 +140,7 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
 #overlay div:not(#restartText) {
     width: 100%;
 }
-#overlayText div {
+#overlayText div:not(#overlayStats) {
     font-size: 100px;
     margin-top: 10px;
 }
@@ -149,10 +158,11 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     text-align: center;
     line-height: 40px;
     vertical-align: middle;
+	clear: both;
 }
 @media screen and (max-height: 450px) {
-    #overlay div { font-size: 32px !important; }
-    #overlayText div { font-size: 75px !important; }
+    #overlay div:not(#overlayStats) { font-size: 32px !important; }
+    #overlayText div:not(#overlayStats) { font-size: 75px !important; }
 }
 .theSword {
     display: none;
