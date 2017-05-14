@@ -11,7 +11,7 @@ ExpiresDefault "access plus 12 hours"
 
 # Versions #
 Redirect 307 /live /beta
-Redirect 307 /beta /b?2
+Redirect 307 /beta /b?3
 Redirect 307 /alpha /a?u
 Redirect 307 /a /live
 
