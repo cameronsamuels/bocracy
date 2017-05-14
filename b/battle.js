@@ -151,4 +151,4 @@ function restart() {
 load();
 setInterval('game.attack("red");game.heal("red")', a.speed);
 game.refresh.all();
-window.addEventListener("orientationchange", function() { restart() }, false);
+document.body.ontouchmove=function(e){e.preventDefault()}
