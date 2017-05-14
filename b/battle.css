@@ -126,7 +126,7 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
 	display: inline-block;
 	margin-right: 10vh;
 }
-#overlayStats h5:nth-child(3) {
+#overlayStats h5:last-child {
 	margin-right: 0px;
 }
 #overlayStats {

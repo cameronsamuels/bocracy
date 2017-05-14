@@ -156,7 +156,9 @@ function unlockConfirmed(item) {
 }
 
 function purchase(item) {
+	if (item.includes("."))
 	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
+	else showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')");
 }
 
 function unlock(item) {
@@ -167,7 +169,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["aonarchy"].length) - 1) {
 					showAlert("You have unlocked all the characters here");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+					
 					return;
 				}
 			}
@@ -189,7 +191,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -200,7 +202,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["ciftian"].length) - 1) {
 					showAlert("You have unlocked all the characters here");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+					
 					return;
 				}
 			}
@@ -222,7 +224,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -233,7 +235,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["ammunist"].length) - 1) {
 					showAlert("You have unlocked all the characters here");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+					
 					return;
 				}
 			}
@@ -255,7 +257,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " A";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/a/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -266,7 +268,7 @@ function unlock(item) {
 					break;
 				} else if (i == (goodNames["citatian"].length) - 1) {
 					showAlert("You have unlocked all the characters here");
-					id('unlockedPopupBtn').setAttribute('onclick', id('unlockedPopupBtn').getAttribute('onclick') + "window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+					
 					return;
 				}
 			}
@@ -288,7 +290,7 @@ function unlock(item) {
 			id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " C";
 			id('unlockedPopupImg').style.display = "block";
 			id('unlockedPopupImg').src = 'https://bocracy.com/assets/c/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';window.location='battle.html" + window.location.hash.replace('firstTime', '') + "'");
+			id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
 			id('unlockedPopup').style.display = "block";
 			id('popupOverlay').style.display = "block";
 			localStorage.coins -= 500;
@@ -337,7 +339,7 @@ function convertClick() {
 function loadLive() {
 	id('body').oncontextmenu = function(e) { e.preventDefault(); }
 	convertClick();
-	setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "block";},1500)
+	setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "block";},1000)
 }
 document.addEventListener('DOMContentLoaded', loadLive, false);
 if (!localStorage.coins) {

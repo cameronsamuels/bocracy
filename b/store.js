@@ -38,7 +38,7 @@ if (!isMobile.iOS()) id('playButton').style.display = 'none';
 var battlegrounds = ["aonarchy","ammunist","ciftian","citatian"], m = document.querySelector('main');
 for (i = 0; i < battlegrounds.length; i++) {
     var html = "";
-    html = html + "<section><h1>" + battlegrounds[i] + "<span class='button' onclick='window.location=\"battle.html#" + battlegrounds[i] + "\"'>Play</span></h1>";
+    html = html + "<section><h1>" + battlegrounds[i] + "<span class='button' onclick='window.location=\"battle.html#" + battlegrounds[i] + "\"'>Play</span></h1><div style='background-image:url(img/random.png)' onclick='purchase(\"" + battlegrounds[i] + "\")'>Random</div>";
     for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
 		var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
         html += "<div style='background-image:url(https://bocracy.com/assets/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'>" + characterName + "</div>";

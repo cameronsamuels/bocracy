@@ -32,12 +32,12 @@ var game = { on : 'false',
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 			id('sound').src = "snd/victory.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = '<div>YOU WON</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			id('sound').src = "snd/loss.wav";
 			id('audio').load(); id('audio').play();
-			id('overlayText').innerHTML = '<div>YOU LOST</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#b30005';
 		}
 		id('restartText').style.display = "none";
