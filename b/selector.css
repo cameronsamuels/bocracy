@@ -21,7 +21,7 @@ divider, .button, #countries img, #freeplay a, #normal a { display: inline-block
 #mapDiv, #mapDiv img:not(#legend) { display: none }
 #mapDiv, body, html { background: #3F51B5 }
 #freeplay a, #normal a, .button:hover { background: #2E40A4 }
-
+#mapDiv, #backButton, #legend { left: 0px }
 divider { border: 1px #fff dashed }
 .button {
 	border: 1px #2E40A4 solid;
@@ -32,7 +32,7 @@ divider { border: 1px #fff dashed }
     width: calc(100% - 50px);
 }
 .button:hover { border: 1px #3F51B5 solid }
-header { height: 25px }
+header { position: relative }
 @media screen and (max-width: 500px) { #countries img, #freeplay a, #normal a  { width: 40% !important; margin: 4% !important; }}
 #countries img, #freeplay a, #normal a {
 	text-decoration: none;
@@ -43,20 +43,17 @@ header { height: 25px }
 	padding: 2.5% 0px;
 	font-size: 70%;
 }
-#title { font-size: 30px }
+#title { font-size: 37px }
 #backButton {
     width: 37px;
-	left: 0px;
 }
 #mapDiv {
    	position: fixed;
-    top: 0px;
-    left: 0px;
+	top: 0px;
 }
 #legend {
 	width: 150px;
 	bottom: 0px;
-	left: 0px;
 	pointer-events: none;
 }
 #mapDiv img:not(#legend) {

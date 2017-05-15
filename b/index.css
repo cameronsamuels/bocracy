@@ -28,8 +28,8 @@ body, html {
 .button, header { display: inline-block }
 main, body, html { width: 100% }
 .button:not(.big) { font-size: 3.7vw}
-@media screen and (orientation: portrait) { .button:not(.big) { font-size:7vw !important}}
-@media screen and (orientation: portrait) { .big { font-size:10vw !important}}
+@media screen and (orientation: portrait) { .button:not(.big) { font-size:6vw !important}}
+@media screen and (orientation: portrait) { .big { font-size:12vw !important}}
 .full { width: calc(100% - 42px) }
 .big { font-size: 6vw; }
 main {
