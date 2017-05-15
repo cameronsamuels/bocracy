@@ -1,1 +1,1 @@
-id("body").style.backgroundPosition=1e3*Math.random()+"%";
+id("body").style.backgroundPosition=1e2*Math.random()+"%";
