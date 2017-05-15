@@ -111,7 +111,8 @@ function load() {
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
 	if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
-		window.location = "store.html#firstTime" + current; return;
+		localStorage[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
+		localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
 	a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
 	b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];

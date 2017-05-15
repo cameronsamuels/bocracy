@@ -32,6 +32,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     #bSection, #aSection { display: none }
     #portrait { display: block!important }
     .theSword { display: none!important }
+	#refreshButton { display: none }
     #overlay { display: none!important }
 }
 #portrait { display: none }
