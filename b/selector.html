@@ -3,9 +3,7 @@
 		<title>Battle Selector | b-Ocracy</title>
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
-	  	<link rel="stylesheet" type="text/css" href="selector.min.css?4">
-        <meta property="og:description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-        <meta property="og:image" content="https://bocracy.com/icon.png" />
+	  	<link rel="stylesheet" type="text/css" href="selector.min.css?5">
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
 	    <script src="https://bocracy.com/assets/js/imgmap.js"></script>
 	    <script>
@@ -20,48 +18,33 @@
         </script>
 	</head>
 	<body id="body">
-		<div id="wrapper">
 			<header id="header">
-				<a onclick="window.location='index.html?4'"><img id="backButton" src="btn/back.png"/></a>
-				<div id="title"><font size="6">b-Ocracy</font></div><div class="clear"></div>
+				<a onclick="window.location='index.html?5'"><img id="backButton" src="btn/back.png"/></a>
+				<div id="title">b-Ocracy</div>
 			</header>
-			<divider class="clear"></divider><font size="5">Maps</font>
+			<divider></divider><font size="5">Maps</font>
 			<main id="countries">
 				<img onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/a-flag.png" id="aritropus" />
 				<img onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/c-flag.png" id="cortofa"/>
 			</main>
-			<divider class="clear"></divider><font size="5">Freeplay</font>
-			<main id="freeplay">
-				<a onclick="window.location = 'battle.html?4#bictatorship'"><div>Bictatorship</div></a>
-				<a onclick="window.location = 'battle.html?4#bocracy'"><div>bOcracy</div></a>
-				<a onclick="window.location = 'battle.html?4#dinotera'"><div>Dinotera</div></a>
-				<a onclick="window.location = 'battle.html?4#alinar'"><div>Alinar Snows</div></a>
-				<a onclick="window.location = 'battle.html?4#cerotopis'"><div>Cerotopis</div></a>
-				<a onclick="window.location = 'battle.html?4#citopia'"><div>Citopia</div></a>
-				<a onclick="window.location = 'battle.html?4#fantasy'"><div>Fantasy Land</div></a>
-				<a onclick="window.location = 'battle.html?4#original'"><div>bVille</div></a>
-			</main>
-			<divider class="clear"></divider><font size="5">Normal Play</font>
+			<divider></divider><font size="5">Normal Play</font>
 			<main id="normal">
-				<a onclick="window.location = 'battle.html?4#aonarchy'"><div>Aonarchy</div></a>
-				<a onclick="window.location = 'battle.html?4#ammunist'"><div>Ammunist</div></a>
-				<a onclick="window.location = 'battle.html?4#ciftian'"><div>Ciftian</div></a>
-				<a onclick="window.location = 'battle.html?4#citatian'"><div>Citatian</div></a>
+				<a onclick="window.location = 'battle.html?5#aonarchy'"><div>Aonarchy</div></a>
+				<a onclick="window.location = 'battle.html?5#ammunist'"><div>Ammunist</div></a>
+				<a onclick="window.location = 'battle.html?5#ciftian'"><div>Ciftian</div></a>
+				<a onclick="window.location = 'battle.html?5#citatian'"><div>Citatian</div></a>
 			</main>
-			<!-- <divider class="clear"></divider> -->
-			<!--<a class="text" onclick="window.open('https://bocracy.com/2', '_top')"><h4>Alpha Test</h4></a>
-			<divider></divider>
-				<div class="ads"><p>
-	            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	            <ins class="adsbygoogle"
-	                style="display:block"
-	                data-ad-client="ca-pub-9778270788893963"
-	                data-ad-slot="2347758531"
-	                data-ad-format="auto"></ins>
-	            <script>
-	            	(adsbygoogle = window.adsbygoogle || []).push({});
-	            </script>
-	        </p></div> -->
+			<divider></divider><font size="5">Freeplay</font>
+			<main id="freeplay">
+				<a onclick="window.location = 'battle.html?5#bictatorship'"><div>Bictatorship</div></a>
+				<a onclick="window.location = 'battle.html?5#bocracy'"><div>bOcracy</div></a>
+				<a onclick="window.location = 'battle.html?5#dinotera'"><div>Dinotera</div></a>
+				<a onclick="window.location = 'battle.html?5#alinar'"><div>Alinar Snows</div></a>
+				<a onclick="window.location = 'battle.html?5#cerotopis'"><div>Cerotopis</div></a>
+				<a onclick="window.location = 'battle.html?5#citopia'"><div>Citopia</div></a>
+				<a onclick="window.location = 'battle.html?5#fantasy'"><div>Fantasy Land</div></a>
+				<a onclick="window.location = 'battle.html?5#original'"><div>bVille</div></a>
+			</main>
 			<audio loop autoplay><source src="snd/theme.wav" type="audio/wav"></audio>
 			<div id="mapDiv">
 				<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
@@ -87,7 +70,7 @@
 				  <area shape="rect" coords="416,530,466,571" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
 				  <area shape="rect" coords="360,313,404,354" title="Battleground" ontouchend="window.location='battle.html#ammunist'">
 				  <area shape="rect" coords="1005,1061,1099,1151" title="Alinar Snows Freeplay" ontouchend="window.location='battle.html#alinar'">
-				  <area shape="rect" coords="964,199,1031,3" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';">
+				  <area shape="rect" coords="964,199,1031,3" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';imageMapResize()">
 				  <area shape="rect" coords="416,645,457,683" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
 				  <area shape="rect" coords="647,557,683,595" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
 				  <area shape="rect" coords="495,557,527,589" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)window.location='multiplayer.html#ammunist';else window.location='multiplayer.html#aonarchy'">
@@ -113,32 +96,10 @@
 				  <area shape="rect" coords="79,416,158,486" title="Citatian Store" ontouchend="window.location='store.html#citatian'">
 				  <area shape="poly" coords="536,665,498,721,560,782,571,806,545,844,416,776,448,601,495,577,609,586,639,612,615,671" title="Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)window.location='battle.html#citopia';else if (rand < 0.2)window.location='battle.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)window.location='battle.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)window.location='battle.html#citatian';">
 				  <area shape="rect" coords="519,680,565,738" title="Multiplayer Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)window.location='multiplayer.html#citopia';else if (rand < 0.2)window.location='multiplayer.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)window.location='multiplayer.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)window.location='multiplayer.html#citatian';">
-				  <area shape="rect" coords="1025,1192,1125,1494" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block';">
+				  <area shape="rect" coords="1025,1192,1125,1494" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block';imageMapResize()">
 				</map>
 			</div>
-<!-- 			<div id="confirmPopup">
-	            <h2>Are you sure?</h2><div class="divider"></div>
-	            <h3 id="confirmText"></h3>
-	            <footer>
-	                <div class="divider"></div>
-	                <div id="confirmYesBtn" class="button">Yes</div>
-	                <div id="confirmNoBtn" class="button">No</div>
-	            </footer>
-	        </div> -->
-	        <!-- <div id="popupOverlay"></div> -->
-	        <!-- <div id="story" ontouchend="window.location='https://bocracy.com/story'"></div> -->
-	    	<!-- <div id="whatsNew">
-	    		<img id="exit" src="btn/exit.png" width="32" height="32" ontouchend="document.getElementById('whatsNew').style.display='none'" />
-	    		<h2>What's New?</h2>
-	    		<divider></divider>
-	    		<div>
-	    			<h3>v1.1.0</h3>
-	    			<arial>World Map<br />Stores<br />7 new battlegrounds<br />A story line<br />New music<br />New cortofa continent<br />Brand new characters<br />Country Flags<br />Other major and minor things<br />Sped up loading<br />Many bug fixes and improvements<br /></ul></arial>
-	    		</div>
-	    	</div> -->
-	    </div>
-	    <div id="loader"></div>
-	    <script src="live.min.js?4"></script>
-		<script src="selector.min.js?4"></script>
+	    <script src="live.min.js?5"></script>
+<!--		<script src="selector.min.js?5"></script>-->
 	</body>
 </html>

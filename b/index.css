@@ -70,6 +70,7 @@ header {
 	background-color: #b30005;
 	white-space: nowrap;
 }
+/*
 #banner {
 	width: 200px;
 	height: 200px;
@@ -77,4 +78,4 @@ header {
 	right: 0px; top: 0px;
 }
 #banner img, #banner { pointer-events: none; }
-@media screen and (max-width: 499px) { #banner { zoom: 50%; }}
+@media screen and (max-width: 499px) { #banner { zoom: 50%; }}*/
