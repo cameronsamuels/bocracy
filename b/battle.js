@@ -20,6 +20,15 @@ var game = { on : 'false',
 		id('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
 		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 		id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+		id('bName').style.fontSize = (10-(id('bName').innerHTML.length/2)||2) + "vw";
+		
+		id('aName').style.fontSize = Math.min((10-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw','')) + "vw";
+		
+		id('bName').style.fontSize = Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw','')) + "vw";
+		if (id('bName').style.fontSize.replace('vw','')<2) {
+			id('bName').style.fontSize = "2vw";
+			id('aName').style.fontSize = "2vw";
+		}
 	}, all : function() {
 		game.refresh.display();
 		window.requestAnimationFrame(game.refresh.all);

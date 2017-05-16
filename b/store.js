@@ -54,4 +54,68 @@ function refreshStore(){
 		m.innerHTML += html;
 	}
 }
+function showConfirm(text, yes, no) {
+    id('confirmText').innerHTML = text;
+    id('confirmYesBtn').setAttribute('onclick', "eval(" + yes + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
+    id('confirmNoBtn').setAttribute('onclick', "eval(" + no + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
+    id('confirmPopup').style.display = "block";
+    id('popupOverlay').style.display = "block";
+}
+function showAlert(text) {
+    id('unlockedPopupText').innerHTML = text;
+    id('unlockedPopupImg').style.display = "none";
+    id('unlockedPopup').style.display = "block";
+    id('popupOverlay').style.display = "block";
+    id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");	
+}
+
+function unlockConfirmed(item) {
+	unlock(item);
+}
+
+function purchase(item) {
+	if (item.includes("."))
+	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
+	else showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')");
+}
+
+function unlock(item) {
+	if (!item.includes(".")) {
+		for (i = 0; i < goodNames[item].length; i++) {
+			if (localStorage[goodNames[item][i]] == "false") {
+				break;
+			} else if (i == (goodNames[item].length) - 1) {
+				showAlert("You have unlocked all the characters here");
+				setTimeout(function(){id('popupOverlay').style.display = "block"},500);
+				return;
+			}
+		}
+		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
+		while (localStorage[unlocked] == 'true') {
+			unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
+		}
+		localStorage.coins -= 500;
+	} else {
+		var unlocked = item.toString().split('.')[1];
+        if (localStorage[good[unlocked].name] == "true") {
+			showAlert("You have unlocked this character already");
+			return;
+		}
+        if (localStorage.coins < good[unlocked].info[2]) {
+			showAlert("Insufficient redbacks");
+			return;
+		}
+		localStorage.coins -= good[unlocked].info[2];
+	}
+	localStorage[unlocked] = 'true';
+	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
+	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
+	id('unlockedPopupImg').style.display = "block";
+	id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
+	id('unlockedPopup').style.display = "block";
+	id('popupOverlay').style.display = "block";
+	id('coins').innerHTML = localStorage.coins;
+	refreshStore();
+}
 refreshStore();
