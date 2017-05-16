@@ -65,7 +65,8 @@ header {
     width: 20px;
     margin-top: 5px;
 	position: absolute;
-	top: 0
+	top: 0;
+	z-index: 2;
 }
 #refreshButton {
 	right: 0;

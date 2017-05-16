@@ -5,17 +5,20 @@
   src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
 }
 body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    background: url('img/wood.png');
-    background-color: #654620;
+    background: url('img/wood.png') #654620;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
 }
+body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #content, #adContainer, #contentElement, #popupOverlay { width: 100% }
+#content, #adContainer, #confirmPopup, #unlockedPopup, #confirmPopup footer, #unlockedPopup footer, #popupOverlay { position: absolute }
+#confirmPopup h3, body, html { margin: 0 }
+.button, header a, main section div { cursor: pointer }
+#content, #adContainer, #popupOverlay { top: 0 }
+#content, #adContainer, main .button, #popupOverlay { left: 0 }
+#content, #adContainer, #mainContainer, #contentElement, body, html, #popupOverlay { height: 100% }
 .button {
     border: 1px #2E40A4 solid;
     background-color: #3F51B5;
@@ -25,7 +28,6 @@ body, html {
     color: white;
     font-size: 12px;
     padding: 8px 15px;
-    cursor: pointer;
     width: calc(100% - 50px);
 }
 .button:hover {
@@ -36,9 +38,6 @@ header {
     font-size: 5vw;
     line-height: 5vw;
     padding: 5px;
-/*    position: absolute;*/
-/*    top: 0px;*/
-/*    left: 0px;*/
     width: calc(100% - 10px);
     text-align: right;
     z-index: 5;
@@ -47,35 +46,19 @@ header {
 @media screen and (min-width: 700px){ header{font-size:2.5vw} #coinsImg { height: 2.5vw }}
 header div { display: inline-block }
 #coins { background: #654620 }
-header .button {
-    width: 150px !important;
-    text-align: center;
-    padding: 0px;
-    margin: 0px !important;
-    height: 25px;
-    line-height: 25px;
-    position: relative;
-    top: -5px;
+#playButton {
+	max-width: 350px;
+    margin: auto;
+    height: 50px;
+	line-height: 50px;
+	font-size: 25px;
 }
 #mainContainer {
     position: relative;
-    width: 100%;
-    height: 100%;
     display: none;
     background: #000;
 }
-
-#content, #adContainer {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
 #contentElement {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 #mainContainer {
@@ -86,9 +69,7 @@ header .button {
     box-shadow: 1px 1px 1px #2a2a2a;
     border-radius: 25px;
     z-index: 1;
-    text-align: center;
     display: none;
-    position: absolute;
 }
 #confirmPopup {
     height: 200px;
@@ -108,32 +89,24 @@ header .button {
     top: calc(50% - 150px);
     left: calc(50% - 125px);
 }
-#confirmPopup footer, #unlockedPopup footer { position: absolute; bottom: 5px; width: 100%; }
-#confirmPopup h3 { margin: 0px; }
+#confirmPopup footer, #unlockedPopup footer { bottom: 5px }
 #unlockedPopupImg { margin: 0px calc(50% - 62.5px); }
 #confirmYesBtn, #confirmNoBtn {
     width: calc(42.5% - 30px) !important;
     margin: 1px calc(1% - 0.5px) !important;
 }
 #popupOverlay {
-    width: 100%;
-    height: 100%;
     background: #2a2a2a;
-    opacity: 0.25;
+    opacity: 0.5;
     display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
 }
 header a {
     float: left;
     clear: both;
-    cursor: pointer;
 }
 main .button {
     width: 100px;
     display: block;
-    left: 0;
     right: 0;
     margin: 5px auto;
 }
@@ -159,11 +132,7 @@ main section div {
     float: left;
     word-wrap: break-word;
     font-size: 16px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-color: #563f22;
-    cursor: pointer;
+    background: #563f22 no-repeat 100%/cover;
 }
 @media screen and (max-width: 500px) {
     main section div {
@@ -187,6 +156,4 @@ main section div {
         line-height: calc(50vw - 60px);
     }
 }
-::-webkit-scrollbar {
-    width: 0px;
-}
+::-webkit-scrollbar { width: 0 }
