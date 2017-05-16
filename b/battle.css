@@ -19,6 +19,22 @@ body, html {
 .clear { clear: both }
 red { color: #b30005 }
 a { color: white; text-decoration: underline; cursor: pointer;}
+.button {
+    border: 1px #fff solid;
+    background-color: #2E40A4;
+    display: inline-block;
+    margin: 2.5px 9px;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: calc(100% - 50px);
+}
+.button:hover {
+    background-color: #3F51B5;
+    border: 1px #2E40A4 solid;
+}
 @media screen and (min-height:351px), screen and (min-width:620px) {
     header { height: 50px!important; line-height: 50px!important }
     section { height: calc(100% - 50px) }
@@ -66,8 +82,6 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     margin-top: 25px !important;
     margin-left: 25%;
 }
-#aButton, #bButton {
-}
 #clickToStart {
     position: absolute;
     top: 25px;
@@ -95,14 +109,6 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     transition: width 0.25s;
 }
 #aName, #bName { font-size: 25px; margin: 5px 0 }
-#popup {
-    display: none;
-    position: absolute;
-    top: calc(50% - 100px);
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 200px
-}
 #overlay {
     display: none;
     background: #3F51B5;
@@ -126,6 +132,7 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     height: 26.56px;
 	display: inline-block;
 	margin-right: 10vh;
+	font-size: 5vh;
 }
 #overlayStats h5:last-child {
 	margin-right: 0px;
@@ -185,4 +192,4 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
 @-webkit-keyframes aSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
 @keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
 @-webkit-keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
-#rotate { height: 200px; width: 178px; left: calc(50% - 89px) }
+#rotate { height: 80vw; width: 80vw; left: calc(50% - 89px) }
