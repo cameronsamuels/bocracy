@@ -193,3 +193,4 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
 @keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
 @-webkit-keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
 #rotate { height: 80vw; width: 80vw; left: calc(50% - 89px) }
+#portrait h3 { color: #fff }

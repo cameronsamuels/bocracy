@@ -34,8 +34,8 @@ var game = { on : 'false',
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
 		if (side == 'green') {
-			if (current.includes('+')) var coinsEarned = bad[a.name].info[2] * 0.2;
-			else if (newStats == 'true') var coinsEarned = bad[a.name].info[2] * 0.05;
+			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
+			else if (newStats == 'true') var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			else var coinsEarned = 10;
 			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
