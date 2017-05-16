@@ -5,7 +5,7 @@
   src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
 }
 body, html {
-	margin: 0px;
+	margin: 0;
 	text-align: center;
 	font-family: 'Syncopate', sans-serif;
 	user-select: none;
@@ -16,16 +16,17 @@ body, html {
 body, html, #mapDiv { height: 100% }
 body, html, divider, header, #mapDiv { width: 100% }
 #backButton, .button, #countries img, #freeplay a, #normal a { cursor: pointer }
-#backButton, #legend, #mapDiv img:not(#legend) { position: absolute }
-divider, .button, #countries img, #freeplay a, #normal a { display: inline-block }
+#backButton, #mapDiv img, #mapDiv { position: absolute }
+divider, .button, #countries img, #freeplay a, #normal a, font { display: inline-block }
 #mapDiv, #mapDiv img:not(#legend) { display: none }
 #mapDiv, body, html { background: #3F51B5 }
 #freeplay a, #normal a, .button:hover { background: #2E40A4 }
-#mapDiv, #backButton, #legend { left: 0px }
+#mapDiv, #backButton, #mapDiv img { left: 0 }
+#mapDiv img { bottom: 0 }
 divider { border: 1px #fff dashed }
 .button {
 	border: 1px #2E40A4 solid;
-	margin: 2.5px 9px !important;
+	margin: 2.5px 9px;
 	border-radius: 3px;
     font-size: 16px;
     padding: 8px 15px;
@@ -36,31 +37,27 @@ header { position: relative }
 @media screen and (max-width: 500px) { #countries img, #freeplay a, #normal a  { width: 40% !important; margin: 4% !important; }}
 #countries img, #freeplay a, #normal a {
 	text-decoration: none;
-	margin: 2%;
+	margin: 0 2% 2% 2%;
 	width: 20%;
 }
 #freeplay a, #normal a {
-	padding: 2.5% 0px;
+	padding: 2.5% 0;
 	font-size: 70%;
 }
-#title { font-size: 37px }
+#title { font-size: 37px;margin-top:7px }
+font { margin: 7px 0 }
 #backButton {
     width: 37px;
 }
 #mapDiv {
-   	position: fixed;
-	top: 0px;
+	top: 0;
 }
 #legend {
 	width: 150px;
-	bottom: 0px;
 	pointer-events: none;
 }
 #mapDiv img:not(#legend) {
-	z-index: -1;
-	left: 0;
 	right: 0;
-	bottom: 0;
 	margin: auto;
 }
 @media screen and (orientation: landscape) {
@@ -74,4 +71,4 @@ header { position: relative }
 		top: 0;
 	}
 }
-::-webkit-scrollbar { width: 0px }
+::-webkit-scrollbar { width: 0 }
