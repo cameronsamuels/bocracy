@@ -39,7 +39,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     header { height: 50px!important; line-height: 50px!important }
     section { height: calc(100% - 50px) }
     #backButton, #refreshButton { width: 30px!important; margin-top: 10px!important }
-    #title { font-size: 30px!important; margin-left: calc(50% - 120px)!important }
+    #title { font-size: 30px!important }
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
@@ -56,18 +56,29 @@ header {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    background: #3F51B5
+    background: #3F51B5;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 #backButton, #refreshButton {
     width: 20px;
     margin-top: 5px;
-    float: left
+	position: absolute;
+	top: 0
 }
-#refreshButton { float: right }
+#refreshButton {
+	right: 0;
+}
+#backButton {
+	left: 0;
+}
 #title {
     font-size: 15px;
-    float: left;
-    margin-left: calc(50% - 75px)
+/*    float: left;*/
+	text-align: center;
+	position: relative;
+/*    margin-left: calc(50% - 75px)*/
 }
 section { width: 50%; height: calc(100% - 30px); float: left; position: relative; }
 #bSection { background: #64DD17 }

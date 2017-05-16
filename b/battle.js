@@ -154,7 +154,8 @@ function load() {
 			if (stats[i] == 'speed') a.speed / 1.25;
 			else a[stats[i]] *= 1.25;
 		}
-	}	
+	}
+	id('title').innerHTML = current;
 }
 function restart() {
 	game.on = 'false';
