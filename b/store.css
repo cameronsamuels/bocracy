@@ -34,17 +34,17 @@ body, html {
 }
 header {
     font-size: 5vw;
-    line-height: 36px;
-    vertical-align: middle;
-    padding: 1px;
+    line-height: 5vw;
+    padding: 5px;
 /*    position: absolute;*/
 /*    top: 0px;*/
 /*    left: 0px;*/
-    width: 100%;
+    width: calc(100% - 10px);
     text-align: right;
     z-index: 5;
 }
-@media screen and (min-width: 700px){ header{font-size:2.5vw}}
+#coinsImg { height: 5vw;vertical-align: middle; }
+@media screen and (min-width: 700px){ header{font-size:2.5vw} #coinsImg { height: 2.5vw }}
 header div { display: inline-block }
 #coins { background: #654620 }
 header .button {
