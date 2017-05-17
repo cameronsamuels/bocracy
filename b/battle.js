@@ -5,16 +5,10 @@ if (window.location.hash != '') current = window.location.hash.toString().replac
 var game = { on : 'false',
 	refresh : { display : function() {
 		var bName = b.name;
-		while (bName.includes('_') || bName.includes('-')) { bName = bName.toString().replace('_', '-').replace('--', '^').replace('-', ' '); }
-		while (bName.includes('^')) { bName = bName.replace('^', '-'); }
-		bName = bName.replace('D', '.');
+		bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
 		id('bName').innerHTML = bName + ' ' + goodNames.url;
 		var aName = a.name;
-		while (aName.includes('_') || aName.includes('-')) {
-			aName = aName.toString().replace('_', '-').replace('--', '^').replace('-', ' ');
-		}
-		while (aName.includes('^')) { aName = aName.replace('^', '-'); }
-		aName = aName.replace('D', '.').replace('Boss', '');
+		aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
 		id('aName').innerHTML = aName + ' ' + badNames.url;
 		id('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		id('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
@@ -68,6 +62,7 @@ var game = { on : 'false',
 				id('clickToStart').style.display = 'none';
 				setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
 				clicks++;
+				if (a.health == 0) game.win('green');
 			} else if (atk == 'red') {
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
@@ -79,8 +74,8 @@ var game = { on : 'false',
 				id('aSword').style.WebkitAnimationName = "aSword";
 				id('aSword').style.animationName = "aSword";
 				setTimeout("id('aSword').style.display = 'none';id('aSword').style.WebkitAnimationName = '';id('aSword').style.animationName = '';", 100);
+				if (b.health == 0) game.win('red');
 			}
-			if (b.health == 0 || a.health == 0) game.win(atk);
 		}
 	}, heal : function(side) {
 		if (game.on == 'true') {

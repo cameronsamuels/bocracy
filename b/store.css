@@ -112,7 +112,7 @@ main .button {
 }
 main {
 	overflow-y: scroll;
-	height: calc(100% - 5vw);
+	height: calc(100% - 5vw - 73px);
 	width: 100vw;
 }
 @media screen and (min-width:700px) { main{height: calc(100% - 2.5vw);}}
