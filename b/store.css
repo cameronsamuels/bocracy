@@ -35,17 +35,21 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
     border: 1px #3F51B5 solid;
 }
 header {
-    font-size: 5vw;
-    line-height: 5vw;
+    font-size: 7vw;
+    line-height: 7vw;
     padding: 5px;
     width: calc(100% - 10px);
     text-align: right;
-    z-index: 5;
 }
-#coinsImg { height: 5vw;vertical-align: middle; }
-@media screen and (min-width: 700px){ header{font-size:2.5vw} #coinsImg { height: 2.5vw }}
+#coinsImg { vertical-align: middle; }
+@media screen and (min-width: 500px){ header{font-size:4vw !important;line-height:4vw} #coinsImg, #backButton { height: 4vw!important }}
 header div { display: inline-block }
 #coins { background: #654620 }
+#backButton {
+    left: 0;
+	position: absolute;
+}
+#coinsImg, #backButton { height: 7vw }
 #playButton {
 	max-width: 350px;
     margin: auto;
@@ -95,14 +99,14 @@ header div { display: inline-block }
     width: calc(42.5% - 30px) !important;
     margin: 1px calc(1% - 0.5px) !important;
 }
+#confirmPopup p {
+	font-size: 90%;
+	color: #555;
+}
 #popupOverlay {
     background: #2a2a2a;
     opacity: 0.5;
     display: none;
-}
-header a {
-    float: left;
-    clear: both;
 }
 main .button {
     width: 100px;

@@ -1,6 +1,6 @@
 if (window.location.hash != '') {
     var current = window.location.hash.toString().replace('#', '');
-if (current.includes("firstTime")) {
+//if (current.includes("firstTime")) {
 	// if (localStorage.hasAonarchy == undefined) {
 	// 	localStorage.coins = 500;
 	// 	localStorage.hasAonarchy = 'true';
@@ -17,17 +17,18 @@ if (current.includes("firstTime")) {
 	// 	localStorage.coins = 500;
 	// 	localStorage.hasCitatian = 'true';
 	// 	unlock(current.replace("firstTime", ""));
-	if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] == undefined) {
-		if (localStorage.coins) localStorage.coins = parseFloat(localStorage.coins) + 500;
-		else localStorage.coins = 500;
-		localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] = 'true';
-		unlock(current.replace('firstTime', ''));
-	} else {
-		window.location = window.location.toString().replace('firstTime', '');
-		location.reload();	
-	}
-}
-//else if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] != undefined) purchase(current);
+//	if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] == undefined) {
+//		if (localStorage.coins) localStorage.coins = parseFloat(localStorage.coins) + 500;
+//		else localStorage.coins = 500;
+//		localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] = 'true';
+//		unlock(current.replace('firstTime', ''));
+//	} else {
+//		window.location = window.location.toString().replace('firstTime', '');
+//		location.reload();	
+//	}
+//}
+//if (localStorage['has' + current.charAt(0).toUpperCase() + current.substring(1)] != undefined) 
+	purchase(current);
 //else {
 //	window.location.hash = "#firstTime" + current;
 //	location.reload();
@@ -75,8 +76,8 @@ function unlockConfirmed(item) {
 
 function purchase(item) {
 	if (item.includes("."))
-	showConfirm("Buy " + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + " for " + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks?", "unlockConfirmed('" + item + "')");
-	else showConfirm("Buy a character from " + item + " for 500 redbacks?", "unlockConfirmed('" + item + "')");
+	showConfirm("<p>Purchase</p>" + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + "<p>for<br />" + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks</p>", "unlockConfirmed('" + item + "')");
+	else showConfirm("<p>Purchase random</p>" + item + " <p>character for<br />500 redbacks</p>", "unlockConfirmed('" + item + "')");
 }
 
 function unlock(item) {
