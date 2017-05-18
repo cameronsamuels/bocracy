@@ -42,6 +42,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     #title { font-size: 30px!important }
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
+@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:25px!important;}#clickToStart{top:25px!important;}}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (orientation:portrait) {
@@ -81,9 +82,9 @@ header {
 	position: relative;
 /*    margin-left: calc(50% - 75px)*/
 }
-section { width: 50%; height: calc(100% - 30px); float: left; position: relative;background: 0%/50% no-repeat; }
-#bSection { background: #64DD17 }
-#aSection { background: #b30005;background-position: 50% }
+section { width: 50%; height: calc(100% - 30px); float: left; position: relative;background-size: 300%;background-repeat: no-repeat; }
+#bSection { background-color: #64DD17;;background-position: 0% 80% }
+#aSection { background-color: #b30005;background-position: 50% 80% }
 #aButton, #bButton, #clickToStart {
     width: 50%;
     padding: 25% 0px;
@@ -91,18 +92,18 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;
-    margin-top: 25px !important;
     margin-left: 25%;
 }
+#bButton, #aButton { margin-top: 25vh }
 #clickToStart {
     position: absolute;
-    top: 25px;
+    top: 25vh;
     left: 25%;
     opacity: 0.8;
     background-color: #3F51B5;
     color: white;
     font-weight: 800;
-    margin: 0px !important;
+    margin: 0px;
     font-size: 20px;
     padding: calc(25% - 10px) 0px;
     line-height: 20px;

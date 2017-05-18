@@ -155,8 +155,15 @@ function load() {
     http.open('HEAD', 'img/' + current.replace('+', '') + ".svg", false);
     http.send();
     if (http.status != 404) {
-		id('bSection').backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-		id('aSection').backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('aButton').style.backgroundColor = 'transparent';
+		id('bButton').style.backgroundColor = 'transparent';
+	} else {
+		id('bSection').style.backgroundImage = '';
+		id('aSection').style.backgroundImage = '';
+		id('aButton').style.backgroundColor = '';
+		id('bButton').style.backgroundColor = '';
 	}
 }
 function restart() {
