@@ -151,6 +151,13 @@ function load() {
 		}
 	}
 	id('title').innerHTML = current;
+	var http = new XMLHttpRequest();
+    http.open('HEAD', 'img/' + current.replace('+', '') + ".svg", false);
+    http.send();
+    if (http.status != 404) {
+		id('bSection').backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('aSection').backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+	}
 }
 function restart() {
 	game.on = 'false';

@@ -81,9 +81,9 @@ header {
 	position: relative;
 /*    margin-left: calc(50% - 75px)*/
 }
-section { width: 50%; height: calc(100% - 30px); float: left; position: relative; }
+section { width: 50%; height: calc(100% - 30px); float: left; position: relative;background: 0%/50% no-repeat; }
 #bSection { background: #64DD17 }
-#aSection { background: #b30005 }
+#aSection { background: #b30005;background-position: 50% }
 #aButton, #bButton, #clickToStart {
     width: 50%;
     padding: 25% 0px;
