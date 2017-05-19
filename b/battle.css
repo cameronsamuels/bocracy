@@ -63,7 +63,7 @@ header {
 	left: 0;
 }
 #backButton, #refreshButton {
-    width: 20px;
+    width: 30px;
     margin-top: 5px;
 	position: absolute;
 	top: 0;
@@ -75,8 +75,10 @@ header {
 #backButton {
 	left: 0;
 }
+@media screen and (orientation:landscape){#title{font-size: 25px;}}
 #title {
-    font-size: 15px;
+    font-size: 25px;
+	margin-top: 5px;
 /*    float: left;*/
 	text-align: center;
 	position: relative;
@@ -112,15 +114,24 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     height: 20px;
     margin: 0 calc(50% - 90px);
     background: #F44336;
-    border: 4px #3F51B5 solid
+    border: 4px #000 solid;
+	position: relative;
 }
-#aHealth #aHealthBar, #bHealth #bHealthBar {
+#aHealthBar, #bHealthBar {
     width: 100%;
     height: 100%;
     background: #64DD17;
     transition: width 0.25s;
+	position: absolute;
 }
-#aName, #bName { margin: 5px 0;font-weight:900; }
+#aHealth p, #bHealth p {
+	position: relative;
+    margin: 0;
+    top:  0;
+    line-height: 20px;
+	font-weight: 900;
+}
+#aName, #bName { margin: 5px 0;font-weight:900;display:inline-block; }
 #aName { background:#b30005}
 #bName { background:#64DD17}
 #overlay {
