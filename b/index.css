@@ -54,13 +54,17 @@ main {
 }
 #battleground div, #characters div {
 	margin: 0 2% 2% 2%;
-	width: 20%;
-	padding: 5% 0;
-	font-size: 90%;
+	padding: 3% 0;
+	font-size: 80%;
 	background: #2E40A4;
 	display: inline-block;
 	cursor: pointer;
 }
+#battleground {
+	border-bottom: 4px #fff solid;
+}
+#battleground div { width: 20% }
+#characters div { width: 28% }
 #characters div {
 	border-radius: 50px
 }

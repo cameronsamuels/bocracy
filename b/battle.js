@@ -47,6 +47,11 @@ var game = { on : 'false',
 					setTimeout(function(){id('restartText').style.display = "block"}, 750);
 					id('overlay').style.display = "block";
 					game.on = 'false';
+					series.t = 1;
+					series.c = 0;
+					series.b = [];
+					series.a = [];
+					return;
 				}
 				b.name = localStorage['b' + series.t];
 				b.health = good[b.name].stats[1];
