@@ -27,15 +27,15 @@ function startPlay() {
 		localStorage['b' + (i+1)] = characters[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	}
 	localStorage.sc = characters.length;
-	location = "battle.html#series" + b;
+	location = "battle.html?12#series" + b;
 }
-//if (isMobile.any()) {
-//	id('battleground').ontouchend = battleground;
-//	id('characters').ontouchend = character;
-//}
-//else {
+if (isMobile.any()) {
+	id('battleground').addEventListener('touchend', battleground);
+	id('characters').addEventListener('touchend', character);
+}
+else {
 	id('battleground').onclick = battleground;
 	id('characters').onclick = character;
-//}
+}
 id("body").style.backgroundPosition=1e2*Math.random()+"%";
 id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>citatian</div><div>ciftian</div>";

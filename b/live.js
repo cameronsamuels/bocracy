@@ -41,7 +41,7 @@ var goodNames = {
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
-}, battles = ['dinotera', 'citatian', 'ciftian', 'alinar', 'aonarchy', 'ammunist'], good = { }, bad = { };
+}, battles = ['dinotera', 'ciftian', 'alinar', 'aonarchy', 'ammunist'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];

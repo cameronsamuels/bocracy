@@ -29,12 +29,16 @@ var game = { on : 'false',
 	}}, win : function(side) {
 		if (series.w) {
 			if (side == 'green') {
-				a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
+				var aName = a.name;
+				do {
+					a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
+				} while (a.name == aName);
 				a.health = bad[a.name].stats[1];
 				a.orig_health = a.health;
 				a.attack = bad[a.name].stats[0];
 				a.speed = 450;
 				a.heal = bad[a.name].stats[2];
+				b.health = Math.min(b.orig_health, b.health*1.3);
 			} else {
 				series.t++;
 				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
@@ -62,8 +66,7 @@ var game = { on : 'false',
 		} else {
 		if (side == 'green') {
 			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
-			else if (newStats == 'true') var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
-			else var coinsEarned = 10;
+			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
 			id('sound').src = "snd/victory.wav";
@@ -91,10 +94,9 @@ var game = { on : 'false',
 				if (newStats == 'true')	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
 				if (('url("img/' + weapon + '.png")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 				id('bSword').style.display = "block";
-				id('bSword').style.WebkitAnimationName = "bSword";
 				id('bSword').style.animationName = "bSword";
 				id('clickToStart').style.display = 'none';
-				setTimeout("id('bSword').style.display = 'none';id('bSword').style.WebkitAnimationName = '';id('bSword').style.animationName = '';", 100);
+				setTimeout("id('bSword').style.display = 'none';id('bSword').style.animationName = '';", 100);
 				clicks++;
 				if (a.health == 0) game.win('green');
 			} else if (atk == 'red') {
@@ -105,9 +107,8 @@ var game = { on : 'false',
 				if (newStats == 'true')	{ if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5]; }
 				if (('url("img/' + weapon + '.png")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 				id('aSword').style.display = "block";
-				id('aSword').style.WebkitAnimationName = "aSword";
 				id('aSword').style.animationName = "aSword";
-				setTimeout("id('aSword').style.display = 'none';id('aSword').style.WebkitAnimationName = '';id('aSword').style.animationName = '';", 100);
+				setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
 				if (b.health == 0) game.win('red');
 			}
 		}
@@ -137,7 +138,7 @@ function load() {
 		id('sound').src = 'snd/sound.wav';
 		id('audio').load(); id('audio').play();
 	}
-	if (!window.location.toString().includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
+	if (!window.location.hash.includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "ciftian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
@@ -155,9 +156,16 @@ function load() {
 	if (series.w) {
 		b.name = localStorage.b1;
 	} else {
-		b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
+		var bName = b.name;
+		do {
+			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
+		} while (b.name == bName);
+
 	}
-	a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
+	var aName = a.name;
+	do {
+		a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
+	} while (a.name == aName);
 	if (newStats == 'false') {
 		while (b.name == a.name) { b.name = goodNames[current][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = Math.min(Math.random() * 2250, 2000);

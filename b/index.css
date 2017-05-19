@@ -29,7 +29,7 @@ body, html {
 main, body, html { width: 100% }
 .button:not(.big) { font-size: 3.7vw}
 @media screen and (orientation: portrait) { .button:not(.big) { font-size:6vw !important}}
-@media screen and (orientation: portrait) { .big { font-size:12vw !important}}
+@media screen and (orientation: portrait) { .big { font-size:12vw !important}#backButton{height: 5vh!important}}
 .full { width: calc(100% - 42px) }
 .big { font-size: 6vw; }
 main {
@@ -37,7 +37,6 @@ main {
 	margin: auto;
 }
 .btn {
-    border: 1px #3F51B5 solid;
     background-color: #2E40A4;
     margin: 2.5px 9px;
     border-radius: 6px;
@@ -53,18 +52,17 @@ main {
     border: 1px #2E40A4 solid;
 }
 #battleground div, #characters div {
-	margin: 0 2% 2% 2%;
+	margin: 1% 2%;
 	padding: 3% 0;
-	font-size: 80%;
+	font-size: 70%;
 	background: #2E40A4;
 	display: inline-block;
 	cursor: pointer;
+	width: 20%
 }
 #battleground {
 	border-bottom: 4px #fff solid;
 }
-#battleground div { width: 20% }
-#characters div { width: 28% }
 #characters div {
 	border-radius: 50px
 }
@@ -86,6 +84,9 @@ header {
 	top: 5px;
 	position: absolute;
 	height: 5vw
+}
+#select h2 {
+	margin: 5px;
 }
 #select {
 	display: none;

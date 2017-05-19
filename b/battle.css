@@ -42,7 +42,7 @@ a { color: white; text-decoration: underline; cursor: pointer;}
     #title { font-size: 30px!important }
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
-@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:25px!important;}#clickToStart{top:25px!important;}}
+@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (orientation:portrait) {
@@ -58,7 +58,7 @@ header {
     height: 30px;
     line-height: 30px;
     background: #3F51B5;
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -67,7 +67,7 @@ header {
     margin-top: 5px;
 	position: absolute;
 	top: 0;
-	z-index: 2;
+	z-index: 4;
 }
 #refreshButton {
 	right: 0;
@@ -80,24 +80,23 @@ header {
 /*    float: left;*/
 	text-align: center;
 	position: relative;
+	z-index: 3;
+	font-weight:900
 /*    margin-left: calc(50% - 75px)*/
 }
-section { width: 50%; height: calc(100% - 30px); float: left; position: relative;background-size: 300%;background-repeat: no-repeat; }
+section { width: 50%; height: 100%; float: left; position: relative;background-size: 300%;background-repeat: no-repeat; }
 #bSection { background-color: #64DD17;;background-position: 0% 80% }
 #aSection { background-color: #b30005;background-position: 50% 80% }
 #aButton, #bButton, #clickToStart {
     width: 50%;
     padding: 25% 0px;
-    background: #FFF;
-    background-size: cover;
-    background-position: 100%;
-    background-repeat: no-repeat;
+    background: #FFF 100%/cover no-repeat;
     margin-left: 25%;
 }
-#bButton, #aButton { margin-top: 25vh }
+#bButton, #aButton { margin-top: 15vh }
 #clickToStart {
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     left: 25%;
     opacity: 0.8;
     background-color: #3F51B5;
@@ -121,7 +120,9 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     background: #64DD17;
     transition: width 0.25s;
 }
-#aName, #bName { margin: 5px 0 }
+#aName, #bName { margin: 5px 0;font-weight:900; }
+#aName { background:#b30005}
+#bName { background:#64DD17}
 #overlay {
     display: none;
     background: #3F51B5;
@@ -131,6 +132,7 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
     top: 0;
     left: 0;
     color: white;
+	z-index: 10;
 }
 #overlay img, #overlayStats span {
     height: calc(20vh - 4px);
@@ -188,22 +190,17 @@ section { width: 50%; height: calc(100% - 30px); float: left; position: relative
 .theSword {
     display: none;
     position: absolute;
-    background-size: cover;
-    background-position: 100%;
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 50px;
+    background: 100%/cover no-repeat;
+    width: 26vh;
+    height: 13vh;
     animation-duration: 0.1s;
-    -webkit-animation-duration: 0.1s
 }
-#bSword { left: calc(75% - 125px); top: 125px }
+#bSword { left: calc(75% - 125px); top: 45vh }
 #aSword {
-    left: calc(25% + 125px); top: 75px;
+    left: calc(25% + 125px); top: 20vh;
     transform: rotate(180deg)
 }
 @keyframes bSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
-@-webkit-keyframes aSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
 @keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
-@-webkit-keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
 #rotate { height: 80vw; width: 80vw; left: calc(50% - 89px) }
 #portrait h3 { color: #fff }
