@@ -36,6 +36,34 @@ main {
 	max-width: 800px;
 	margin: auto;
 }
+.btn {
+    border: 1px #3F51B5 solid;
+    background-color: #2E40A4;
+    margin: 2.5px 9px;
+    border-radius: 6px;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    width: calc(100% - 50px);
+	position: absolute;
+	bottom: 0px;
+}
+.btn:hover {
+    background-color: #3F51B5;
+    border: 1px #2E40A4 solid;
+}
+#battleground div, #characters div {
+	margin: 0 2% 2% 2%;
+	width: 20%;
+	padding: 5% 0;
+	font-size: 90%;
+	background: #2E40A4;
+	display: inline-block;
+	cursor: pointer;
+}
+#characters div {
+	border-radius: 50px
+}
 @media screen and (min-height: 540px) and (max-height: 599px) and (orientation: portrait) {
 	main { max-width: 300px; }
 }
@@ -49,3 +77,19 @@ header {
 	font-size: 45px;
 	background-color: #b30005;
 }
+#backButton {
+    left: 5px;
+	top: 5px;
+	position: absolute;
+	height: 5vw
+}
+#select {
+	display: none;
+	position: absolute;
+	top: 0; left: 0;
+	background: #3F51B5;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 500px) { #characters div, #battleground div  {width: 40% !important; margin: 4% !important; }}

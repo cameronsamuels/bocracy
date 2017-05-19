@@ -51,6 +51,10 @@ function object(nm, stats, info, other) {
 	this.stats = stats;
 	this.info = info;
 	this.other = other;
+	if (localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined) {
+		localStorage[nm] = 'true';
+		localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
+	}
 	if (localStorage[nm] == undefined) localStorage[nm] = 'false';
 	if (info[1] == 'true') goodNames[info[0].replace('+', 'Boss')].push(nm);
 	else badNames[info[0].replace('+', 'Boss')].push(nm);

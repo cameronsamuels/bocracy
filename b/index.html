@@ -5,7 +5,7 @@
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<link rel="apple-touch-icon" href="https://bocracy.com/icon.png">
-	  	<link rel="stylesheet" type="text/css" href="index.min.css?9">
+	  	<link rel="stylesheet" type="text/css" href="index.min.css?10">
         <meta property="og:description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
         <meta property="og:image" content="https://bocracy.com/icon.png" />
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
@@ -23,13 +23,21 @@
 	<body id="body">
 		<header>b-Ocracy</header>
 		<main>
-			<div id="play" class="button full big" ontouchend="location='battle.html?9'">PLAY</div>
-			<div id="selector" class="button full" ontouchend="location='selector.html?9'">BATTLE SELECTOR</div>
-			<div id="store" class="button" ontouchend="location='store.html?9'">STORE</div>
-			<div id="credits" class="button" ontouchend="location='https://bocracy.com/credits?9'">CREDITS</div>
+			<div id="play" class="button full big" ontouchend="location='battle.html?10'">PLAY</div>
+			<div id="campaign" class="button" ontouchend="play()">CAMPAIGN</div>
+			<div id="selector" class="button" ontouchend="location='selector.html?10'">BATTLES</div>
+			<div id="store" class="button" ontouchend="location='store.html?10'">STORE</div>
+			<div id="credits" class="button" ontouchend="location='https://bocracy.com/credits?10'">CREDITS</div>
 		</main>
+		<div id='select'>
+			<a ontouchend="document.getElementById('select').style.display = 'none'"><img id="backButton" src="btn/back.png" /></a>
+			<h1>The Gathering</h1>
+			<section id="battleground"></section>
+			<section id="characters"></section>
+			<div class="btn" id="startPlay" ontouchend="startPlay()">Play</div>
+		</div>
 		<audio loop autoplay><source src="snd/theme.wav" type="audio/wav"></audio>
 	</body>
-	<script src="live.min.js?9"></script>
-	<script src="index.js?9"></script>
+	<script src="live.min.js?10"></script>
+	<script src="index.js?10"></script>
 </html>

@@ -1,7 +1,7 @@
 var newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
-current = battles[Math.floor(Math.random() * battles.length)], newStats, series = {w:window.location.hash.includes("series"),b:[],a:[],t:1,c:0};
-if (window.location.hash != '') current = window.location.hash.toString().replace('#', '').replace('series','');
+current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),b:[],a:[],t:1,c:0};
+if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
 var game = { on : 'false',
 	refresh : { display : function() {
 		var bName = b.name;
@@ -38,7 +38,7 @@ var game = { on : 'false',
 			} else {
 				series.t++;
 				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
-				if (series.t > 3) {
+				if (series.t > localStorage.sc) {
 					id('sound').src = "snd/loss.wav";
 					id('audio').load(); id('audio').play();
 					id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
@@ -132,7 +132,7 @@ function load() {
 		id('sound').src = 'snd/sound.wav';
 		id('audio').load(); id('audio').play();
 	}
-	if (!window.location.toString().includes('#')) current = battles[Math.floor(Math.random() * battles.length)];
+	if (!window.location.toString().includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "ciftian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
