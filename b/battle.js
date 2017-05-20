@@ -111,8 +111,8 @@ var game = { on : 'false',
 				setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
 				if (b.health == 0) game.win('red');
 			}
-			document.querySelector('#aHealth p').innerHTML = a.health + '/' + a.orig_health;
-			document.querySelector('#bHealth p').innerHTML = b.health + '/' + b.orig_health;
+			document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
+			document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 		}
 	}, heal : function(side) {
 		if (game.on == 'true') {
@@ -198,8 +198,8 @@ function load() {
 			else a[stats[i]] *= 1.25;
 		}
 	}
-	document.querySelector('#aHealth p').innerHTML = a.health + '/' + a.orig_health;
-	document.querySelector('#bHealth p').innerHTML = b.health + '/' + b.orig_health;
+	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
+	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	id('title').innerHTML = current;
 	try {
 		var http = new XMLHttpRequest();

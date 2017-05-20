@@ -1,9 +1,3 @@
-# STRONG HTACCESS PROTECTION #
-<Files ~ "^.*\.([Hh][Tt][Aa])">
- order allow,deny
- deny from all
-</Files>
-
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault "access 1 week"
@@ -11,35 +5,22 @@ ExpiresDefault "access 1 week"
 
 # Versions #
 Redirect 307 /live /beta
-Redirect 307 /beta /b?13
+Redirect 307 /beta /b?14
 Redirect 307 /alpha /a?u
 Redirect 307 /a /live
 
 # Listings and Places #
 Redirect 307 /ios https://appsto.re/us/OUwGib.i
-Redirect 307 /iphone https://appsto.re/us/OUwGib.i
-Redirect 307 /apple https://appsto.re/us/OUwGib.i
-Redirect 307 /ipad https://appsto.re/us/OUwGib.i
+Redirect 307 /iphone /ios
 Redirect 307 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
 Redirect 307 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
 Redirect 307 /kongregate http://www.kongregate.com/games/gaftop/b-ocracy
 Redirect 307 /itch.io https://satchmo.itch.io/bocracy
-Redirect 307 /indievideogames http://www.indievideogames.com/pages/project.php?project=231
 Redirect 307 /fb https://apps.facebook.com/1639840069651736/
-Redirect 307 /ludumdare http://ludumdare.com/compo/minild-71/?action=preview&uid=91735
 Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
-Redirect 307 /repo https://bitbucket.org/CameronSamuels/bocracy.com
 Redirect 307 /wikia http://bocracy.wikia.com/
 Redirect 307 /wiki http://bocracy.wikia.com/
 Redirect 307 /facebook https://facebook.com/bOcracy
-Redirect 307 /googleplus https://plus.google.com/communities/113037141930394908339
-Redirect 307 /crunchbase https://www.crunchbase.com/product/b-ocracy
-
-# Pages #
-Redirect 307 /bclick https://playbclick.com
-Redirect 307 /apps https://playbclick.com/apps
-Redirect 307 /more https://playbclick.com/apps
 
 # Company #
 Redirect 307 /support mailto:team@bocracy.com
-Redirect 307 /team /credits
