@@ -5,13 +5,12 @@ ExpiresDefault "access 1 week"
 
 # Versions #
 Redirect 307 /live /beta
-Redirect 307 /beta /b?14
+Redirect 307 /beta /b?15
 Redirect 307 /alpha /a?u
 Redirect 307 /a /live
 
 # Listings and Places #
 Redirect 307 /ios https://appsto.re/us/OUwGib.i
-Redirect 307 /iphone /ios
 Redirect 307 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
 Redirect 307 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
 Redirect 307 /kongregate http://www.kongregate.com/games/gaftop/b-ocracy

@@ -11,7 +11,8 @@ var goodNames = {
 			url : '',
 			original : ['santa', 'skater', 'saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
 			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
-			dinotera : ['triceratops', 't--rex', 'mosasaur', 'apatosaurus', 'carnotaurus'],
+			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
+			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			aonarchy : [],
 			aonarchyBoss : [],
@@ -28,7 +29,8 @@ var goodNames = {
 			url : '',
 			original : ['saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
 			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
-			dinotera : ['triceratops', 't--rex', 'mosasaur', 'apatosaurus', 'carnotaurus'],
+			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
+			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			aonarchy : [],
 			aonarchyBoss : [],
@@ -41,7 +43,7 @@ var goodNames = {
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
-}, battles = ['dinotera', 'ciftian', 'alinar', 'aonarchy', 'ammunist'], good = { }, bad = { };
+}, battles = ['dericil', 'alinar', 'aonarchy', 'ammunist'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];

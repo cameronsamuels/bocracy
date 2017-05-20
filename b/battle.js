@@ -201,22 +201,36 @@ function load() {
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	id('title').innerHTML = current;
-	try {
-		var http = new XMLHttpRequest();
-		http.open('HEAD', 'img/' + current.replace('+', '') + ".svg", false);
-		http.send();
-		if (http.status != 404) {
-			id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-			id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-			id('aButton').style.backgroundColor = 'transparent';
-			id('bButton').style.backgroundColor = 'transparent';
-		} else {
-			id('bSection').style.backgroundImage = '';
-			id('aSection').style.backgroundImage = '';
-			id('aButton').style.backgroundColor = '';
-			id('bButton').style.backgroundColor = '';
-		}
-	} catch (ex) {}
+//	try {
+//		var http = new XMLHttpRequest();
+//		http.open('HEAD', 'img/' + current.replace('+', '') + ".svg", false);
+//		http.send();
+//		if (http.status != 404) {
+//			id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+//			id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+//			id('aButton').style.backgroundColor = 'transparent';
+//			id('bButton').style.backgroundColor = 'transparent';
+//		} else {
+//			id('bSection').style.backgroundImage = '';
+//			id('aSection').style.backgroundImage = '';
+//			id('aButton').style.backgroundColor = '';
+//			id('bButton').style.backgroundColor = '';
+//		}
+//	} catch (ex) {}
+	var img = new Image();
+	img.onload = function() {
+		id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('aButton').style.backgroundColor = 'transparent';
+		id('bButton').style.backgroundColor = 'transparent';
+	};
+	img.onerror = function() {
+		id('bSection').style.backgroundImage = '';
+		id('aSection').style.backgroundImage = '';
+		id('aButton').style.backgroundColor = '';
+		id('bButton').style.backgroundColor = '';
+	};
+	img.src = 'img/' + current.replace('+', '') + '.svg';
 }
 function restart() {
 	game.on = 'false';
