@@ -2,51 +2,46 @@
 body, html {
 	width: 100%;
 	height: 100%;
-	margin: 0px;
+	margin: 0;
 	background: #3F51B5;
 	text-align: center;
 	color: white;
 	font-family: 'Syncopate', sans-serif;
-	overflow-y: scroll;
+	overflow-y: scroll
 }
 arial {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 	font-size: 80%;
 	font-weight: 200;
 }
-.button {
-	border: 1px #3F51B5 solid;
-	background-color: #2E40A4;
-	margin: 2.5px 9px !important;
-	border-radius: 3px;
+header div {
+    background: #fff;
+    margin: auto;
+    border-radius: 3px;
     font-size: 16px;
     padding: 8px 15px;
-    text-align: center;
-    user-select: none;
-    cursor: pointer;
-    width: calc(100% - 50px);
+	cursor: pointer;
+	user-select: none;
+	color: #2E40A4;
 }
-h2 { font-size: 30px; }
-divider {
+d {
 	display: inline-block;
 	border: 1px white dashed;
 	width: 120px;
-	margin: 2px 0px;
-	height: 0px;
+	height: 0;
 }
 header {
 	width: 100%;
-	height: 25px;
-	margin: 20px 0px;
-	line-height: 25px;
+	position: absolute;
+	background: #3F51B5
 }
-div:not(#title):not(.button) {
+header ~ div {
 	background: #2E40A4;
-	text-align: center;
-	width: 80%;
-	margin: 30px 5%;
-	padding: 2.5% 5%;
-	font-size: 110%;
+	margin: 8px 5%;
+	padding: 2% 5%;
 }
-a, a:visited  { color: white; }
-#title { font-size: 30px; }
+div { width: 80% }
+header + div { margin-top: 100px !important }
+a, a:visited  { color: white }
+h1 { margin: 0 }
+::-webkit-scrollbar { width:0}

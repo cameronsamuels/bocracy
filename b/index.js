@@ -5,9 +5,7 @@ function play() {
 function battleground(e) {
 	if (e.target.id != 'battleground' && !e.target.style.border) {
 	b = e.target.innerHTML;
-	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++) {
-		document.querySelectorAll('#battleground div')[i].style.border = '';
-	}
+	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++) document.querySelectorAll('#battleground div')[i].style.border = '';
 	e.target.style.border = "1px white solid";
 	id('characters').innerHTML = "";
 	for (i = 0; i < goodNames[b].length; i++) {
@@ -52,8 +50,7 @@ function startPlay() {
 if (isMobile.any()) {
 	id('battleground').addEventListener('touchend', battleground);
 	id('characters').addEventListener('touchend', character);
-}
-else {
+} else {
 	id('battleground').onclick = battleground;
 	id('characters').onclick = character;
 }

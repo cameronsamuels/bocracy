@@ -6,7 +6,7 @@
 }
 body, html {
 	height: 100%;
-	margin: 0px;
+	margin: 0;
 	text-align: center;
 	font-family: 'Syncopate', sans-serif;
 	user-select: none;
@@ -16,12 +16,12 @@ body, html {
     background: #b30005 url('img/landing.svg') 0px/cover;
 }
 .button {
-	border: 8px #2E40A4 solid;
-	background-color: #fff;
+	border: 8px #000 solid;
+	background: #fff;
     margin: 3px;
     cursor: pointer;
     width: calc(50% - 42px);
-    color: #2E40A4;
+    color: #000;
     font-weight: 800;
 	padding: 5vh 8px;
 }
@@ -67,12 +67,8 @@ main {
 	cursor: pointer;
 	width: 20%
 }
-#battleground {
-	border-bottom: 4px #fff solid;
-}
-#characters div {
-	border-radius: 50px
-}
+#battleground { border-bottom: 4px #fff solid }
+#characters div { border-radius: 50px }
 @media screen and (min-height: 540px) and (max-height: 599px) and (orientation: portrait) {
 	main { max-width: 300px; }
 }
@@ -84,7 +80,7 @@ main {
 }
 header {
 	font-size: 45px;
-	background-color: #b30005;
+	background: #b30005;
 }
 #backButton {
     left: 5px;

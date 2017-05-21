@@ -17,9 +17,9 @@ Redirect 307 /kongregate http://www.kongregate.com/games/gaftop/b-ocracy
 Redirect 307 /itch.io https://satchmo.itch.io/bocracy
 Redirect 307 /fb https://apps.facebook.com/1639840069651736/
 Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
-Redirect 307 /wikia http://bocracy.wikia.com/
+Redirect 307 /wikia /wiki
 Redirect 307 /wiki http://bocracy.wikia.com/
-Redirect 307 /facebook https://facebook.com/bOcracy
+Redirect 307 /facebook https://fb.me/bOcracy
 
 # Company #
 Redirect 307 /support mailto:team@bocracy.com
