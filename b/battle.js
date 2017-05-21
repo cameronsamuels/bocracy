@@ -89,10 +89,7 @@ var game = { on : 'false',
 			if (atk == 'green') {
 				a.health -= b.attack;
 				a.health = Math.max(0, a.health);
-				a.health = Math.min(a.orig_health, a.health);
-				var weapon  = 'sword';
-				if (newStats == 'true')	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
-				if (('url("img/' + weapon + '.png")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
+				a.health = Math.min(a.orig_health, a.health);				
 				id('bSword').style.display = "block";
 				id('bSword').style.animationName = "bSword";
 				id('clickToStart').style.display = 'none';
@@ -103,9 +100,6 @@ var game = { on : 'false',
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
-				var weapon  = 'sword';
-				if (newStats == 'true')	{ if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5]; }
-				if (('url("img/' + weapon + '.png")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.png")';
 				id('aSword').style.display = "block";
 				id('aSword').style.animationName = "aSword";
 				setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
@@ -231,6 +225,16 @@ function load() {
 		id('bButton').style.backgroundColor = '';
 	};
 	img.src = 'img/' + current.replace('+', '') + '.svg';
+	var aw  = 'sword', bw = 'sword';
+	try {
+		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+	} catch (ex) {}
+	try {
+		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+	} catch (ex){}
+	id('bSword').style.backgroundImage = 'url("img/' + bw + '.png")';
+	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
+	id('refreshButton').style.display = "";
 }
 function restart() {
 	game.on = 'false';

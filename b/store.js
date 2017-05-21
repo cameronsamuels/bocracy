@@ -1,38 +1,6 @@
 if (window.location.hash != '') {
     var current = window.location.hash.toString().replace('#', '');
-//if (current.includes("firstTime")) {
-	// if (localStorage.hasAonarchy == undefined) {
-	// 	localStorage.coins = 500;
-	// 	localStorage.hasAonarchy = 'true';
-	// 	unlock(current.replace("firstTime", ""));
-	// } else if (localStorage.hasCiftian == undefined) {
-	// 	localStorage.coins = 500;
-	// 	localStorage.hasCiftian = 'true';
-	// 	unlock(current.replace("firstTime", ""));
-	// } else if (localStorage.hasAmmunist == undefined) {
-	// 	localStorage.coins = 500;
-	// 	localStorage.hasAmmunist = 'true';
-	// 	unlock(current.replace("firstTime", ""));
-	// } else if (localStorage.hasCitatian == undefined) {
-	// 	localStorage.coins = 500;
-	// 	localStorage.hasCitatian = 'true';
-	// 	unlock(current.replace("firstTime", ""));
-//	if (localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] == undefined) {
-//		if (localStorage.coins) localStorage.coins = parseFloat(localStorage.coins) + 500;
-//		else localStorage.coins = 500;
-//		localStorage['has' + current.toString().replace('firstTime', '').charAt(0).toUpperCase() + current.toString().replace('firstTime', '').substring(1)] = 'true';
-//		unlock(current.replace('firstTime', ''));
-//	} else {
-//		window.location = window.location.toString().replace('firstTime', '');
-//		location.reload();	
-//	}
-//}
-//if (localStorage['has' + current.charAt(0).toUpperCase() + current.substring(1)] != undefined) 
 	purchase(current);
-//else {
-//	window.location.hash = "#firstTime" + current;
-//	location.reload();
-//}
 }
 id('coins').innerHTML = localStorage.coins;
 if (!isMobile.iOS()) id('playButton').style.display = 'none';
@@ -57,8 +25,8 @@ function refreshStore(){
 }
 function showConfirm(text, yes, no) {
     id('confirmText').innerHTML = text;
-    id('confirmYesBtn').setAttribute('onclick', "eval(" + yes + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
-    id('confirmNoBtn').setAttribute('onclick', "eval(" + no + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
+    id('confirmYesBtn').setAttribute('ontouchend', "eval(" + yes + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
+    id('confirmNoBtn').setAttribute('ontouchend', "eval(" + no + "); document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");
     id('confirmPopup').style.display = "block";
     id('popupOverlay').style.display = "block";
 }
@@ -67,7 +35,7 @@ function showAlert(text) {
     id('unlockedPopupImg').style.display = "none";
     id('unlockedPopup').style.display = "block";
     id('popupOverlay').style.display = "block";
-    id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");	
+    id('unlockedPopupBtn').setAttribute('ontouchend', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';");	
 }
 
 function unlockConfirmed(item) {
@@ -77,7 +45,7 @@ function unlockConfirmed(item) {
 function purchase(item) {
 	if (item.includes("."))
 	showConfirm("<p>Purchase</p>" + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + "<p>for<br />" + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks</p>", "unlockConfirmed('" + item + "')");
-	else showConfirm("<p>Purchase random</p>" + item + " <p>character for<br />500 redbacks</p>", "unlockConfirmed('" + item + "')");
+	else showConfirm("<p>Purchase random</p>" + item + " <p>character for<br />700 redbacks</p>", "unlockConfirmed('" + item + "')");
 }
 
 function unlock(item) {
@@ -91,11 +59,15 @@ function unlock(item) {
 				return;
 			}
 		}
+		if (localStorage.coins < 700) {
+			showAlert("Insufficient redbacks");
+			return;
+		}
 		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
 		while (localStorage[unlocked] == 'true') {
 			unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
 		}
-		localStorage.coins -= 500;
+		localStorage.coins -= 700;
 	} else {
 		var unlocked = item.toString().split('.')[1];
         if (localStorage[good[unlocked].name] == "true") {
@@ -113,7 +85,7 @@ function unlock(item) {
 	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
 	id('unlockedPopupImg').style.display = "block";
 	id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
+	id('unlockedPopupBtn').setAttribute('ontouchend', "document.getElementById('unlockedPopup').style.display = 'none';document.getElementById('popupOverlay').style.display = 'none'");
 	id('unlockedPopup').style.display = "block";
 	id('popupOverlay').style.display = "block";
 	id('coins').innerHTML = localStorage.coins;
