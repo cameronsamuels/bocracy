@@ -16,22 +16,38 @@ function battleground(e) {
 		}
 	}
 	id('startPlay').style.display = 'none';
+	id('notEnough').style.display = 'none';
 }
 }
+var cost;
 function character(e) {
 	if (e.target.id != 'characters') {
 	e.target.style.border=e.target.style.border?"":"1px white solid";
-	if (document.querySelectorAll('[style*="border"]').length > 0) id('startPlay').style.display = 'block';
-	else id('startPlay').style.display = 'none';
+	cost = 0;
+	for (i = 0; i < id('characters').querySelectorAll('[style*="border"]').length; i++) {
+		cost += Math.floor(good[id('characters').querySelectorAll('[style*="border"]')[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.01);
+		cost += 5;
+	}
+	if (id('characters').querySelectorAll('[style*="border"]').length > 0) {
+		id('startPlay').style.display = 'block';
+		id('startPlay').innerHTML = 'Play (' + cost + ')';
+	}
+	if (localStorage.coins < cost) {
+		id('startPlay').style.display = 'none';
+		id('notEnough').style.display = 'block';
+		id('notEnough').innerHTML = "Not enough (" + localStorage.coins + "/" + cost + ")";
+	} else id('notEnough').style.display = 'none';
+	if (id('characters').querySelectorAll('[style*="border"]').length == 0) id('startPlay').style.display = 'none';
 	}
 }
 function startPlay() {
-	var characters = document.querySelectorAll('[style*="border"]');
+	if (localStorage.coins >= cost) localStorage.coins -= cost;
+	var characters = id('characters').querySelectorAll('[style*="border"]');
 	for (i = 0; i < characters.length; i++) {
 		localStorage['b' + (i+1)] = characters[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	}
 	localStorage.sc = characters.length;
-	location = "battle.html?15#series" + b;
+	location = "battle.html?16#series" + b;
 }
 if (isMobile.any()) {
 	id('battleground').addEventListener('touchend', battleground);

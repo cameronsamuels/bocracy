@@ -50,6 +50,14 @@ main {
     background-color: #3F51B5;
     border: 1px #2E40A4 solid;
 }
+#notEnough {
+	background-color: #b30005;
+	display: none
+}
+.notEnough:hover {
+	border: 1px #b30005 solid;
+	background-color: #710003;
+}
 #battleground div, #characters div {
 	margin: 1% 2%;
 	padding: 3% 0;
