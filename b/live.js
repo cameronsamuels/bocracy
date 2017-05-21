@@ -27,7 +27,7 @@ var goodNames = {
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
 }, badNames = {
 			url : '',
-			original : ['saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
+			original : ['electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
 			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],

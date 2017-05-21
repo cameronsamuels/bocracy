@@ -95,6 +95,9 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     background: #FFF 100%/cover no-repeat;
     margin-left: 25%;
 }
+#aButton {
+	transform: scaleX(-1)
+}
 #bButton, #aButton { margin-top: 15vh }
 #clickToStart {
     position: absolute;
