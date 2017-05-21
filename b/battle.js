@@ -64,6 +64,7 @@ var game = { on : 'false',
 				b.heal = good[b.name].stats[2];
 			}
 		} else {
+		game.on = 'false';
 		if (side == 'green') {
 			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
@@ -82,7 +83,6 @@ var game = { on : 'false',
 		id('restartText').style.display = "none";
 		setTimeout(function(){id('restartText').style.display = "block"}, 750);
 		id('overlay').style.display = "block";
-		game.on = 'false';
 		}
 	}, attack : function(atk) {
 		if (game.on == 'true') {
@@ -195,22 +195,6 @@ function load() {
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	id('title').innerHTML = current;
-//	try {
-//		var http = new XMLHttpRequest();
-//		http.open('HEAD', 'img/' + current.replace('+', '') + ".svg", false);
-//		http.send();
-//		if (http.status != 404) {
-//			id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-//			id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-//			id('aButton').style.backgroundColor = 'transparent';
-//			id('bButton').style.backgroundColor = 'transparent';
-//		} else {
-//			id('bSection').style.backgroundImage = '';
-//			id('aSection').style.backgroundImage = '';
-//			id('aButton').style.backgroundColor = '';
-//			id('bButton').style.backgroundColor = '';
-//		}
-//	} catch (ex) {}
 	var img = new Image();
 	img.onload = function() {
 		id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';

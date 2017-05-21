@@ -4,18 +4,6 @@ current = battles[Math.floor(Math.random() * battles.length)], newStats;
 if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
 var game = { on : 'false',
 	refresh : { display : function() {
-		var bName = b.name;
-		while (bName.includes('_') || bName.includes('-')) { bName = bName.toString().replace('_', '-').replace('--', '^').replace('-', ' '); }
-		while (bName.includes('^')) { bName = bName.replace('^', '-'); }
-		bName = bName.replace('D', '.');
-		id('bName').innerHTML = bName + ' ' + goodNames.url;
-		var aName = a.name;
-		while (aName.includes('_') || aName.includes('-')) {
-			aName = aName.toString().replace('_', '-').replace('--', '^').replace('-', ' ');
-		}
-		while (aName.includes('^')) { aName = aName.replace('^', '-'); }
-		aName = aName.replace('D', '.').replace('Boss', '');
-		id('aName').innerHTML = aName + ' ' + badNames.url;
 		id('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		id('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
 		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
@@ -92,6 +80,25 @@ function load() {
 	b.attack = a.attack;
 	b.heal = a.heal;
 	game.on = 'true';
+	var bName = b.name;
+	while (bName.includes('_') || bName.includes('-')) { bName = bName.toString().replace('_', '-').replace('--', '^').replace('-', ' '); }
+	while (bName.includes('^')) { bName = bName.replace('^', '-'); }
+	bName = bName.replace('D', '.');
+	id('bName').innerHTML = bName + ' ' + goodNames.url;
+	var aName = a.name;
+	while (aName.includes('_') || aName.includes('-')) {
+		aName = aName.toString().replace('_', '-').replace('--', '^').replace('-', ' ');
+	}
+	while (aName.includes('^')) { aName = aName.replace('^', '-'); }
+	aName = aName.replace('D', '.').replace('Boss', '');
+	id('aName').innerHTML = aName + ' ' + badNames.url;
+	id('bName').style.fontSize = (10-(id('bName').innerHTML.length/2)||2) + "vh";
+	id('aName').style.fontSize = Math.min((10-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vh','')) + "vh";
+	id('bName').style.fontSize = Math.min(id('bName').style.fontSize.replace('vh',''),id('aName').style.fontSize.replace('vh','')) + "vh";
+	if (id('bName').style.fontSize.replace('vh','')<2) {
+		id('bName').style.fontSize = "2vh";
+		id('aName').style.fontSize = "2vh";
+	}
 }
 function restart() {
 	game.on = 'false';

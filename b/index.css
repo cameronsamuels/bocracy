@@ -28,7 +28,7 @@ body, html {
 .button, header { display: inline-block }
 main, body, html { width: 100% }
 .button:not(.big) { font-size: 3.7vw}
-@media screen and (orientation: portrait) { .button:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 5vh!important}#select h2 {font-size:5vh!important;line-height:5vh!important}}
+@media screen and (orientation: portrait) { .button:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 4.5vh!important}#select h2 {font-size:4.5vh!important;line-height:4.5vh!important}}
 .full { width: calc(100% - 42px) }
 .big { font-size: 6vw; }
 main {
@@ -90,12 +90,12 @@ header {
     left: 5px;
 	top: 5px;
 	position: absolute;
-	height: 5vw
+	height: 4.5vw
 }
 #select h2 {
 	margin: 5px;
-	font-size: 5vw;
-	line-height: 5vw;
+	font-size: 4.5vw;
+	line-height: 4.5vw;
 }
 #select {
 	display: none;

@@ -9,8 +9,6 @@ body, html {
     height: 100%;
     margin: 0;
     background: #3F51B5;
-    cursor: url(img/cur.png), default;
-    text-transform: capitalize;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     user-select: none;
@@ -19,14 +17,10 @@ body, html {
 }
 
 .clear { clear: both }
-red { color: red }
-green { color: #64DD17 }
 
 @media screen and (orientation:landscape) {
-    #bSection, #aSection, #overlay { display: none }
+    #bSection, #aSection, #overlay { display: none!important }
     #landscape { display: block !important }
-    .theSword { display: none!important }
-    #overlay { display: none!important }
 }
 
 #landscape { display: none }
@@ -35,14 +29,19 @@ header {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    background: #3F51B5
 }
 
 #backButton,
 #refreshButton {
     width: 20px;
-    margin-top: 5px;
-    float: left
+	top: 5px;
+    position: absolute;
+}
+#backButton {
+	left: 0;
+}
+#refreshButton {
+	right: 0;
 }
 
 #refreshButton {
@@ -51,8 +50,6 @@ header {
 
 #title {
     font-size: 15px;
-    float: left;
-    margin-left: calc(50% - 75px)
 }
 
 section {
@@ -82,10 +79,7 @@ section {
     height: 75px;
     margin-top: 25px;
     margin-left: calc(50% - 37.5px);
-    background: #FFF;
-    background-size: cover;
-    background-position: 100%;
-    background-repeat: no-repeat;
+    background: #FFF 100%/cover no-repeat;
     transform: rotate(180deg)
 }
 
@@ -121,15 +115,24 @@ section {
 
 #aActions div:not(.clear),
 #bActions div:not(.clear) {
-    width: 115px;
+    width: 110px;
     height: 50px;
     background: #3F51B5;
     border-radius: 80px;
     margin: 0 5px;
     float: left;
     line-height: 50px;
-    vertical-align: middle;
-    text-align: center
+    color: white;
+	border: 1px #2E40A4 solid;
+}
+#aActions div:not(.clear):active,
+#bActions div:not(.clear):active {
+    background-color: #2E40A4;
+    border: 1px #3F51B5 solid;
+	width: 99px;
+    height: 45px;
+	margin: 2.5px 10.5px;
+	line-height: 45px;
 }
 
 #overlay {
@@ -140,8 +143,6 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-}
-#overlay div:not(#restartText):not(#overlayText div):not(#overlayText) {
 }
 #overlay div:not(#restartText) {
     color: white;
@@ -155,7 +156,7 @@ section {
     background: #2E40A4;
     border-radius: 20px;
     position: absolute;
-    margin: 0px calc(5% - 2px);
+    margin: 0 calc(5% - 2px);
     bottom: 10px;
     width: 90%;
     border: 4px white solid;
@@ -166,14 +167,10 @@ section {
 .theSword {
     display: none;
     position: absolute;
-    background-image: url(img/sword.png);
-    background-size: cover;
-    background-position: 100%;
-    background-repeat: no-repeat;
+    background: url(img/sword.png) 100%/cover no-repeat;
     width: 100px;
     height: 50px;
     animation-duration: 0.1s;
-    -webkit-animation-duration: 0.1s
 }
 
 #bSword {
@@ -189,45 +186,19 @@ section {
 }
 
 @keyframes bSword {
-    from {
-        top: 225px
-    }
-    to {
-        top: calc(100% - 195px)
-    }
-}
-
-@-webkit-keyframes bSword {
-    from {
-        top: 225px
-    }
-    to {
-        top: calc(100% - 195px)
-    }
+    from { top: 225px }
+    to { top: calc(100% - 195px) }
 }
 
 @keyframes aSword {
-    from {
-        bottom: 225px
-    }
-    to {
-        bottom: calc(100% - 195px)
-    }
-}
-
-@-webkit-keyframes aSword {
-    from {
-        bottom: 225px
-    }
-    to {
-        bottom: calc(100% - 195px)
-    }
+    from { bottom: 225px }
+    to { bottom: calc(100% - 195px) }
 }
 
 #rotate {
-    height: 100px;
-    width: 89px;
-    left: calc(50% - 44.5px);
+    height: 50vh;
+    margin: auto;
+	left:0;right:0;
     position: absolute;
     display: none
 }
