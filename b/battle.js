@@ -1,6 +1,6 @@
 var newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
-current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0};
+current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
 var game = { on : 'false',
 	refresh : { all : function() {
@@ -10,6 +10,8 @@ var game = { on : 'false',
 	}}, win : function(side) {
 		if (series.w) {
 			if (side == 'green') {
+				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
+				series.k++;
 				var aName = a.name;
 				do {
 					a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
@@ -20,18 +22,21 @@ var game = { on : 'false',
 				a.speed = 450;
 				a.heal = bad[a.name].stats[2];
 				b.health = Math.min(b.orig_health, b.health*1.3);
+				updateCharacter();
 			} else {
 				series.t++;
-				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
 				if (series.t > localStorage.sc) {
-					id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+					series.c = Math.round(series.c * series.t);
+					if (localStorage.coins == undefined) localStorage.coins = series.c;
+					else localStorage.coins = parseFloat(localStorage.coins) + series.c;
+					id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
 					id('overlay').style.backgroundColor = '#b30005';
 					id('restartText').style.display = "none";
 					setTimeout(function(){id('restartText').style.display = "block"}, 750);
 					id('overlay').style.display = "block";
 					game.on = 'false';
 					series.t = 1;
-					series.c = 0;
+					series.k = 0;
 					return;
 				}
 				b.name = localStorage['b' + series.t];
@@ -126,6 +131,7 @@ function load() {
 			
 		} while (b.name == bName);
 	}
+	series.c = 0;
 	var aName = a.name;
 	do {
 		a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
@@ -185,6 +191,9 @@ function load() {
 	id('bSword').style.backgroundImage = 'url("img/' + bw + '.png")';
 	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
 	id('refreshButton').style.display = "";
+	updateCharacter();
+}
+function updateCharacter() {
 	var bName = b.name;
 	bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
 	id('bName').innerHTML = bName + ' ' + goodNames.url;

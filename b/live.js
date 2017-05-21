@@ -57,7 +57,7 @@ function object(nm, stats, info, other) {
 		localStorage[nm] = 'true';
 		localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
 	}
-	if (localStorage[nm] == undefined) localStorage[nm] = 'false';
+	if (localStorage[nm] == undefined && info[1] == 'true') localStorage[nm] = 'false';
 	if (info[1] == 'true') goodNames[info[0].replace('+', 'Boss')].push(nm);
 	else badNames[info[0].replace('+', 'Boss')].push(nm);
 	if (goodNames[info[0] + 'Boss'] != undefined && info[1] == 'true') goodNames[info[0] + 'Boss'].push(nm);
