@@ -53,7 +53,7 @@ function object(nm, stats, info, other) {
 	this.stats = stats;
 	this.info = info;
 	this.other = other;
-	if (localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined) {
+	if (localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined && info[1] == 'true') {
 		localStorage[nm] = 'true';
 		localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
 	}

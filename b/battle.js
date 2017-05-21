@@ -123,8 +123,8 @@ function load() {
 		var bName = b.name;
 		do {
 			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
+			
 		} while (b.name == bName);
-
 	}
 	var aName = a.name;
 	do {
