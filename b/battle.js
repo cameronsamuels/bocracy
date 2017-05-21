@@ -1,30 +1,11 @@
 var newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
-current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),b:[],a:[],t:1,c:0};
+current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0};
 if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
 var game = { on : 'false',
-	refresh : { display : function() {
-		var bName = b.name;
-		bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
-		id('bName').innerHTML = bName + ' ' + goodNames.url;
-		var aName = a.name;
-		aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
-		id('aName').innerHTML = aName + ' ' + badNames.url;
+	refresh : { all : function() {
 		id('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		id('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
-		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-		id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-		id('bName').style.fontSize = (10-(id('bName').innerHTML.length/2)||2) + "vw";
-		
-		id('aName').style.fontSize = Math.min((10-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw','')) + "vw";
-		
-		id('bName').style.fontSize = Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw','')) + "vw";
-		if (id('bName').style.fontSize.replace('vw','')<2) {
-			id('bName').style.fontSize = "2vw";
-			id('aName').style.fontSize = "2vw";
-		}
-	}, all : function() {
-		game.refresh.display();
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
 		if (series.w) {
@@ -43,8 +24,6 @@ var game = { on : 'false',
 				series.t++;
 				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
 				if (series.t > localStorage.sc) {
-					id('sound').src = "snd/loss.wav";
-					id('audio').load(); id('audio').play();
 					id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 					id('overlay').style.backgroundColor = '#b30005';
 					id('restartText').style.display = "none";
@@ -53,8 +32,6 @@ var game = { on : 'false',
 					game.on = 'false';
 					series.t = 1;
 					series.c = 0;
-					series.b = [];
-					series.a = [];
 					return;
 				}
 				b.name = localStorage['b' + series.t];
@@ -70,13 +47,9 @@ var game = { on : 'false',
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
-			id('sound').src = "snd/victory.wav";
-			id('audio').load(); id('audio').play();
 			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#64DD17';
 		} else {
-			id('sound').src = "snd/loss.wav";
-			id('audio').load(); id('audio').play();
 			id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#b30005';
 		}
@@ -123,16 +96,12 @@ var game = { on : 'false',
 function load() {
 	clicks = 0;
 	if (!isMobile.any()) {
-		id('portrait').style.display = 'none';
-		id('bSection').style.display = 'block';
-		id('aSection').style.display = 'block';
-		id('bSword').style.display = '';
-		id('aSword').style.display = '';
-		id('overlay').style.display = '';
-	}
-	if (id('sound').src.includes("snd/loss.wav") || id('sound').src.includes("snd/victory.wav")) {
-		id('sound').src = 'snd/sound.wav';
-		id('audio').load(); id('audio').play();
+		id('portrait').style.display = 'none !important';
+//		id('bSection').style.display = 'block';
+//		id('aSection').style.display = 'block';
+//		id('bSword').style.display = 'block!important';
+//		id('aSword').style.display = 'block!important';
+//		id('overlay').style.display = '';
 	}
 	if (!window.location.hash.includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
@@ -149,9 +118,8 @@ function load() {
 		localStorage[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
 		localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
-	if (series.w) {
-		b.name = localStorage.b1;
-	} else {
+	if (series.w) b.name = localStorage.b1;
+	else {
 		var bName = b.name;
 		do {
 			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
@@ -165,26 +133,24 @@ function load() {
 	if (newStats == 'false') {
 		while (b.name == a.name) { b.name = goodNames[current][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = Math.min(Math.random() * 2250, 2000);
-		a.orig_health = a.health;
 		a.attack = Math.max(32, Math.random() * 40);
 		a.speed = 450;
 		a.heal = Math.random() * 12;
 		b.health = parseFloat(a.health * 0.85);
-		b.orig_health = b.health;
 		b.attack = parseFloat(a.attack * 0.85);
 		b.heal = parseFloat(a.heal * 0.85);
 	} else if (newStats == 'true') {
 		while (localStorage[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = bad[a.name].stats[1];
-		a.orig_health = a.health;
 		a.attack = bad[a.name].stats[0];
 		a.speed = 450;
 		a.heal = bad[a.name].stats[2];
 		b.health = good[b.name].stats[1];
-		b.orig_health = b.health;
 		b.attack = good[b.name].stats[0];
 		b.heal = good[b.name].stats[2];
 	}
+	b.orig_health = b.health;
+	a.orig_health = a.health;
 	if (current.includes('+')) {
 		var stats = ['attack', 'health', 'speed', 'heal', 'orig_health'];
 		for (i = 0; i < stats.length; i++) {
@@ -219,6 +185,23 @@ function load() {
 	id('bSword').style.backgroundImage = 'url("img/' + bw + '.png")';
 	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
 	id('refreshButton').style.display = "";
+	var bName = b.name;
+	bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
+	id('bName').innerHTML = bName + ' ' + goodNames.url;
+	var aName = a.name;
+	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
+	id('aName').innerHTML = aName + ' ' + badNames.url;
+		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	id('bName').style.fontSize = (10-(id('bName').innerHTML.length/2)||2) + "vw";
+	
+	id('aName').style.fontSize = Math.min((10-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw','')) + "vw";
+	
+	id('bName').style.fontSize = Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw','')) + "vw";
+	if (id('bName').style.fontSize.replace('vw','')<2) {
+		id('bName').style.fontSize = "2vw";
+		id('aName').style.fontSize = "2vw";
+	}
 }
 function restart() {
 	game.on = 'false';

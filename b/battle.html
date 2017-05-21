@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 	<head>
-		<title>Battle | b-Ocracy</title>
+		<title>b-Ocracy</title>
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
 	  	<link rel="stylesheet" type="text/css" href="battle.min.css?17" />
 	  	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -12,15 +12,14 @@
         
           ga('create', 'UA-50194959-4', 'auto');
           ga('send', 'pageview');
-        
+
         </script>
 	</head>
 	<body id="body">
 		<header id="header">
-			<a ontouchend="window.location='index.html?17'"><img id="backButton" src="btn/back.png"/></a>
+			<a ontouchend="location='index.html?17'"><img id="backButton" src="btn/back.png"/></a>
 			<div id="title">b-Ocracy</div>
 			<a ontouchend="restart()"><img id="refreshButton" src="btn/refresh.png"/></a>
-			<div class="clear"></div>
 		</header>
 		<section id="bSection">
 			<div id="bButton" ontouchend="game.heal('green')"></div><div id="bName"></div><div id="bHealth"><div id="bHealthBar"></div><p></p></div>
@@ -29,15 +28,14 @@
 			<div id="aButton" ontouchend="game.on='true';game.attack('green')"></div><div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div><p></p></div>
 		</section>
 		<div class="clear"></div>
-		<div id="overlay"><div id="overlayText"></div><div id="restartText" ontouchend="restart()">PLAY AGAIN</div></div>
+		<div id="overlay"><div id="overlayText"></div><div id="restartText" class="button" ontouchend="restart()">PLAY AGAIN</div></div>
 		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
 		<div id="portrait">
 			<h5>Click the right image to attack<br />Click the left one to heal</h5>
-			<div id="multiplayer" class="button" ontouchend="window.location='multiplayer.html'+window.location.hash">Multiplayer mode</div>
+			<div id="multiplayer" class="button" ontouchend="location='multiplayer.html?17'+window.location.hash">Multiplayer mode</div>
             <h3>ROTATE TO LANDSCAPE</h3>
 			<img id="rotate" src="img/rotate.png" />
         </div>
-		<audio id="audio" loop autoplay><source id="sound" src="snd/sound.wav" type="audio/wav"></audio>
 	</body>
 	<script src="live.min.js?17"></script>
 	<script src="battle.min.js?17"></script>

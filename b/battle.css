@@ -7,7 +7,7 @@
 body, html {
     width: 100%;
     height: 100%;
-    margin: 0px;
+    margin: 0;
     background: #3F51B5;
     cursor: url(img/cur.png), default;
     text-align: center;
@@ -17,7 +17,7 @@ body, html {
     overflow: hidden;
 }
 .clear { clear: both }
-a { color: white;cursor: pointer;}
+a { cursor: pointer}
 .button {
     border: 1px #fff solid;
     background-color: #2E40A4;
@@ -39,13 +39,22 @@ a { color: white;cursor: pointer;}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (orientation:portrait) {
-    #bSection, #aSection { display: none }
-    #portrait { display: block!important }
+    #portrait { display: block }
     .theSword { display: none!important }
 	#refreshButton { display: none }
     #overlay { display: none!important }
 }
-#portrait { display: none }
+@media screen and (orientation:landscape) {
+	#portrait{display: none}
+}
+#portrait {
+	z-index: 2;
+    position: absolute;
+    top: 0;
+    background: #3F51B5;
+    width: 100%;
+    height: 100%
+}
 header {
     width: 100%;
     height: 30px;
@@ -156,32 +165,20 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 #overlayStats h5:last-child {
 	margin-right: 0px;
 }
-#overlay div:not(#restartText):not(#overlayText div):not(#overlayText) {
-    top: calc(50% - 80px);
-    font-size: 70px;
-    position: absolute;
-}
 #overlay div:not(#restartText) {
     width: 100%;
 }
-#overlayText div:not(#overlayStats) {
+#overlayText div:first-child {
     font-size: 100px;
     margin-top: 10px;
 }
 #restartText {
     font-size: 40px;
-    background: #2E40A4;
-    border-radius: 20px;
+    border-radius: 40px;
     position: absolute;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
     bottom: 10px;
-    width: 70%;
-    border: 4px white solid;
     line-height: 40px;
     vertical-align: middle;
-	clear: both;
 }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
