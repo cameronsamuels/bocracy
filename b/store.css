@@ -118,8 +118,10 @@ main {
 	overflow-y: scroll;
 	height: calc(100% - 5vw - 73px);
 	width: 100vw;
+	bottom: 0;
+	position: absolute;
 }
-@media screen and (min-width:700px) { main{height: calc(100% - 2.5vw);}}
+@media screen and (min-width:700px) { main{height: calc(100% - 2.5vw - 78px);}}
 main section {
     clear: both;
     float: none;

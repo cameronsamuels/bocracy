@@ -26,8 +26,8 @@ function refreshStore(){
 }
 function showConfirm(text, yes, no) {
     id('confirmText').innerHTML = text;
-    id('confirmYesBtn').setAttribute('ontouchend', "eval(" + yes + "); setTimeout(function(){document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'},350)");
-    id('confirmNoBtn').setAttribute('ontouchend', "eval(" + no + "); setTimeout(function(){document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'},350)");
+    id('confirmYesBtn').setAttribute('onclick', "eval(" + yes + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
+    id('confirmNoBtn').setAttribute('onclick', "eval(" + no + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
     id('confirmPopup').style.display = "block";
     id('popupOverlay').style.display = "block";
 }
@@ -36,7 +36,7 @@ function showAlert(text) {
     id('unlockedPopupImg').style.display = "none";
     id('unlockedPopup').style.display = "block";
     id('popupOverlay').style.display = "block";
-    id('unlockedPopupBtn').setAttribute('ontouchend', "setTimeout(function(){document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'},350)");	
+    id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");	
 }
 
 function unlockConfirmed(item) {
@@ -86,7 +86,7 @@ function unlock(item) {
 	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
 	id('unlockedPopupImg').style.display = "block";
 	id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-	id('unlockedPopupBtn').setAttribute('ontouchend', "setTimeout(function(){document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'},350)");
+	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
 	id('unlockedPopup').style.display = "block";
 	setTimeout(function(){id('popupOverlay').style.display = "block"},400);
 	id('coins').innerHTML = localStorage.coins;
