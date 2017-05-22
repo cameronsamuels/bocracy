@@ -29,7 +29,7 @@ var game = { on : 'false',
 					series.c = Math.round(series.c * series.t);
 					if (localStorage.coins == undefined) localStorage.coins = series.c;
 					else localStorage.coins = parseFloat(localStorage.coins) + series.c;
-					id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
+					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
 					id('overlay').style.backgroundColor = '#b30005';
 					id('restartText').style.display = "none";
 					setTimeout(function(){id('restartText').style.display = "block"}, 750);
@@ -44,6 +44,7 @@ var game = { on : 'false',
 				b.orig_health = b.health;
 				b.attack = good[b.name].stats[0];
 				b.heal = good[b.name].stats[2];
+				updateCharacter();
 			}
 		} else {
 		game.on = 'false';

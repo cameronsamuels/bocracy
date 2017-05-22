@@ -17,7 +17,7 @@
 	</head>
 	<body id="body">
 		<header id="header">
-			<a ontouchend="location='index.html?18'"><img id="backButton" src="btn/back.png"/></a>
+			<a ontouchend="history.back()"><img id="backButton" src="btn/back.png"/></a>
 			<div id="title">b-Ocracy</div>
 			<a ontouchend="restart()"><img id="refreshButton" src="btn/refresh.png"/></a>
 		</header>
@@ -25,7 +25,7 @@
 			<div id="bButton" ontouchend="game.heal('green')"></div><div id="bName"></div><div id="bHealth"><div id="bHealthBar"></div><p></p></div>
 		</section>
 		<section id="aSection">
-			<div id="aButton" ontouchend="game.on='true';game.attack('green')"></div><div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div><p></p></div>
+			<div id="aButton" ontouchend="game.attack('green')"></div><div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div><p></p></div>
 		</section>
 		<div class="clear"></div>
 		<div id="overlay"><div id="overlayText"></div><div id="restartText" class="button" ontouchend="restart()">PLAY AGAIN</div></div>

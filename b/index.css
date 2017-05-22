@@ -32,7 +32,7 @@ main, body, html { width: 100% }
 .full { width: calc(100% - 42px) }
 .big { font-size: 6vw; }
 main {
-	max-width: 800px;
+	max-width: 80vw;
 	margin: auto;
 }
 .btn {
@@ -44,10 +44,11 @@ main {
     padding: 15px;
     width: calc(100% - 50px);
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
+	cursor: pointer;
 }
 .btn:hover {
-    background-color: #3F51B5;
+    background-color: #1F3195;
 }
 #notEnough {
 	background-color: #b30005;
@@ -58,24 +59,26 @@ main {
 }
 #battleground div, #characters div {
 	margin: 1% 2%;
-	padding: 3% 0;
-	font-size: 70%;
+	padding: 3vw 0;
+	font-size: 2vh;
 	background: #2E40A4;
 	display: inline-block;
 	cursor: pointer;
 	width: 20%
 }
 #battleground { border-bottom: 4px #fff solid }
-#characters div { border-radius: 50px }
+#characters div { border-radius: calc(2vh + 6vw) }
 @media screen and (min-height: 540px) and (max-height: 599px) and (orientation: portrait) {
 	main { max-width: 300px; }
 }
 @media screen and (min-height: 300px) and (max-height: 440px) and (orientation: landscape) {
     main { max-width: 70vw; }
 }
+/*
 @media screen and (min-height: 600px) and (max-width: 1024px) and (orientation: landscape) {
 	main { max-width: 90vw; }
 }
+*/
 header {
 	font-size: 45px;
 	background: #b30005;
@@ -84,7 +87,8 @@ header {
     left: 5px;
 	top: 5px;
 	position: absolute;
-	height: 4.5vw
+	height: 4.5vw;
+	cursor: pointer;
 }
 #select h2 {
 	margin: 5px;
@@ -101,3 +105,4 @@ header {
 	height: 100%;
 }
 @media screen and (max-width: 500px) { #characters div, #battleground div  {width: 40% !important; margin: 4% !important; }}
+@media screen and (max-height:500px){#characters div, #battleground div{font-size:2vw}#characters div{border-radius:calc(8vw)}}
