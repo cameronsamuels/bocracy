@@ -47,41 +47,30 @@
 			</main>
 			<div id="mapDiv">
 				<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
-				<img id="Amap" usemap="#aritropusMap" src="img/aritropus.png">
+				<img id="Amap" usemap="#aritropusMap" src="img/aritropus.svg">
 				<img id="Cmap" usemap="#cortofaMap" src="img/cortofa.png">
 				<img id="legend" src="img/legend.png" />
 				<map name="aritropusMap">
-                  <area shape="rect" coords="516,756,606,838" title="Aonarchy Battleground" ontouchend="location='battle.html#aonarchy'">
-                  <area shape="rect" coords="858,750,920,809" title="Aonarchy Multiplayer Battleground" ontouchend="location='multiplayer.html#aonarchy'">
-                  <area shape="rect" coords="372,946,287,853" title="Aonarchy Boss Battleground" ontouchend="location='battle.html#aonarchy+'">
-                  <area shape="rect" coords="492,914,410,847" title="Aonarchy Multiplayer Boss Battleground" ontouchend="location='multiplayer.html#aonarchy+'">
-                  <area shape="rect" coords="850,820,949,920" title="Aonarchy Store" ontouchend="location='store.html#aonarchy'">
-                  <area shape="rect" coords="349,724,413,785" title="Battleground" ontouchend="location='battle.html#aonarchy'">
-                  <area shape="rect" coords="519,674,571,724" title="Battleground" ontouchend="location='battle.html#aonarchy'">
-                  <area shape="rect" coords="639,724,694,782" title="Battleground" ontouchend="location='battle.html#aonarchy'">
-                  <area shape="rect" coords="568,612,621,665" title="Battleground" ontouchend="location='battle.html#aonarchy'">
-
-                  <area shape="rect" coords="428,387,489,454" title="Ammunist Battleground" ontouchend="location='battle.html#ammunist'">
-                  <area shape="rect" coords="378,390,419,357" title="Ammunist Multiplayer Battleground" ontouchend="location='multiplayer.html#ammunist'">
-                  <area shape="rect" coords="645,422,773,519" title="Ammunist Boss Battleground" ontouchend="location='battle.html#ammunist+'">
-                  <area shape="rect" coords="536,454,498,486" title="Ammunist Multiplayer Boss Battleground" ontouchend="location='multiplayer.html#ammunist+'">
-                  <area shape="rect" coords="571,536,639,606" title="Ammunist Store" ontouchend="location='store.html#ammunist'">
-                  <area shape="rect" coords="416,530,466,571" title="Battleground" ontouchend="location='battle.html#ammunist'">
-                  <area shape="rect" coords="360,313,404,354" title="Battleground" ontouchend="location='battle.html#ammunist'">
-                  <area shape="rect" coords="1005,1061,1099,1151" title="Alinar Snows Freeplay" ontouchend="location='battle.html#alinar'">
-                  <area shape="rect" coords="964,199,1031,3" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';imageMapResize()">
-                  <area shape="rect" coords="416,645,457,683" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='multiplayer.html#ammunist';else location='multiplayer.html#aonarchy'">
-                  <area shape="rect" coords="647,557,683,595" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='multiplayer.html#ammunist';else location='multiplayer.html#aonarchy'">
-                  <area shape="rect" coords="495,557,527,589" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='multiplayer.html#ammunist';else location='multiplayer.html#aonarchy'">
-                  <area shape="rect" coords="434,170,472,214" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='multiplayer.html#ammunist';else location='multiplayer.html#aonarchy'">
-                  <area shape="rect" coords="586,73,618,114" title="Multiplayer Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='multiplayer.html#ammunist';else location='multiplayer.html#aonarchy'">
-
-                  <area shape="rect" coords="642,141,712,223" title="Store" ontouchend="if (Math.round(Math.random()) == 1)location='store.html#ammunist';else location='store.html#aonarchy'">
-                  <area shape="rect" coords="343,214,384,252" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='battle.html#ammunist';else location='battle.html#aonarchy'">
-                  <area shape="rect" coords="352,103,387,141" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='battle.html#ammunist';else location='battle.html#aonarchy'">
-                  <area shape="rect" coords="498,123,557,170" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='battle.html#ammunist';else location='battle.html#aonarchy'">
-                  <area shape="rect" coords="665,73,712,117" title="Battleground" ontouchend="if (Math.round(Math.random()) == 1)location='battle.html#ammunist';else location='battle.html#aonarchy'">
-
+					<area  title="Aonarchy Battleground" ontouchend="location='battle.html#aonarchy'" shape="rect" coords="654,850,819,995" />
+					<area  title="Aonarchy Multiplayer Battleground" ontouchend="location='multiplayer.html#aonarchy'" shape="rect" coords="846,806,1006,960" />
+					<area  title="Aonarchy Store" ontouchend="location='store.html#aonarchy'" shape="rect" coords="552,1011,714,1162" />
+					<area  title="Abossicus Boss Battleground" ontouchend="location='battle.html#aonarchy+'" shape="rect" coords="596,1406,445,1280" />
+					<area  title="Abossicus Multiplayer Boss Battleground" ontouchend="location='multiplayer.html#aonarchy+'" shape="rect" coords="436,1252,337,1353" />
+					<area title="Ammunist Battleground" ontouchend="location='battle.html#ammunist'" shape="rect" coords="345,734,506,892" />
+					<area  title="Ammunist Store" ontouchend="location='store.html#ammunist'" shape="rect" coords="522,627,656,761" />
+					<area  title="Ammunist Multiplayer Battleground" ontouchend="location='multiplayer.html#ammunist'" shape="rect" coords="519,644,395,523" />
+					<area  title="Ascow Boss Battleground" ontouchend="location='battle.html#ammunist+'" shape="rect" coords="895,705,735,576" />
+					<area  title="Ascow Multiplayer Boss Battleground" ontouchend="location='multiplayer.html#ammunist+'" shape="rect" coords="895,508,1023,629" />
+					<area  title="Eora Basin Battleground" ontouchend="location='battle.html#eora'" shape="rect" coords="508,342,368,457" />
+					<area  title="Eora Basin Multiplayer Battleground" ontouchend="location='multiplayer.html#eora'" shape="rect" coords="546,349,654,452" />
+					<area  title="Eora Basin Store" ontouchend="location='store.html#eora'" shape="rect" coords="524,148,646,268" />
+					<area  title="Alinar Snows Freeplay Battleground" ontouchend="location='battle.html#alinar'" shape="rect" coords="1032,1101,1184,1229" />
+					<area  title="Alinar Snows Multiplayer Freeplay Battleground" ontouchend="location='multiplayer.html#alinar'" shape="rect" coords="1119,1278,1241,1378" />
+					<area  title="Cadrinal City Freeplay Boss Battleground" ontouchend="location='battle.html#cadrinal'" shape="rect" coords="1301,795,1161,905" />
+					<area  title="Acitus Conflict" ontouchend="location='battle.html#acitus'" shape="rect" coords="845,284,956,389" />
+					<area  title="Archolius Trade Towers" ontouchend="location='trade.html'" shape="rect" coords="469,957,340,1117" />
+					<area  title="Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';imageMapResize()" shape="rect" coords="1016,314,939,1" />
+					<area  title="Balinion Blockade" ontouchend="location='battle.html#balinion^'" shape="rect" coords="260,672,57,1121" />
 				</map>
 				<map name="cortofaMap">
 				  <area shape="rect" coords="756,750,891,891" title="Ciftian Battleground" ontouchend="location='battle.html#ciftian'">
