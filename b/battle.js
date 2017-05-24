@@ -118,6 +118,7 @@ function load() {
 		case "citopia": newStats = 'false'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "citatian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
+		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
 	if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
@@ -203,11 +204,11 @@ function updateCharacter() {
 	id('aName').innerHTML = aName + ' ' + badNames.url;
 		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	id('bName').style.fontSize = (10-(id('bName').innerHTML.length/2)||2) + "vw";
+	id('bName').style.fontSize = Math.abs(9-(id('bName').innerHTML.length/2)||2) + "vw";
 	
-	id('aName').style.fontSize = Math.min((10-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw','')) + "vw";
+	id('aName').style.fontSize = Math.abs(Math.min((9-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw',''))) + "vw";
 	
-	id('bName').style.fontSize = Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw','')) + "vw";
+	id('bName').style.fontSize = Math.abs(Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw',''))) + "vw";
 	if (id('bName').style.fontSize.replace('vw','')<2) {
 		id('bName').style.fontSize = "2vw";
 		id('aName').style.fontSize = "2vw";

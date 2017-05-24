@@ -133,7 +133,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     line-height: 20px;
 	font-weight: 900;
 }
-#aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:5px }
+#aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
 #aName { background:#b30005}
 #bName { background:#64DD17}
 #overlay {

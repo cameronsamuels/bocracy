@@ -18,6 +18,7 @@ var goodNames = {
 			aonarchyBoss : [],
 			ammunist : [],
 			ammunistBoss : [],
+			eora : [],
 			ciftian : [],
 			ciftianBoss : [],
 			citatian : [],
@@ -36,6 +37,7 @@ var goodNames = {
 			aonarchyBoss : [],
 			ammunist : [],
 			ammunistBoss : [],
+			eora : [],
 			ciftian : [],
 			ciftianBoss : [],
 			citatian : [],
@@ -43,7 +45,7 @@ var goodNames = {
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
 			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
-}, battles = ['dericil', 'alinar', 'aonarchy', 'ammunist'], good = { }, bad = { };
+}, battles = ['dericil', 'alinar', 'aonarchy', 'ammunist', 'eora'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];
@@ -118,6 +120,20 @@ bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['citati
 bad.scubbars = new object('scubbars', [50, 1500, 25], ['citatian', 'false', 1000, 'a', 'scubbars', 'scorpion_spikes']);
 bad.byter = new object('byter', [45, 1500, 20], ['citatian', 'false', 750, 'a', 'byter', 'missile']);
 bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['citatian', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
+
+bad.poor_worker = new object('poor_worker', [30, 2000, 20], ['eora', 'false', 250, 'a', 'poor_worker', 'scythe']);
+bad.dynamite = new object('dynamite', [50, 2500, 20], ['eora', 'false', 1500, 'a', 'dynamite']);
+bad.mercenary = new object('mercenary', [50, 3000, 20], ['eora', 'false', 1600, 'a', 'mercenary']);
+bad.teratul_rider = new object('teratul_rider', [75, 4500, 10], ['eora', 'false', 2222, 'a', 'teratul_rider']);
+bad.defensive_destroyer = new object('defensive_destroyer', [75, 3000, 10], ['eora', 'false', 1919, 'a', 'defensive_destroyer', 'cannonball']);
+bad.caveman = new object('caveman', [40, 2500, 20], ['eora', 'false', 1000, 'a', 'caveman']);
+
+good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral']);
+good.prospector = new object('prospector', [30, 1750, 15], ['eora', 'true', 750, 'a', 'prospector']);
+good.elemental = new object('elemental', [50, 3200, 40], ['eora', 'true', 2000, 'a', 'elemental', 'fireball']);
+good.camel_rider = new object('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, 'a', 'camel_rider']);
+good.cactus = new object('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'fairy_dust']);
+good.mountain_jetpack = new object('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
 function convertClick() {
 	if (!isMobile.any()) {

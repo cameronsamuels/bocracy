@@ -4,7 +4,7 @@ if (window.location.hash != '') {
 }
 id('coins').innerHTML = localStorage.coins;
 if (!isMobile.iOS()) id('playButton').style.display = 'none';
-var battlegrounds = ["aonarchy","ammunist","ciftian","citatian"], m = document.querySelector('main');
+var battlegrounds = ["aonarchy","ammunist","eora","ciftian","citatian"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {
