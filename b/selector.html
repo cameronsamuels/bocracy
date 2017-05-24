@@ -68,7 +68,7 @@
 					<area  title="Eora Basin Store" ontouchend="location='store.html#eora'" shape="rect" coords="524,148,646,268">
 					<area  title="Alinar Snows Freeplay Battleground" ontouchend="location='battle.html#alinar'" shape="rect" coords="1032,1101,1184,1229">
 					<area  title="Alinar Snows Multiplayer Freeplay Battleground" ontouchend="location='multiplayer.html#alinar'" shape="rect" coords="1119,1278,1241,1378">
-					<area  title="Cadrinal City Freeplay Boss Battleground" ontouchend="location='battle.html#cadrinal'" shape="rect" coords="1301,795,1161,905">
+					<area  title="Cadrinal City Freeplay Boss Battleground" ontouchend="location='battle.html#cadrinal+'" shape="rect" coords="1301,795,1161,905">
 					<area  title="Acitus Conflict" ontouchend="location='battle.html#acitus'" shape="rect" coords="845,284,956,389">
 					<area  title="Archolius Trade Towers" ontouchend="location='trade.html'" shape="rect" coords="469,957,340,1117">
 					<area  title="Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block'" shape="rect" coords="1016,314,939,1">
@@ -88,49 +88,5 @@
 				  <area shape="poly" coords="536,665,498,721,560,782,571,806,545,844,416,776,448,601,495,577,609,586,639,612,615,671" title="Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)location='battle.html#citopia';else if (rand < 0.2)location='battle.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)location='battle.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)location='battle.html#citatian';">
 				  <area shape="rect" coords="519,680,565,738" title="Multiplayer Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)location='multiplayer.html#citopia';else if (rand < 0.2)location='multiplayer.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)location='multiplayer.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)location='multiplayer.html#citatian';">
 				  <area shape="rect" coords="1025,1192,1125,1494" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block'">
-				</map></div><script>if(!navigator.userAgent.match(/Android/i)&&!navigator.userAgent.match(/iPhone|iPad|iPod/i)){var clickables = document.querySelectorAll('[ontouchend]');for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick',clickables[i].getAttribute('ontouchend'))}</script></body>	   <!-- <script>-->
-<!--				window.onload = function () {-->
-<!--    var imageMapResize = function (map, img) {-->
-<!--            var n;-->
-<!--                areas = map.getElementsByTagName('area');-->
-<!--                len = areas.length;-->
-<!--                coords = [];-->
-<!--                previousWidth = 1500;-->
-<!--            for (n = 0; n < len; n++) {-->
-<!--                coords[n] = areas[n].coords.split(',');-->
-<!--            }-->
-<!--            this.resize = function () {-->
-<!--                var n, m, clen;-->
-<!--                    x = img.offsetWidth / previousWidth;-->
-<!--                for (n = 0; n < len; n++) {-->
-<!--                    clen = coords[n].length;-->
-<!--                    for (m = 0; m < clen; m++) {-->
-<!--                        coords[n][m] *= x;-->
-<!--                    }-->
-<!--                    areas[n].coords = coords[n].join(',');-->
-<!--                }-->
-<!--                previousWidth = document.body.clientWidth;-->
-<!--                return true;-->
-<!--            };-->
-<!--            window.onresize = this.resize;-->
-<!--        },-->
-<!--        aMap = new imageMapResize(document.getElementsByName('aritropusMap')[0], document.getElementById('Amap'));-->
-<!--    aMap.resize();-->
-<!--cMap = new imageMapResize(document.getElementsByName('cortofaMap')[0], document.getElementById('Cmap'));-->
-<!--    cMap.resize();-->
-<!--    return;-->
-<!--				}-->
-<!--	    </script>-->
-
-
-<script>/*;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);$('[usemap]').rwdImageMaps();*/
-// if (window.innerWidth/window.innerHeight>1) {
-//     $('#mapDiv img:not(#legend)').attr('height', $(window).height() - 39);
-//     $('#mapDiv img:not(#legend)').attr('width', $(window).height() - 39)
-//     } else {
-//         $('#mapDiv img:not(#legend)').attr('width', $(window).width());
-//         $('#mapDiv img:not(#legend)').attr('height', $(window).width());
-//     }
-window.onload=function(){setTimeout(function(){imageMapResize()},1000)}
-  </script>
+				</map></div><script>if(!navigator.userAgent.match(/Android/i)&&!navigator.userAgent.match(/iPhone|iPad|iPod/i)){var clickables = document.querySelectorAll('[ontouchend]');for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick',clickables[i].getAttribute('ontouchend'))}</script></body><script>window.onload=function(){setTimeout(function(){imageMapResize()},1000)}</script>
 </html>
