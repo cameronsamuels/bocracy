@@ -36,7 +36,7 @@ main {
 	margin: auto;
 }
 .btn {
-    background-color: #2E40A4;
+    background-color: #64DD17;
     margin: 2.5px 9px;
     border-radius: 6px;
     color: white;
@@ -48,23 +48,21 @@ main {
 	cursor: pointer;
 }
 .btn:hover {
-    background-color: #1F3195;
+    background-color: #42bb05;
 }
 #notEnough {
-	background-color: #b30005;
+	background-color: #930005;
 	display: none
-}
-.notEnough:hover {
-	background-color: #710003;
 }
 #battleground div, #characters div {
 	margin: 1% 2%;
 	padding: 3vw 0;
 	font-size: 2vh;
-	background: #2E40A4;
+	background: #930005;
 	display: inline-block;
 	cursor: pointer;
-	width: 20%
+	width: 20%;
+	box-sizing: border-box;
 }
 #battleground { border-bottom: 4px #fff solid }
 #characters div { border-radius: calc(2vh + 6vw) }
@@ -99,7 +97,7 @@ header {
 	display: none;
 	position: absolute;
 	top: 0; left: 0;
-	background: #3F51B5;
+	background: #b30005;
 	z-index: 5;
 	width: 100%;
 	height: 100%;

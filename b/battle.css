@@ -36,7 +36,7 @@ a { cursor: pointer}
 }
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
 @media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
-@media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 6px) 0px !important; } }
+@media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 7.5px) 0px !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
 @media screen and (orientation:portrait) {
     #portrait { display: block }
@@ -179,6 +179,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     bottom: 10px;
     line-height: 40px;
     vertical-align: middle;
+	background: #42bb05;
+	border: 0;
 }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }

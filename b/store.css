@@ -41,21 +41,20 @@ header {
     width: calc(100% - 10px);
     text-align: right;
 }
-#coinsImg { vertical-align: middle; }
 @media screen and (min-width: 500px){ header{font-size:4vw !important;line-height:4vw} #coinsImg, #backButton { height: 4vw!important }}
 header div { display: inline-block }
-#coins { background: #654620 }
+#coins { background: #654620;vertical-align: top; }
 #backButton {
     left: 0;
 	position: absolute;
 }
 #coinsImg, #backButton { height: 7vw }
 #playButton {
-	max-width: 350px;
+	max-width: 250px;
     margin: auto;
-    height: 50px;
-	line-height: 50px;
-	font-size: 25px;
+    height: 30px;
+	line-height: 30px;
+	font-size: 20px;
 }
 #mainContainer {
     position: relative;
@@ -116,7 +115,7 @@ main .button {
 }
 main {
 	overflow-y: scroll;
-	height: calc(100% - 5vw - 73px);
+	height: calc(100% - 5vw - 78px);
 	width: 100vw;
 	bottom: 0;
 	position: absolute;
@@ -136,30 +135,18 @@ main section div {
     border-radius: 20px;
     padding: 5px;
     float: left;
-    word-wrap: break-word;
-    font-size: 16px;
     background: #563f22 no-repeat 100%/cover;
 }
 @media screen and (max-width: 500px) {
     main section div {
-        width: calc(50vw - 24px);
-        height: calc(50vw - 24px);
-        line-height: calc(100vw - 60px);
-        font-size: 12px;
-    }
-}
-@media screen and (min-width: 501px) and (max-width: 750px) {
-    main section div {
         width: calc(33vw - 24px);
         height: calc(33vw - 24px);
-        line-height: calc(66vw - 60px);
     }
 }
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 501px) {
     main section div {
         width: calc(25vw - 24px);
         height: calc(25vw - 24px);
-        line-height: calc(50vw - 60px);
     }
 }
 ::-webkit-scrollbar { width: 0 }

@@ -1,11 +1,10 @@
 <!DOCTYPE html><html>
 	<head>
-		<title>Battle Selector | b-Ocracy</title>
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<title>b-Ocracy</title>
+		<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
 	  	<link rel="stylesheet" type="text/css" href="selector.min.css?18">
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-
 	    <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,38 +16,10 @@
         
         </script>
         <script src="https://bocracy.com/assets/js/imgmap.js"></script>
-        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 	</head>
 	<body id="body">
-			<header id="header">
-				<a ontouchend="location='index.html?18'"><img id="backButton" src="btn/back.png"/></a>
-				<div id="title">b-Ocracy</div>
-			</header>
-			<divider></divider><font size="5">Maps</font>
-			<main id="countries">
-				<img onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/a-flag.png" id="aritropus" />
-				<img onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/c-flag.png" id="cortofa"/>
-			</main>
-			<divider></divider><font size="5">Normal Play</font>
-			<main id="normal">
-				<a onclick="location = 'battle.html?18#aonarchy'"><div>Aonarchy</div></a>
-				<a onclick="location = 'battle.html?18#ammunist'"><div>Ammunist</div></a>
-				<a onclick="location = 'battle.html?18#ciftian'"><div>Ciftian</div></a>
-				<a onclick="location = 'battle.html?18#citatian'"><div>Citatian</div></a>
-			</main>
-			<divider></divider><font size="5">Freeplay</font>
-			<main id="freeplay">
-				<a onclick="location = 'battle.html?18#alinar'"><div>Alinar Snows</div></a>
-				<a onclick="location = 'battle.html?18#dinotera'"><div>Dinotera</div></a>
-				<a onclick="location = 'battle.html?18#dericil'"><div>Dericil Sea</div></a>
-				<a onclick="location = 'battle.html?18#cerotopis'"><div>Cerotopis</div></a>
-				<a onclick="location = 'battle.html?18#citopia'"><div>Citopia</div></a>
-				<a onclick="location = 'battle.html?18#bictatorship'"><div>Bictatorship</div></a>
-				<a onclick="location = 'battle.html?18#bocracy'"><div>bOcracy</div></a>
-				<a onclick="location = 'battle.html?18#fantasy'"><div>Fantasy Land</div></a>
-			</main>
+			<img id="backButton" ontouchend="location='index.html?18'" src="btn/back.png"/>
 			<div id="mapDiv">
-				<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
 				<img id="Amap" usemap="#aritropusMap" src="img/aritropus.svg">
 				<img id="Cmap" usemap="#cortofaMap" src="img/cortofa.png">
 				<img id="legend" src="img/legend.png" />
@@ -71,7 +42,7 @@
 					<area  title="Cadrinal City Freeplay Boss Battleground" ontouchend="location='battle.html#cadrinal+'" shape="rect" coords="1301,795,1161,905">
 					<area  title="Acitus Conflict" ontouchend="location='battle.html#acitus'" shape="rect" coords="845,284,956,389">
 					<area  title="Archolius Trade Towers" ontouchend="location='trade.html'" shape="rect" coords="469,957,340,1117">
-					<area  title="Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block'" shape="rect" coords="1016,314,939,1">
+					<area  title="Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Cmap').style.display = 'block';imageMapResize()" shape="rect" coords="1016,314,939,1">
 					<area  title="Balinion Blockade" ontouchend="location='battle.html#balinion^'" shape="rect" coords="260,672,57,1121">
 				</map>
 				<map name="cortofaMap">
@@ -85,8 +56,5 @@
 				  <area shape="rect" coords="275,472,346,560" title="Citatian Battleground" ontouchend="location='battle.html#citatian'">
 				  <area shape="rect" coords="220,548,278,609" title="Citatian Multiplayer Battleground" ontouchend="location='multiplayer.html#citatian'">
 				  <area shape="rect" coords="79,416,158,486" title="Citatian Store" ontouchend="location='store.html#citatian'">
-				  <area shape="poly" coords="536,665,498,721,560,782,571,806,545,844,416,776,448,601,495,577,609,586,639,612,615,671" title="Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)location='battle.html#citopia';else if (rand < 0.2)location='battle.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)location='battle.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)location='battle.html#citatian';">
-				  <area shape="rect" coords="519,680,565,738" title="Multiplayer Battleground" ontouchend="var rand = Math.random();if (rand >= 0.8)location='multiplayer.html#citopia';else if (rand < 0.2)location='multiplayer.html#cerotopis'; else if (rand >= 0.2 && rand < 0.5)location='multiplayer.html#ciftian';else if (rand >= 0.5 && rand <= 0.7)location='multiplayer.html#citatian';">
-				  <area shape="rect" coords="1025,1192,1125,1494" title="The Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block'">
-				</map></div><script>if(!navigator.userAgent.match(/Android/i)&&!navigator.userAgent.match(/iPhone|iPad|iPod/i)){var clickables = document.querySelectorAll('[ontouchend]');for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick',clickables[i].getAttribute('ontouchend'))}</script></body><script>window.onload=function(){setTimeout(function(){imageMapResize()},1000)}</script>
-</html>
+				  <area shape="rect" coords="1025,1192,1125,1494" title="Acitus Bridge" ontouchend="var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}document.getElementById('Amap').style.display = 'block';imageMapResize()">
+				</map></div><script>if(!navigator.userAgent.match(/Android/i)&&!navigator.userAgent.match(/iPhone|iPad|iPod/i)){var clickables = document.querySelectorAll('[ontouchend]');for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick',clickables[i].getAttribute('ontouchend'))}imageMapResize()</script></body></html>

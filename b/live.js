@@ -9,11 +9,8 @@ var isMobile = {
 
 var goodNames = {
 			url : '',
-			original : ['santa', 'skater', 'saw', 'spiky', 'electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
-			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			aonarchy : [],
 			aonarchyBoss : [],
 			ammunist : [],
@@ -25,15 +22,11 @@ var goodNames = {
 			citatian : [],
 			cerotopis : ['light-warrior', 'paramedics', 'enslaved'],
 			citopia : ['overlapping', 'triple-odd', 'night'],
-			alinar : ['color-jetpack', 'thorn', 'mammoth-rider', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0'],
-			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
+			alinar : ['color-jetpack', 'thorn', 'mammoth-rider', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0']
 }, badNames = {
 			url : '',
-			original : ['electric', 'shark', 'ghost', 'dragonball', 'giant', 'spear', 'superhero'],
-			bocracy : ['knight', 'archer', 'barbed', 'flower', 'muscle', 'trump'],
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-			fantasy : ['dovahkinn', 'mage', 'superhero', 'giant', 'dragonball', 'ghost'],
 			aonarchy : [],
 			aonarchyBoss : [],
 			ammunist : [],
@@ -45,8 +38,7 @@ var goodNames = {
 			citatian : [],
 			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
-			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch'],
-			bictatorship : ['worldwar', 'superhero', 'giant', 'barbed', 'muscle', 'electric', 'trump']
+			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
 }, battles = ['dericil', 'alinar', 'aonarchy', 'ammunist', 'eora'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;

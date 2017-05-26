@@ -3,10 +3,10 @@ function play() {
 	id('startPlay').style.display = 'none';
 }
 function battleground(e) {
-	if (e.target.id != 'battleground' && !e.target.style.outline) {
+	if (e.target.id != 'battleground' && !e.target.style.border) {
 	b = e.target.innerHTML;
-	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++) document.querySelectorAll('#battleground div')[i].style.outline = '';
-	e.target.style.outline = "1px white solid";
+	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++) document.querySelectorAll('#battleground div')[i].style.border= '';
+	e.target.style.border = "1px white solid";
 	id('characters').innerHTML = "";
 	for (i = 0; i < goodNames[b].length; i++) {
 		if (localStorage[goodNames[b][i]] == 'true') {
@@ -20,7 +20,7 @@ function battleground(e) {
 var cost;
 function character(e) {
 	if (e.target.id != 'characters') {
-	e.target.style.background=e.target.style.background?"":"#5F71D5";
+	e.target.style.background=e.target.style.background?"":"#730005";
 	cost = 0;
 	for (i = 0; i < id('characters').querySelectorAll('[style*="background"]').length; i++) {
 		cost += Math.floor(good[id('characters').querySelectorAll('[style*="background"]')[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.01);
