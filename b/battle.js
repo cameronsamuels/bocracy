@@ -123,6 +123,7 @@ function load() {
 		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "cadrinal": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
+		case "acitus": newStats = 'false'; badNames.url = "c"; goodNames.url = "a"; break;
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
 	if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
