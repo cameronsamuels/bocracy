@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><html>
 	<head>
 		<title>b-Ocracy</title>
@@ -15,7 +14,7 @@
           ga('send', 'pageview');
 
         </script>
-        <script type="text/javascript" src="//d3aq14vri881or.cloudfront.net/kiip.js"></script>
+        <script type="text/javascript" src="https://d3aq14vri881or.cloudfront.net/kiip.js"></script>
 	</head>
 	<body id="body">
 		<header id="header">
@@ -30,11 +29,10 @@
 			<div id="aButton" ontouchend="game.attack('green')"></div><div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div><div id="aName"></div><div id="aHealth"><div id="aHealthBar"></div><p></p></div>
 		</section>
 		<div class="clear"></div>
-		<div id="overlay"><div id="overlayText"></div><div id="restartText" class="button" ontouchend="restart()">PLAY AGAIN</div></div>
+		<div id="overlay"><div id="overlayText"></div><div id="restartText" ontouchend="restart()">PLAY AGAIN</div></div>
 		<div class="theSword" id="bSword"></div><div class="theSword" id="aSword"></div>
 		<div id="portrait">
 			<h5>Click the right image to attack<br />Click the left one to heal</h5>
-			<div id="multiplayer" class="button" ontouchend="location='multiplayer.html?18'+window.location.hash">Multiplayer mode</div>
             <h3>ROTATE TO LANDSCAPE</h3>
 			<img id="rotate" src="img/rotate.png" />
         </div>

@@ -15,24 +15,23 @@ body, html {
     color: #fff;
     background: #b30005 url('img/landing.svg') 0px/cover;
 }
-.button {
+main div {
 	border: 8px #000 solid;
 	background: #fff;
     margin: 3px;
     cursor: pointer;
     width: calc(50% - 42px);
     color: #000;
-    font-weight: 800;
 	padding: 5vh 8px;
 }
-.button, header { display: inline-block }
+main div, header { display: inline-block }
 main, body, html { width: 100% }
-.button:not(.big) { font-size: 3.7vw}
-@media screen and (orientation: portrait) { .button:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 4.5vh!important}#select h2 {font-size:4.5vh!important;line-height:4.5vh!important}}
+main div:not(.big) { font-size: 3.7vw}
+@media screen and (orientation: portrait) { main div:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 4.5vh!important}#select h2 {font-size:4.5vh!important;line-height:4.5vh!important}}
 .full { width: calc(100% - 42px) }
-.big { font-size: 6vw; }
+.big { font-size: 6vw }
 main {
-	max-width: 80vw;
+	max-width: 70vw;
 	margin: auto;
 }
 .btn {
@@ -66,17 +65,9 @@ main {
 }
 #battleground { border-bottom: 4px #fff solid }
 #characters div { border-radius: calc(2vh + 6vw) }
-@media screen and (min-height: 540px) and (max-height: 599px) and (orientation: portrait) {
-	main { max-width: 300px; }
+@media screen and (orientation: portrait) {
+    main { max-width: 95vw; }
 }
-@media screen and (min-height: 300px) and (max-height: 440px) and (orientation: landscape) {
-    main { max-width: 70vw; }
-}
-/*
-@media screen and (min-height: 600px) and (max-width: 1024px) and (orientation: landscape) {
-	main { max-width: 90vw; }
-}
-*/
 header {
 	font-size: 45px;
 	background: #b30005;

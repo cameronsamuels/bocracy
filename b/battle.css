@@ -9,7 +9,6 @@ body, html {
     height: 100%;
     margin: 0;
     background: #3F51B5;
-    cursor: url(img/cur.png), default;
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     user-select: none;
@@ -18,22 +17,6 @@ body, html {
 }
 .clear { clear: both }
 a { cursor: pointer}
-.button {
-    border: 1px #fff solid;
-    background-color: #2E40A4;
-    display: inline-block;
-    margin: 2.5px 9px;
-    border-radius: 3px;
-    color: white;
-    font-size: 12px;
-    padding: 8px 15px;
-    cursor: pointer;
-    width: calc(100% - 50px);
-}
-.button:hover {
-    background-color: #3F51B5;
-    border: 1px #2E40A4 solid;
-}
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
 @media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 7.5px) 0px !important; } }
@@ -79,12 +62,8 @@ header {
 	top: 0;
 	z-index: 4;
 }
-#refreshButton {
-	right: 2px;
-}
-#backButton {
-	left: 2px;
-}
+#refreshButton { right: 2px }
+#backButton { left: 2px }
 section { width: 50%; height: 100%; float: left; position: relative;background-size: 300%;background-repeat: no-repeat; }
 #bSection { background-color: #64DD17;;background-position: 0% 80% }
 #aSection { background-color: #b30005;background-position: 50% 80% }
@@ -94,9 +73,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     background: #FFF 100%/cover no-repeat;
     margin-left: 25%;
 }
-#aButton {
-	transform: scaleX(-1)
-}
+#aButton { transform: scaleX(-1) }
 #bButton, #aButton { margin-top: 15vh }
 #clickToStart {
     position: absolute;
@@ -178,9 +155,13 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     position: absolute;
     bottom: 10px;
     line-height: 40px;
-    vertical-align: middle;
 	background: #42bb05;
-	border: 0;
+    display: inline-block;
+    margin: 2.5px 9px;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: calc(100% - 50px);
 }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }

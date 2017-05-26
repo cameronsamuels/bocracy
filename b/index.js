@@ -55,4 +55,4 @@ if (isMobile.any()) {
 	id('characters').onclick = character;
 }
 id("body").style.backgroundPosition=1e2*Math.random()+"%";
-id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>eora</div><div>citatian</div><div>ciftian</div>";
+id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>eora</div>";
