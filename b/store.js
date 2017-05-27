@@ -3,7 +3,6 @@ if (window.location.hash != '') {
 	purchase(current);
 }
 id('coins').innerHTML = localStorage.coins;
-if (!isMobile.iOS()) id('playButton').style.display = 'none';
 var battlegrounds = ["eora","aonarchy","ammunist","ciftian"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
