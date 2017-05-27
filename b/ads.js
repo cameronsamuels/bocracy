@@ -37,7 +37,7 @@ videoContent.onended = contentEndedListener;
 
 // Request video ads.
 var adsRequest = new google.ima.AdsRequest();
-adsRequest.adTagUrl = 'http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&client=pub-9778270788893963&videoad_start_delay=0&description_url=http%3A%2F%2Fwww.google.com&max_ad_duration=40000&adtest=off';
+adsRequest.adTagUrl = 'http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&client=ca-games-pub-4968145218643279&videoad_start_delay=0&description_url=http%3A%2F%2Fwww.google.com&max_ad_duration=40000&adtest=on';
 
 // Specify the linear and nonlinear slot sizes. This helps the SDK to
 // select the correct creative if multiple are returned.
