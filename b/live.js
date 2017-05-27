@@ -20,7 +20,6 @@ var goodNames = {
 			acitus : ['prospector', 'archer', 'worldwar'],
 			ciftian : [],
 			ciftianBoss : [],
-			citatian : [],
 			cerotopis : ['light-warrior', 'paramedics', 'enslaved'],
 			citopia : ['overlapping', 'triple-odd', 'night'],
 			alinar : ['color-jetpack', 'thorn', 'mammoth-rider', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0']
@@ -37,7 +36,6 @@ var goodNames = {
 			cadrinalBoss : ['sharkanator', 'd15-cannon', 'bentacrabb-2D1', 'bylo-ken', 'teratul-rider', 'defensive-destroyer', 'batalifor-sentry', 'b--torv-troops'],
 			ciftian : [],
 			ciftianBoss : [],
-			citatian : [],
 			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
@@ -71,8 +69,9 @@ good.witchcraft = new object('witchcraft', [45, 1500, 20], ['aonarchy', 'true', 
 
 bad.sharkanator = new object('sharkanator', [100, 5000, 0], ['aonarchy', 'false', 2500, 'a', 'sharkanator', 'cannonball']);
 bad.bentacrabb_2D1 = new object('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', 'false', 1500, 'a', 'bentacrabb_2D1', 'cannonball']);
-bad.bylo_ken = new object('bylo_ken', [35, 1500, 20], ['aonarchy', 'false', 600, 'a', 'bylo_ken', 'saber']);
-bad.d15_cannon = new object('d15_cannon', [60, 2000, 5], ['aonarchy', 'false', 1500, 'a', 'd15_cannon', 'cannonball']);
+bad.bylo_ken = new object('bylo_ken', [45, 2200, 20], ['aonarchy', 'false', 800, 'a', 'bylo_ken', 'saber']);
+bad.d15_cannon = new object('d15_cannon', [60, 2200, 5], ['aonarchy', 'false', 1500, 'a', 'd15_cannon', 'cannonball']);
+bad.byter = new object('byter', [40, 1500, 20], ['aonarchy', 'false', 750, 'a', 'byter', 'missile']);
 
 bad.sharkanatorBoss = new object('sharkanatorBoss', [100, 5000, 0], ['aonarchy+', 'false', 2500, 'a', 'sharkanatorBoss', 'cannonball']);
 bad.bylo_kenBoss = new object('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 600, 'a', 'bylo_kenBoss', 'saber']);
@@ -82,21 +81,20 @@ good.enslaved = new object('enslaved', [30, 2000, 10], ['ciftian', 'true', 750, 
 good.triple_odd = new object('triple_odd', [40, 2500, 20], ['ciftian', 'true', 1000, 'c', 'triple_odd', 'c_ball']);
 good.night = new object('night', [25, 1500, 20], ['ciftian', 'true', 600, 'c', 'night', 'shadowball']);
 good.light_warrior = new object('light_warrior', [60, 3000, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior', 'warrior_sword']);
+good.paramedics = new object('paramedics', [30, 1250, 40], ['ciftian', 'true', 1000, 'c', 'paramedics', 'c_ball']);
+good.overlapping = new object('overlapping', [40, 3200, 10], ['ciftian', 'true', 1300, 'c', 'overlapping', 'c_ball']);
 
 bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb', 'missile']);
-bad.batalifor_1D0 = new object('batalifor_1D0', [20, 2000, 10], ['ciftian', 'false', 1000, 'a', 'batalifor_1D0', 'cannonball']);
+
 bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['ciftian', 'false', 750, 'a', 'f87_cannon', 'missile']);
 bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight', 'dark_sword']);
+bad.scubbars = new object('scubbars', [50, 1500, 25], ['ciftian', 'false', 1000, 'a', 'scubbars', 'scorpion_spikes']);
+bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['ciftian', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
+bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['ciftian', 'false', 1000, 'a', 'batalifor_general', 'green_fluid_sword']);
 
 bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss', 'missile']);
 bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss', 'cannonball']);
 bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss', 'dark_sword']);
-
-bad.batalifor_sentry = new object('batalifor_sentry', [60, 3000, 10], ['ammunist', 'false', 1500, 'a', 'batalifor_sentry', 'cannonball']);
-bad.batalifor_2D4 = new object('batalifor_2D4', [30, 1500, 20], ['ammunist', 'false', 750, 'a', 'batalifor_2D4', 'red_fluid_sword']);
-bad.b__torv_troops = new object('b__torv_troops', [40, 3000, 15], ['ammunist', 'false', 1300, 'a', 'b__torv_troops', 'missile']);
-bad.b__torv_commander = new object('b__torv_commander', [30, 2000, 20], ['ammunist', 'false', 1000, 'a', 'b__torv_commander', 'saber']);
-bad.b_shuttle = new object('b_shuttle', [50, 3500, 7], ['ammunist', 'false', 1500, 'a', 'b_shuttle', 'cannonball']);
 
 good.guardian = new object('guardian', [30, 1750, 40], ['ammunist', 'true', 750, 'a', 'guardian', 'fairy_dust']);
 good.siren = new object('siren', [35, 1300, 20], ['ammunist', 'true', 450, 'a', 'siren', 'music']);
@@ -105,30 +103,29 @@ good.spiky = new object('spiky', [35, 2000, 20], ['ammunist', 'true', 1000, 'a',
 good.jetpack = new object('jetpack', [35, 2500, 15], ['ammunist', 'true', 1200, 'a', 'jetpack', 'fireball']);
 good.worldwar = new object('worldwar', [50, 2000, 15], ['ammunist', 'true', 1500, 'a', 'worldwar', 'shadowball']);
 
+bad.batalifor_sentry = new object('batalifor_sentry', [60, 3000, 10], ['ammunist', 'false', 1500, 'a', 'batalifor_sentry', 'cannonball']);
+bad.batalifor_2D4 = new object('batalifor_2D4', [30, 1500, 20], ['ammunist', 'false', 750, 'a', 'batalifor_2D4', 'red_fluid_sword']);
+bad.b__torv_troops = new object('b__torv_troops', [40, 3000, 15], ['ammunist', 'false', 1300, 'a', 'b__torv_troops', 'missile']);
+bad.b__torv_commander = new object('b__torv_commander', [30, 2000, 20], ['ammunist', 'false', 1000, 'a', 'b__torv_commander', 'saber']);
+bad.b_shuttle = new object('b_shuttle', [50, 3500, 7], ['ammunist', 'false', 1500, 'a', 'b_shuttle', 'cannonball']);
+bad.batalifor_1D0 = new object('batalifor_1D0', [20, 2000, 10], ['ammunist', 'false', 1000, 'a', 'batalifor_1D0', 'cannonball']);
+
 bad.batalifor_sentryBoss = new object('batalifor_sentryBoss', [60, 3500, 5], ['ammunist+', 'false', 1500, 'a', 'batalifor_sentryBoss', 'cannonball']);
 bad.b_shuttleBoss = new object('b_shuttleBoss', [60, 4000, 5], ['ammunist+', 'false', 1500, 'a', 'b_shuttleBoss', 'cannonball']);
 bad.bentacrabb_2D1Boss = new object('bentacrabb_2D1Boss', [60, 3500, 5], ['ammunist+', 'false', 1500, 'a', 'bentacrabb_2D1Boss', 'cannonball']);
 
-good.paramedics = new object('paramedics', [30, 1250, 40], ['citatian', 'true', 1000, 'c', 'paramedics', 'c_ball']);
-good.overlapping = new object('overlapping', [40, 3200, 10], ['citatian', 'true', 1300, 'c', 'overlapping', 'c_ball']);
-
-bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['citatian', 'false', 1000, 'a', 'batalifor_general', 'green_fluid_sword']);
-bad.scubbars = new object('scubbars', [50, 1500, 25], ['citatian', 'false', 1000, 'a', 'scubbars', 'scorpion_spikes']);
-bad.byter = new object('byter', [45, 1500, 20], ['citatian', 'false', 750, 'a', 'byter', 'missile']);
-bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['citatian', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
-
-bad.poor_worker = new object('poor_worker', [30, 2000, 20], ['eora', 'false', 250, 'a', 'poor_worker', 'scythe']);
-bad.dynamite = new object('dynamite', [50, 2500, 20], ['eora', 'false', 1500, 'a', 'dynamite']);
+bad.poor_worker = new object('poor_worker', [30, 2000, 20], ['eora', 'false', 250, 'a', 'poor_worker', 'sickle']);
+bad.dynamite = new object('dynamite', [50, 2500, 20], ['eora', 'false', 1500, 'a', 'dynamite', 'dynamite']);
 bad.mercenary = new object('mercenary', [50, 3000, 20], ['eora', 'false', 1600, 'a', 'mercenary']);
 bad.teratul_rider = new object('teratul_rider', [75, 4500, 10], ['eora', 'false', 2222, 'a', 'teratul_rider']);
 bad.defensive_destroyer = new object('defensive_destroyer', [75, 3000, 10], ['eora', 'false', 1919, 'a', 'defensive_destroyer', 'cannonball']);
 bad.caveman = new object('caveman', [40, 2500, 20], ['eora', 'false', 1000, 'a', 'caveman']);
 
-good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral']);
-good.prospector = new object('prospector', [30, 1750, 15], ['eora', 'true', 750, 'a', 'prospector']);
-good.elemental = new object('elemental', [50, 3200, 40], ['eora', 'true', 2000, 'a', 'elemental', 'fireball']);
+good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral', 'rocks']);
+good.prospector = new object('prospector', [30, 1750, 15], ['eora', 'true', 750, 'a', 'prospector', 'shovel']);
+good.elemental = new object('elemental', [50, 3200, 40], ['eora', 'true', 2000, 'a', 'elemental', 'elements']);
 good.camel_rider = new object('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, 'a', 'camel_rider']);
-good.cactus = new object('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'fairy_dust']);
+good.cactus = new object('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'thorns']);
 good.mountain_jetpack = new object('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
 function convertClick() {
