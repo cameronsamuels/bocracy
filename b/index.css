@@ -28,7 +28,7 @@ main div {
 main div, header { display: inline-block }
 main, body, html { width: 100% }
 main div:not(.big) { font-size: 3.7vw}
-@media screen and (orientation: portrait) { main div:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 4.5vh!important}#select h2 {font-size:4.5vh!important;line-height:4.5vh!important}main { max-width: 95vw }}
+@media screen and (orientation: portrait) { main div:not(.big) { font-size:6vw !important} .big { font-size:12vw !important}#backButton{height: 4.5vh!important}#select h2 {font-size:4.5vh!important;line-height:4.5vh!important}main { max-width: 95vw!important }}
 .full { width: calc(100% - 42px) }
 .big { font-size: 6vw }
 main {

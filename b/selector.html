@@ -1,11 +1,10 @@
 <!DOCTYPE html><html>
 	<head>
-		<title>Battle Selector | b-Ocracy</title>
+		<title>b-Ocracy</title>
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	  	<link rel="shortcut icon" type="image/png" href="https://bocracy.com/icon.png">
 	  	<link rel="stylesheet" type="text/css" href="selector.min.css?18">
 	    <meta name="description" content="b-Ocracy - Fight the greatest uprising in the land of b-Ocracy! Attack, Heal, Conquer, Succeed!" />
-
 	    <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,7 +16,6 @@
         
         </script>
         <script src="https://bocracy.com/assets/js/imgmap.js"></script>
-        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 	</head>
 	<body id="body">
 			<header id="header">
@@ -29,21 +27,10 @@
 				<img onclick="document.getElementById('Amap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/a-flag.png" id="aritropus" />
 				<img onclick="document.getElementById('Cmap').style.display = 'block';document.getElementById('mapDiv').style.display = 'block';imageMapResize()" src="img/c-flag.png" id="cortofa"/>
 			</main>
-			<divider></divider><font size="5">Normal Play</font>
-			<main id="normal">
-				<a onclick="location = 'battle.html?18#aonarchy'"><div>Aonarchy</div></a>
-				<a onclick="location = 'battle.html?18#ammunist'"><div>Ammunist</div></a>
-				<a onclick="location = 'battle.html?18#eora'"><div>Eora Basin</div></a>
-				<a onclick="location = 'battle.html?18#ciftian'"><div>Ciftian</div></a>
-			</main>
-			<divider></divider><font size="5">Freeplay</font>
+			<divider></divider><font size="5">More</font>
 			<main id="freeplay">
-				<a onclick="location = 'battle.html?18#alinar'"><div>Alinar Snows</div></a>
-				<a onclick="location = 'battle.html?18#cadrinal+'"><div>Cadrinal City</div></a>
 				<a onclick="location = 'battle.html?18#dinotera'"><div>Dinotera</div></a>
 				<a onclick="location = 'battle.html?18#dericil'"><div>Dericil Sea</div></a>
-				<a onclick="location = 'battle.html?18#cerotopis'"><div>Cerotopis</div></a>
-				<a onclick="location = 'battle.html?18#citopia'"><div>Citopia</div></a>
 			</main>
 			<div id="mapDiv">
 				<div class="button" onclick="document.getElementById('mapDiv').style.display = 'none';var ele = document.querySelectorAll('#mapDiv img:not(#legend)');for (i = 0; i < ele.length; i++){ele[i].style.display = 'none'}">Close</div>
