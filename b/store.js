@@ -4,12 +4,12 @@ if (window.location.hash != '') {
 }
 id('coins').innerHTML = localStorage.coins;
 if (!isMobile.iOS()) id('playButton').style.display = 'none';
-var battlegrounds = ["eora","aonarchy","ammunist","ciftian","citatian"], m = document.querySelector('main');
+var battlegrounds = ["eora","aonarchy","ammunist","ciftian"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {
 		var html = "";
-		html = html + "<section><h1>" + battlegrounds[i] + "<span class='button' onclick='window.location=\"battle.html#" + battlegrounds[i] + "\"'>Play</span></h1><div style='background-image:url(img/shuffle.png)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
+		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(img/shuffle.png)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
 		for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
 			if (localStorage[good[goodNames[battlegrounds[i]][j]].name] != "true") {
 				var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');

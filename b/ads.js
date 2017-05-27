@@ -4,7 +4,6 @@
 	        document.getElementById('adContainer'),
 	        videoContent);
 function ad() {
-	document.getElementById('audio').pause();
 	document.getElementById('mainContainer').style.display = 'block';
 	adDisplayContainer.initialize();
 	requestAds();
