@@ -3,9 +3,10 @@ function play() {
 	id('startPlay').style.display = 'none';
 }
 function battleground(e) {
-	if (e.target.id != 'battleground' && !e.target.style.border) {
+	if (e.target.id != 'battleground' && !e.target.style.border.toString().includes('white')) {
 	b = e.target.innerHTML;
-	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++) document.querySelectorAll('#battleground div')[i].style.border= '';
+	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++)
+	document.querySelectorAll('#battleground div')[i].style.border= '1px transparent solid';
 	e.target.style.border = "1px white solid";
 	id('characters').innerHTML = "";
 	for (i = 0; i < goodNames[b].length; i++) {
@@ -54,5 +55,5 @@ if (isMobile.any()) {
 	id('battleground').onclick = battleground;
 	id('characters').onclick = character;
 }
-id("body").style.backgroundPosition=1e2*Math.random()+"%";
+document.body.style.backgroundPosition=1e2*Math.random()+"%";
 id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>eora</div>";

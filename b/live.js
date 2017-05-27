@@ -139,7 +139,7 @@ function convertClick() {
 }
 
 function loadLive() {
-	id('body').oncontextmenu = function(e) { e.preventDefault(); }
+	document.body.oncontextmenu = function(e) { e.preventDefault(); }
 	convertClick();
 	setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "";},1000)
 }
