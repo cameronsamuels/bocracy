@@ -46,7 +46,7 @@ function startPlay() {
 		localStorage['b' + (i+1)] = characters[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	}
 	localStorage.sc = characters.length;
-	location = "battle.html?18#series" + b;
+	location = "battle.html#series" + b;
 }
 if (isMobile.any()) {
 	id('battleground').addEventListener('touchend', battleground);

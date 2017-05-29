@@ -5,7 +5,7 @@ ExpiresDefault "access 1 week"
 
 # Versions #
 Redirect 307 /live /beta
-Redirect 307 /beta /b?18
+Redirect 307 /beta /b
 Redirect 307 /alpha /a?u
 Redirect 307 /a /live
 
