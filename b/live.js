@@ -116,16 +116,17 @@ bad.bentacrabb_2D1Boss = new object('bentacrabb_2D1Boss', [60, 3500, 5], ['ammun
 
 bad.poor_worker = new object('poor_worker', [30, 2000, 20], ['eora', 'false', 250, 'a', 'poor_worker', 'sickle']);
 bad.dynamite = new object('dynamite', [50, 2500, 20], ['eora', 'false', 1500, 'a', 'dynamite', 'dynamite']);
-bad.mercenary = new object('mercenary', [50, 3000, 20], ['eora', 'false', 1600, 'a', 'mercenary']);
-bad.teratul_rider = new object('teratul_rider', [75, 4500, 10], ['eora', 'false', 2222, 'a', 'teratul_rider']);
+bad.mercenary = new object('mercenary', [50, 3000, 20], ['eora', 'false', 1600, 'a', 'mercenary', 'missile']);
+bad.teratul_rider = new object('teratul_rider', [75, 4500, 10], ['eora', 'false', 2222, 'a', 'teratul_rider', 'knife']);
 bad.defensive_destroyer = new object('defensive_destroyer', [75, 3000, 10], ['eora', 'false', 1919, 'a', 'defensive_destroyer', 'cannonball']);
-bad.caveman = new object('caveman', [40, 2500, 20], ['eora', 'false', 1000, 'a', 'caveman']);
+bad.bucarrun_assasin = new object('bucarrun_assasin', [40, 2500, 20], ['eora', 'false', 1000, 'a', 'bucarrun_assasin', 'knife']);
 
 good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral', 'rocks']);
 good.prospector = new object('prospector', [30, 1750, 15], ['eora', 'true', 750, 'a', 'prospector', 'shovel']);
 good.elemental = new object('elemental', [50, 3200, 40], ['eora', 'true', 2000, 'a', 'elemental', 'elements']);
-good.camel_rider = new object('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, 'a', 'camel_rider']);
+good.camel_rider = new object('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, 'a', 'camel_rider', 'scavenger_sword']);
 good.cactus = new object('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'thorns']);
+good.scavenger = new object('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 'a', 'scavenger', 'scavenger_sword']);
 good.mountain_jetpack = new object('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
 function convertClick() {
