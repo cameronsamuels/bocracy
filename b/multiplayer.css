@@ -18,44 +18,32 @@ body, html {
 
 .clear { clear: both }
 
-@media screen and (orientation:landscape) {
-    #bSection, #aSection, #overlay { display: none!important }
-    #landscape { display: block !important }
+@media screen and (orientation:landscape) {	
+	html {
+		transform: rotate(-90deg);
+		transform-origin: left top;
+		width: 100vh;
+		height: 100vw;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
 }
 
-#landscape { display: none }
-
-header {
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-}
-
-#backButton,
-#refreshButton {
-    width: 20px;
+#backButton {
+    width: 30px;
 	top: 5px;
     position: absolute;
-}
-#backButton {
-	left: 0;
-}
-#refreshButton {
-	right: 0;
-}
-
-#refreshButton {
-    float: right
-}
-
-#title {
-    font-size: 15px;
+	z-index: 10;
+	left: 5px;
 }
 
 section {
     width: 100%;
-    height: calc(50% - 15px);
-    float: left
+    height: 50%;
+    float: left;
+	z-index: 5;
+	position: relative;
 }
 
 @media screen and (max-height: 567px) {
@@ -65,13 +53,20 @@ section {
 }
 
 #bSection {
-    background: #64DD17;
-    transform: rotate(180deg)
+	background-color: #64DD17;
+    transform: rotate(180deg);
 }
-
-#aSection {
-    background: red
+#background {
+	background-position: 50% 100%;
+	background-size: 300%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0; left: 0;
+	z-index: 0
 }
+#aSection { background-color: #b30005 }
 
 #aButton,
 #bButton {
@@ -89,21 +84,28 @@ section {
     height: 20px;
     margin: 0 calc(50% - 90px);
     background: #F44336;
-    border: 4px #3F51B5 solid
+    border: 4px #000 solid;
+	position: relative;
 }
 
-#aHealth #aHealthBar,
-#bHealth #bHealthBar {
+#aHealthBar, #bHealthBar {
     width: 100%;
     height: 100%;
     background: #64DD17;
     transition: width 0.25s;
+	position: absolute;
 }
 
-#aName,
-#bName {
-    font-size: 25px;
-    margin: 5px 0
+#aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
+#aName { background:#b30005}
+#bName { background:#64DD17}
+
+#aHealth p, #bHealth p {
+	position: relative;
+    margin: 0;
+    top:  0;
+    line-height: 20px;
+	font-weight: 900;
 }
 
 #aActions,
@@ -134,34 +136,116 @@ section {
 	margin: 2.5px 10.5px;
 	line-height: 45px;
 }
-
+@media screen and (orientation: landscape) {
+	#overlay {
+/*
+		transform: rotate(90deg);
+		transform-origin: left top;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 100%;
+*/
+		width: 100vw;
+		height: 100vh;
+	}
+	#overlay h5 {
+	margin-right: 10vh;
+	font-size: 5vh;
+	}
+	#overlay img, #overlayStats span {
+    height: calc(20vh - 4px);
+	width: calc(20vh - 4px);
+	border-radius: 10vh;
+	line-height: 20vh;
+}
+	#overlayText div:first-child {
+    margin-top: calc(50vh - 50px);
+}
+}
+@media screen and (orientation: portrait) {
+	#overlayText div:first-child {
+    margin-top: calc(50vw - 50px);
+}
+	#overlay {
+/*
+		transform: rotate(90deg);
+		transform-origin: left top;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 100%;
+		
+*/
+		width: 100vh;
+		height: 100vw;
+	}
+	#overlay h5 {
+	margin-right: 10vw;
+	font-size: 5vw;
+	}
+	#overlay img, #overlayStats span {
+    height: calc(20vw - 4px);
+	width: calc(20vw - 4px);
+	border-radius: 10vw;
+	line-height: 20vw;
+}
+}
 #overlay {
+	
+	transform: rotate(90deg);
+		transform-origin: left top;
+		
+		top: 0;
+		left: 100%;
     display: none;
     background: #3F51B5;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    color: white;
+	z-index: 200;
+	position: absolute;
+}
+#overlay img, #overlayStats span {
+    margin: 5px 0px;
+	display: block;
+	border: 2px #fff solid;
+}
+#overlay h5 {
+    height: 26.56px;
+	display: inline-block;
+	margin: 5px;
+}
+#overlay h4 {
+	margin: 0;
+}
+#overlay * {
+	left: 0;
+}
+#overlayStats h5:last-child {
+	margin-right: 0px;
 }
 #overlay div:not(#restartText) {
-    color: white;
     width: 100%;
-    font-size: 40px;
-    top: calc(50% - 20px);
-    position: absolute;
+}
+#overlayText div:first-child {
+    font-size: 100px;
 }
 #restartText {
     font-size: 40px;
-    background: #2E40A4;
-    border-radius: 20px;
+    border-radius: 40px;
     position: absolute;
-    margin: 0 calc(5% - 2px);
     bottom: 10px;
-    width: 90%;
-    border: 4px white solid;
-    text-align: center;
+    line-height: 40px;
+	background: #42bb05;
+    display: inline-block;
+    margin: 2.5px 9px;
     color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: calc(100% - 50px);
+}
+@media screen and (max-height: 450px) {
+    #overlay div:not(#overlayStats) { font-size: 32px !important; }
+    #overlayText div:not(#overlayStats) { font-size: 75px !important; }
 }
 
 .theSword {
@@ -193,17 +277,4 @@ section {
 @keyframes aSword {
     from { bottom: 225px }
     to { bottom: calc(100% - 195px) }
-}
-
-#rotate {
-    height: 50vh;
-    margin: auto;
-	left:0;right:0;
-    position: absolute;
-    display: none
-}
-
-#computer,
-#rotateInstructions {
-    display: none
 }
