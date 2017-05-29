@@ -92,5 +92,5 @@ header {
 	width: 100%;
 	height: 100%;
 }
-@media screen and (max-width: 600px) { #characters div, #battleground div  {width: 40% !important }}
+@media screen and (max-width: 530px) { #characters div, #battleground div  {width: 40% !important }}
 @media screen and (max-height:500px){#characters div, #battleground div{font-size:2vw;height:8vw}#characters div{border-radius:8vw}}
