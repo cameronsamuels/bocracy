@@ -64,9 +64,9 @@ header {
 }
 #refreshButton { right: 2px }
 #backButton { left: 2px }
-section { width: 50%; height: 100%; float: left; position: relative;background-size: 300%;background-repeat: no-repeat; }
-#bSection { background-color: #64DD17;;background-position: 0% 80% }
-#aSection { background-color: #b30005;background-position: 50% 80% }
+section { width: 50%; height: 100%; float: left; position: relative;background-size: 300%;background-repeat: no-repeat;transition:background-position 1s }
+#bSection { background-color: #64DD17 }
+#aSection { background-color: #b30005 }
 #aButton, #bButton, #clickToStart {
     width: 50%;
     padding: 25% 0px;

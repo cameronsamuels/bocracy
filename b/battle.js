@@ -1,5 +1,5 @@
 if (location.protocol.includes('http')) var kiipInstance = new Kiip('fca374961f67f78f76e4072c37997e4d');
-var newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bgPos, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
@@ -78,6 +78,10 @@ var game = { on : 'false',
 				setTimeout("id('bSword').style.display = 'none';id('bSword').style.animationName = '';", 100);
 				clicks++;
 				if (a.health == 0) game.win('green');
+				bgPos -= 10;
+				if (bgPos < -(window.innerWidth/4)) bgPos = -(window.innerWidth/4);
+				id('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
+				id('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			} else if (atk == 'red') {
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
@@ -86,6 +90,10 @@ var game = { on : 'false',
 				id('aSword').style.animationName = "aSword";
 				setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
 				if (b.health == 0) game.win('red');
+				bgPos += 10;
+				if (bgPos > 0) bgPos = 0;
+				id('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
+				id('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			}
 			document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 			document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
@@ -199,6 +207,9 @@ function load() {
 	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
 	id('refreshButton').style.display = "";
 	updateCharacter();
+	id('bSection').style.backgroundPosition = '0% 80%';
+	id('aSection').style.backgroundPosition = '50% 80%';
+	bgPos = 0;
 }
 function updateCharacter() {
 	var bName = b.name;
