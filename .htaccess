@@ -2,14 +2,11 @@
 ExpiresActive On
 ExpiresDefault "access 1 week"
 </IfModule>
-
-# Versions #
-Redirect 307 /live /beta
+Redirect 307 /live /b
 Redirect 307 /beta /b
-Redirect 307 /alpha /a?u
-Redirect 307 /a /live
+Redirect 307 /alpha /b
+Redirect 307 /a /b
 
-# Listings and Places #
 Redirect 307 /ios https://appsto.re/us/OUwGib.i
 Redirect 307 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
 Redirect 307 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
@@ -20,6 +17,4 @@ Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
 Redirect 307 /wikia /wiki
 Redirect 307 /wiki http://bocracy.wikia.com/
 Redirect 307 /facebook https://fb.me/bOcracy
-
-# Company #
 Redirect 307 /support mailto:team@bocracy.com
