@@ -173,7 +173,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     background: 100%/cover no-repeat;
     width: 26vh;
     height: 13vh;
-    animation-duration: 0.1s;
+    animation-duration: 150ms;
 }
 #bSword { left: calc(75% - 125px); top: 45vh }
 #aSword {

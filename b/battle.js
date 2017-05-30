@@ -1,5 +1,5 @@
 if (location.protocol.includes('http')) var kiipInstance = new Kiip('fca374961f67f78f76e4072c37997e4d');
-var bgPos, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bSword, aSword, bgPos = 0, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
@@ -74,11 +74,14 @@ var game = { on : 'false',
 			if (atk == 'green') {
 				a.health -= b.attack;
 				a.health = Math.max(0, a.health);
-				a.health = Math.min(a.orig_health, a.health);				
+				a.health = Math.min(a.orig_health, a.health);
+				var newone = id('bSword').cloneNode(true);
+				id('bSword').parentNode.replaceChild(newone, id('bSword'));
 				id('bSword').style.display = "block";
 				id('bSword').style.animationName = "bSword";
 				id('clickToStart').style.display = 'none';
-				setTimeout("id('bSword').style.display = 'none';id('bSword').style.animationName = '';", 100);
+				clearTimeout(bSword);
+				bSword = setTimeout("id('bSword').style.display = 'none';id('bSword').style.animationName = '';", 150);
 				clicks++;
 				if (a.health == 0) game.win('green');
 				bgPos -= 10;
@@ -89,9 +92,12 @@ var game = { on : 'false',
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
+				var newone = id('aSword').cloneNode(true);
+				id('aSword').parentNode.replaceChild(newone, id('aSword'));
 				id('aSword').style.display = "block";
 				id('aSword').style.animationName = "aSword";
-				setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
+				clearTimeout(aSword);
+				aSword = setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
 				if (b.health == 0) game.win('red');
 				bgPos += 10;
 				if (bgPos > 0) bgPos = 0;
@@ -171,7 +177,8 @@ function load() {
 		b.attack = good[b.name].stats[0];
 		b.heal = good[b.name].stats[2];
 	}
-	a.speed = 450;
+	if (isMobile.any()) a.speed = 300;
+	else a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
 	if (current.includes('+')) {
