@@ -65,6 +65,9 @@ var game = { on : 'false',
 		id('restartText').style.display = "none";
 		setTimeout(function(){id('restartText').style.display = "block"}, 750);
 		id('overlay').style.display = "block";
+		id('bSection').style.backgroundPosition = '0% 80%';
+		id('aSection').style.backgroundPosition = '50% 80%';
+		bgPos = 0;
 		}
 	}, attack : function(atk) {
 		if (game.on == 'true') {
@@ -153,23 +156,22 @@ function load() {
 	} while (a.name == aName);
 	if (newStats == 'false') {
 		while (b.name == a.name) { b.name = goodNames[current][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
-		a.health = Math.min(Math.random() * 2250, 2000);
-		a.attack = Math.max(32, Math.random() * 40);
-		a.speed = 450;
-		a.heal = Math.random() * 12;
-		b.health = parseFloat(a.health * 0.85);
-		b.attack = parseFloat(a.attack * 0.85);
-		b.heal = parseFloat(a.heal * 0.85);
+		a.health = Math.max(Math.random() * 2000, 1500);
+		a.attack = Math.max(20, Math.random() * 35);
+		a.heal = Math.random() * 15;
+		b.health = parseFloat(a.health * 0.75);
+		b.attack = parseFloat(a.attack * 0.75);
+		b.heal = parseFloat(a.heal * 0.75);
 	} else if (newStats == 'true') {
 		while (localStorage[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = bad[a.name].stats[1];
 		a.attack = bad[a.name].stats[0];
-		a.speed = 450;
 		a.heal = bad[a.name].stats[2];
 		b.health = good[b.name].stats[1];
 		b.attack = good[b.name].stats[0];
 		b.heal = good[b.name].stats[2];
 	}
+	a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
 	if (current.includes('+')) {
@@ -207,9 +209,6 @@ function load() {
 	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
 	id('refreshButton').style.display = "";
 	updateCharacter();
-	id('bSection').style.backgroundPosition = '0% 80%';
-	id('aSection').style.backgroundPosition = '50% 80%';
-	bgPos = 0;
 }
 function updateCharacter() {
 	var bName = b.name;
