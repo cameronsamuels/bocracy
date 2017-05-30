@@ -165,9 +165,9 @@ function load() {
 		a.health = Math.max(Math.random() * 2000, 1500);
 		a.attack = Math.max(20, Math.random() * 35);
 		a.heal = Math.random() * 15;
-		b.health = parseFloat(a.health * 0.75);
-		b.attack = parseFloat(a.attack * 0.75);
-		b.heal = parseFloat(a.heal * 0.75);
+		b.health = parseFloat(a.health * 0.8);
+		b.attack = parseFloat(a.attack * 0.8);
+		b.heal = parseFloat(a.heal * 0.8);
 	} else if (newStats == 'true') {
 		while (localStorage[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = bad[a.name].stats[1];
@@ -212,8 +212,8 @@ function load() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
 	} catch (ex){}
-	id('bSword').style.backgroundImage = 'url("img/' + bw + '.png")';
-	id('aSword').style.backgroundImage = 'url("img/' + aw + '.png")';
+	id('bSword').style.backgroundImage = 'url("img/' + bw + '.svg")';
+	id('aSword').style.backgroundImage = 'url("img/' + aw + '.svg")';
 	id('refreshButton').style.display = "";
 	updateCharacter();
 }
