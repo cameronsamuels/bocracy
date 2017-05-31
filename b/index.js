@@ -24,7 +24,7 @@ function character(e) {
 	e.target.style.background=e.target.style.background?"":"#730005";
 	cost = 0;
 	for (i = 0; i < id('characters').querySelectorAll('[style*="background"]').length; i++) {
-		cost += Math.floor(good[id('characters').querySelectorAll('[style*="background"]')[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.01);
+		cost += Math.floor(good[id('characters').querySelectorAll('[style*="background"]')[i].innerHTML.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03);
 		cost += 5;
 	}
 	if (id('characters').querySelectorAll('[style*="background"]').length > 0) {
