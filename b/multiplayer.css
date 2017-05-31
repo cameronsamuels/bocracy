@@ -138,14 +138,6 @@ section {
 }
 @media screen and (orientation: landscape) {
 	#overlay {
-/*
-		transform: rotate(90deg);
-		transform-origin: left top;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 100%;
-*/
 		width: 100vw;
 		height: 100vh;
 	}
@@ -168,15 +160,6 @@ section {
     margin-top: calc(50vw - 50px);
 }
 	#overlay {
-/*
-		transform: rotate(90deg);
-		transform-origin: left top;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 100%;
-		
-*/
 		width: 100vh;
 		height: 100vw;
 	}
@@ -192,12 +175,10 @@ section {
 }
 }
 #overlay {
-	
 	transform: rotate(90deg);
-		transform-origin: left top;
-		
-		top: 0;
-		left: 100%;
+	transform-origin: left top;
+	top: 0;
+	left: 100%;
     display: none;
     background: #3F51B5;
     color: white;
@@ -230,18 +211,20 @@ section {
     font-size: 100px;
 }
 #restartText {
-    font-size: 40px;
-    border-radius: 40px;
-    position: absolute;
-    bottom: 10px;
     line-height: 40px;
 	background: #42bb05;
-    display: inline-block;
     margin: 2.5px 9px;
-    color: white;
-    padding: 8px 15px;
-    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 40px;
+    padding: 15px;
     width: calc(100% - 50px);
+	position: absolute;
+	bottom: 10px;
+	cursor: pointer;
+}
+#restartText:hover {
+	background-color: #53CC16;
 }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
