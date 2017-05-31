@@ -25,6 +25,44 @@ body, html {
 		top: 100%;
 		left: 0;
 	}
+	#bButton, #aButton { margin-top: 15vw }
+	#clickToStart { top: 15vw }
+	#overlay img, #overlayStats span {
+		height: calc(20vw - 4px);
+		width: calc(20vw - 4px);
+		border-radius: 10vw;
+		line-height: 20vw;
+	}
+	#overlay h5 {
+		margin-right: 10vw;
+		font-size: 5vw;
+	}
+	.theSword {
+		width: 23vw;
+		height: 13vw;
+	}
+	#bSword { top: 45vw }
+	#aSword { top: 20vw }
+}
+@media screen and (orientation:landscape) {	
+	#bButton, #aButton { margin-top: 15vh }
+	#clickToStart { top: 15vh }
+	#overlay img, #overlayStats span {
+		height: calc(20vh - 4px);
+		width: calc(20vh - 4px);
+		border-radius: 10vh;
+		line-height: 20vh;
+	}
+	#overlay h5 {
+		margin-right: 10vh;
+		font-size: 5vh;
+	}
+	.theSword {
+		width: 23vh;
+		height: 13vh;
+	}
+	#bSword { top: 45vh }
+	#aSword { top: 20vh }
 }
 .clear { clear: both }
 a { cursor: pointer}
@@ -67,10 +105,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     margin-left: 25%;
 }
 #aButton { transform: scaleX(-1) }
-#bButton, #aButton { margin-top: 15vh }
 #clickToStart {
     position: absolute;
-    top: 15vh;
     left: 25%;
     opacity: 0.8;
     background-color: #3F51B5;
@@ -118,19 +154,13 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 	z-index: 10;
 }
 #overlay img, #overlayStats span {
-    height: calc(20vh - 4px);
-	width: calc(20vh - 4px);
-	border-radius: 10vh;
     margin: 5px 0px;
 	display: block;
-	line-height: 20vh;
 	border: 2px #fff solid;
 }
 #overlay h5 {
     height: 26.56px;
 	display: inline-block;
-	margin-right: 10vh;
-	font-size: 5vh;
 }
 #overlayStats h5:last-child {
 	margin-right: 0px;
@@ -166,13 +196,11 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     display: none;
     position: absolute;
     background: 100%/cover no-repeat;
-    width: 23vh;
-    height: 13vh;
     animation-duration: 150ms;
 }
-#bSword { left: calc(75% - 125px); top: 45vh }
+#bSword { left: calc(75% - 125px)}
 #aSword {
-    left: calc(25% + 125px); top: 20vh;
+    left: calc(25% + 125px);
     transform: rotate(180deg)
 }
 @keyframes bSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
