@@ -150,18 +150,20 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     margin-top: 10px;
 }
 #restartText {
-    font-size: 40px;
-    border-radius: 40px;
-    position: absolute;
-    bottom: 10px;
     line-height: 40px;
 	background: #42bb05;
-    display: inline-block;
     margin: 2.5px 9px;
-    color: white;
-    padding: 8px 15px;
-    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 40px;
+    padding: 15px;
     width: calc(100% - 50px);
+	position: absolute;
+	bottom: 10px;
+	cursor: pointer;
+}
+#restartText:active {
+	background-color: #53CC16;
 }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
