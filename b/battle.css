@@ -162,7 +162,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 	bottom: 10px;
 	cursor: pointer;
 }
-#restartText:active {
+#restartText:hover {
 	background-color: #53CC16;
 }
 @media screen and (max-height: 450px) {

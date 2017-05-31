@@ -205,15 +205,6 @@ function load() {
 		id('bButton').style.backgroundColor = '';
 	};
 	img.src = 'img/' + current.replace('+', '') + '.svg';
-	var aw  = 'sword', bw = 'sword';
-	try {
-		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
-	} catch (ex) {}
-	try {
-		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
-	} catch (ex){}
-	id('bSword').style.backgroundImage = 'url("img/' + bw + '.svg")';
-	id('aSword').style.backgroundImage = 'url("img/' + aw + '.svg")';
 	id('refreshButton').style.display = "";
 	updateCharacter();
 }
@@ -235,6 +226,15 @@ function updateCharacter() {
 		id('bName').style.fontSize = "2vw";
 		id('aName').style.fontSize = "2vw";
 	}
+	var aw  = 'sword', bw = 'sword';
+	try {
+		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+	} catch (ex) {}
+	try {
+		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+	} catch (ex){}
+	id('bSword').style.backgroundImage = 'url("img/' + bw + '.svg")';
+	id('aSword').style.backgroundImage = 'url("img/' + aw + '.svg")';
 }
 function restart() {
 	game.on = 'false';
