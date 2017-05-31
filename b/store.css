@@ -19,6 +19,7 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
 #content, #adContainer, #popupOverlay { top: 0 }
 #content, #adContainer, main .button, #popupOverlay { left: 0 }
 #content, #adContainer, #mainContainer, #contentElement, body, html, #popupOverlay { height: 100% }
+/*#confirmPopup, #unlockedPopup { position: relative }*/
 .button {
     border: 1px #2E40A4 solid;
     background-color: #3F51B5;
@@ -67,46 +68,6 @@ header div { display: inline-block }
 #mainContainer {
     z-index: 10;
 }
-#confirmPopup, #unlockedPopup {
-    background-color: #FFF !important;
-    box-shadow: 1px 1px 1px #2a2a2a;
-    border-radius: 25px;
-    z-index: 1;
-    display: none;
-}
-#confirmPopup {
-    height: 200px;
-    width: 250px;
-    top: calc(50% - 100px);
-    left: calc(50% - 125px);
-}
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    #unlockedPopup {
-        zoom: 80%;
-        top: calc(50% - 125px) !important;
-    }    
-}
-#unlockedPopup {
-    height: 300px;
-    width: 250px;
-    top: calc(50% - 150px);
-    left: calc(50% - 125px);
-}
-#confirmPopup footer, #unlockedPopup footer { bottom: 5px }
-#unlockedPopupImg { margin: 0px calc(50% - 62.5px); }
-#confirmYesBtn, #confirmNoBtn {
-    width: calc(42.5% - 30px) !important;
-    margin: 1px calc(1% - 0.5px) !important;
-}
-#confirmPopup p {
-	font-size: 90%;
-	color: #555;
-}
-#popupOverlay {
-    background: #2a2a2a;
-    opacity: 0.5;
-    display: none;
-}
 main .button {
     width: 100px;
     display: block;
@@ -152,3 +113,64 @@ main section h1 {
     }
 }
 ::-webkit-scrollbar { width: 0 }
+#confirmPopup, #unlockedPopup {
+    background-color: #FFF !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 25px;
+    z-index: 1;
+    display: none;
+}
+#confirmPopup {
+    height: 200px;
+    width: 250px;
+    top: calc(50% - 160px);
+    left: calc(50% - 125px);
+}
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    #unlockedPopup {
+        zoom: 80%;
+		top: calc(50% - 168px);
+    }    
+}
+#unlockedPopup {
+    height: 300px;
+    width: 250px;
+    top: calc(50% - 210px);
+    left: calc(50% - 125px);
+}
+#confirmPopup footer, #unlockedPopup footer { bottom: 5px }
+#unlockedPopupImg { margin: 0px calc(50% - 62.5px); }
+#confirmYesBtn, #confirmNoBtn {
+    width: calc(42.5% - 30px) !important;
+    margin: 1px calc(1% - 0.5px) !important;
+}
+#confirmPopup p {
+	font-size: 90%;
+	color: #555;
+}
+#popupOverlay {
+    background: #2a2a2a;
+    opacity: 0.5;
+    display: none;
+}
+#confirmPopup:before, #unlockedPopup:before {
+  content:"";
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position:absolute;
+  bottom:-30px;
+  right:40px;
+  border-width:0 0 30px 50px;
+  border-style:solid;
+  border-color:transparent #fff;
+  display:block;
+  width:0;
+}
+#confirmPopup:after, #unlockedPopup:after {
+	content: '';
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: -110px;
+	right: 100px;
+	background: url('img/business.png') no-repeat 100%/cover;
+}
