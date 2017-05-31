@@ -121,14 +121,6 @@ var game = { on : 'false',
 };
 function load() {
 	clicks = 0;
-	if (!isMobile.any()) {
-		id('portrait').style.display = 'none !important';
-//		id('bSection').style.display = 'block';
-//		id('aSection').style.display = 'block';
-//		id('bSword').style.display = 'block!important';
-//		id('aSword').style.display = 'block!important';
-//		id('overlay').style.display = '';
-	}
 	if (!window.location.hash.includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;

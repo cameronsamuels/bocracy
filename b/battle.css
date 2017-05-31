@@ -15,29 +15,23 @@ body, html {
     -webkit-user-select: none;
     overflow: hidden;
 }
+@media screen and (orientation:portrait) {	
+	html {
+		transform: rotate(-90deg);
+		transform-origin: left top;
+		width: 100vh;
+		height: 100vw;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}
 .clear { clear: both }
 a { cursor: pointer}
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
 @media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(25% - 7.5px) 0px !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(25% - 6px) 0px !important; } }
-@media screen and (orientation:portrait) {
-    #portrait { display: block }
-    .theSword { display: none!important }
-	#refreshButton { display: none }
-    #overlay { display: none!important }
-}
-@media screen and (orientation:landscape) {
-	#portrait{display: none}
-}
-#portrait {
-	z-index: 2;
-    position: absolute;
-    top: 0;
-    background: #3F51B5;
-    width: 100%;
-    height: 100%
-}
 header {
     width: 100%;
     height: 30px;
@@ -54,7 +48,6 @@ header {
 	z-index: 3;
 	font-weight:900
 }
-#portrait h5 { margin-top:50px }
 #backButton, #refreshButton {
     width: 30px;
     margin-top: 5px;
@@ -184,5 +177,3 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 }
 @keyframes bSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
 @keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
-#rotate { height: 80vw; width: 80vw; left: calc(50% - 89px) }
-#portrait h3 { color: #fff }
