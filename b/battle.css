@@ -108,8 +108,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 #clickToStart {
     position: absolute;
     left: 25%;
-    opacity: 0.8;
-    background-color: #3F51B5;
+    opacity: 0.7;
+    background-color: #000;
     color: white;
     font-weight: 800;
     margin: 0px;
@@ -137,6 +137,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     margin: 0;
     top:  0;
     line-height: 20px;
+	vertical-align: middle;
 	font-weight: 900;
 }
 #aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
