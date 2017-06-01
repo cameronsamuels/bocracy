@@ -115,7 +115,6 @@ main section h1 {
 ::-webkit-scrollbar { width: 0 }
 #confirmPopup, #unlockedPopup {
     background-color: #FFF !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     border-radius: 25px;
     z-index: 1;
     display: none;
@@ -155,7 +154,6 @@ main section h1 {
 }
 #confirmPopup:before, #unlockedPopup:before {
   content:"";
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   position:absolute;
   bottom:-30px;
   right:40px;
