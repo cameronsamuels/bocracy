@@ -22,7 +22,7 @@ var goodNames = {
 			ciftianBoss : [],
 			cerotopis : ['light-warrior', 'paramedics', 'enslaved'],
 			citopia : ['overlapping', 'triple-odd', 'night'],
-			alinar : ['color-jetpack', 'thorn', 'mammoth-rider', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0']
+			alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
 }, badNames = {
 			url : '',
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
