@@ -147,4 +147,4 @@ function loadLive() {
 document.addEventListener('DOMContentLoaded', loadLive, false);
 if (!localStorage.coins) localStorage.coins = 0;
 else localStorage.coins = Math.round(localStorage.coins);
-document.body.innerHTML="<div id='logo' style='width:100%;height:100%;background:#343838'><img src='img/banner.png' style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0' /></div><div id='mainWrapper' style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
+document.body.innerHTML="<div id='logo' style='width:100%;height:100%;background:#343838'><img src='img/banner.svg' style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0' /></div><div id='mainWrapper' style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";

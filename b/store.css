@@ -165,10 +165,10 @@ main section h1 {
 }
 #confirmPopup:after, #unlockedPopup:after {
 	content: '';
-	width: 100px;
+	width: 80px;
 	height: 100px;
 	position: absolute;
 	bottom: -110px;
 	right: 100px;
-	background: url('img/business.png') no-repeat 100%/cover;
+	background: url('img/merchant.svg') no-repeat 100%/cover;
 }
