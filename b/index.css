@@ -30,11 +30,6 @@ body { width: 100% }
 	}
 	main div { padding: 5vw 8px }
 	characters>div { height: 50vw }
-	#battleground div {
-		padding: 3vh 0;
-		font-size: 1.8vw;
-		height: calc(6vh + 2vw);
-	}
 	main div:not(.big) { font-size: 3.7vh}
 	.big { font-size: 6vh }
 	main { max-width: 70vh}
@@ -44,44 +39,35 @@ body { width: 100% }
 		line-height: 4.5vh;
 	}
 	#battleground div {
-		padding: 3vh 0;
-		font-size: 1.8vw;
-		height: calc(6vh + 2vw);
+		padding: 1vh 0;
 	}
 	#characters>div { height: 40vw }
 	#characters div div {
         width: calc(14.29vh - 8px);
         height: calc(14.29vh - 8px);
     }
-	#battleground div{font-size:2vh;height:8vh}
+	#battleground div{font-size:3vw}
 }
 @media screen and (orientation:landscape) {	
 	main div { padding: 5vh 8px }
 	characters>div { height: 50vh }
 	#battleground div {
-		padding: 3vw 0;
-		font-size: 1.8vh;
-		height: calc(6vw + 2vh);
+		padding: 1vw 0;
 	}
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
-		#backButton {height: 4.5vw}
+	#backButton {height: 4.5vw}
 	#select h2 {
 		font-size: 4.5vw;
 		line-height: 4.5vw;
-	}
-	#battleground div {
-		padding: 3vw 0;
-		font-size: 1.8vh;
-		height: calc(6vw + 2vh);
 	}
 	#characters>div { height: 40vh }
 	#characters div div {
         width: calc(14.29vw - 8px);
         height: calc(14.29vw - 8px);
     }
-	#battleground div{font-size:2vw;height:8vw}
+	#battleground div{font-size:3vh}
 }
 #selected { border-left:4px #fff solid }
 main div {
@@ -121,7 +107,7 @@ main { margin: auto }
 	display: inline-block;
 	cursor: pointer;
 	width: 23%;
-	box-sizing: border-box;
+	border: 1px transparent solid;
 }
 #battleground { border-bottom: 4px #fff solid }
 header {
