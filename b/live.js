@@ -74,6 +74,7 @@ bad.d15_cannon = new object('d15_cannon', [60, 2200, 5], ['aonarchy', 'false', 1
 bad.byter = new object('byter', [40, 1500, 20], ['aonarchy', 'false', 750, 'a', 'byter', 'missile']);
 
 bad.sharkanatorBoss = new object('sharkanatorBoss', [100, 5000, 0], ['aonarchy+', 'false', 2500, 'a', 'sharkanatorBoss', 'cannonball']);
+bad.reinforced_sharkanatorBoss = new object('reinforced_sharkanatorBoss', [120, 6000, 5], ['aonarchy+', 'false', 3000, 'a', 'reinforced_sharkanatorBoss', 'cannonball']);
 bad.bylo_kenBoss = new object('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 600, 'a', 'bylo_kenBoss', 'saber']);
 bad.d15_cannonBoss = new object('d15_cannonBoss', [60, 2000, 5], ['aonarchy+', 'false', 1500, 'a', 'd15_cannonBoss', 'cannonball']);
 

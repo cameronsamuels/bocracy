@@ -202,22 +202,31 @@ function load() {
 }
 function updateCharacter() {
 	var bName = b.name;
-	bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
+	bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	id('bName').innerHTML = bName + ' ' + goodNames.url;
 	var aName = a.name;
-	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-');
+	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	id('aName').innerHTML = aName + ' ' + badNames.url;
 		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	id('bName').style.fontSize = Math.abs(9-(id('bName').innerHTML.length/2)||2) + "vw";
+//	id('bName').style.fontSize = Math.abs(9-(id('bName').innerHTML.length/2)||2) + "vw";
 	
-	id('aName').style.fontSize = Math.abs(Math.min((9-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw',''))) + "vw";
+//	id('aName').style.fontSize = Math.abs(Math.min((9-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw',''))) + "vw";
 	
-	id('bName').style.fontSize = Math.abs(Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw',''))) + "vw";
-	if (id('bName').style.fontSize.replace('vw','')<2) {
-		id('bName').style.fontSize = "2vw";
-		id('aName').style.fontSize = "2vw";
-	}
+//	id('bName').style.fontSize = Math.abs(Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw',''))) + "vw";
+//	if (id('bName').style.fontSize.replace('vw','')<2) {
+//		if (id('bName').style.fontSize.replace('vw','')<0) {
+//			id('bName').style.fontSize = '0.5vw';
+//			id('aName').style.fontSize = id('bName').style.fontSize;
+//		} else {
+//			id('bName').style.fontSize = (parseFloat(id('bName').style.fontSize.replace('vw', '')) + 0.5) + 'vw';
+//			id('aName').style.fontSize = id('bName').style.fontSize;
+//		}
+//	}
+	id('bName').style.fontSize = (30-id('bName').innerHTML.length)/5 + 'vw';
+	id('aName').style.fontSize = Math.min((30-id('aName').innerHTML.length)/5,id('bName').style.fontSize.replace('vw', '')) + 'vw';
+	if (id('aName').style.fontSize.replace('vw', '') < 1) id('aName').style.fontSize = (parseFloat(id('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
+	id('bName').style.fontSize = Math.min((30-id('bName').innerHTML.length)/5,id('aName').style.fontSize.replace('vw', '')) + 'vw';
 	var aw  = 'sword', bw = 'sword';
 	try {
 		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
