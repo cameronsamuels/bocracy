@@ -30,7 +30,7 @@ var game = { on : 'false',
 					series.c = Math.round(series.c * series.t);
 					if (localStorage.coins == undefined) localStorage.coins = series.c;
 					else localStorage.coins = parseFloat(localStorage.coins) + series.c;
-					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
+					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
 					id('overlay').style.backgroundColor = '#b30005';
 					id('restartText').style.display = "none";
 					setTimeout(function(){id('restartText').style.display = "block"}, 750);
@@ -54,7 +54,7 @@ var game = { on : 'false',
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
 			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
-			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.png"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#64DD17';
 			var rewardable = ['sharkanator', 'bentacrabb_2D1', 'b--2-mobile-cannon', 'sub-batalifor', 'teratul_rider', 'defensive_destroyer', 'batalifor-sentry', 'b--torv-troops', 'dark_knight'];
 			if (rewardable.indexOf(a.name) != -1) kiipInstance.postMoment('defeating the ' + a.name);
