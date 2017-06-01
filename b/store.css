@@ -68,12 +68,14 @@ header div { display: inline-block }
 #mainContainer {
     z-index: 10;
 }
+/*
 main .button {
     width: 100px;
     display: block;
     right: 0;
     margin: 5px auto;
 }
+*/
 main {
 	overflow-y: scroll;
 	height: calc(100% - 7vw - 64px);
