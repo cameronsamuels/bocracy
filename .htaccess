@@ -1,6 +1,6 @@
 <IfModule mod_expires.c>
 ExpiresActive On
-ExpiresDefault "access 1 week"
+ExpiresDefault "access 1 month"
 </IfModule>
 Redirect 307 /live /b
 Redirect 307 /beta /b
