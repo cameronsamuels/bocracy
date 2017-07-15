@@ -102,7 +102,7 @@ good.siren = new object('siren', [35, 1300, 20], ['ammunist', 'true', 450, 'a', 
 good.jak_o_anterns = new object('jak_o_anterns', [20, 2000, 10], ['ammunist', 'true', 450, 'a', 'jak_o_anterns', 'sickle']);
 good.spiky = new object('spiky', [35, 2000, 20], ['ammunist', 'true', 1000, 'a', 'spiky', 'spikes']);
 good.jetpack = new object('jetpack', [35, 2500, 15], ['ammunist', 'true', 1200, 'a', 'jetpack', 'fireball']);
-good.worldwar = new object('worldwar', [50, 2000, 15], ['ammunist', 'true', 1500, 'a', 'worldwar', 'shadowball']);
+good.worldwar = new object('worldwar', [50, 2000, 15], ['ammunist', 'true', 1500, 'a', 'worldwar', 'bomb']);
 
 bad.batalifor_sentry = new object('batalifor_sentry', [60, 3000, 10], ['ammunist', 'false', 1500, 'a', 'batalifor_sentry', 'cannonball']);
 bad.batalifor_2D4 = new object('batalifor_2D4', [30, 1500, 20], ['ammunist', 'false', 750, 'a', 'batalifor_2D4', 'red_fluid_sword']);
@@ -119,7 +119,7 @@ bad.poor_worker = new object('poor_worker', [30, 2000, 20], ['eora', 'false', 25
 bad.dynamite = new object('dynamite', [50, 2500, 20], ['eora', 'false', 1500, 'a', 'dynamite', 'dynamite']);
 bad.mercenary = new object('mercenary', [50, 3000, 20], ['eora', 'false', 1600, 'a', 'mercenary', 'missile']);
 bad.teratul_rider = new object('teratul_rider', [75, 4500, 10], ['eora', 'false', 2222, 'a', 'teratul_rider', 'knife']);
-bad.defensive_destroyer = new object('defensive_destroyer', [75, 3000, 10], ['eora', 'false', 1919, 'a', 'defensive_destroyer', 'cannonball']);
+bad.defensive_destroyer = new object('defensive_destroyer', [75, 3000, 10], ['eora', 'false', 1919, 'a', 'defensive_destroyer', 'bomb']);
 bad.bucarrun_assasin = new object('bucarrun_assasin', [40, 2500, 20], ['eora', 'false', 1000, 'a', 'bucarrun_assasin', 'knife']);
 
 good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral', 'rocks']);
