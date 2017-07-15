@@ -124,6 +124,7 @@ function load() {
 	if (!window.location.hash.includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
+		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "ciftian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "cerotopis": newStats = 'false'; badNames.url = "b"; goodNames.url = "c"; break;

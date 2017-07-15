@@ -3,7 +3,7 @@ if (window.location.hash != '') {
 	purchase(current);
 }
 id('coins').innerHTML = localStorage.coins;
-var battlegrounds = ["eora","aonarchy","ammunist"], m = document.querySelector('main');
+var battlegrounds = ["eora","aonarchy","alief","ammunist"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {

@@ -59,4 +59,4 @@ if (isMobile.any()) {
 	id('characters').onclick = character;
 }
 document.body.style.backgroundPosition=1e2*Math.random()+"%";
-id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>eora</div>";
+id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";

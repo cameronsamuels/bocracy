@@ -13,6 +13,7 @@ var goodNames = {
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			aonarchy : [],
 			aonarchyBoss : [],
+			alief : [],
 			ammunist : [],
 			ammunistBoss : [],
 			eora : [],
@@ -28,6 +29,7 @@ var goodNames = {
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			aonarchy : [],
+			alief : [],
 			aonarchyBoss : [],
 			ammunist : [],
 			ammunistBoss : [],
@@ -39,7 +41,7 @@ var goodNames = {
 			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
 			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
-}, battles = ['dericil', 'alinar', 'aonarchy', 'ammunist', 'eora'], good = { }, bad = { };
+}, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { };
 function object(nm, stats, info, other) {
 	/*  nm = name as string;
 		stats = [attack as float, health as float, heal as float];
@@ -62,10 +64,8 @@ good.archer = new object('archer', [40, 1500, 20], ['aonarchy', 'true', 750, 'a'
 good.goblin_horde = new object('goblin_horde', [50, 3200, 10], ['aonarchy', 'true', 1500, 'a', 'goblin_horde', 'goblin_sword']);
 good.goblin = new object('goblin', [20, 1200, 15], ['aonarchy', 'true', 250, 'a', 'goblin', 'goblin_sword']);
 good.warrior = new object('warrior', [55, 3000, 10], ['aonarchy', 'true', 1500, 'a', 'warrior', 'warrior_sword']);
-good.phantom = new object('phantom', [30, 2000, 20], ['aonarchy', 'true', 750, 'a', 'phantom', 'shadowball']);
 good.anonymous = new object('anonymous', [30, 1500, 15], ['aonarchy', 'true', 600, 'a', 'anonymous', 'cyber_hand']);
 good.a87_cannon = new object('a87_cannon', [60, 2500, 10], ['aonarchy', 'true', 1500, 'a', 'a87_cannon', 'cannonball']);
-good.witchcraft = new object('witchcraft', [45, 1500, 20], ['aonarchy', 'true', 800, 'a', 'witchcraft', 'spell']);
 
 bad.sharkanator = new object('sharkanator', [100, 5000, 0], ['aonarchy', 'false', 2500, 'a', 'sharkanator', 'cannonball']);
 bad.bentacrabb_2D1 = new object('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', 'false', 1500, 'a', 'bentacrabb_2D1', 'cannonball']);
@@ -78,7 +78,19 @@ bad.reinforced_sharkanatorBoss = new object('reinforced_sharkanatorBoss', [120, 
 bad.bylo_kenBoss = new object('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 600, 'a', 'bylo_kenBoss', 'saber']);
 bad.d15_cannonBoss = new object('d15_cannonBoss', [60, 2000, 5], ['aonarchy+', 'false', 1500, 'a', 'd15_cannonBoss', 'cannonball']);
 
-good.enslaved = new object('enslaved', [30, 2000, 10], ['ciftian', 'true', 750, 'c', 'enslaved', 'c_ball']);
+good.witchcraft = new object('witchcraft', [45, 1500, 20], ['alief', 'true', 800, 'a', 'witchcraft', 'spell']);
+good.phantom = new object('phantom', [30, 2000, 20], ['alief', 'true', 750, 'a', 'phantom', 'shadowball']);
+good.elemental = new object('elemental', [48, 3000, 20], ['alief', 'true', 1500, 'a', 'elemental', 'elements']);
+// good.mage = new object('mage', [50, 3500, 40], ['alief', 'true', 2000, 'a', 'mage', 'spell']);
+
+bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['alief', 'false', 1500, 'a', 'ultacrabb', 'missile']);
+bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['alief', 'false', 750, 'a', 'f87_cannon', 'missile']);
+bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['alief', 'false', 1500, 'a', 'dark_knight', 'dark_sword']);
+bad.scubbars = new object('scubbars', [50, 1500, 25], ['alief', 'false', 1000, 'a', 'scubbars', 'scorpion_spikes']);
+bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['alief', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
+bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['alief', 'false', 1000, 'a', 'batalifor_general', 'green_fluid_sword']);
+
+/*good.enslaved = new object('enslaved', [30, 2000, 10], ['ciftian', 'true', 750, 'c', 'enslaved', 'c_ball']);
 good.triple_odd = new object('triple_odd', [40, 2500, 20], ['ciftian', 'true', 1000, 'c', 'triple_odd', 'c_ball']);
 good.night = new object('night', [25, 1500, 20], ['ciftian', 'true', 600, 'c', 'night', 'shadowball']);
 good.light_warrior = new object('light_warrior', [60, 3000, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior', 'warrior_sword']);
@@ -96,7 +108,7 @@ bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['ciftia
 bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss', 'missile']);
 bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss', 'cannonball']);
 bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss', 'dark_sword']);
-
+*/
 good.guardian = new object('guardian', [30, 1750, 40], ['ammunist', 'true', 750, 'a', 'guardian', 'fairy_dust']);
 good.siren = new object('siren', [35, 1300, 20], ['ammunist', 'true', 450, 'a', 'siren', 'music']);
 good.jak_o_anterns = new object('jak_o_anterns', [20, 2000, 10], ['ammunist', 'true', 450, 'a', 'jak_o_anterns', 'sickle']);
@@ -124,7 +136,6 @@ bad.bucarrun_assasin = new object('bucarrun_assasin', [40, 2500, 20], ['eora', '
 
 good.mineral = new object('mineral', [35, 2222, 15], ['eora', 'true', 1000, 'a', 'mineral', 'rocks']);
 good.prospector = new object('prospector', [30, 1750, 15], ['eora', 'true', 750, 'a', 'prospector', 'shovel']);
-good.elemental = new object('elemental', [50, 3200, 40], ['eora', 'true', 2000, 'a', 'elemental', 'elements']);
 good.camel_rider = new object('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, 'a', 'camel_rider', 'scavenger_sword']);
 good.cactus = new object('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'thorns']);
 good.scavenger = new object('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 'a', 'scavenger', 'scavenger_sword']);
