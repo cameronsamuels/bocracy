@@ -109,8 +109,8 @@ bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', '
 bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss', 'cannonball']);
 bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss', 'dark_sword']);
 */
-good.guardian = new object('guardian', [30, 1750, 40], ['ammunist', 'true', 750, 'a', 'guardian', 'fairy_dust']);
-good.siren = new object('siren', [35, 1300, 20], ['ammunist', 'true', 450, 'a', 'siren', 'music']);
+good.siren = new object('siren', [35, 1500, 20], ['ammunist', 'true', 600, 'a', 'siren', 'music']);
+good.guardian = new object('guardian', [30, 1750, 35], ['ammunist', 'true', 1000, 'a', 'guardian', 'fairy_dust']);
 good.jak_o_anterns = new object('jak_o_anterns', [20, 2000, 10], ['ammunist', 'true', 450, 'a', 'jak_o_anterns', 'sickle']);
 good.spiky = new object('spiky', [35, 2000, 20], ['ammunist', 'true', 1000, 'a', 'spiky', 'spikes']);
 good.jetpack = new object('jetpack', [35, 2500, 15], ['ammunist', 'true', 1200, 'a', 'jetpack', 'fireball']);
