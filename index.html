@@ -21,7 +21,7 @@ function c(){
   a.play();
 }
 b.addEventListener('click', c);
-document.addEventListener('ontouchend', c);
+document.querySelector('iframe').addEventListener('ontouchend', c);
 b.click();
 //a.onended=function(){this.currentTime=0,this.play()}
 </script>
