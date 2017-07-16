@@ -15,11 +15,13 @@
 <audio style=display:none></audio><button style=display:none></button>
 <script>
 var a = document.querySelector('audio'), b = document.querySelector('button');
-b.addEventListener('click', function (e) {
+function c(){
   a.src = 'https://bocracy.com/assets/snd/theme3.wav';
   a.loop = true;
   a.play();
-});
+}
+b.addEventListener('click', c);
+document.addEventListener('ontouchend', c);
 b.click();
 //a.onended=function(){this.currentTime=0,this.play()}
 </script>
