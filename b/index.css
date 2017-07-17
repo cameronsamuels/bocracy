@@ -1,13 +1,11 @@
 @font-face {
-  font-family: 'Syncopate';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+  font-family: s;
+  src: url('syncopate.woff') format('woff');
 }
 body, html {
 	margin: 0;
 	text-align: center;
-	font-family: 'Syncopate', sans-serif;
+	font-family: s, sans-serif;
 	user-select: none;
 	-webkit-user-select: none;
 	overflow: hidden;
