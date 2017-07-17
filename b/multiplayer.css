@@ -180,12 +180,12 @@ section {
     animation-duration: 0.1s;
 }
 #bSword {
-    left: 25px;
+    left: -10px;
     top: 225px;
     transform: rotate(90deg)
 }
 #aSword {
-    right: 25px;
+    right: -10px;
     bottom: 195px;
     transform: rotate(-90deg)
 }
