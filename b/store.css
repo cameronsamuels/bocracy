@@ -38,11 +38,12 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
 header {
     font-size: 7vw;
     line-height: 7vw;
+    height: 7vw;
     padding: 5px;
     width: calc(100% - 10px);
     text-align: right;
 }
-@media screen and (min-width: 500px){ header{font-size:4vw !important;line-height:4vw}main{height: calc(100% - 4vw - 64px)!important}#coinsImg, #backButton { height: 4vw!important }}
+@media screen and (min-width: 500px){ header{font-size:4vw !important;line-height:4vw;height:4vw}main{height: calc(100% - 4vw - 64px)!important}#coinsImg, #backButton { height: 4vw!important }}
 header div { display: inline-block }
 #coins { background: #654620;vertical-align: top; }
 #backButton {
