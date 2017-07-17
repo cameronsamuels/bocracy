@@ -1,8 +1,6 @@
 @font-face {
-  font-family: 'Syncopate';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+  font-family: s;
+  src: url('syncopate.woff') format('woff');
 }
 body, html {
     width: 100%;
@@ -10,14 +8,12 @@ body, html {
     margin: 0;
     background: #3F51B5;
     text-align: center;
-    font-family: 'Syncopate', sans-serif;
+    font-family: s, sans-serif;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
 }
-
 .clear { clear: both }
-
 @media screen and (orientation:landscape) {	
 	html {
 		transform: rotate(-90deg);
@@ -29,7 +25,6 @@ body, html {
 		left: 0;
 	}
 }
-
 #backButton {
     width: 30px;
 	top: 5px;
@@ -37,7 +32,6 @@ body, html {
 	z-index: 10;
 	left: 5px;
 }
-
 section {
     width: 100%;
     height: 50%;
@@ -45,13 +39,11 @@ section {
 	z-index: 5;
 	position: relative;
 }
-
 @media screen and (max-height: 567px) {
     #aSection, #bSection {
         zoom: 80%;
     }
 }
-
 #bSection {
 	background-color: #64DD17;
     transform: rotate(180deg);
@@ -67,7 +59,6 @@ section {
 	z-index: 0
 }
 #aSection { background-color: #b30005 }
-
 #aButton,
 #bButton {
     width: 75px;
@@ -77,7 +68,6 @@ section {
     background: #FFF 100%/cover no-repeat;
     transform: rotate(180deg)
 }
-
 #aHealth,
 #bHealth {
     width: 180px;
@@ -87,7 +77,6 @@ section {
     border: 4px #000 solid;
 	position: relative;
 }
-
 #aHealthBar, #bHealthBar {
     width: 100%;
     height: 100%;
@@ -95,11 +84,9 @@ section {
     transition: width 0.25s;
 	position: absolute;
 }
-
 #aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
 #aName { background:#b30005}
 #bName { background:#64DD17}
-
 #aHealth p, #bHealth p {
 	position: relative;
     margin: 0;
@@ -107,14 +94,12 @@ section {
     line-height: 20px;
 	font-weight: 900;
 }
-
 #aActions,
 #bActions {
     width: 250px;
     height: 50px;
     margin: 20px calc(50% - 125px)
 }
-
 #aActions div:not(.clear),
 #bActions div:not(.clear) {
     width: 110px;
@@ -141,16 +126,6 @@ section {
 		width: 100vw;
 		height: 100vh;
 	}
-	#overlay h5 {
-	margin-right: 10vh;
-	font-size: 5vh;
-	}
-	#overlay img, #overlayStats span {
-    height: calc(20vh - 4px);
-	width: calc(20vh - 4px);
-	border-radius: 10vh;
-	line-height: 20vh;
-}
 	#overlayText div:first-child {
     margin-top: calc(50vh - 50px);
 }
@@ -163,16 +138,6 @@ section {
 		width: 100vh;
 		height: 100vw;
 	}
-	#overlay h5 {
-	margin-right: 10vw;
-	font-size: 5vw;
-	}
-	#overlay img, #overlayStats span {
-    height: calc(20vw - 4px);
-	width: calc(20vw - 4px);
-	border-radius: 10vw;
-	line-height: 20vw;
-}
 }
 #overlay {
 	transform: rotate(90deg);
@@ -185,31 +150,9 @@ section {
 	z-index: 200;
 	position: absolute;
 }
-#overlay img, #overlayStats span {
-    margin: 5px 0px;
-	display: block;
-	border: 2px #fff solid;
-}
-#overlay h5 {
-    height: 26.56px;
-	display: inline-block;
-	margin: 5px;
-}
-#overlay h4 {
-	margin: 0;
-}
-#overlay * {
-	left: 0;
-}
-#overlayStats h5:last-child {
-	margin-right: 0px;
-}
-#overlay div:not(#restartText) {
-    width: 100%;
-}
-#overlayText div:first-child {
-    font-size: 100px;
-}
+#overlay * { left: 0 }
+#overlay div:not(#restartText) { width: 100% }
+#overlayText div:first-child { font-size: 100px }
 #restartText {
     line-height: 40px;
 	background: #42bb05;
@@ -223,14 +166,11 @@ section {
 	bottom: 10px;
 	cursor: pointer;
 }
-#restartText:hover {
-	background-color: #53CC16;
-}
+#restartText:hover { background-color: #53CC16 }
 @media screen and (max-height: 450px) {
-    #overlay div:not(#overlayStats) { font-size: 32px !important; }
-    #overlayText div:not(#overlayStats) { font-size: 75px !important; }
+    #overlay div { font-size: 32px !important; }
+    #overlayText div { font-size: 75px !important; }
 }
-
 .theSword {
     display: none;
     position: absolute;
@@ -239,24 +179,20 @@ section {
     height: 50px;
     animation-duration: 0.1s;
 }
-
 #bSword {
     left: 25px;
     top: 225px;
     transform: rotate(90deg)
 }
-
 #aSword {
     right: 25px;
     bottom: 195px;
     transform: rotate(-90deg)
 }
-
 @keyframes bSword {
     from { top: 225px }
     to { top: calc(100% - 195px) }
 }
-
 @keyframes aSword {
     from { bottom: 225px }
     to { bottom: calc(100% - 195px) }

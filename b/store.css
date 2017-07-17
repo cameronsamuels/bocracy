@@ -1,13 +1,11 @@
 @font-face {
-  font-family: 'Syncopate';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+  font-family: s;
+  src: url('syncopate.woff') format('woff');
 }
 body, html {
     background: url('img/wood.svg') #654620;
     text-align: center;
-    font-family: 'Syncopate', sans-serif;
+    font-family: s, sans-serif;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
@@ -19,7 +17,6 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
 #content, #adContainer, #popupOverlay { top: 0 }
 #content, #adContainer, main .button, #popupOverlay { left: 0 }
 #content, #adContainer, #mainContainer, #contentElement, body, html, #popupOverlay { height: 100% }
-/*#confirmPopup, #unlockedPopup { position: relative }*/
 .button {
     border: 1px #2E40A4 solid;
     background-color: #3F51B5;
@@ -69,14 +66,6 @@ header div { display: inline-block }
 #mainContainer {
     z-index: 10;
 }
-/*
-main .button {
-    width: 100px;
-    display: block;
-    right: 0;
-    margin: 5px auto;
-}
-*/
 main {
 	overflow-y: scroll;
 	height: calc(100% - 7vw - 64px);
