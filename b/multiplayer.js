@@ -123,4 +123,4 @@ function restart() {
 }
 load();
 game.refresh.all();
-document.body.ontouchmove=function(e){e.preventDefault()}
+document.ontouchmove=function(e){e.preventDefault()}
