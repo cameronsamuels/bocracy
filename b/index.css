@@ -69,23 +69,23 @@ body { width: 100% }
 main div {
 	border: 8px #000 solid;
 	background: #fff;
-    margin: 3px;
-    cursor: pointer;
-    width: calc(50% - 42px);
-    color: #000;
+	margin: 3px;
+	cursor: pointer;
+	width: calc(50% - 42px);
+	color: #000;
 }
 main div, header { display: inline-block }
 main, body, html { width: 100% }
 .full { width: calc(100% - 42px) }
 main { margin: auto }
 .btn {
-    background-color: #64DD17;
-    margin: 2.5px 9px;
-    border-radius: 6px;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
-    width: calc(100% - 50px);
+	background-color: #64DD17;
+	margin: 2.5px 9px;
+	border-radius: 6px;
+	color: white;
+	font-size: 24px;
+	padding: 15px;
+	width: calc(100% - 50px);
 	position: absolute;
 	bottom: 0;
 	cursor: pointer;
