@@ -152,23 +152,3 @@ header {
     float: left;
     background: #930005 no-repeat 100%/cover;
 }
-/*
-@media screen and (max-width: 500px) {
-    #characters div div {
-        width: calc(33vw - 8px);
-        height: calc(33vw - 8px);
-    }
-}
-*/
-/*
-@media screen and (min-width: 501px) {
-   #characters div div {
-        width: calc(14.29vw - 8px);
-        height: calc(14.29vw - 8px);
-    }
-}
-*/
-
-
-/*@media screen and (max-width: 530px) {#battleground div  {width: 42% !important }}*/
-/*@media screen and (max-height:500px){#battleground div{font-size:2vw;height:8vw}}*/
