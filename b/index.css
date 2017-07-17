@@ -38,9 +38,7 @@ body { width: 100% }
 		font-size: 4.5vh;
 		line-height: 4.5vh;
 	}
-	#battleground div {
-		padding: 1vh 0;
-	}
+	#battleground div { padding: 1vh 0 }
 	#characters>div { height: 40vw }
 	#characters div div {
         width: calc(14.29vh - 8px);
@@ -51,9 +49,7 @@ body { width: 100% }
 @media screen and (orientation:landscape) {	
 	main div { padding: 5vh 8px }
 	characters>div { height: 50vh }
-	#battleground div {
-		padding: 1vw 0;
-	}
+	#battleground div { padding: 1vw 0 }
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
@@ -94,9 +90,7 @@ main { margin: auto }
 	bottom: 0;
 	cursor: pointer;
 }
-.btn:hover {
-    background-color: #42bb05;
-}
+.btn:hover { background-color: #42bb05 }
 #notEnough {
 	background-color: #930005;
 	display: none
@@ -120,9 +114,7 @@ header {
 	position: absolute;
 	cursor: pointer;
 }
-#select h2 {
-	margin: 5px;
-}
+#select h2 { margin: 5px }
 #select {
 	display: none;
 	position: absolute;
