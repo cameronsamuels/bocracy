@@ -1,21 +1,19 @@
 @font-face {
-  font-family: 'Syncopate';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+  font-family: s;
+  src: url('syncopate.woff') format('woff');
 }
 body, html {
 	margin: 0;
 	text-align: center;
-	font-family: 'Syncopate', sans-serif;
+	font-family: s, sans-serif;
 	user-select: none;
-    -webkit-user-select: none;
-    overflow: hidden;
-    color: #fff;
-    background: #b30005 url('img/landing.svg') 0/cover;
+	-webkit-user-select: none;
+	overflow: hidden;
+	color: #fff;
+	background: #b30005 url('img/landing.svg') 0/cover;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	width: 100%;
-    height: 100%;
+	height: 100%;
 }
 body { width: 100% }
 @media screen and (orientation:portrait) {	
@@ -38,9 +36,7 @@ body { width: 100% }
 		font-size: 4.5vh;
 		line-height: 4.5vh;
 	}
-	#battleground div {
-		padding: 1vh 0;
-	}
+	#battleground div { padding: 1vh 0 }
 	#characters>div { height: 40vw }
 	#characters div div {
         width: calc(14.29vh - 8px);
@@ -51,9 +47,7 @@ body { width: 100% }
 @media screen and (orientation:landscape) {	
 	main div { padding: 5vh 8px }
 	characters>div { height: 50vh }
-	#battleground div {
-		padding: 1vw 0;
-	}
+	#battleground div { padding: 1vw 0 }
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
@@ -73,30 +67,28 @@ body { width: 100% }
 main div {
 	border: 8px #000 solid;
 	background: #fff;
-    margin: 3px;
-    cursor: pointer;
-    width: calc(50% - 42px);
-    color: #000;
+	margin: 3px;
+	cursor: pointer;
+	width: calc(50% - 42px);
+	color: #000;
 }
 main div, header { display: inline-block }
 main, body, html { width: 100% }
 .full { width: calc(100% - 42px) }
 main { margin: auto }
 .btn {
-    background-color: #64DD17;
-    margin: 2.5px 9px;
-    border-radius: 6px;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
-    width: calc(100% - 50px);
+	background-color: #64DD17;
+	margin: 2.5px 9px;
+	border-radius: 6px;
+	color: white;
+	font-size: 24px;
+	padding: 15px;
+	width: calc(100% - 50px);
 	position: absolute;
 	bottom: 0;
 	cursor: pointer;
 }
-.btn:hover {
-    background-color: #42bb05;
-}
+.btn:hover { background-color: #42bb05 }
 #notEnough {
 	background-color: #930005;
 	display: none
@@ -120,9 +112,7 @@ header {
 	position: absolute;
 	cursor: pointer;
 }
-#select h2 {
-	margin: 5px;
-}
+#select h2 { margin: 5px }
 #select {
 	display: none;
 	position: absolute;
@@ -152,23 +142,3 @@ header {
     float: left;
     background: #930005 no-repeat 100%/cover;
 }
-/*
-@media screen and (max-width: 500px) {
-    #characters div div {
-        width: calc(33vw - 8px);
-        height: calc(33vw - 8px);
-    }
-}
-*/
-/*
-@media screen and (min-width: 501px) {
-   #characters div div {
-        width: calc(14.29vw - 8px);
-        height: calc(14.29vw - 8px);
-    }
-}
-*/
-
-
-/*@media screen and (max-width: 530px) {#battleground div  {width: 42% !important }}*/
-/*@media screen and (max-height:500px){#battleground div{font-size:2vw;height:8vw}}*/

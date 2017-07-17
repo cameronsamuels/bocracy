@@ -1,8 +1,6 @@
 @font-face {
-  font-family: 'Syncopate';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Syncopate'), local('Syncopate-Regular'), url('syncopate.woff') format('woff');
+  font-family: s;
+  src: url('syncopate.woff') format('woff');
 }
 body, html {
     width: 100%;
@@ -10,7 +8,7 @@ body, html {
     margin: 0;
     background: #3F51B5;
     text-align: center;
-    font-family: 'Syncopate', sans-serif;
+    font-family: s, sans-serif;
 	-webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
