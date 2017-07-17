@@ -9,6 +9,7 @@ body, html {
     background: #3F51B5;
     text-align: center;
     font-family: s, sans-serif;
+	-webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;

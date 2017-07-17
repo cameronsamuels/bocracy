@@ -8,6 +8,7 @@ body, html {
     font-family: s, sans-serif;
     user-select: none;
     -webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
     overflow: hidden;
 }
 body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #content, #adContainer, #contentElement, #popupOverlay { width: 100% }
