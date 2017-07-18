@@ -34,21 +34,22 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
     border: 1px #3F51B5 solid;
 }
 header {
-    font-size: 7vw;
-    line-height: 7vw;
-    height: 7vw;
+    height: 30px;
+
+    font-size: 30px;
+
     padding: 5px;
     width: calc(100% - 10px);
     text-align: right;
 }
-@media screen and (min-width: 500px){ header{font-size:4vw !important;line-height:4vw;height:4vw}main{height: calc(100% - 4vw - 64px)!important}#coinsImg, #backButton { height: 4vw!important }}
 header div { display: inline-block }
 #coins { background: #654620;vertical-align: top; }
 #backButton {
+    top: 5px;
     left: 0;
-	position: absolute;
+    position: absolute;
 }
-#coinsImg, #backButton { height: 7vw }
+#coinsImg, #backButton { height: 30px }
 #playButton {
 	max-width: 250px;
     margin: auto;
@@ -69,7 +70,7 @@ header div { display: inline-block }
 }
 main {
 	overflow-y: scroll;
-	height: calc(100% - 7vw - 64px);
+	height: calc(100% - 94px);
 	width: 100vw;
 	bottom: 0;
 	position: absolute;
