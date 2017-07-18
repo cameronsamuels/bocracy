@@ -15,6 +15,23 @@ body, html {
 	width: 100%;
 	height: 100%;
 }
+header {
+	font-size: 45px;
+	background: #b30005;
+	padding-top: 5px;
+}
+#backButton {
+    width: 30px;
+	left: 5px;
+	top: 5px;
+	position: absolute;
+	cursor: pointer;
+}
+#select h2 {
+	font-size: 30px;
+	line-height: 30px;
+	margin: 5px
+}
 @media screen and (orientation:portrait) {	
 	html {
 		transform: rotate(-90deg);
@@ -30,11 +47,6 @@ body, html {
 	main div:not(.big) { font-size: 3.7vh}
 	.big { font-size: 6vh }
 	main { max-width: 70vh}
-	#backButton {height: 4.5vh}
-	#select h2 {
-		font-size: 4.5vh;
-		line-height: 4.5vh;
-	}
 	#battleground div { padding: 1vh 0 }
 	#characters>div { height: 40vw }
 	#characters div div {
@@ -50,11 +62,6 @@ body, html {
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
-	#backButton {height: 4.5vw}
-	#select h2 {
-		font-size: 4.5vw;
-		line-height: 4.5vw;
-	}
 	#characters>div { height: 40vh }
 	#characters div div {
         width: calc(14.29vw - 8px);
@@ -101,17 +108,6 @@ main { margin: auto }
 	border: 1px transparent solid;
 }
 #battleground { border-bottom: 4px #fff solid }
-header {
-	font-size: 45px;
-	background: #b30005;
-}
-#backButton {
-    left: 5px;
-	top: 5px;
-	position: absolute;
-	cursor: pointer;
-}
-#select h2 { margin: 5px }
 #select {
 	display: none;
 	position: absolute;
