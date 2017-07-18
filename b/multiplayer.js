@@ -48,11 +48,7 @@ function load() {
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "ciftian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "cerotopis": newStats = 'false'; badNames.url = "b"; goodNames.url = "c"; break;
-		case "citopia": newStats = 'false'; badNames.url = "b"; goodNames.url = "c"; break;
-		case "citatian": newStats = 'true'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "cadrinal": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;

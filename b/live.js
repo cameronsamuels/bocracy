@@ -19,10 +19,6 @@ var goodNames = {
 			eora : [],
 			cadrinalBoss : ['goblin_horde', 'flame-archer', 'elemental', 'camel-rider', 'a87-cannon', 'worldwar'],
 			acitus : ['prospector', 'archer', 'worldwar'],
-			ciftian : [],
-			ciftianBoss : [],
-			cerotopis : ['light-warrior', 'paramedics', 'enslaved'],
-			citopia : ['overlapping', 'triple-odd', 'night'],
 			alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
 }, badNames = {
 			url : '',
@@ -36,10 +32,6 @@ var goodNames = {
 			eora : [],
 			acitus : ['light-warrior', 'paramedics'],
 			cadrinalBoss : ['sharkanator', 'd15-cannon', 'bentacrabb-2D1', 'bylo-ken', 'teratul-rider', 'defensive-destroyer', 'batalifor-sentry', 'b--torv-troops'],
-			ciftian : [],
-			ciftianBoss : [],
-			cerotopis : ['ultacrabb', 'batalifor-1D0', 'dark-knight', 'f87-cannon'],
-			citopia : ['byter', 'batalifor-general','boverr-1D2', 'scubbars'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
 }, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { };
 function object(nm, stats, info, other) {
@@ -90,25 +82,6 @@ bad.scubbars = new object('scubbars', [50, 1500, 25], ['alief', 'false', 1000, '
 bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['alief', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
 bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['alief', 'false', 1000, 'a', 'batalifor_general', 'green_fluid_sword']);
 
-/*good.enslaved = new object('enslaved', [30, 2000, 10], ['ciftian', 'true', 750, 'c', 'enslaved', 'c_ball']);
-good.triple_odd = new object('triple_odd', [40, 2500, 20], ['ciftian', 'true', 1000, 'c', 'triple_odd', 'c_ball']);
-good.night = new object('night', [25, 1500, 20], ['ciftian', 'true', 600, 'c', 'night', 'shadowball']);
-good.light_warrior = new object('light_warrior', [60, 3000, 15], ['ciftian', 'true', 1500, 'c', 'light_warrior', 'warrior_sword']);
-good.paramedics = new object('paramedics', [30, 1250, 40], ['ciftian', 'true', 1000, 'c', 'paramedics', 'c_ball']);
-good.overlapping = new object('overlapping', [40, 3200, 10], ['ciftian', 'true', 1300, 'c', 'overlapping', 'c_ball']);
-
-bad.ultacrabb = new object('ultacrabb', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'ultacrabb', 'missile']);
-
-bad.f87_cannon = new object('f87_cannon', [40, 1250, 20], ['ciftian', 'false', 750, 'a', 'f87_cannon', 'missile']);
-bad.dark_knight = new object('dark_knight', [60, 2000, 5], ['ciftian', 'false', 1500, 'a', 'dark_knight', 'dark_sword']);
-bad.scubbars = new object('scubbars', [50, 1500, 25], ['ciftian', 'false', 1000, 'a', 'scubbars', 'scorpion_spikes']);
-bad.boverr_1D2 = new object('boverr_1D2', [50, 2000, 10], ['ciftian', 'false', 1000, 'a', 'boverr_1D2', 'scorpion_spikes']);
-bad.batalifor_general = new object('batalifor_general', [40, 2000, 15], ['ciftian', 'false', 1000, 'a', 'batalifor_general', 'green_fluid_sword']);
-
-bad.f87_cannonBoss = new object('f87_cannonBoss', [40, 1250, 20], ['ciftian+', 'false', 750, 'a', 'f87_cannonBoss', 'missile']);
-bad.ultacrabbBoss = new object('ultacrabbBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'ultacrabbBoss', 'cannonball']);
-bad.dark_knightBoss = new object('dark_knightBoss', [60, 2000, 5], ['ciftian+', 'false', 1500, 'a', 'dark_knightBoss', 'dark_sword']);
-*/
 good.siren = new object('siren', [35, 1500, 20], ['ammunist', 'true', 600, 'a', 'siren', 'music']);
 good.guardian = new object('guardian', [30, 1500, 35], ['ammunist', 'true', 1000, 'a', 'guardian', 'fairy_dust']);
 good.jak_o_anterns = new object('jak_o_anterns', [20, 2000, 10], ['ammunist', 'true', 450, 'a', 'jak_o_anterns', 'sickle']);
