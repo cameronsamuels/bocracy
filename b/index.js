@@ -60,3 +60,7 @@ if (isMobile.any()) {
 }
 document.body.style.backgroundPosition=1e2*Math.random()+"%";
 id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
+if (!isMobile.any()) {
+	document.querySelectorAll('main div')[2].innerHTML = "BETA";
+	document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");
+}
