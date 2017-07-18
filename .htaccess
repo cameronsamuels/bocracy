@@ -2,6 +2,9 @@
 ExpiresActive On
 ExpiresDefault "access 1 month"
 </IfModule>
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Redirect 307 /live /b
 Redirect 307 /beta /b
 Redirect 307 /alpha /b
