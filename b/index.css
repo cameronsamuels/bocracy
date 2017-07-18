@@ -79,7 +79,6 @@ main div {
 	color: #000;
 }
 main div, header { display: inline-block }
-main, body, html { width: 100% }
 .full { width: calc(100% - 42px) }
 main { margin: auto }
 .btn {
