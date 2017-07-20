@@ -100,7 +100,7 @@ function load() {
 	img.onload = function() {
 		id('bSection').style.background = 'transparent';
 		id('aSection').style.background = 'transparent';
-		id('background').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('background').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
 		id('aButton').style.backgroundColor = 'transparent';
 		id('bButton').style.backgroundColor = 'transparent';
 	};
@@ -110,7 +110,7 @@ function load() {
 		id('aButton').style.backgroundColor = '';
 		id('bButton').style.backgroundColor = '';
 	};
-	img.src = 'img/' + current.replace('+', '') + '.svg';
+	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
 }
 function restart() {
 	game.on = 'false';

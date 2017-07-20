@@ -183,8 +183,8 @@ function load() {
 	id('title').innerHTML = current;
 	var img = new Image();
 	img.onload = function() {
-		id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-		id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('bSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
+		id('aSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
 		id('aButton').style.backgroundColor = 'transparent';
 		id('bButton').style.backgroundColor = 'transparent';
 	};
@@ -194,7 +194,7 @@ function load() {
 		id('aButton').style.backgroundColor = '';
 		id('bButton').style.backgroundColor = '';
 	};
-	img.src = 'img/' + current.replace('+', '') + '.svg';
+	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
 	id('refreshButton').style.display = "";
 	updateCharacter();
 }
