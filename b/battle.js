@@ -232,8 +232,8 @@ function updateCharacter() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
 	} catch (ex){}
-	id('bSword').style.backgroundImage = 'url("img/' + bw + '.svg")';
-	id('aSword').style.backgroundImage = 'url("img/' + aw + '.svg")';
+	id('bSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + bw + '.svg")';
+	id('aSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
 	game.on = 'false';
