@@ -1,4 +1,4 @@
-function id(e) { return document.getElementById(e) }
+var $ = function(e) { return document.getElementById(e) }
 function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
 document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=http://thebclickteam.tk/lib/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
 var goodNames = {
@@ -93,7 +93,7 @@ function convertClick() {
 		requestAnimationFrame(convertClick);
 	}
 }
-function loadLive() { convertClick(), setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "";},1000) }
+function loadLive() { convertClick(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
 document.addEventListener('DOMContentLoaded', loadLive, false);
 if (!ls.coins) ls.coins = 0;
 else ls.coins = Math.round(ls.coins);

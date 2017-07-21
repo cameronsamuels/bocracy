@@ -1,6 +1,6 @@
 function play() {
-	id('select').style.display = 'block';
-	id('startPlay').style.display = 'none';
+	$('select').style.display = 'block';
+	$('startPlay').style.display = 'none';
 }
 function battleground(e) {
 	if (e.target.id != 'battleground' && !e.target.style.border.toString().includes('white')) {
@@ -8,7 +8,7 @@ function battleground(e) {
 	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++)
 	document.querySelectorAll('#battleground div')[i].style.border= '1px transparent solid';
 	e.target.style.border = "1px white solid";
-	id('characters').innerHTML = "";
+	$('characters').innerHTML = "";
 	var html = "<div id='unselected'>";
 	for (i = 0; i < goodNames[b].length; i++) {
 		if (ls[goodNames[b][i]] == 'true') {
@@ -16,35 +16,35 @@ function battleground(e) {
 		}
 	}
 	html = html + '</div><div id="selected"></div>';
-	id('characters').innerHTML = html;
-	id('startPlay').style.display = 'none';
-	id('notEnough').style.display = 'none';
+	$('characters').innerHTML = html;
+	$('startPlay').style.display = 'none';
+	$('notEnough').style.display = 'none';
 }
 }
 var cost;
 function character(e) {
 	if (e.target.id != 'characters' && e.target.id != 'selected' && e.target.id != 'unselected') {
-	e.target.parentElement.id=='selected'?id('unselected').appendChild(e.target):id('selected').appendChild(e.target);
+	e.target.parentElement.id=='selected'?$('unselected').appendChild(e.target):$('selected').appendChild(e.target);
 	cost = 0;
-	for (i = 0; i < id('characters').querySelectorAll('#selected div').length; i++) {
-		cost += Math.floor(good[id('characters').querySelectorAll('#selected div')[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03);
+	for (i = 0; i < $('characters').querySelectorAll('#selected div').length; i++) {
+		cost += Math.floor(good[$('characters').querySelectorAll('#selected div')[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03);
 		cost += 5;
 	}
-	if (id('characters').querySelectorAll('#selected div').length > 0) {
-		id('startPlay').style.display = 'block';
-		id('startPlay').innerHTML = 'Play (' + cost + ')';
+	if ($('characters').querySelectorAll('#selected div').length > 0) {
+		$('startPlay').style.display = 'block';
+		$('startPlay').innerHTML = 'Play (' + cost + ')';
 	}
 	if (ls.coins < cost) {
-		id('startPlay').style.display = 'none';
-		id('notEnough').style.display = 'block';
-		id('notEnough').innerHTML = "Not enough (" + ls.coins + "/" + cost + ")";
-	} else id('notEnough').style.display = 'none';
-	if (id('characters').querySelectorAll('#selected div').length == 0) id('startPlay').style.display = 'none';
+		$('startPlay').style.display = 'none';
+		$('notEnough').style.display = 'block';
+		$('notEnough').innerHTML = "Not enough (" + ls.coins + "/" + cost + ")";
+	} else $('notEnough').style.display = 'none';
+	if ($('characters').querySelectorAll('#selected div').length == 0) $('startPlay').style.display = 'none';
 	}
 }
 function startPlay() {
 	if (ls.coins >= cost) ls.coins -= cost;
-	var characters = id('characters').querySelectorAll('#selected div');
+	var characters = $('characters').querySelectorAll('#selected div');
 	for (i = 0; i < characters.length; i++) {
 		ls['b' + (i+1)] = characters[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	}
@@ -52,14 +52,14 @@ function startPlay() {
 	location = "battle.html#series" + b;
 }
 if (mob()) {
-	id('battleground').addEventListener('touchend', battleground);
-	id('characters').addEventListener('touchend', character);
+	$('battleground').addEventListener('touchend', battleground);
+	$('characters').addEventListener('touchend', character);
 } else {
-	id('battleground').onclick = battleground;
-	id('characters').onclick = character;
+	$('battleground').onclick = battleground;
+	$('characters').onclick = character;
 }
 document.body.style.backgroundPosition=1e2*Math.random()+"%";
-id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
+$('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
 if (!mob()) {
 	document.querySelectorAll('main div')[2].innerHTML = "BETA";
 	document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");

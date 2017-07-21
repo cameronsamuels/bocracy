@@ -2,7 +2,7 @@ if (window.location.hash != '') {
     var current = window.location.hash.toString().replace('#', '');
 	purchase(current);
 }
-id('coins').innerHTML = ls.coins;
+$('coins').innerHTML = ls.coins;
 var battlegrounds = ["eora","aonarchy","alief","ammunist"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
@@ -24,18 +24,18 @@ function refreshStore(){
 	if (m.innerHTML == "") m.innerHTML = "<div style='color:white;margin:10vh 0'><h2>You have unlocked all the characters!</h2><h3>Come back soon!</h3></div>";
 }
 function showConfirm(text, yes, no) {
-    id('confirmText').innerHTML = text;
-    id('confirmYesBtn').setAttribute('onclick', "eval(" + yes + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
-    id('confirmNoBtn').setAttribute('onclick', "eval(" + no + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
-    id('confirmPopup').style.display = "block";
-    id('popupOverlay').style.display = "block";
+    $('confirmText').innerHTML = text;
+    $('confirmYesBtn').setAttribute('onclick', "eval(" + yes + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
+    $('confirmNoBtn').setAttribute('onclick', "eval(" + no + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
+    $('confirmPopup').style.display = "block";
+    $('popupOverlay').style.display = "block";
 }
 function showAlert(text) {
-    id('unlockedPopupText').innerHTML = text;
-    id('unlockedPopupImg').style.display = "none";
-    id('unlockedPopup').style.display = "block";
-    id('popupOverlay').style.display = "block";
-    id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");	
+    $('unlockedPopupText').innerHTML = text;
+    $('unlockedPopupImg').style.display = "none";
+    $('unlockedPopup').style.display = "block";
+    $('popupOverlay').style.display = "block";
+    $('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");	
 }
 
 function unlockConfirmed(item) {
@@ -55,7 +55,7 @@ function unlock(item) {
 				break;
 			} else if (i == (goodNames[item].length) - 1) {
 				showAlert("You have unlocked all the characters here");
-				setTimeout(function(){id('popupOverlay').style.display = "block"},500);
+				setTimeout(function(){$('popupOverlay').style.display = "block"},500);
 				return;
 			}
 		}
@@ -82,13 +82,13 @@ function unlock(item) {
 	}
 	ls[unlocked] = 'true';
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
-	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
-	id('unlockedPopupImg').style.display = "block";
-	id('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
-	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
-	id('unlockedPopup').style.display = "block";
-	setTimeout(function(){id('popupOverlay').style.display = "block"},400);
-	id('coins').innerHTML = ls.coins;
+	$('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
+	$('unlockedPopupImg').style.display = "block";
+	$('unlockedPopupImg').src = 'https://bocracy.com/assets/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	$('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
+	$('unlockedPopup').style.display = "block";
+	setTimeout(function(){$('popupOverlay').style.display = "block"},400);
+	$('coins').innerHTML = ls.coins;
 	refreshStore();
 }
 refreshStore();

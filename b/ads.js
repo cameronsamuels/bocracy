@@ -1,7 +1,7 @@
-var videoContent = id('contentElement');
-var adDisplayContainer = new google.ima.AdDisplayContainer(id('adContainer'),videoContent);
+var videoContent = $('contentElement');
+var adDisplayContainer = new google.ima.AdDisplayContainer($('adContainer'),videoContent);
 function ad() {
-	id('mainContainer').style.display = 'block';
+	$('mainContainer').style.display = 'block';
 	adDisplayContainer.initialize();
 	requestAds();
 }
@@ -20,7 +20,7 @@ adsRequest.linearAdSlotWidth = window.innerWidth;
 adsRequest.linearAdSlotHeight = window.innerHeight;
 adsRequest.nonLinearAdSlotWidth = window.innerWidth;
 adsRequest.nonLinearAdSlotHeight = window.innerHeight;
-id('playButton').addEventListener('click', ad);
+$('playButton').addEventListener('click', ad);
 function requestAds() {
   adsLoader.requestAds(adsRequest);
   videoContent.load();
