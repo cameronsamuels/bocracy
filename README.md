@@ -11,4 +11,4 @@ b-Ocracy is currently in the beta testing stage, so contributing to our game via
 ## Team
 Our primary team members for [b-Ocracy](https://github.com/orgs/thebclickteam/teams/bocracy/members) include [Cameron Samuels](http://cameronsamuels.com), Ethan Choo, [Faith Tsang](https://github.com/faithtsang), [Cooper Lan](https://github.com/cooperlan), and [Jacob Gelder](https://github.com/jacobgelder).
 ## License
-b-Ocracy is distributed under the [Cameron Samuels License](LICENSE). It restricts selling, sublicensing, and distribution.
+b-Ocracy is distributed under the [Cameron Samuels License](LICENSE). The license restricts selling, sublicensing, and distribution.
