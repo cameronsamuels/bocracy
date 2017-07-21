@@ -205,8 +205,8 @@ function updateCharacter() {
 	var aName = a.name;
 	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	id('aName').innerHTML = aName + ' ' + badNames.url;
-		id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+		id('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	id('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 //	id('bName').style.fontSize = Math.abs(9-(id('bName').innerHTML.length/2)||2) + "vw";
 	
 //	id('aName').style.fontSize = Math.abs(Math.min((9-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw',''))) + "vw";

@@ -86,8 +86,8 @@ function load() {
 		id('bName').style.fontSize = "2vh";
 		id('aName').style.fontSize = "2vh";
 	}
-	id('bButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	id('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	id('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
 	if (newStats == 'true') { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
 	if (('url("img/' + weapon + '.svg")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.svg")';

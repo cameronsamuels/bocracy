@@ -12,7 +12,7 @@ function battleground(e) {
 	var html = "<div id='unselected'>";
 	for (i = 0; i < goodNames[b].length; i++) {
 		if (localStorage[goodNames[b][i]] == 'true') {
-			html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(https://bocracy.com/assets/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
+			html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://thebclickteam.tk/lib/boc/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
 		}
 	}
 	html = html + '</div><div id="selected"></div>';
