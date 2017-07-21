@@ -8,7 +8,7 @@ function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {
 		var html = "";
-		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
+		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(http://thebclickteam.tk/lib/boc/img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
 		for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
 			if (localStorage[good[goodNames[battlegrounds[i]][j]].name] != "true") {
 				var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
