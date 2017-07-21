@@ -92,8 +92,8 @@ function t() {
 		requestAnimationFrame(t);
 	}
 }
-function loadLive() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
-document.addEventListener('DOMContentLoaded', loadLive, false);
+function ld() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
+document.addEventListener('DOMContentLoaded', ld, false);
 if (!ls.coins) ls.coins = 0;
 else ls.coins = Math.round(ls.coins);
 document.oncontextmenu = function(e) { e.preventDefault() }
