@@ -1,11 +1,5 @@
 function id(id) { return document.getElementById(id) }
-
-var isMobile = {
-	Android: function() { return navigator.userAgent.match(/Android/i); },
-	iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-	Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
-   	any: function() { return (isMobile.Android() || isMobile.iOS() || isMobile.Windows()); }
-};
+function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
 
 var goodNames = {
 			url : '',
@@ -115,7 +109,7 @@ good.scavenger = new object('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 
 good.mountain_jetpack = new object('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
 function convertClick() {
-	if (!isMobile.any()) {
+	if (!mob()) {
 		var clickables = document.querySelectorAll('[ontouchend]');
 		for (i = 0; i < clickables.length; i++) {
 			clickables[i].setAttribute('onclick', clickables[i].getAttribute('ontouchend'));

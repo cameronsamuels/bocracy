@@ -51,7 +51,7 @@ function startPlay() {
 	localStorage.sc = characters.length;
 	location = "battle.html#series" + b;
 }
-if (isMobile.any()) {
+if (mob()) {
 	id('battleground').addEventListener('touchend', battleground);
 	id('characters').addEventListener('touchend', character);
 } else {
@@ -60,7 +60,7 @@ if (isMobile.any()) {
 }
 document.body.style.backgroundPosition=1e2*Math.random()+"%";
 id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
-if (!isMobile.any()) {
+if (!mob()) {
 	document.querySelectorAll('main div')[2].innerHTML = "BETA";
 	document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");
 }

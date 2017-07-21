@@ -167,7 +167,7 @@ function load() {
 		b.attack = good[b.name].stats[0];
 		b.heal = good[b.name].stats[2];
 	}
-	if (isMobile.any()) a.speed = 300;
+	if (mob()) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
