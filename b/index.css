@@ -43,31 +43,31 @@ header {
 		left: 0;
 	}
 	main div { padding: 5vw 8px }
-	characters>div { height: 50vw }
+	ch>div { height: 50vw }
 	main div:not(.big) { font-size: 3.7vh}
 	.big { font-size: 6vh }
 	main { max-width: 70vh}
-	#battleground div { padding: 1vh 0 }
-	#characters>div { height: 40vw }
-	#characters div div {
+	#bg div { padding: 1vh 0 }
+	#ch>div { height: 40vw }
+	#ch div div {
         width: calc(14.29vh - 8px);
         height: calc(14.29vh - 8px);
     }
-	#battleground div{font-size:3vw}
+	#bg div{font-size:3vw}
 }
 @media screen and (orientation:landscape) {	
 	main div { padding: 5vh 8px }
-	characters>div { height: 50vh }
-	#battleground div { padding: 1vw 0 }
+	ch>div { height: 50vh }
+	#bg div { padding: 1vw 0 }
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
-	#characters>div { height: 40vh }
-	#characters div div {
+	#ch>div { height: 40vh }
+	#ch div div {
         width: calc(14.29vw - 8px);
         height: calc(14.29vw - 8px);
     }
-	#battleground div{font-size:3vh}
+	#bg div{font-size:3vh}
 }
 #selected { border-left:4px #fff solid }
 main div {
@@ -94,11 +94,11 @@ main { margin: auto }
 	cursor: pointer;
 }
 .btn:hover { background: #42bb05 }
-#notEnough {
+#ne {
 	background: #930005;
 	display: none
 }
-#battleground div {
+#bg div {
 	margin: 1%;
 	background: #930005;
 	display: inline-block;
@@ -106,7 +106,7 @@ main { margin: auto }
 	width: 22%;
 	border: 1px transparent solid;
 }
-#battleground { border-bottom: 4px #fff solid }
+#bg { border-bottom: 4px #fff solid }
 #select {
 	display: none;
 	position: absolute;
@@ -116,20 +116,20 @@ main { margin: auto }
 	width: 100%;
 	height: 100%;
 }
-#characters {
+#ch {
     clear: both;
     float: none;
     color: white;
 }
-#characters>div {
+#ch>div {
 	float: left;
 	width: calc(50% - 22px);
 	padding: 10px;
 }
-#characters:before,#characters:after {content: " ";display: table}
-#characters:after { clear: both }
-#characters { zoom: 1 }
-#characters div div {
+#ch:before,#ch:after {content: " ";display: table}
+#ch:after { clear: both }
+#ch { zoom: 1 }
+#ch div div {
     border: 2px black solid;
     margin: 2px;
     border-radius: 20px;

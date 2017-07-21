@@ -92,7 +92,7 @@ function t() {
 		requestAnimationFrame(t);
 	}
 }
-function ld() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
+function ld() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = ""},1000) }
 document.addEventListener('DOMContentLoaded', ld, false);
 if (!ls.coins) ls.coins = 0;
 else ls.coins = Math.round(ls.coins);
