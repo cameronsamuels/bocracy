@@ -90,17 +90,17 @@ function load() {
 	id('aButton').style.backgroundImage = 'url(https://bocracy.com/assets/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
 	if (newStats == 'true') { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
-	if (('url("img/' + weapon + '.svg")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("img/' + weapon + '.svg")';
+	if (('url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")') != id('aSword').style.backgroundImage) id('aSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")';
 	var weapon  = 'sword';
 	if (newStats == 'true')	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
-	if (('url("img/' + weapon + '.svg")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("img/' + weapon + '.svg")';
+	if (('url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")') != id('bSword').style.backgroundImage) id('bSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
 	img.onload = function() {
 		id('bSection').style.background = 'transparent';
 		id('aSection').style.background = 'transparent';
-		id('background').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
+		id('background').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
 		id('aButton').style.backgroundColor = 'transparent';
 		id('bButton').style.backgroundColor = 'transparent';
 	};
@@ -110,7 +110,7 @@ function load() {
 		id('aButton').style.backgroundColor = '';
 		id('bButton').style.backgroundColor = '';
 	};
-	img.src = 'img/' + current.replace('+', '') + '.svg';
+	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
 }
 function restart() {
 	game.on = 'false';
