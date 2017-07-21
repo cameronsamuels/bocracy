@@ -11,7 +11,7 @@ function battleground(e) {
 	id('characters').innerHTML = "";
 	var html = "<div id='unselected'>";
 	for (i = 0; i < goodNames[b].length; i++) {
-		if (localStorage[goodNames[b][i]] == 'true') {
+		if (ls[goodNames[b][i]] == 'true') {
 			html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(https://bocracy.com/assets/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
 		}
 	}
@@ -34,21 +34,21 @@ function character(e) {
 		id('startPlay').style.display = 'block';
 		id('startPlay').innerHTML = 'Play (' + cost + ')';
 	}
-	if (localStorage.coins < cost) {
+	if (ls.coins < cost) {
 		id('startPlay').style.display = 'none';
 		id('notEnough').style.display = 'block';
-		id('notEnough').innerHTML = "Not enough (" + localStorage.coins + "/" + cost + ")";
+		id('notEnough').innerHTML = "Not enough (" + ls.coins + "/" + cost + ")";
 	} else id('notEnough').style.display = 'none';
 	if (id('characters').querySelectorAll('#selected div').length == 0) id('startPlay').style.display = 'none';
 	}
 }
 function startPlay() {
-	if (localStorage.coins >= cost) localStorage.coins -= cost;
+	if (ls.coins >= cost) ls.coins -= cost;
 	var characters = id('characters').querySelectorAll('#selected div');
 	for (i = 0; i < characters.length; i++) {
-		localStorage['b' + (i+1)] = characters[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
+		ls['b' + (i+1)] = characters[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	}
-	localStorage.sc = characters.length;
+	ls.sc = characters.length;
 	location = "battle.html#series" + b;
 }
 if (mob()) {

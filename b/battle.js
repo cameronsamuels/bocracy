@@ -26,11 +26,11 @@ var game = { on : 'false',
 				updateCharacter();
 			} else {
 				series.t++;
-				if (series.t > localStorage.sc) {
+				if (series.t > ls.sc) {
 					series.c = Math.round(series.c * series.t);
-					if (localStorage.coins == undefined) localStorage.coins = series.c;
-					else localStorage.coins = parseFloat(localStorage.coins) + series.c;
-					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
+					if (ls.coins == undefined) ls.coins = series.c;
+					else ls.coins = parseFloat(ls.coins) + series.c;
+					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					id('overlay').style.backgroundColor = '#b30005';
 					id('restartText').style.display = "none";
 					setTimeout(function(){id('restartText').style.display = "block"}, 750);
@@ -40,7 +40,7 @@ var game = { on : 'false',
 					series.k = 0;
 					return;
 				}
-				b.name = localStorage['b' + series.t];
+				b.name = ls['b' + series.t];
 				b.health = good[b.name].stats[1];
 				b.orig_health = b.health;
 				b.attack = good[b.name].stats[0];
@@ -52,8 +52,8 @@ var game = { on : 'false',
 		if (side == 'green') {
 			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
-			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
-			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
+			if (ls.coins == undefined) ls.coins = coinsEarned;
+			else ls.coins = parseFloat(ls.coins) + coinsEarned;
 			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			id('overlay').style.backgroundColor = '#64DD17';
 			var rewardable = ['sharkanator', 'bentacrabb_2D1', 'b--2-mobile-cannon', 'sub-batalifor', 'teratul_rider', 'defensive_destroyer', 'batalifor-sentry', 'b--torv-troops', 'dark_knight'];
@@ -130,11 +130,11 @@ function load() {
 		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
-	if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
-		localStorage[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
-		localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
+	if (newStats == 'true' && ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
+		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
+		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
-	if (series.w) b.name = localStorage.b1;
+	if (series.w) b.name = ls.b1;
 	else {
 		var bName = b.name;
 		do {
@@ -156,7 +156,7 @@ function load() {
 		b.attack = parseFloat(a.attack * 0.8);
 		b.heal = parseFloat(a.heal * 0.8);
 	} else if (newStats == 'true') {
-		while (localStorage[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
+		while (ls[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = bad[a.name].stats[1];
 		a.attack = bad[a.name].stats[0];
 		a.heal = bad[a.name].stats[2];

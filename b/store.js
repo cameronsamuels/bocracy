@@ -2,7 +2,7 @@ if (window.location.hash != '') {
     var current = window.location.hash.toString().replace('#', '');
 	purchase(current);
 }
-id('coins').innerHTML = localStorage.coins;
+id('coins').innerHTML = ls.coins;
 var battlegrounds = ["eora","aonarchy","alief","ammunist"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
@@ -10,7 +10,7 @@ function refreshStore(){
 		var html = "";
 		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(http://thebclickteam.tk/lib/boc/img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
 		for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
-			if (localStorage[good[goodNames[battlegrounds[i]][j]].name] != "true") {
+			if (ls[good[goodNames[battlegrounds[i]][j]].name] != "true") {
 				var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
 				html += "<div style='background-image:url(https://bocracy.com/assets/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'></div>";
 			}
@@ -51,7 +51,7 @@ function purchase(item) {
 function unlock(item) {
 	if (!item.includes(".")) {
 		for (i = 0; i < goodNames[item].length; i++) {
-			if (localStorage[goodNames[item][i]] == "false") {
+			if (ls[goodNames[item][i]] == "false") {
 				break;
 			} else if (i == (goodNames[item].length) - 1) {
 				showAlert("You have unlocked all the characters here");
@@ -59,28 +59,28 @@ function unlock(item) {
 				return;
 			}
 		}
-		if (localStorage.coins < 700) {
+		if (ls.coins < 700) {
 			showAlert("Insufficient redbacks");
 			return;
 		}
 		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
-		while (localStorage[unlocked] == 'true') {
+		while (ls[unlocked] == 'true') {
 			unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
 		}
-		localStorage.coins -= 700;
+		ls.coins -= 700;
 	} else {
 		var unlocked = item.toString().split('.')[1];
-        if (localStorage[good[unlocked].name] == "true") {
+        if (ls[good[unlocked].name] == "true") {
 			showAlert("You have unlocked this character already");
 			return;
 		}
-        if (localStorage.coins < good[unlocked].info[2]) {
+        if (ls.coins < good[unlocked].info[2]) {
 			showAlert("Insufficient redbacks");
 			return;
 		}
-		localStorage.coins -= good[unlocked].info[2];
+		ls.coins -= good[unlocked].info[2];
 	}
-	localStorage[unlocked] = 'true';
+	ls[unlocked] = 'true';
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
 	id('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
 	id('unlockedPopupImg').style.display = "block";
@@ -88,7 +88,7 @@ function unlock(item) {
 	id('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
 	id('unlockedPopup').style.display = "block";
 	setTimeout(function(){id('popupOverlay').style.display = "block"},400);
-	id('coins').innerHTML = localStorage.coins;
+	id('coins').innerHTML = ls.coins;
 	refreshStore();
 }
 refreshStore();

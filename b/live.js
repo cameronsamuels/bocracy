@@ -1,41 +1,25 @@
-function id(id) { return document.getElementById(id) }
+function id(e) { return document.getElementById(e) }
 function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
-
+document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=http://thebclickteam.tk/lib/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
 var goodNames = {
-			url : '',
-			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-			aonarchy : [],
-			aonarchyBoss : [],
-			alief : [],
-			ammunist : [],
-			ammunistBoss : [],
-			eora : [],
-			alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
+	url : '', aonarchy : [], aonarchyBoss : [], alief : [], ammunist : [], ammunistBoss : [], eora : [],
+	dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
+	alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
 }, badNames = {
-			url : '',
-			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-			aonarchy : [],
-			alief : [],
-			aonarchyBoss : [],
-			ammunist : [],
-			ammunistBoss : [],
-			eora : [],
-			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
-}, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { };
+	url : '', aonarchy : [], alief : [], aonarchyBoss : [], ammunist : [], ammunistBoss : [], eora : [],
+	dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
+	alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
+}, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { }, ls = localStorage;
 function object(nm, stats, info, other) {
-	/*  nm = name as string;
-		stats = [attack as float, health as float, heal as float];
-		info = [category as string, side as boolean, cost as float, letter as string, name as string, release as date, duration_hours as float]
-		other = {  }*/
 	this.name = nm;
 	this.stats = stats;
 	this.info = info;
 	this.other = other;
-	if (localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined && info[1] == 'true') {
-		localStorage[nm] = 'true';
-		localStorage['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
+	if (ls['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined && info[1] == 'true') {
+		ls[nm] = 'true';
+		ls['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
 	}
-	if (localStorage[nm] == undefined && info[1] == 'true') localStorage[nm] = 'false';
+	if (ls[nm] == undefined && info[1] == 'true') ls[nm] = 'false';
 	if (info[1] == 'true') goodNames[info[0].replace('+', 'Boss')].push(nm);
 	else badNames[info[0].replace('+', 'Boss')].push(nm);
 	if (goodNames[info[0] + 'Boss'] != undefined && info[1] == 'true') goodNames[info[0] + 'Boss'].push(nm);
@@ -105,19 +89,12 @@ good.mountain_jetpack = new object('mountain_jetpack', [30, 2222, 15], ['eora', 
 function convertClick() {
 	if (!mob()) {
 		var clickables = document.querySelectorAll('[ontouchend]');
-		for (i = 0; i < clickables.length; i++) {
-			clickables[i].setAttribute('onclick', clickables[i].getAttribute('ontouchend'));
-		}
+		for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick', clickables[i].getAttribute('ontouchend')), clickables[i].removeAttribute('ontouchend');
 		requestAnimationFrame(convertClick);
 	}
 }
-
-function loadLive() {
-	document.body.oncontextmenu = function(e) { e.preventDefault(); }
-	convertClick();
-	setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "";},1000)
-}
+function loadLive() { convertClick(), setTimeout(function(){id('logo').style.display='none';id('mainWrapper').style.display = "";},1000) }
 document.addEventListener('DOMContentLoaded', loadLive, false);
-if (!localStorage.coins) localStorage.coins = 0;
-else localStorage.coins = Math.round(localStorage.coins);
-document.body.innerHTML="<div id='logo' style='width:100%;height:100%;background:#343838'><img src='http://thebclickteam.tk/lib/boc/ico/banner.svg' style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0' /></div><div id='mainWrapper' style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
+if (!ls.coins) ls.coins = 0;
+else ls.coins = Math.round(ls.coins);
+document.oncontextmenu = function(e) { e.preventDefault() }
