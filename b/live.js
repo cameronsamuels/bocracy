@@ -85,14 +85,14 @@ good.cactus = new c('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactu
 good.scavenger = new c('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 'a', 'scavenger', 'scavenger_sword']);
 good.mountain_jetpack = new c('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
-function convertClick() {
+function t() {
 	if (!mob()) {
 		var clickables = document.querySelectorAll('[ontouchend]');
 		for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick', clickables[i].getAttribute('ontouchend')), clickables[i].removeAttribute('ontouchend');
-		requestAnimationFrame(convertClick);
+		requestAnimationFrame(t);
 	}
 }
-function loadLive() { convertClick(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
+function loadLive() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = "";},1000) }
 document.addEventListener('DOMContentLoaded', loadLive, false);
 if (!ls.coins) ls.coins = 0;
 else ls.coins = Math.round(ls.coins);
