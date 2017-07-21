@@ -10,19 +10,18 @@ var goodNames = {
 	dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 	alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
 }, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { }, ls = localStorage;
-function c(nm, stats, info, other) {
-	this.name = nm;
-	this.stats = stats;
-	this.info = info;
-	this.other = other;
-	if (ls['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] == undefined && info[1] == 'true') {
-		ls[nm] = 'true';
-		ls['has' + info[0].charAt(0).toUpperCase() + info[0].substring(1).replace('Boss', '')] = 'true';
+function c(e, s, p) {
+	this.name = e;
+	this.stats = s;
+	this.info = p;
+	if (ls['has' + p[0].charAt(0).toUpperCase() + p[0].substring(1).replace('Boss', '')] == undefined && p[1] == 'true') {
+		ls[e] = 'true';
+		ls['has' + p[0].charAt(0).toUpperCase() + p[0].substring(1).replace('Boss', '')] = 'true';
 	}
-	if (ls[nm] == undefined && info[1] == 'true') ls[nm] = 'false';
-	if (info[1] == 'true') goodNames[info[0].replace('+', 'Boss')].push(nm);
-	else badNames[info[0].replace('+', 'Boss')].push(nm);
-	if (goodNames[info[0] + 'Boss'] != undefined && info[1] == 'true') goodNames[info[0] + 'Boss'].push(nm);
+	if (ls[e] == undefined && p[1] == 'true') ls[e] = 'false';
+	if (p[1] == 'true') goodNames[p[0].replace('+', 'Boss')].push(e);
+	else badNames[p[0].replace('+', 'Boss')].push(e);
+	if (goodNames[p[0] + 'Boss'] != undefined && p[1] == 'true') goodNames[p[0] + 'Boss'].push(e);
 }
 good.archer = new c('archer', [40, 1500, 20], ['aonarchy', 'true', 750, 'a', 'archer', 'arrow']);
 good.goblin_horde = new c('goblin_horde', [50, 3200, 10], ['aonarchy', 'true', 1500, 'a', 'goblin_horde', 'goblin_sword']);
