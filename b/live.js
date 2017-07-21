@@ -3,7 +3,6 @@ function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|
 
 var goodNames = {
 			url : '',
-			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			aonarchy : [],
 			aonarchyBoss : [],
@@ -11,12 +10,9 @@ var goodNames = {
 			ammunist : [],
 			ammunistBoss : [],
 			eora : [],
-			cadrinalBoss : ['goblin_horde', 'flame-archer', 'elemental', 'camel-rider', 'a87-cannon', 'worldwar'],
-			acitus : ['prospector', 'archer', 'worldwar'],
 			alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
 }, badNames = {
 			url : '',
-			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
 			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			aonarchy : [],
 			alief : [],
@@ -24,8 +20,6 @@ var goodNames = {
 			ammunist : [],
 			ammunistBoss : [],
 			eora : [],
-			acitus : ['light-warrior', 'paramedics'],
-			cadrinalBoss : ['sharkanator', 'd15-cannon', 'bentacrabb-2D1', 'bylo-ken', 'teratul-rider', 'defensive-destroyer', 'batalifor-sentry', 'b--torv-troops'],
 			alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
 }, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { };
 function object(nm, stats, info, other) {

@@ -51,8 +51,6 @@ function load() {
 		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "cadrinal": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "acitus": newStats = 'false'; badNames.url = "c"; goodNames.url = "a"; break;
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
 	a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
