@@ -4,18 +4,18 @@ function play() {
 }
 function bg(e) {
 	if (e.target.id != 'bg' && !e.target.style.border.toString().includes('white')) {
-	b = e.target.innerHTML;
-	for (i = 0; i < document.querySelectorAll('#bg div').length; i++)
-	document.querySelectorAll('#bg div')[i].style.border= '1px transparent solid';
-	e.target.style.border = "1px white solid";
-	$('ch').innerHTML = "";
-	var html = "<div id='unselected'>";
-	for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(https://bocracy.com/assets/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
-	html += '</div><div id="selected"></div>';
-	$('ch').innerHTML = html;
-	$('sp').style.display = 'none';
-	$('ne').style.display = 'none';
-}
+		b = e.target.innerHTML;
+		for (i = 0; i < document.querySelectorAll('#bg div').length; i++)
+		document.querySelectorAll('#bg div')[i].style.border= '1px transparent solid';
+		e.target.style.border = "1px white solid";
+		$('ch').innerHTML = "";
+		var html = "<div id='unselected'>";
+		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(https://bocracy.com/assets/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
+		html += '</div><div id="selected"></div>';
+		$('ch').innerHTML = html;
+		$('sp').style.display = 'none';
+		$('ne').style.display = 'none';
+	}
 }
 var ct;
 function ch(e) {
