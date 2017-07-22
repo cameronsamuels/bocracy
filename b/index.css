@@ -18,7 +18,7 @@ body, html {
 header {
 	font-size: 45px;
 	background: #b30005;
-	padding-top: 5px;
+	line-height: 45px;
 }
 #backButton {
 	width: 30px;
