@@ -109,6 +109,8 @@ main { margin: auto }
 	background: #930005;
 	display: none
 }
+#ne, #sp { animation: p 1s }
+@keyframes p { 0% { opacity:0 } }
 #bg div {
 	margin: 1%;
 	background: #930005;
