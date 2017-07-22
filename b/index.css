@@ -143,7 +143,7 @@ main { margin: auto }
 #ch div div {
 	border: 2px black solid;
 	margin: 2px;
-	border-radius: 20px;
+	border-radius: 22%;
 	float: left;
 	background: #930005 no-repeat 100%/cover;
 }
