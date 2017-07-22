@@ -25,7 +25,7 @@ body, html {
 header {
 	font-size: 45px;
 	background: #b30005;
-	padding-top: 5px;
+	line-height: 45px;
 }
 #backButton {
 	width: 30px;
@@ -50,12 +50,10 @@ header {
 		left: 0;
 	}
 	main div { padding: 5vw 8px }
-	ch>div { height: 50vw }
 	main div:not(.big) { font-size: 3.7vh}
 	.big { font-size: 6vh }
 	main { max-width: 70vh}
 	#bg div { padding: 1vh 0 }
-	#ch>div { height: 40vw }
 	#ch div div {
 		width: calc(14.29vh - 8px);
 		height: calc(14.29vh - 8px);
@@ -65,12 +63,10 @@ header {
 }
 @media screen and (orientation:landscape) {
 	main div { padding: 5vh 8px }
-	ch>div { height: 50vh }
 	#bg div { padding: 1vw 0 }
 	main div:not(.big) { font-size: 3.7vw}
 	.big { font-size: 6vw }
 	main { max-width: 70vw}
-	#ch>div { height: 40vh }
 	#ch div div {
 		width: calc(14.29vw - 8px);
 		height: calc(14.29vw - 8px);
@@ -134,15 +130,16 @@ main { margin: auto }
 	clear: both;
 	float: none;
 	color: white;
+	height: calc(80% - 100px);
 }
 #ch>div {
 	float: left;
 	width: calc(50% - 22px);
 	padding: 10px;
+	height: 100%;
 }
 #ch:before,#ch:after {content: " ";display: table}
 #ch:after { clear: both }
-#ch { zoom: 1 }
 #ch div div {
 	border: 2px black solid;
 	margin: 2px;
