@@ -10,8 +10,8 @@ function bg(e) {
 		e.target.style.border = "1px white solid";
 		$('ch').innerHTML = "";
 		var html = "<div id='unselected'>";
-		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(https://bocracy.com/assets/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
-		html += '</div><div id="selected"></div>';
+		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://thebclickteam.tk/lib/boc/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
+    html += '</div><div id="selected"></div>';
 		$('ch').innerHTML = html;
 		$('sp').style.display = 'none';
 		$('ne').style.display = 'none';
