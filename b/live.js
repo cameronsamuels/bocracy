@@ -10,7 +10,7 @@ var isMobile = {
 var goodNames = {
 			url : '',
 			dinotera : ['triceratops', 't--rex', 'apatosaurus', 'carnotaurus'],
-			dericil : ['helicoprion', 'elasmosaurus', 'archeolon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
+			dericil : ['helicoprion', 'elasmosaurus', 'archelon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
 			aonarchy : [],
 			aonarchyBoss : [],
 			alief : [],
