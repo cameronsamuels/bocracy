@@ -59,6 +59,7 @@ header {
 	#ch div div {
 		width: calc(14.29vh - 8px);
 		height: calc(14.29vh - 8px);
+		animation: cp 0.2s linear;
 	}
 	#bg div{font-size:3vw}
 }
@@ -73,9 +74,12 @@ header {
 	#ch div div {
 		width: calc(14.29vw - 8px);
 		height: calc(14.29vw - 8px);
+		animation: cl 0.2s linear;
 	}
 	#bg div{font-size:3vh}
 }
+@keyframes cl { 0% {width:0;height:0;margin:6vw;transform:rotate(360deg)} }
+@keyframes cp { 0% {width:0;height:0;margin:6vh } }
 #selected { border-left:4px #fff solid }
 main div {
 	border: 8px solid;
