@@ -1,46 +1,39 @@
-var videoContent = $('contentElement');
-var adDisplayContainer = new google.ima.AdDisplayContainer($('adContainer'),videoContent);
+var vc = $('contentElement'), adc = new google.ima.AdDisplayContainer($('adContainer'),vc),
+al = new google.ima.AdsLoader(adc), ar = new google.ima.AdsRequest(),
+cel = function() {al.contentComplete();ls.coins = parseFloat(ls.coins) + 250;location.reload()};
 function ad() {
 	$('mainContainer').style.display = 'block';
-	adDisplayContainer.initialize();
-	requestAds();
+	adc.initialize();
+	ra();
 }
-var adsLoader = new google.ima.AdsLoader(adDisplayContainer);
-adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,onAdsManagerLoaded,false);
-adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR,onAdError,false);
-function onAdError(adErrorEvent) {
-  console.log(adErrorEvent.getError());
-  adsManager.destroy();
+al.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,aml),
+al.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR,oe), vc.onended = cel;
+function oe(e) {
+  console.log(e.getError());
+  am.destroy();
 }
-var contentEndedListener = function() {adsLoader.contentComplete();ls.coins = parseFloat(ls.coins) + 250;location.reload()};
-videoContent.onended = contentEndedListener;
-var adsRequest = new google.ima.AdsRequest();
-adsRequest.adTagUrl = 'http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&client=ca-games-pub-4968145218643279&videoad_start_delay=0&description_url=http%3A%2F%2Fwww.google.com&max_ad_duration=40000&adtest=on';
-adsRequest.linearAdSlotWidth = window.innerWidth;
-adsRequest.linearAdSlotHeight = window.innerHeight;
-adsRequest.nonLinearAdSlotWidth = window.innerWidth;
-adsRequest.nonLinearAdSlotHeight = window.innerHeight;
+ar.adTagUrl = 'http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&client=ca-games-pub-4968145218643279&videoad_start_delay=0&description_url=http%3A%2F%2Fwww.google.com&max_ad_duration=40000&adtest=on';
+ar.linearAdSlotWidth = innerWidth, ar.linearAdSlotHeight = innerHeight, ar.nonLinearAdSlotWidth = innerWidth, ar.nonLinearAdSlotHeight = innerHeight;
 $('playButton').addEventListener('click', ad);
-function requestAds() {
-  adsLoader.requestAds(adsRequest);
-  videoContent.load();
+function ra() {
+  al.requestAds(ar);
+  vc.load();
 }
-function onAdsManagerLoaded(adsManagerLoadedEvent) {
-  adsManager = adsManagerLoadedEvent.getAdsManager(videoContent);
-  adsManager.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR,onAdError);
-  adsManager.addEventListener(google.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED,onContentPauseRequested);
-  adsManager.addEventListener(google.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED,onContentResumeRequested);
+function aml(e) {
+  am = e.getAdsManager(vc);
+  am.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR,oe),
+  am.addEventListener(google.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED,cp),
+  am.addEventListener(google.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED,cr);
   try {
-    adsManager.init(window.innerWidth, window.innerWidth*(360/640), google.ima.ViewMode.NORMAL);
-    adsManager.start();
-  } catch (adError) {
-  }
+    am.init(innerWidth, innerWidth*(360/640), google.ima.ViewMode.NORMAL);
+    am.start();
+  } catch (e) {}
 }
-function onContentPauseRequested() {
-  videoContent.removeEventListener('ended', contentEndedListener);
-  videoContent.pause();
+function cp() {
+  vc.removeEventListener('ended', cel);
+  vc.pause();
 }
-function onContentResumeRequested() {
-  videoContent.addEventListener('ended', contentEndedListener);
-  videoContent.play();
+function cr() {
+  vc.addEventListener('ended', cel);
+  vc.play();
 }
