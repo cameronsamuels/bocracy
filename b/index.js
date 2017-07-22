@@ -35,7 +35,7 @@ function sp() {
 	for (i = 0; i < ch.length; i++) ls['b' + (i+1)] = ch[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	ls.sc = ch.length; location = "battle.html#series" + b;
 }
-if (mob()) $('bg').addEventListener('touchend', bg), $('ch').addEventListener('touchend', ch);
-else $('bg').onclick = bg, $('ch').onclick = ch;
+if (mob()) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
+else $('bg').onmousedown = bg, $('ch').onmousedown = ch;
 $('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
 if (!mob()) document.querySelectorAll('main div')[2].innerHTML = "BETA", document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");
