@@ -44,18 +44,8 @@ header ~ div {
     margin: 8px 5%;
     padding: 2% 5%;
 }
-div {
-    width: 80%
-}
-header + div {
-    margin-top: 100px !important
-}
-a {
-    color: #fff
-}
-h1 {
-    margin: 0
-}
-::-webkit-scrollbar {
-    width: 0
-}
+div { width: 80% }
+header + div { margin-top: 100px !important }
+a { color: #fff }
+h1 { margin: 0 }
+::-webkit-scrollbar { width: 0 }

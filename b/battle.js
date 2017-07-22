@@ -5,8 +5,8 @@ current = battles[Math.floor(Math.random() * battles.length)], series = {w:windo
 if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
 var game = { on : 'false',
 	refresh : { all : function() {
-		id('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
-		id('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
+		$('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
+		$('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
 		if (series.w) {
@@ -26,21 +26,21 @@ var game = { on : 'false',
 				updateCharacter();
 			} else {
 				series.t++;
-				if (series.t > localStorage.sc) {
+				if (series.t > ls.sc) {
 					series.c = Math.round(series.c * series.t);
-					if (localStorage.coins == undefined) localStorage.coins = series.c;
-					else localStorage.coins = parseFloat(localStorage.coins) + series.c;
-					id('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + localStorage.sc + '</span>dth</h5></div>';
-					id('overlay').style.backgroundColor = '#b30005';
-					id('restartText').style.display = "none";
-					setTimeout(function(){id('restartText').style.display = "block"}, 750);
-					id('overlay').style.display = "block";
+					if (ls.coins == undefined) ls.coins = series.c;
+					else ls.coins = parseFloat(ls.coins) + series.c;
+					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+					$('overlay').style.backgroundColor = '#b30005';
+					$('restartText').style.display = "none";
+					setTimeout(function(){$('restartText').style.display = "block"}, 750);
+					$('overlay').style.display = "block";
 					game.on = 'false';
 					series.t = 1;
 					series.k = 0;
 					return;
 				}
-				b.name = localStorage['b' + series.t];
+				b.name = ls['b' + series.t];
 				b.health = good[b.name].stats[1];
 				b.orig_health = b.health;
 				b.attack = good[b.name].stats[0];
@@ -52,21 +52,21 @@ var game = { on : 'false',
 		if (side == 'green') {
 			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
-			if (localStorage.coins == undefined) localStorage.coins = coinsEarned;
-			else localStorage.coins = parseFloat(localStorage.coins) + coinsEarned;
-			id('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
-			id('overlay').style.backgroundColor = '#64DD17';
+			if (ls.coins == undefined) ls.coins = coinsEarned;
+			else ls.coins = parseFloat(ls.coins) + coinsEarned;
+			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			$('overlay').style.backgroundColor = '#64DD17';
 			var rewardable = ['sharkanator', 'bentacrabb_2D1', 'b--2-mobile-cannon', 'sub-batalifor', 'teratul_rider', 'defensive_destroyer', 'batalifor-sentry', 'b--torv-troops', 'dark_knight'];
 			if (rewardable.indexOf(a.name) != -1) kiipInstance.postMoment('defeating the ' + a.name);
 		} else {
-			id('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
-			id('overlay').style.backgroundColor = '#b30005';
+			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			$('overlay').style.backgroundColor = '#b30005';
 		}
-		id('restartText').style.display = "none";
-		setTimeout(function(){id('restartText').style.display = "block"}, 750);
-		id('overlay').style.display = "block";
-		id('bSection').style.backgroundPosition = '0% 80%';
-		id('aSection').style.backgroundPosition = '50% 80%';
+		$('restartText').style.display = "none";
+		setTimeout(function(){$('restartText').style.display = "block"}, 750);
+		$('overlay').style.display = "block";
+		$('bSection').style.backgroundPosition = '0% 80%';
+		$('aSection').style.backgroundPosition = '50% 80%';
 		bgPos = 0;
 		}
 	}, attack : function(atk) {
@@ -75,34 +75,34 @@ var game = { on : 'false',
 				a.health -= b.attack;
 				a.health = Math.max(0, a.health);
 				a.health = Math.min(a.orig_health, a.health);
-				var newone = id('bSword').cloneNode(true);
-				id('bSword').parentNode.replaceChild(newone, id('bSword'));
-				id('bSword').style.display = "block";
-				id('bSword').style.animationName = "bSword";
-				id('clickToStart').style.display = 'none';
+				var newone = $('bSword').cloneNode(true);
+				$('bSword').parentNode.replaceChild(newone, $('bSword'));
+				$('bSword').style.display = "block";
+				$('bSword').style.animationName = "bSword";
+				$('clickToStart').style.display = 'none';
 				clearTimeout(bSword);
-				bSword = setTimeout("id('bSword').style.display = 'none';id('bSword').style.animationName = '';", 150);
+				bSword = setTimeout("$('bSword').style.display = 'none';$('bSword').style.animationName = '';", 150);
 				clicks++;
 				if (a.health == 0) game.win('green');
 				bgPos -= 10;
 				if (bgPos < -(window.innerWidth/4)) bgPos = -(window.innerWidth/4);
-				id('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
-				id('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
+				$('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
+				$('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			} else if (atk == 'red') {
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
-				var newone = id('aSword').cloneNode(true);
-				id('aSword').parentNode.replaceChild(newone, id('aSword'));
-				id('aSword').style.display = "block";
-				id('aSword').style.animationName = "aSword";
+				var newone = $('aSword').cloneNode(true);
+				$('aSword').parentNode.replaceChild(newone, $('aSword'));
+				$('aSword').style.display = "block";
+				$('aSword').style.animationName = "aSword";
 				clearTimeout(aSword);
-				aSword = setTimeout("id('aSword').style.display = 'none';id('aSword').style.animationName = '';", 100);
+				aSword = setTimeout("$('aSword').style.display = 'none';$('aSword').style.animationName = '';", 100);
 				if (b.health == 0) game.win('red');
 				bgPos += 10;
 				if (bgPos > 0) bgPos = 0;
-				id('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
-				id('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
+				$('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
+				$('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			}
 			document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 			document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
@@ -126,18 +126,15 @@ function load() {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "cerotopis": newStats = 'false'; badNames.url = "b"; goodNames.url = "c"; break;
 		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "cadrinal": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "acitus": newStats = 'false'; badNames.url = "c"; goodNames.url = "a"; break;
 		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
 	}
-	if (newStats == 'true' && localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
-		localStorage[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
-		localStorage['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
+	if (newStats == 'true' && ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
+		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
+		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
-	if (series.w) b.name = localStorage.b1;
+	if (series.w) b.name = ls.b1;
 	else {
 		var bName = b.name;
 		do {
@@ -159,7 +156,7 @@ function load() {
 		b.attack = parseFloat(a.attack * 0.8);
 		b.heal = parseFloat(a.heal * 0.8);
 	} else if (newStats == 'true') {
-		while (localStorage[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
+		while (ls[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 		a.health = bad[a.name].stats[1];
 		a.attack = bad[a.name].stats[0];
 		a.heal = bad[a.name].stats[2];
@@ -167,7 +164,7 @@ function load() {
 		b.attack = good[b.name].stats[0];
 		b.heal = good[b.name].stats[2];
 	}
-	if (isMobile.any()) a.speed = 300;
+	if (mob()) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
@@ -180,51 +177,49 @@ function load() {
 	}
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
-	id('title').innerHTML = current;
+	$('title').innerHTML = current;
 	var img = new Image();
 	img.onload = function() {
-		id('bSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-		id('aSection').style.backgroundImage = 'url(img/' + current.replace('+', '') + '.svg)';
-		id('aButton').style.backgroundColor = 'transparent';
-		id('bButton').style.backgroundColor = 'transparent';
+		$('bSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('aSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('aButton').style.backgroundColor = 'transparent';
+		$('bButton').style.backgroundColor = 'transparent';
 	};
 	img.onerror = function() {
-		id('bSection').style.backgroundImage = '';
-		id('aSection').style.backgroundImage = '';
-		id('aButton').style.backgroundColor = '';
-		id('bButton').style.backgroundColor = '';
+		$('bSection').style.backgroundImage = '';
+		$('aSection').style.backgroundImage = '';
+		$('aButton').style.backgroundColor = '';
+		$('bButton').style.backgroundColor = '';
 	};
-	img.src = 'img/' + current.replace('+', '') + '.svg';
-	id('refreshButton').style.display = "";
+	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
+	$('refreshButton').style.display = "";
 	updateCharacter();
 }
 function updateCharacter() {
 	var bName = b.name;
 	bName = bName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
-	id('bName').innerHTML = bName + ' ' + goodNames.url;
+	$('bName').innerHTML = bName + ' ' + goodNames.url;
 	var aName = a.name;
 	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
-	id('aName').innerHTML = aName + ' ' + badNames.url;
-		id('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	id('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-//	id('bName').style.fontSize = Math.abs(9-(id('bName').innerHTML.length/2)||2) + "vw";
-	
-//	id('aName').style.fontSize = Math.abs(Math.min((9-(id('aName').innerHTML.length/2)||2),id('bName').style.fontSize.replace('vw',''))) + "vw";
-	
-//	id('bName').style.fontSize = Math.abs(Math.min(id('bName').style.fontSize.replace('vw',''),id('aName').style.fontSize.replace('vw',''))) + "vw";
-//	if (id('bName').style.fontSize.replace('vw','')<2) {
-//		if (id('bName').style.fontSize.replace('vw','')<0) {
-//			id('bName').style.fontSize = '0.5vw';
-//			id('aName').style.fontSize = id('bName').style.fontSize;
+	$('aName').innerHTML = aName + ' ' + badNames.url;
+		$('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+//	$('bName').style.fontSize = Math.abs(9-($('bName').innerHTML.length/2)||2) + "vw";	
+//	$('aName').style.fontSize = Math.abs(Math.min((9-($('aName').innerHTML.length/2)||2),$('bName').style.fontSize.replace('vw',''))) + "vw";
+//	$('bName').style.fontSize = Math.abs(Math.min($('bName').style.fontSize.replace('vw',''),$('aName').style.fontSize.replace('vw',''))) + "vw";
+//	if ($('bName').style.fontSize.replace('vw','')<2) {
+//		if ($('bName').style.fontSize.replace('vw','')<0) {
+//			$('bName').style.fontSize = '0.5vw';
+//			$('aName').style.fontSize = $('bName').style.fontSize;
 //		} else {
-//			id('bName').style.fontSize = (parseFloat(id('bName').style.fontSize.replace('vw', '')) + 0.5) + 'vw';
-//			id('aName').style.fontSize = id('bName').style.fontSize;
+//			$('bName').style.fontSize = (parseFloat($('bName').style.fontSize.replace('vw', '')) + 0.5) + 'vw';
+//			$('aName').style.fontSize = $('bName').style.fontSize;
 //		}
 //	}
-	id('bName').style.fontSize = (30-id('bName').innerHTML.length)/5 + 'vw';
-	id('aName').style.fontSize = Math.min((30-id('aName').innerHTML.length)/5,id('bName').style.fontSize.replace('vw', '')) + 'vw';
-	if (id('aName').style.fontSize.replace('vw', '') < 1) id('aName').style.fontSize = (parseFloat(id('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
-	id('bName').style.fontSize = Math.min((30-id('bName').innerHTML.length)/5,id('aName').style.fontSize.replace('vw', '')) + 'vw';
+	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
+	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
+	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
+	$('bName').style.fontSize = Math.min((30-$('bName').innerHTML.length)/5,$('aName').style.fontSize.replace('vw', '')) + 'vw';
 	var aw  = 'sword', bw = 'sword';
 	try {
 		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
@@ -232,13 +227,13 @@ function updateCharacter() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
 	} catch (ex){}
-	id('bSword').style.backgroundImage = 'url("img/' + bw + '.svg")';
-	id('aSword').style.backgroundImage = 'url("img/' + aw + '.svg")';
+	$('bSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + bw + '.svg")';
+	$('aSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
 	game.on = 'false';
-	id('clickToStart').style.display = 'block';
-	id('overlay').style.display = 'none';
+	$('clickToStart').style.display = 'block';
+	$('overlay').style.display = 'none';
 	load();
 }
 function neatTime(time) {

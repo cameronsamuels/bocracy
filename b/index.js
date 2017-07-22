@@ -1,66 +1,41 @@
 function play() {
-	id('select').style.display = 'block';
-	id('startPlay').style.display = 'none';
+	$('select').style.display = 'block';
+	$('sp').style.display = 'none';
 }
-function battleground(e) {
-	if (e.target.id != 'battleground' && !e.target.style.border.toString().includes('white')) {
-	b = e.target.innerHTML;
-	for (i = 0; i < document.querySelectorAll('#battleground div').length; i++)
-	document.querySelectorAll('#battleground div')[i].style.border= '1px transparent solid';
-	e.target.style.border = "1px white solid";
-	id('characters').innerHTML = "";
-	var html = "<div id='unselected'>";
-	for (i = 0; i < goodNames[b].length; i++) {
-		if (localStorage[goodNames[b][i]] == 'true') {
-			html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://thebclickteam.tk/lib/boc/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
-		}
-	}
-	html = html + '</div><div id="selected"></div>';
-	id('characters').innerHTML = html;
-	id('startPlay').style.display = 'none';
-	id('notEnough').style.display = 'none';
-}
-}
-var cost;
-function character(e) {
-	if (e.target.id != 'characters' && e.target.id != 'selected' && e.target.id != 'unselected') {
-	e.target.parentElement.id=='selected'?id('unselected').appendChild(e.target):id('selected').appendChild(e.target);
-	cost = 0;
-	for (i = 0; i < id('characters').querySelectorAll('#selected div').length; i++) {
-		cost += Math.floor(good[id('characters').querySelectorAll('#selected div')[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03);
-		cost += 5;
-	}
-	if (id('characters').querySelectorAll('#selected div').length > 0) {
-		id('startPlay').style.display = 'block';
-		id('startPlay').innerHTML = 'Play (' + cost + ')';
-	}
-	if (localStorage.coins < cost) {
-		id('startPlay').style.display = 'none';
-		id('notEnough').style.display = 'block';
-		id('notEnough').innerHTML = "Not enough (" + localStorage.coins + "/" + cost + ")";
-	} else id('notEnough').style.display = 'none';
-	if (id('characters').querySelectorAll('#selected div').length == 0) id('startPlay').style.display = 'none';
+function bg(e) {
+	if (e.target.id != 'bg' && !e.target.style.border.toString().includes('white')) {
+		b = e.target.innerHTML;
+		for (i = 0; i < document.querySelectorAll('#bg div').length; i++)
+		document.querySelectorAll('#bg div')[i].style.border= '1px transparent solid';
+		e.target.style.border = "1px white solid";
+		$('ch').innerHTML = "";
+		var html = "<div id='unselected'>";
+		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://thebclickteam.tk/lib/boc/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
+    html += '</div><div id="selected"></div>';
+		$('ch').innerHTML = html;
+		$('sp').style.display = 'none';
+		$('ne').style.display = 'none';
 	}
 }
-function startPlay() {
-	if (localStorage.coins >= cost) localStorage.coins -= cost;
-	var characters = id('characters').querySelectorAll('#selected div');
-	for (i = 0; i < characters.length; i++) {
-		localStorage['b' + (i+1)] = characters[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
+var ct;
+function ch(e) {
+	if (e.target.id != 'ch' && e.target.id != 'selected' && e.target.id != 'unselected') {
+		e.target.parentElement.id=='selected'?$('unselected').appendChild(e.target):$('selected').appendChild(e.target);
+		ct = 0;
+		for (i = 0; i < $('ch').querySelectorAll('#selected div').length; i++) ct += Math.floor(good[$('ch').querySelectorAll('#selected div')[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03) + 5;
+		if ($('ch').querySelectorAll('#selected div').length > 0) $('sp').style.display = 'block', $('sp').innerHTML = 'Play (' + ct + ')';
+		if (ls.coins < ct) $('sp').style.display = 'none', $('ne').style.display = 'block', $('ne').innerHTML = "Not enough (" + ls.coins + "/" + ct + ")";
+		else $('ne').style.display = 'none';
+		if ($('ch').querySelectorAll('#selected div').length == 0) $('sp').style.display = 'none';
 	}
-	localStorage.sc = characters.length;
-	location = "battle.html#series" + b;
 }
-if (isMobile.any()) {
-	id('battleground').addEventListener('touchend', battleground);
-	id('characters').addEventListener('touchend', character);
-} else {
-	id('battleground').onclick = battleground;
-	id('characters').onclick = character;
+function sp() {
+	if (ls.coins >= ct) ls.coins -= ct;
+	var ch = $('ch').querySelectorAll('#selected div');
+	for (i = 0; i < ch.length; i++) ls['b' + (i+1)] = ch[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
+	ls.sc = ch.length; location = "battle.html#series" + b;
 }
-document.body.style.backgroundPosition=1e2*Math.random()+"%";
-id('battleground').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
-if (!isMobile.any()) {
-	document.querySelectorAll('main div')[2].innerHTML = "BETA";
-	document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");
-}
+if (mob()) $('bg').addEventListener('touchend', bg), $('ch').addEventListener('touchend', ch);
+else $('bg').onclick = bg, $('ch').onclick = ch;
+$('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
+if (!mob()) document.querySelectorAll('main div')[2].innerHTML = "BETA", document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");

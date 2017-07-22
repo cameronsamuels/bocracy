@@ -3,7 +3,7 @@
   src: url('syncopate.woff') format('woff');
 }
 body, html {
-    background: url('img/wood.svg') #654620;
+    background: url('http://thebclickteam.tk/lib/boc/bg/wood.svg') #654620;
     text-align: center;
     font-family: s, sans-serif;
     user-select: none;
@@ -164,5 +164,5 @@ main section h1 {
 	position: absolute;
 	bottom: -110px;
 	right: 100px;
-	background: url('img/merchant.svg') no-repeat 100%/cover;
+	background: url('http://thebclickteam.tk/lib/boc/img/merchant.svg') no-repeat 100%/cover;
 }

@@ -1,28 +1,36 @@
-<!DOCTYPE html><html><head><title>b-Ocracy</title>
-<meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-<link rel="shortcut icon" href=https://bocracy.com/icon.png>
-<link rel=stylesheet href=index.min.css>
-<meta name=description content="Fight the greatest uprising in the land of b-Ocracy!">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!DOCTYPE html><html>
+<head>
+	<title>b-Ocracy</title>
+	<meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+	<link rel="shortcut icon" href=https://bocracy.com/icon.png>
+	<link rel=stylesheet href=index.min.css>
+	<meta name=description content="Fight the greatest uprising in the land of b-Ocracy!">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-50194959-4', 'auto');
-  ga('send', 'pageview');
+		ga('create', 'UA-50194959-4', 'auto');
+		ga('send', 'pageview');
 
-</script></head><body><header>b-Ocracy</header><main>
-<div class="full big" ontouchend="location='battle.html'">PLAY</div>
-<div ontouchend="play()">SERIES</div>
-<div class=small ontouchend="location='multiplayer.html'">2PLAYER</div>
-<div ontouchend="location='store.html'">STORE</div>
-<div ontouchend="location='https://bocracy.com/credits'">CREDITS</div></main>
-<div id=select>
-<a ontouchend="document.getElementById('select').style.display=''"><img id=backButton src=img/back.svg></a>
-<h2>Series Mode</h2>
-<section id=battleground></section>
-<section id=characters></section>
-<div class=btn id=startPlay ontouchend="startPlay()">Play</div>
-<div class=btn id=notEnough></div></div></body>
-<script src=live.min.js></script><script src=index.min.js></script></html>
+	</script>
+</head>
+<body>
+	<header>b-Ocracy</header>
+	<main>
+		<div class="full big" ontouchend="location='battle.html'">PLAY</div>
+		<div ontouchend="play()">SERIES</div>
+		<div class=small ontouchend="location='multiplayer.html'">2PLAYER</div>
+		<div ontouchend="location='store.html'">STORE</div>
+		<div ontouchend="location='https://bocracy.com/credits'">CREDITS</div>
+	</main>
+	<div id=select>
+		<a ontouchend="document.getElementById('select').style.display=''"><img id=backButton src=http://thebclickteam.tk/lib/boc/btn/back.svg></a>
+		<h2>Series Mode</h2>
+		<section id=bg></section>
+		<section id=ch></section>
+		<div class=btn id=sp ontouchend="sp()">Play</div>
+		<div class=btn id=ne></div>
+	</div>
+</body><script src=live.min.js></script><script src=index.min.js></script></html>
