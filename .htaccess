@@ -7,7 +7,8 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Redirect 307 /live /b
 Redirect 307 /beta /b
-Redirect 307 /alpha /b
+Redirect 307 /alpha /2
+Redirect 307 /2 http://bocracy.tk
 Redirect 307 /a /b
 
 Redirect 307 /ios https://appsto.re/us/OUwGib.i
