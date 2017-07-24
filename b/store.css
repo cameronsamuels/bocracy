@@ -125,9 +125,10 @@ main section h1 {
 }
 @media screen and (orientation: landscape) and (max-height: 500px) {
     #unlockedPopup {
-        zoom: 80%;
+        zoom: 70%;
 		top: calc(50% - 168px);
-    }    
+    }
+    #confirmPopup { zoom: 80% }
 }
 #unlockedPopup {
     height: 300px;
