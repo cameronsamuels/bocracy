@@ -17,6 +17,7 @@ ar {
     font-size: 80%;
     font-weight: 200;
     display: block;
+    margin-top: 2px;
 }
 header div {
     background: #fff;
@@ -29,9 +30,10 @@ header div {
     color: #2E40A4;
 }
 d {
-    display: inline-block;
+    display: block;
     border: 1px dashed;
     width: 120px;
+    margin: 10px auto;
     height: 0;
 }
 header {
