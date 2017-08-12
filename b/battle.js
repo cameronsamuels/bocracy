@@ -1,4 +1,3 @@
-if (location.protocol.includes('http')) var kiipInstance = new Kiip('fca374961f67f78f76e4072c37997e4d');
 var bSword, aSword, bgPos = 0, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0,k:0};
@@ -56,8 +55,6 @@ var game = { on : 'false',
 			else ls.coins = parseFloat(ls.coins) + coinsEarned;
 			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
-			var rewardable = ['sharkanator', 'bentacrabb_2D1', 'b--2-mobile-cannon', 'sub-batalifor', 'teratul_rider', 'defensive_destroyer', 'batalifor-sentry', 'b--torv-troops', 'dark_knight'];
-			if (rewardable.indexOf(a.name) != -1) kiipInstance.postMoment('defeating the ' + a.name);
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#b30005';
