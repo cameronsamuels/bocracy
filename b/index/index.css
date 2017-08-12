@@ -1,6 +1,6 @@
 @font-face {
 	font-family: s;
-	src: url('syncopate.woff') format('woff');
+	src: url('../global/syncopate.woff') format('woff');
 }
 body, html {
 	margin: 0;
