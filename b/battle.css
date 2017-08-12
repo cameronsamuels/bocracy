@@ -42,6 +42,16 @@ body, html {
 	}
 	#bSword { top: 45vw }
 	#aSword { top: 20vw }
+	#aHealth, #bHealth {
+		width: 40vw;
+		height: 5vw;
+		border: 1vw #000 solid;
+	}
+	#aHealth p, #bHealth p {
+	    font-size: 4vw;
+	    line-height: 5vw;
+	    height: 5vw;
+	}
 }
 @media screen and (orientation:landscape) {	
 	#bButton, #aButton { margin-top: 15vh }
@@ -62,6 +72,16 @@ body, html {
 	}
 	#bSword { top: 45vh }
 	#aSword { top: 20vh }
+	#aHealth, #bHealth {
+		width: 40vh;
+		height: 5vh;
+		border: 1vh #000 solid;
+	}
+	#aHealth p, #bHealth p {
+	    font-size: 4vh;
+	    line-height: 5vh;
+	    height: 5vh;
+	}
 }
 .clear { clear: both }
 a { cursor: pointer}
@@ -117,11 +137,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     line-height: 20px;
 }
 #aHealth, #bHealth {
-    width: 180px;
-    height: 20px;
-    margin: 0 calc(50% - 90px);
-    background: #F44336;
-    border: 4px #000 solid;
+	margin: auto;
+	background: #f44336;
 	position: relative;
 }
 #aHealthBar, #bHealthBar {
@@ -134,10 +151,9 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 #aHealth p, #bHealth p {
 	position: relative;
     margin: 0;
-    top:  0;
-    line-height: 20px;
-	vertical-align: middle;
-	font-weight: 900;
+    top: 0;
+    vertical-align: middle;
+    font-weight: 900;
 }
 #aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
 #aName { background:#b30005}
