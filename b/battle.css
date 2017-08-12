@@ -184,10 +184,12 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 	position: absolute;
 	bottom: 10px;
 	cursor: pointer;
+	animation: f 1s;
 }
 #restartText:hover {
 	background-color: #53CC16;
 }
+@keyframes f { 0% { opacity: 0 } }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
     #overlayText div:not(#overlayStats) { font-size: 75px !important; }
