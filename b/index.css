@@ -60,6 +60,11 @@ header {
 		animation: cp 0.2s linear;
 	}
 	#bg div{font-size:3vw}
+	.btn {
+		border-radius: 1vw;
+		font-size: 6vw;
+		padding: 4vw 0;
+	}
 }
 @media screen and (orientation:landscape) {
 	main div { padding: 5vh 8px }
@@ -73,6 +78,11 @@ header {
 		animation: cl 0.2s linear;
 	}
 	#bg div{font-size:3vh}
+	.btn {
+		border-radius: 1vh;
+		font-size: 6vh;
+		padding: 4vh 0;
+	}
 }
 @keyframes cl { 0% {width:0;height:0;margin:6vw;transform:rotate(360deg)} }
 @keyframes cp { 0% {width:0;height:0;margin:6vh;transform:rotate(360deg) } }
@@ -90,17 +100,18 @@ main div, header { display: inline-block }
 main { margin: auto }
 .btn {
 	background: #64DD17;
-	margin: 2.5px 9px;
-	border-radius: 6px;
+	margin: 2.5px auto;
 	color: #fff;
-	font-size: 24px;
-	padding: 15px;
-	width: calc(100% - 50px);
+	width: 80%;
 	position: absolute;
-	bottom: 0;
+	bottom: 10px;
 	cursor: pointer;
+	left: 0;
+	right: 0;
 }
 .btn:hover { background: #42bb05 }
+@media screen and (min-width: 750px) and (orientation:landscape) { .btn { padding:2.5vh } }
+@media screen and (min-height: 750px) and (orientation:portrait) { .btn { padding:2.5vw } }
 #ne {
 	background: #930005;
 	display: none
