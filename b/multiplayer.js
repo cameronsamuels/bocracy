@@ -84,21 +84,21 @@ function load() {
 		$('bName').style.fontSize = "2vh";
 		$('aName').style.fontSize = "2vh";
 	}
-	$('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('bButton').style.backgroundImage = 'url(http://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(http://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
 	if (newStats == 'true') { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
-	if (('url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")') != $('aSword').style.backgroundImage) $('aSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")';
+	if (('url("http://blib.tk/boc/wpn/' + weapon + '.svg")') != $('aSword').style.backgroundImage) $('aSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + weapon + '.svg")';
 	var weapon  = 'sword';
 	if (newStats == 'true')	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
-	if (('url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")') != $('bSword').style.backgroundImage) $('bSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + weapon + '.svg")';
+	if (('url("http://blib.tk/boc/wpn/' + weapon + '.svg")') != $('bSword').style.backgroundImage) $('bSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
 	img.onload = function() {
 		$('bSection').style.background = 'transparent';
 		$('aSection').style.background = 'transparent';
-		$('background').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('background').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
 	};
@@ -108,7 +108,7 @@ function load() {
 		$('aButton').style.backgroundColor = '';
 		$('bButton').style.backgroundColor = '';
 	};
-	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
+	img.src = 'http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
 }
 function restart() {
 	game.on = 'false';

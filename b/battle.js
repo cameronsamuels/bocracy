@@ -29,7 +29,7 @@ var game = { on : 'false',
 					series.c = Math.round(series.c * series.t);
 					if (ls.coins == undefined) ls.coins = series.c;
 					else ls.coins = parseFloat(ls.coins) + series.c;
-					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').setAttribute("ontouchend", "location='index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
@@ -54,7 +54,7 @@ var game = { on : 'false',
 			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (ls.coins == undefined) ls.coins = coinsEarned;
 			else ls.coins = parseFloat(ls.coins) + coinsEarned;
-			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
@@ -178,8 +178,8 @@ function load() {
 	$('title').innerHTML = current;
 	var img = new Image();
 	img.onload = function() {
-		$('bSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
-		$('aSection').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('bSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('aSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
 	};
@@ -189,7 +189,7 @@ function load() {
 		$('aButton').style.backgroundColor = '';
 		$('bButton').style.backgroundColor = '';
 	};
-	img.src = 'http://thebclickteam.tk/lib/boc/bg/' + current.replace('+', '') + '.svg';
+	img.src = 'http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
 	$('refreshButton').style.display = "";
 	updateCharacter();
 }
@@ -200,8 +200,8 @@ function updateCharacter() {
 	var aName = a.name;
 	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	$('aName').innerHTML = aName + ' ' + badNames.url;
-		$('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+		$('bButton').style.backgroundImage = 'url(http://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(http://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
 	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
 	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
@@ -213,8 +213,8 @@ function updateCharacter() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
 	} catch (ex){}
-	$('bSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + bw + '.svg")';
-	$('aSword').style.backgroundImage = 'url("http://thebclickteam.tk/lib/boc/wpn/' + aw + '.svg")';
+	$('bSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + bw + '.svg")';
+	$('aSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
 	game.on = 'false';

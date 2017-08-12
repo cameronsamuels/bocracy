@@ -8,11 +8,11 @@ function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {
 		var html = "";
-		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(http://thebclickteam.tk/lib/boc/img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
+		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(http://blib.tk/boc/img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
 		for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
 			if (ls[good[goodNames[battlegrounds[i]][j]].name] != "true") {
 				var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
-				html += "<div style='background-image:url(http://thebclickteam.tk/lib/boc/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'></div>";
+				html += "<div style='background-image:url(http://blib.tk/boc/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'></div>";
 			}
 		}
 		if (!html.includes("</div><div")) {
@@ -84,7 +84,7 @@ function unlock(item) {
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
 	$('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
 	$('unlockedPopupImg').style.display = "block";
-	$('unlockedPopupImg').src = 'http://thebclickteam.tk/lib/boc/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	$('unlockedPopupImg').src = 'http://blib.tk/boc/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 	$('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
 	$('unlockedPopup').style.display = "block";
 	setTimeout(function(){$('popupOverlay').style.display = "block"},400);
