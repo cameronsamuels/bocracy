@@ -5,18 +5,18 @@ ExpiresDefault "access 1 month"
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-Redirect 307 /live /b
-Redirect 307 /beta /b
-Redirect 307 /alpha /2
-Redirect 307 /2 http://bocracy.tk
-Redirect 307 /a /b
+Redirect 301 /live /b
+Redirect 301 /beta /b
+Redirect 301 /alpha /2
+Redirect 301 /2 http://bocracy.tk
+Redirect 301 /a /b
 
-Redirect 307 /ios https://appsto.re/us/OUwGib.i
-Redirect 307 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
-Redirect 307 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
-Redirect 307 /itch.io https://cameronsamuels.itch.io/bocracy
-Redirect 307 /fb https://apps.facebook.com/1639840069651736/
-Redirect 307 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
-Redirect 307 /wikia /wiki
-Redirect 307 /wiki http://bocracy.wikia.com/
-Redirect 307 /support mailto:team@bocracy.com
+Redirect 301 /ios https://appsto.re/us/OUwGib.i
+Redirect 301 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
+Redirect 301 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
+Redirect 301 /itch.io https://cameronsamuels.itch.io/bocracy
+Redirect 301 /fb https://apps.facebook.com/1639840069651736/
+Redirect 301 /betatest https://groups.google.com/d/forum/b-ocracy-beta-testers
+Redirect 301 /wikia /wiki
+Redirect 301 /wiki http://bocracy.wikia.com/
+Redirect 301 /support mailto:team@bocracy.com
