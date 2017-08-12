@@ -75,7 +75,7 @@ header {
 	#bg div{font-size:3vh}
 }
 @keyframes cl { 0% {width:0;height:0;margin:6vw;transform:rotate(360deg)} }
-@keyframes cp { 0% {width:0;height:0;margin:6vh } }
+@keyframes cp { 0% {width:0;height:0;margin:6vh;transform:rotate(360deg) } }
 #selected { border-left:4px #fff solid }
 main div {
 	border: 8px solid;
