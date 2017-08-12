@@ -30,6 +30,7 @@ var game = { on : 'false',
 					if (ls.coins == undefined) ls.coins = series.c;
 					else ls.coins = parseFloat(ls.coins) + series.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://thebclickteam.tk/lib/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+					$('restartText').setAttribute("ontouchend", "location='index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
