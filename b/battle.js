@@ -204,18 +204,6 @@ function updateCharacter() {
 	$('aName').innerHTML = aName + ' ' + badNames.url;
 		$('bButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('aButton').style.backgroundImage = 'url(http://thebclickteam.tk/lib/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-//	$('bName').style.fontSize = Math.abs(9-($('bName').innerHTML.length/2)||2) + "vw";	
-//	$('aName').style.fontSize = Math.abs(Math.min((9-($('aName').innerHTML.length/2)||2),$('bName').style.fontSize.replace('vw',''))) + "vw";
-//	$('bName').style.fontSize = Math.abs(Math.min($('bName').style.fontSize.replace('vw',''),$('aName').style.fontSize.replace('vw',''))) + "vw";
-//	if ($('bName').style.fontSize.replace('vw','')<2) {
-//		if ($('bName').style.fontSize.replace('vw','')<0) {
-//			$('bName').style.fontSize = '0.5vw';
-//			$('aName').style.fontSize = $('bName').style.fontSize;
-//		} else {
-//			$('bName').style.fontSize = (parseFloat($('bName').style.fontSize.replace('vw', '')) + 0.5) + 'vw';
-//			$('aName').style.fontSize = $('bName').style.fontSize;
-//		}
-//	}
 	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
 	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
 	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
