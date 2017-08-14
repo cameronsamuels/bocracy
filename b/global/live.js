@@ -42,9 +42,11 @@ bad.bylo_kenBoss = new c('bylo_kenBoss', [35, 1500, 20], ['aonarchy+', 'false', 
 bad.d15_cannonBoss = new c('d15_cannonBoss', [60, 2000, 5], ['aonarchy+', 'false', 1500, 'a', 'd15_cannonBoss', 'cannonball']);
 
 good.witchcraft = new c('witchcraft', [45, 1500, 20], ['alief', 'true', 800, 'a', 'witchcraft', 'spell']);
-good.phantom = new c('phantom', [30, 2000, 20], ['alief', 'true', 750, 'a', 'phantom', 'shadowball']);
-good.elemental = new c('elemental', [48, 3000, 20], ['alief', 'true', 1500, 'a', 'elemental', 'elements']);
-// good.mage = new c('mage', [50, 3500, 40], ['alief', 'true', 2000, 'a', 'mage', 'spell']);
+good.phantom = new c('phantom', [30, 1750, 15], ['alief', 'true', 750, 'a', 'phantom', 'shadowball']);
+good.elemental = new c('elemental', [35, 2500, 20], ['alief', 'true', 1500, 'a', 'elemental', 'elements']);
+good.sorcerer = new c('sorcerer', [40, 2000, 30], ['alief', 'true', 1750, 'a', 'sorcerer', 'spell']);
+good.steel_knight = new c('steel_knight', [50, 3000, 20], ['alief', 'true', 2000, 'a', 'steel_knight', 'knife']);
+good.slayer = new c('slayer', [40, 1750, 15], ['alief', 'true', 1300, 'a', 'slayer', 'knife']);
 
 bad.ultacrabb = new c('ultacrabb', [60, 2000, 5], ['alief', 'false', 1500, 'a', 'ultacrabb', 'missile']);
 bad.f87_cannon = new c('f87_cannon', [40, 1250, 20], ['alief', 'false', 750, 'a', 'f87_cannon', 'missile']);
