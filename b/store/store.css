@@ -60,7 +60,7 @@ header div { display: inline-block }
     font-size: 14px;
     position: absolute;
     top: 5px;
-    left: calc(50% - 87.5px);
+    left: calc(50% - 96.5px);
 }
 #mainContainer {
     position: relative;
