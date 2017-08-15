@@ -128,9 +128,7 @@ main section h1 {
     #confirmPopup { zoom: 80% }
 }
 #unlockedPopup {
-    height: 300px;
     width: 250px;
-    top: calc(50% - 210px);
     left: calc(50% - 125px);
 }
 #confirmPopup footer, #unlockedPopup footer { bottom: 5px }

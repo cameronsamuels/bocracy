@@ -20,6 +20,8 @@ function refreshStore(){
 function showAlert() {
     $('unlockedPopupText').innerHTML = "Insufficient redbacks";
     $('unlockedPopupImg').style.display = "none";
+    $('unlockedPopup').style.height = "110px";
+    $('unlockedPopup').style.top = "calc(50% - 120px)";
     $('unlockedPopup').style.display = "block";
     $('popupOverlay').style.display = "block";
 }
@@ -51,8 +53,10 @@ function unlock(item) {
 	ls[unlocked] = 'true';
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
 	$('unlockedPopupText').innerHTML = "<p>You unlocked</p>" + characterName;
-	$('unlockedPopupImg').style.display = "block";
+	$('unlockedPopupImg').style.display = "";
 	$('unlockedPopupImg').src = 'http://blib.tk/boc/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	$('unlockedPopup').style.height = "300px";
+    $('unlockedPopup').style.top = "calc(50% - 210px)";
 	$('unlockedPopup').style.display = "block";
 	$('popupOverlay').style.display = "block";
 	$('redbacks').innerHTML = ls.redbacks;
