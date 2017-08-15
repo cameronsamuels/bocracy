@@ -45,5 +45,5 @@ header ~ div {
 div { width: 80% }
 header + div { margin-top: 100px !important }
 a { color: #fff }
-h1 { margin: 0 }
+h1 { margin: 5px }
 ::-webkit-scrollbar { width: 0 }
