@@ -25,8 +25,8 @@ function refreshStore(){
 }
 function showConfirm(text, yes, no) {
     $('confirmText').innerHTML = text;
-    $('confirmYesBtn').setAttribute('onclick', "eval(" + yes + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
-    $('confirmNoBtn').setAttribute('onclick', "eval(" + no + ");document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
+    $('confirmYesBtn').setAttribute('onclick', "document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';eval(" + yes + ")");
+    $('confirmNoBtn').setAttribute('onclick', "document.getElementById('confirmPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none';eval(" + no + ")");
     $('confirmPopup').style.display = "block";
     $('popupOverlay').style.display = "block";
 }
