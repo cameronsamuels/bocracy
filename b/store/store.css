@@ -84,9 +84,7 @@ main section {
     clear: both;
     float: none;
     color: white;
-}
-main section div:last-child {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 main section div {
     border: 2px #fff solid;
