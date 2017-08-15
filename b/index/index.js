@@ -1,4 +1,9 @@
 function play() {
+	if ($('ch').innerHTML == "") {
+		var e = document.createEvent('MouseEvents');
+    	mob()?e.initEvent("touchstart", true, true):e.initEvent("mousedown", true, true);
+    	document.querySelector('#bg div').dispatchEvent(e);
+	}
 	$('select').style.display = 'block';
 	$('sp').style.display = 'none';
 }
