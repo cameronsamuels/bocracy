@@ -92,8 +92,6 @@ main section div {
     float: left;
     background: #563f22 no-repeat 100%/cover;
 }
-@keyframes ca { 0% {width:0;height:0;margin:calc(16.5vw - 24px);transform:rotate(360deg)} }
-@keyframes cb { 0% {width:0;height:0;margin:calc(8.333vw - 24px);transform:rotate(360deg)} }
 main section h1 {
 	margin: 0
 }
@@ -101,14 +99,12 @@ main section h1 {
     main section div {
         width: calc(33vw - 24px);
         height: calc(33vw - 24px);
-        animation: ca 0.8s linear;
     }
 }
 @media screen and (min-width: 501px) {
     main section div {
         width: calc(16.6666vw - 24px);
         height: calc(16.6666vw - 24px);
-        animation: cb 0.5s linear;
     }
 }
 ::-webkit-scrollbar { width: 0 }
