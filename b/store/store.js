@@ -1,5 +1,5 @@
 $('redbacks').innerHTML = ls.redbacks;
-var battlegrounds = ["aonarchy","ammunist","alief","eora"], m = document.querySelector('main');
+var battlegrounds = ["aonarchy","ammunist","alief","eora","alinar","dericil"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {

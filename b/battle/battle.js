@@ -190,8 +190,8 @@ function updateCharacter() {
 	var aName = a.name;
 	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	$('aName').innerHTML = aName + ' ' + badNames.url;
-		$('bButton').style.backgroundImage = 'url(http://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('aButton').style.backgroundImage = 'url(http://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+		$('bButton').style.backgroundImage = 'url(http://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(http://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
 	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
 	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';

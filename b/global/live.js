@@ -81,18 +81,18 @@ good.cactus = new c('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactu
 good.scavenger = new c('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 'a', 'scavenger', 'scavenger_sword']);
 good.mountain_jetpack = new c('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
 
-good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', 'true', 1000, 'a', 'elasmosaurus']);
-good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', 'true', 600, 'a', 'giant_orthocone']);
-good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', 'true', 700, 'a', 'alligator_gar']);
-good.archelon = new c('archelon', [30, 2500, 12], ['dericil', 'true', 800, 'a', 'archelon']);
-good.gar_school = new c('gar_school', [40, 2000, 20], ['dericil', 'true', 1400, 'a', 'gar_school']);
-good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', 'true', 1600, 'a', 'helicoprion']);
+good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', 'true', 1000, 'b', 'elasmosaurus']);
+good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', 'true', 600, 'b', 'giant_orthocone']);
+good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', 'true', 700, 'b', 'alligator_gar']);
+good.archelon = new c('archelon', [30, 2500, 12], ['dericil', 'true', 800, 'b', 'archelon']);
+good.gar_school = new c('gar_school', [40, 2000, 20], ['dericil', 'true', 1400, 'b', 'gar_school']);
+good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', 'true', 1600, 'b', 'helicoprion']);
 
-bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', 'false', 900, 'a', 'coelacanth']);
-bad.sea_scorpion = new c('sea_scorpion', [38, 2000, 15], ['dericil', 'false', 1500, 'a', 'sea_scorpion']);
-bad.leedsichthys = new c('leedsichthys', [35, 2200, 15], ['dericil', 'false', 1300, 'a', 'leedsichthys']);
-bad.mosasaur = new c('mosasaur', [40, 2500, 15], ['dericil', 'false', 1500, 'a', 'mosasaur']);
-bad.megalodon = new c('megalodon', [50, 3000, 12], ['dericil', 'false', 1800, 'a', 'megalodon']);
+bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', 'false', 900, 'b', 'coelacanth']);
+bad.sea_scorpion = new c('sea_scorpion', [38, 2000, 15], ['dericil', 'false', 1500, 'b', 'sea_scorpion']);
+bad.leedsichthys = new c('leedsichthys', [35, 2200, 15], ['dericil', 'false', 1300, 'b', 'leedsichthys']);
+bad.mosasaur = new c('mosasaur', [40, 2500, 15], ['dericil', 'false', 1500, 'b', 'mosasaur']);
+bad.megalodon = new c('megalodon', [50, 3000, 12], ['dericil', 'false', 1800, 'b', 'megalodon']);
 
 good.flame_archer = new c('flame_archer', [35, 1700, 5], ['alinar', 'true', 900, 'a', 'flame_archer']);
 good.reindeer = new c('reindeer', [25, 1700, 10], ['alinar', 'true', 750, 'a', 'reindeer']);
@@ -103,11 +103,18 @@ good.mammoth = new c('mammoth', [40, 2500, 15], ['alinar', 'true', 1600, 'a', 'm
 
 bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch', 'missile']);
 bad.abomination = new c('abomination', [30, 1800, 15], ['alinar', 'false', 900, 'a', 'abomination']);
-bad.b_torv_snowtrooper = new c('b_torv_snowtrooper', [35, 1800, 15], ['alinar', 'false', 1000, 'a', 'b_torv_snowtrooper']);
+bad.b__torv_snowtrooper = new c('b__torv_snowtrooper', [35, 1800, 15], ['alinar', 'false', 1000, 'a', 'b__torv_snowtrooper']);
 bad.cyclops = new c('cyclops', [40, 2000, 20], ['alinar', 'false', 1200, 'a', 'cyclops']);
 bad.flamethrower = new c('flamethrower', [40, 1800, 15], ['alinar', 'false', 1300, 'a', 'flamethrower']);
 bad.sub_batalifor = new c('sub_batalifor', [45, 2500, 15], ['alinar', 'false', 1500, 'a', 'sub_batalifor']);
-bad.b_2_mobile_cannon = new c('b_2_mobile_cannon', [50, 2500, 12], ['alinar', 'false', 1800, 'a', 'b_2_mobile_cannon']);
+bad.b__2_mobile_cannon = new c('b__2_mobile_cannon', [50, 2500, 12], ['alinar', 'false', 1800, 'a', 'b__2_mobile_cannon']);
+
+// good.color_jetpack = new c('color_jetpack', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'color_jetpack']);
+// good.winter_pumpkins = new c('giant_orthocone', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'giant_orthocone']);
+// good.thorn = new c('thorn', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'thorn']);
+// good.snow_goblin = new c('giant_orthocone', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'giant_orthocone']);
+// good.traitors = new c('giant_orthocone', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'giant_orthocone']);
+// good.rogue = new c('rogue', [60, 2500, 10], ['alinar', 'true', 1500, 'a', 'rogue']);
 
 function t() {
 	if (!mob()) {
