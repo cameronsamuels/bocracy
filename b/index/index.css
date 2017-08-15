@@ -26,6 +26,7 @@ header {
 	font-size: 45px;
 	background: #b30005;
 	line-height: 45px;
+	padding-top: 4px;
 }
 #backButton {
 	width: 30px;
@@ -94,8 +95,8 @@ main div {
 	cursor: pointer;
 	width: calc(50% - 42px);
 	color: #000;
+	display: inline-block;
 }
-main div, header { display: inline-block }
 .full { width: calc(100% - 42px) }
 main { margin: auto }
 .btn {
