@@ -20,17 +20,17 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
 #content, #adContainer, #mainContainer, #contentElement, body, html, #popupOverlay { height: 100% }
 .button {
     border: 1px #2E40A4 solid;
-    background-color: #3F51B5;
+    background: #3F51B5;
     display: inline-block;
     margin: 2.5px 9px;
     border-radius: 3px;
-    color: white;
+    color: #fff;
     font-size: 12px;
-    padding: 8px 15px;
+    padding: 8px;
     width: calc(100% - 50px);
 }
 .button:hover {
-    background-color: #2E40A4;
+    background: #2E40A4;
     border: 1px #3F51B5 solid;
 }
 header {
@@ -52,11 +52,15 @@ header div { display: inline-block }
 }
 #redbacksImg, #backButton { height: 30px }
 #playButton {
-	max-width: 250px;
+	width: 175px;
     margin: auto;
-    height: 30px;
-	line-height: 30px;
-	font-size: 20px;
+    text-align: center;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 87.5px);
 }
 #mainContainer {
     position: relative;
@@ -71,7 +75,7 @@ header div { display: inline-block }
 }
 main {
 	overflow-y: scroll;
-	height: calc(100% - 94px);
+	height: calc(100% - 50px);
 	width: 100vw;
 	bottom: 0;
 	position: absolute;
@@ -95,13 +99,14 @@ main section div {
 main section h1 {
 	margin: 0
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     main section div {
         width: calc(33vw - 24px);
         height: calc(33vw - 24px);
     }
+    #playButton { display: none }
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 401px) {
     main section div {
         width: calc(16.6666vw - 24px);
         height: calc(16.6666vw - 24px);
