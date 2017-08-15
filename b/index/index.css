@@ -157,4 +157,5 @@ main { margin: auto }
 	border-radius: 22%;
 	float: left;
 	background: #930005 no-repeat 100%/cover;
+	cursor: pointer;
 }
