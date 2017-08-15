@@ -39,6 +39,7 @@ header {
     padding: 5px;
     width: calc(100% - 10px);
     text-align: right;
+    white-space: pre;
 }
 header div { display: inline-block }
 #redbacks {
