@@ -85,7 +85,7 @@ main section div:last-child {
 	margin-bottom: 15px;
 }
 main section div {
-    border: 2px black solid;
+    border: 2px #fff solid;
     margin: 5px;
     border-radius: 22%;
     padding: 5px;
