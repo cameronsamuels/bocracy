@@ -120,14 +120,18 @@ main { margin: auto }
 #ne, #sp { animation: p 1s }
 @keyframes p { 0% { opacity:0 } }
 #bg div {
-	margin: 1%;
-	background: #930005;
-	display: inline-block;
-	cursor: pointer;
-	width: 22%;
-	border: 1px transparent solid;
+	margin: 1% 2px;
+    background: #930005;
+    display: inline-block;
+    cursor: pointer;
+    width: calc(16.66% - 8px);
+    border: 1px transparent solid;
 }
-#bg div:active  { padding:0.7% 0;width:21%;margin: 1.2% 1.5%}
+#bg div:active  {
+	padding: 0.7% 0;
+	width: calc(16.66% - 10px);
+	margin: 1.2% 3px;
+}
 #bg { border-bottom: 4px #fff solid }
 #select {
 	display: none;

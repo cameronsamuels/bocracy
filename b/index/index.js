@@ -14,7 +14,7 @@ function bg(e) {
 		e.target.style.border = "1px #fff solid";
 		$('ch').innerHTML = "";
 		var html = "<div id='unselected'>";
-		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://blib.tk/boc/a/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
+		for (i = 0; i < goodNames[b].length; i++) if (ls[goodNames[b][i]] == 'true') html = html + '<div title="' + goodNames[b][i].replace('D', '.').replace('__', '-').replace('_', ' ').replace('_', ' ').replace('_', ' ') + '" style="background-image:url(http://blib.tk/boc/' + good[goodNames[b][i]].info[3] + '/' + goodNames[b][i].replace('.', 'D').replace('_', '-').replace('_', '-').replace('_', '-') + '.png)"></div>';
     html += '</div><div id="selected"></div>';
 		$('ch').innerHTML = html;
 		$('sp').style.display = 'none';
@@ -41,5 +41,5 @@ function sp() {
 }
 if (mob()) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
 else $('bg').onmousedown = bg, $('ch').onmousedown = ch;
-$('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div>";
+$('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div><div>alinar</div><div>dericil</div>";
 if (!mob()) document.querySelectorAll('main div')[2].innerHTML = "BETA", document.querySelectorAll('main div')[2].setAttribute('ontouchend', "location='https://bocracy.com/betatest'");
