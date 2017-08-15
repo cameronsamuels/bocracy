@@ -33,7 +33,7 @@ function sp() {
 	if (ls.coins >= ct) ls.coins -= ct;
 	var ch = $('ch').querySelectorAll('#selected div');
 	for (i = 0; i < ch.length; i++) ls['b' + (i+1)] = ch[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
-	ls.sc = ch.length; location = "battle/#series" + b;
+	ls.sc = ch.length; location = "battle/#endless" + b;
 }
 if (mob()) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
 else $('bg').onmousedown = bg, $('ch').onmousedown = ch;

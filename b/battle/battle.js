@@ -1,17 +1,17 @@
 var bSword, aSword, bgPos = 0, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
-current = battles[Math.floor(Math.random() * battles.length)], series = {w:window.location.hash.includes("series"),t:1,c:0,k:0};
-if (window.location.hash != '' && window.location.hash != '#series') current = window.location.hash.toString().replace('#', '').replace('series','');
+current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
+if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
 var game = { on : 'false',
 	refresh : { all : function() {
 		$('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		$('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
-		if (series.w) {
+		if (endless.w) {
 			if (side == 'green') {
-				series.c = parseFloat(series.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
-				series.k++;
+				endless.c = parseFloat(endless.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
+				endless.k++;
 				var aName = a.name;
 				do {
 					a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
@@ -24,23 +24,23 @@ var game = { on : 'false',
 				b.health = Math.min(b.orig_health, b.health*1.3);
 				updateCharacter();
 			} else {
-				series.t++;
-				if (series.t > ls.sc) {
-					series.c = Math.round(series.c * series.t);
-					if (ls.coins == undefined) ls.coins = series.c;
-					else ls.coins = parseFloat(ls.coins) + series.c;
-					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + series.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + series.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+				endless.t++;
+				if (endless.t > ls.sc) {
+					endless.c = Math.round(endless.c * endless.t);
+					if (ls.coins == undefined) ls.coins = endless.c;
+					else ls.coins = parseFloat(ls.coins) + endless.c;
+					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').setAttribute("ontouchend", "location='../index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
 					$('overlay').style.display = "block";
 					game.on = 'false';
-					series.t = 1;
-					series.k = 0;
+					endless.t = 1;
+					endless.k = 0;
 					return;
 				}
-				b.name = ls['b' + series.t];
+				b.name = ls['b' + endless.t];
 				b.health = good[b.name].stats[1];
 				b.orig_health = b.health;
 				b.attack = good[b.name].stats[0];
@@ -119,7 +119,7 @@ var game = { on : 'false',
 };
 function load() {
 	clicks = 0;
-	if (!window.location.hash.includes('#') || window.location.hash == '#series') current = battles[Math.floor(Math.random() * battles.length)];
+	if (!window.location.hash.includes('#') || window.location.hash == '#endless') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
 		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
@@ -132,7 +132,7 @@ function load() {
 		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
 		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
-	if (series.w) b.name = ls.b1;
+	if (endless.w) b.name = ls.b1;
 	else {
 		var bName = b.name;
 		do {
@@ -140,7 +140,7 @@ function load() {
 			
 		} while (b.name == bName);
 	}
-	series.c = 0;
+	endless.c = 0;
 	var aName = a.name;
 	do {
 		a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
