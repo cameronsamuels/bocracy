@@ -166,7 +166,8 @@ main section h1 {
 	position: absolute;
 	bottom: -110px;
 	right: 100px;
-	background: url('http://blib.tk/boc/img/merchant.svg') no-repeat 100%/cover;
+    border-radius: 22%;
+	background: #fff url('http://blib.tk/boc/img/merchant.svg') no-repeat 100%/cover;
 }
 #unlockedAll {
     color: #fff;
