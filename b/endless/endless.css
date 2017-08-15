@@ -1,0 +1,129 @@
+@font-face {
+	font-family: s;
+	src: url('../global/syncopate.woff') format('woff');
+}
+body, html {
+	margin: 0;
+	text-align: center;
+	font-family: s, sans-serif;
+	user-select: none;
+	-webkit-user-select: none;
+	overflow: hidden;
+	color: #fff;
+	background: #b30005;
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+#backButton {
+	width: 30px;
+	left: 5px;
+	top: 5px;
+	position: absolute;
+	cursor: pointer;
+}
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+	margin: 5px
+}
+@media screen and (orientation:landscape) {
+	#bg div {
+		padding: 1vw 0;
+		font-size:2.8vh
+	}
+	#ch div div {
+		width: calc(14.29vw - 8px);
+		height: calc(14.29vw - 8px);
+		animation: cl 0.2s linear;
+	}
+	.btn {
+		border-radius: 1vh;
+		font-size: 6vh;
+		padding: 4vh 0;
+	}
+}
+@media screen and (orientation:portrait) {
+	html {
+		transform: rotate(-90deg);
+		transform-origin: left top;
+		width: 100vh;
+		height: 100vw;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+	#bg div {
+		padding: 1vh 0;
+		font-size: 2.8vw;
+	}
+	#ch div div {
+		width: calc(14.29vh - 8px);
+		height: calc(14.29vh - 8px);
+		animation: cp 0.2s linear;
+	}
+	.btn {
+		border-radius: 1vw;
+		font-size: 6vw;
+		padding: 4vw 0;
+	}
+}
+.btn {
+	background: #64DD17;
+	margin: 2.5px auto;
+	color: #fff;
+	width: 80%;
+	position: absolute;
+	bottom: 10px;
+	cursor: pointer;
+	left: 0;
+	right: 0;
+}
+.btn:hover { background: #42bb05 }
+@media screen and (min-width: 750px) and (orientation:landscape) { .btn { padding:2.5vh } }
+@media screen and (min-height: 750px) and (orientation:portrait) { .btn { padding:2.5vw } }
+#ne {
+	background: #930005;
+	display: none
+}
+#ne, #sp { animation: p 1s }
+@keyframes p { 0% { opacity:0 } }
+#bg div {
+	margin: 1% 2px;
+    background: #930005;
+    display: inline-block;
+    cursor: pointer;
+    width: calc(16.66% - 8px);
+    border: 1px transparent solid;
+}
+#bg div:active  {
+	padding: 0.7% 0;
+	width: calc(16.66% - 10px);
+	margin: 1.2% 3px;
+}
+#bg { border-bottom: 4px #fff solid }
+#ch {
+	clear: both;
+	float: none;
+	color: white;
+	height: calc(80% - 100px);
+}
+#ch>div {
+	float: left;
+	width: calc(50% - 22px);
+	padding: 10px;
+	height: 100%;
+}
+#ch:before,#ch:after {content: " ";display: table}
+#ch:after { clear: both }
+#ch div div {
+	border: 2px #fff solid;
+	margin: 2px;
+	border-radius: 22%;
+	float: left;
+	background: #930005 no-repeat 100%/cover;
+	cursor: pointer;
+}
+@keyframes cl { 0% {width:0;height:0;margin:6vw;transform:rotate(360deg)} }
+@keyframes cp { 0% {width:0;height:0;margin:6vh;transform:rotate(360deg) } }
+#selected { border-left:4px #fff solid }
