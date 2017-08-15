@@ -95,7 +95,8 @@ main section div {
     background: #563f22 no-repeat 100%/cover;
 }
 main section h1 {
-	margin: 0
+	margin: 0;
+    font-size: 1.5em;
 }
 @media screen and (max-width: 400px) {
     main section div {
