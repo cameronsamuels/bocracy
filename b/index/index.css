@@ -152,7 +152,7 @@ main { margin: auto }
 #ch:before,#ch:after {content: " ";display: table}
 #ch:after { clear: both }
 #ch div div {
-	border: 2px black solid;
+	border: 2px #fff solid;
 	margin: 2px;
 	border-radius: 22%;
 	float: left;
