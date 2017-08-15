@@ -35,15 +35,16 @@ body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #conten
 }
 header {
     height: 30px;
-
     font-size: 30px;
-
     padding: 5px;
     width: calc(100% - 10px);
     text-align: right;
 }
 header div { display: inline-block }
-#coins { background: #654620;vertical-align: top; }
+#coins {
+    vertical-align: top;
+    color: #fff;
+}
 #backButton {
     top: 5px;
     left: 0;
