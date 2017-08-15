@@ -49,7 +49,7 @@ body, html {
 	}
 	#aHealth p, #bHealth p {
 	    font-size: 4vw;
-	    line-height: 5vw;
+	    line-height: 5.4vw;
 	    height: 5vw;
 	}
 }
@@ -79,7 +79,7 @@ body, html {
 	}
 	#aHealth p, #bHealth p {
 	    font-size: 4vh;
-	    line-height: 5vh;
+	    line-height: 5.4vh;
 	    height: 5vh;
 	}
 }
