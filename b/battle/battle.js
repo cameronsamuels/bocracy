@@ -1,4 +1,4 @@
-var bSword, aSword, bgPos = 0, newStats, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bSword, aSword, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -121,14 +121,14 @@ function load() {
 	clicks = 0;
 	if (!window.location.hash.includes('#') || window.location.hash == '#endless') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
-		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
+		case "aonarchy": badNames.url = "b"; goodNames.url = "a"; break;
+		case "alief": badNames.url = "b"; goodNames.url = "a"; break;
+		case "ammunist": badNames.url = "b"; goodNames.url = "a"; break;
+		case "alinar": badNames.url = "b"; goodNames.url = "a"; break;
+		case "eora": badNames.url = "b"; goodNames.url = "a"; break;
+		default: badNames.url = "b"; goodNames.url = "b";
 	}
-	if (newStats == 'true' && ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
+	if (ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
 		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
 		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
 	} 
@@ -145,23 +145,13 @@ function load() {
 	do {
 		a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
 	} while (a.name == aName);
-	if (newStats == 'false') {
-		while (b.name == a.name) { b.name = goodNames[current][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
-		a.health = Math.max(Math.random() * 2000, 1500);
-		a.attack = Math.max(20, Math.random() * 35);
-		a.heal = Math.random() * 15;
-		b.health = parseFloat(a.health * 0.8);
-		b.attack = parseFloat(a.attack * 0.8);
-		b.heal = parseFloat(a.heal * 0.8);
-	} else if (newStats == 'true') {
-		while (ls[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
-		a.health = bad[a.name].stats[1];
-		a.attack = bad[a.name].stats[0];
-		a.heal = bad[a.name].stats[2];
-		b.health = good[b.name].stats[1];
-		b.attack = good[b.name].stats[0];
-		b.heal = good[b.name].stats[2];
-	}
+	while (ls[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
+	a.health = bad[a.name].stats[1];
+	a.attack = bad[a.name].stats[0];
+	a.heal = bad[a.name].stats[2];
+	b.health = good[b.name].stats[1];
+	b.attack = good[b.name].stats[0];
+	b.heal = good[b.name].stats[2];
 	if (mob()) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;

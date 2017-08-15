@@ -1,15 +1,9 @@
 var $ = function(e) { return document.getElementById(e) }
 function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
 document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=http://blib.tk/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
-var goodNames = {
-	url : '', aonarchy : [], aonarchyBoss : [], alief : [], ammunist : [], ammunistBoss : [], eora : [],
-	dericil : ['helicoprion', 'elasmosaurus', 'archelon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-	alinar : ['color-jetpack', 'thorn', 'reindeer', 'flame-archer', 'eskimo-goblins', 'rogue', 'winter-pumpkins', 'toxin', 'iceanaut-2.0', 'snow-goblin', 'mammoth', 'traitors']
-}, badNames = {
-	url : '', aonarchy : [], alief : [], aonarchyBoss : [], ammunist : [], ammunistBoss : [], eora : [],
-	dericil : ['helicoprion', 'elasmosaurus', 'archelon', 'megalodon', 'gar-school', 'giant-orthocone', 'alligator-gar', 'coelacanth', 'sea-scorpion', 'leedsichthys', 'mosasaur'],
-	alinar : ['cyclops', 'b--2-mobile-cannon', 'b--torv-snowtrooper', 'sub-batalifor', 'flamethrower', 'abomination', 'sasquatch']
-}, battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { }, ls = localStorage;
+var goodNames = { url : '', aonarchy : [], aonarchyBoss : [], alief : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
+badNames = { url : '', aonarchy : [], alief : [], aonarchyBoss : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
+battles = ['dericil', 'alinar', 'aonarchy', 'alief', 'ammunist', 'eora'], good = { }, bad = { }, ls = localStorage;
 function c(e, s, p) {
 	this.name = e;
 	this.stats = s;
@@ -86,6 +80,34 @@ good.camel_rider = new c('camel_rider', [40, 2500, 15], ['eora', 'true', 1200, '
 good.cactus = new c('cactus', [35, 1750, 25], ['eora', 'true', 1000, 'a', 'cactus', 'thorns']);
 good.scavenger = new c('scavenger', [40, 2222, 15], ['eora', 'true', 1000, 'a', 'scavenger', 'scavenger_sword']);
 good.mountain_jetpack = new c('mountain_jetpack', [30, 2222, 15], ['eora', 'true', 800, 'a', 'mountain_jetpack', 'fireball']);
+
+good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', 'true', 1000, 'a', 'elasmosaurus']);
+good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', 'true', 600, 'a', 'giant_orthocone']);
+good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', 'true', 700, 'a', 'alligator_gar']);
+good.archelon = new c('archelon', [30, 2500, 12], ['dericil', 'true', 800, 'a', 'archelon']);
+good.gar_school = new c('gar_school', [40, 2000, 20], ['dericil', 'true', 1400, 'a', 'gar_school']);
+good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', 'true', 1600, 'a', 'helicoprion']);
+
+bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', 'false', 900, 'a', 'coelacanth']);
+bad.sea_scorpion = new c('sea_scorpion', [38, 2000, 15], ['dericil', 'false', 1500, 'a', 'sea_scorpion']);
+bad.leedsichthys = new c('leedsichthys', [35, 2200, 15], ['dericil', 'false', 1300, 'a', 'leedsichthys']);
+bad.mosasaur = new c('mosasaur', [40, 2500, 15], ['dericil', 'false', 1500, 'a', 'mosasaur']);
+bad.megalodon = new c('megalodon', [50, 3000, 12], ['dericil', 'false', 1800, 'a', 'megalodon']);
+
+good.flame_archer = new c('flame_archer', [35, 1700, 5], ['alinar', 'true', 900, 'a', 'flame_archer']);
+good.reindeer = new c('reindeer', [25, 1700, 10], ['alinar', 'true', 750, 'a', 'reindeer']);
+good.toxin = new c('toxin', [35, 1800, 5], ['alinar', 'true', 1000, 'a', 'toxin']);
+good.iceanaut_2D0 = new c('iceanaut_2D0', [35, 2000, 5], ['alinar', 'true', 1200, 'a', 'iceanaut_2D0']);
+good.eskimo_goblins = new c('eskimo_goblins', [45, 2500, 10], ['alinar', 'true', 1600, 'a', 'eskimo_goblins']);
+good.mammoth = new c('mammoth', [40, 2500, 15], ['alinar', 'true', 1600, 'a', 'mammoth']);
+
+bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch', 'missile']);
+bad.abomination = new c('abomination', [30, 1800, 15], ['alinar', 'false', 900, 'a', 'abomination']);
+bad.b_torv_snowtrooper = new c('b_torv_snowtrooper', [35, 1800, 15], ['alinar', 'false', 1000, 'a', 'b_torv_snowtrooper']);
+bad.cyclops = new c('cyclops', [40, 2000, 20], ['alinar', 'false', 1200, 'a', 'cyclops']);
+bad.flamethrower = new c('flamethrower', [40, 1800, 15], ['alinar', 'false', 1300, 'a', 'flamethrower']);
+bad.sub_batalifor = new c('sub_batalifor', [45, 2500, 15], ['alinar', 'false', 1500, 'a', 'sub_batalifor']);
+bad.b_2_mobile_cannon = new c('b_2_mobile_cannon', [50, 2500, 12], ['alinar', 'false', 1800, 'a', 'b_2_mobile_cannon']);
 
 function t() {
 	if (!mob()) {
