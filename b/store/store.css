@@ -139,7 +139,7 @@ main section h1 {
     width: calc(42.5% - 30px) !important;
     margin: 1px calc(1% - 0.5px) !important;
 }
-#confirmPopup p {
+#confirmPopup p, #unlockedPopup p {
 	font-size: 90%;
 	color: #555;
 }

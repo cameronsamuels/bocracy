@@ -17,15 +17,15 @@ function refreshStore(){
 	}
 	if (m.innerHTML == "") m.innerHTML = "<div id='unlockedAll'><h2>You have unlocked all the characters!</h2><h3>Come back soon!</h3><img width='100' src='http://blib.tk/boc/img/merchant.svg'></div>";
 }
-function showAlert(text) {
-    $('unlockedPopupText').innerHTML = text;
+function showAlert() {
+    $('unlockedPopupText').innerHTML = "Insufficient redbacks";
     $('unlockedPopupImg').style.display = "none";
     $('unlockedPopup').style.display = "block";
     $('popupOverlay').style.display = "block";
 }
 function purchase(item) {
 	$('confirmText').innerHTML = item.includes(".")?
-	"<p>Purchase</p>" + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + "<p>for<br />" + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks</p>"
+	"<p>Purchase</p>" + item.substring(item.indexOf(".")+1,item.length).replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-') + "<p>for<br>" + good[item.substring(item.indexOf(".")+1,item.length)].info[2] + " redbacks</p>"
     :"<p>Purchase random</p>" + item + " <p>character for<br />700 redbacks</p>";
     $('confirmYesBtn').setAttribute('onclick', "$('confirmPopup').style.display='';$('popupOverlay').style.display='';unlock('" + item + "')");
     $('confirmPopup').style.display = "block";
@@ -34,7 +34,7 @@ function purchase(item) {
 function unlock(item) {
 	if (!item.includes(".")) {
 		if (ls.redbacks < 700) {
-			showAlert("Insufficient redbacks");
+			showAlert();
 			return;
 		}
 		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
@@ -43,14 +43,14 @@ function unlock(item) {
 	} else {
 		var unlocked = item.toString().split('.')[1];
         if (ls.redbacks < good[unlocked].info[2]) {
-			showAlert("Insufficient redbacks");
+			showAlert();
 			return;
 		}
 		ls.redbacks -= good[unlocked].info[2];
 	}
 	ls[unlocked] = 'true';
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
-	$('unlockedPopupText').innerHTML = "You unlocked the " + characterName + " " + good[unlocked].info[3];
+	$('unlockedPopupText').innerHTML = "<p>You unlocked</p>" + characterName;
 	$('unlockedPopupImg').style.display = "block";
 	$('unlockedPopupImg').src = 'http://blib.tk/boc/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 	$('unlockedPopup').style.display = "block";
