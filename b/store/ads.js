@@ -2,7 +2,7 @@ var vc = $('contentElement'), adc = new google.ima.AdDisplayContainer($('adConta
 al = new google.ima.AdsLoader(adc), ar = new google.ima.AdsRequest(),
 cel = function() {
     al.contentComplete();
-    ls.coins = parseFloat(ls.coins) + 50;
+    ls.redbacks = parseFloat(ls.redbacks) + 50;
     location.reload()
 };
 function ad() {

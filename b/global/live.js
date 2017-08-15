@@ -96,6 +96,6 @@ function t() {
 }
 function ld() { t(), setTimeout(function(){$('logo').style.display='none';$('mainWrapper').style.display = ""},1000) }
 document.addEventListener('DOMContentLoaded', ld, false);
-if (!ls.coins) ls.coins = 0;
-else ls.coins = Math.round(ls.coins);
+if (!ls.redbacks) ls.redbacks = 0;
+else ls.redbacks = Math.round(ls.redbacks);
 document.oncontextmenu = function(e) { e.preventDefault() }

@@ -2,7 +2,7 @@ if (window.location.hash != '') {
     var current = window.location.hash.toString().replace('#', '');
 	purchase(current);
 }
-$('coins').innerHTML = ls.coins;
+$('redbacks').innerHTML = ls.redbacks;
 var battlegrounds = ["aonarchy","ammunist","alief","eora"], m = document.querySelector('main');
 function refreshStore(){
 	m.innerHTML = "";
@@ -59,7 +59,7 @@ function unlock(item) {
 				return;
 			}
 		}
-		if (ls.coins < 700) {
+		if (ls.redbacks < 700) {
 			showAlert("Insufficient redbacks");
 			return;
 		}
@@ -67,18 +67,18 @@ function unlock(item) {
 		while (ls[unlocked] == 'true') {
 			unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
 		}
-		ls.coins -= 700;
+		ls.redbacks -= 700;
 	} else {
 		var unlocked = item.toString().split('.')[1];
         if (ls[good[unlocked].name] == "true") {
 			showAlert("You have unlocked this character already");
 			return;
 		}
-        if (ls.coins < good[unlocked].info[2]) {
+        if (ls.redbacks < good[unlocked].info[2]) {
 			showAlert("Insufficient redbacks");
 			return;
 		}
-		ls.coins -= good[unlocked].info[2];
+		ls.redbacks -= good[unlocked].info[2];
 	}
 	ls[unlocked] = 'true';
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
@@ -88,7 +88,7 @@ function unlock(item) {
 	$('unlockedPopupBtn').setAttribute('onclick', "document.getElementById('unlockedPopup').style.display = 'none'; document.getElementById('popupOverlay').style.display = 'none'");
 	$('unlockedPopup').style.display = "block";
 	setTimeout(function(){$('popupOverlay').style.display = "block"},400);
-	$('coins').innerHTML = ls.coins;
+	$('redbacks').innerHTML = ls.redbacks;
 	refreshStore();
 }
 refreshStore();

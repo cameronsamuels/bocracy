@@ -27,8 +27,8 @@ var game = { on : 'false',
 				endless.t++;
 				if (endless.t > ls.sc) {
 					endless.c = Math.round(endless.c * endless.t);
-					if (ls.coins == undefined) ls.coins = endless.c;
-					else ls.coins = parseFloat(ls.coins) + endless.c;
+					if (ls.redbacks == undefined) ls.redbacks = endless.c;
+					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').setAttribute("ontouchend", "location='../index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
@@ -50,11 +50,11 @@ var game = { on : 'false',
 		} else {
 		game.on = 'false';
 		if (side == 'green') {
-			if (current.includes('+')) var coinsEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
-			else var coinsEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
-			if (ls.coins == undefined) ls.coins = coinsEarned;
-			else ls.coins = parseFloat(ls.coins) + coinsEarned;
-			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + coinsEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			if (current.includes('+')) var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
+			else var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
+			if (ls.redbacks == undefined) ls.redbacks = redbacksEarned;
+			else ls.redbacks = parseFloat(ls.redbacks) + redbacksEarned;
+			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';

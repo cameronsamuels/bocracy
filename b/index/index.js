@@ -24,13 +24,13 @@ function ch(e) {
 		ct = 0;
 		for (i = 0; i < $('ch').querySelectorAll('#selected div').length; i++) ct += Math.floor(good[$('ch').querySelectorAll('#selected div')[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_')].info[2] *  0.03) + 5;
 		if ($('ch').querySelectorAll('#selected div').length > 0) $('sp').style.display = 'block', $('sp').innerHTML = 'Play (' + ct + ')';
-		if (ls.coins < ct) $('sp').style.display = 'none', $('ne').style.display = 'block', $('ne').innerHTML = "Not enough (" + ls.coins + "/" + ct + ")";
+		if (ls.redbacks < ct) $('sp').style.display = 'none', $('ne').style.display = 'block', $('ne').innerHTML = "Not enough (" + ls.redbacks + "/" + ct + ")";
 		else $('ne').style.display = 'none';
 		if ($('ch').querySelectorAll('#selected div').length == 0) $('sp').style.display = 'none';
 	}
 }
 function sp() {
-	if (ls.coins >= ct) ls.coins -= ct;
+	if (ls.redbacks >= ct) ls.redbacks -= ct;
 	var ch = $('ch').querySelectorAll('#selected div');
 	for (i = 0; i < ch.length; i++) ls['b' + (i+1)] = ch[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
 	ls.sc = ch.length; location = "battle/#endless" + b;

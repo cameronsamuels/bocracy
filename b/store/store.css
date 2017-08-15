@@ -41,7 +41,7 @@ header {
     text-align: right;
 }
 header div { display: inline-block }
-#coins {
+#redbacks {
     vertical-align: top;
     color: #fff;
 }
@@ -50,7 +50,7 @@ header div { display: inline-block }
     left: 0;
     position: absolute;
 }
-#coinsImg, #backButton { height: 30px }
+#redbacksImg, #backButton { height: 30px }
 #playButton {
 	max-width: 250px;
     margin: auto;
