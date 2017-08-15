@@ -93,7 +93,7 @@ main section div {
     margin: 5px;
     border-radius: 22%;
     padding: 5px;
-    float: left;
+    display: inline-block;
     background: #563f22 no-repeat 100%/cover;
 }
 main section h1 {
