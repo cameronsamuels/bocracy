@@ -10,7 +10,6 @@ Redirect 301 /beta /b
 Redirect 301 /alpha /2
 Redirect 301 /2 http://bocracy.tk
 Redirect 301 /a /b
-
 Redirect 301 /ios https://appsto.re/us/OUwGib.i
 Redirect 301 /android https://play.google.com/store/apps/details?id=com.playbclick.b_ocracy
 Redirect 301 /chrome https://chrome.google.com/webstore/detail/b-ocracy/hpelangkikdpghambidlhegfjjhffmah
