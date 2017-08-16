@@ -11,7 +11,7 @@ b-Ocracy is currently in the beta testing stage, so contributing to our game via
 
 You can also play the [alpha release](https://bocracy.bitballoon.com) online.
 ## Team
-Our primary [team members](https://git.io/v7kbC) for b-Ocracy include [Cameron Samuels](http://cameronsamuels.com), [Ethan Choo](https://github.com/ethanchoo), [Faith Tsang](https://github.com/faithtsang), [Cooper Lan](https://github.com/cooperlan), and [Jacob Gelder](https://github.com/jacobgelder).
+Our primary team members for b-Ocracy include:
 
 <a href="http://cameronsamuels.com"><img src="https://git.io/v7fr7" title="Cameron Samuels" alt="Cameron Samuels"></a>
 <a href="http://github.com/ethanchoo"><img src="https://git.io/v7frC" title="Ethan Choo" alt="Ethan Choo"></a>
