@@ -9,7 +9,7 @@ Play online at <https://bocracy.com>.
 ## Beta testing & contributing
 b-Ocracy is currently in the beta testing stage, so contributing to our game via GitHub or any other way is very appreciative. Also, we have a [Google Group](https://bocracy.com/betatest) for the beta testing that we send out announcements and discuss game related information.
 
-You can also play the [alpha release](https://bocracy.bitballoon.com) online.
+You can also play the [alpha release](http://bocracy.tk) online.
 ## Team
 Our primary team members for b-Ocracy include:
 
