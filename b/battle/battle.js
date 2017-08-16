@@ -1,4 +1,4 @@
-var bSword, aSword, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bSword, aSword, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -165,13 +165,17 @@ function load() {
 	}
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
-	$('title').innerHTML = current;
 	var img = new Image();
 	img.onload = function() {
 		$('bSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
+		$('present').style.background = "url(http://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100%";
+		$('present').innerText = current.replace('+', ' BOSS');
+		$('present').style.display = "block";
+		clearTimeout(presentTimeout);
+		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 3000);
 	};
 	img.onerror = function() {
 		$('bSection').style.backgroundImage = '';
