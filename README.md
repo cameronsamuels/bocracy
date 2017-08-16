@@ -13,11 +13,11 @@ You can also play the [alpha release](https://bocracy.bitballoon.com) online.
 ## Team
 Our primary [team members](https://git.io/v7kbC) for b-Ocracy include [Cameron Samuels](http://cameronsamuels.com), [Ethan Choo](https://github.com/ethanchoo), [Faith Tsang](https://github.com/faithtsang), [Cooper Lan](https://github.com/cooperlan), and [Jacob Gelder](https://github.com/jacobgelder).
 
-[![Cameron Samuels](https://git.io/v7fr7)](http://cameronsamuels.com)
-[![Ethan Choo](https://git.io/v7frC)](http://github.com/ethanchoo)
-[![Faith Tsang](https://git.io/v7frd)](http://github.com/faithtsang)
-[![Cooper Lan](https://git.io/v7frh)](http://github.com/cooperlan)
-[![Jacob Gelder](https://git.io/v7Joh)](http://github.com/jacobgelder)
+<a href="http://cameronsamuels.com"><img src="https://git.io/v7fr7" title="Cameron Samuels" alt="Cameron Samuels"></a>
+<a href="http://github.com/ethanchoo"><img src="https://git.io/v7frC" title="Ethan Choo" alt="Ethan Choo"></a>
+<a href="http://github.com/faithtsang"><img src="https://git.io/v7frd" title="Faith Tsang" alt="Faith Tsang"></a>
+<a href="http://github.com/cooperlan"><img src="https://git.io/v7frh" title="Cooper Lan" alt="Cooper Lan"></a>
+<a href="http://github.com/jacobgelder"><img src="https://git.io/v7Joh" title="Jacob Gelder" alt="Jacob Gelder"></a>
 
 ## License
 b-Ocracy is distributed under the [Cameron Samuels License](LICENSE). The license restricts selling, sublicensing, and distribution.
