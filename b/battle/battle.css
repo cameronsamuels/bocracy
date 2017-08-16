@@ -116,6 +116,7 @@ header {
 	color: #fff;
 	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 	animation: p linear 3s;
+	font-weight: 900;
 }
 @keyframes p { 100% { background-size: 120% } }
 #backButton, #refreshButton {
