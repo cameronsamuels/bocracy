@@ -6,10 +6,8 @@ The b-Fight-ing game! Fight the greatest uprising in the land of b-Ocracy.
 [![Play it on itch.io](http://svgshare.com/i/2HM.svg)](https://bocracy.com/itch.io)
 
 Play online at <https://bocracy.com>.
-## Beta testing & contributing
-b-Ocracy is currently in the beta testing stage, so contributing to our game via GitHub or any other way is very appreciative. Also, we have a [Google Group](https://bocracy.com/betatest) for the beta testing that we send out announcements and discuss game related information.
-
-You can also play the [alpha release](http://bocracy.tk) online.
+## Contributing
+Please read over the [contributing guidelines](CONTRIBUTING.md) for information like beta testing, submitting issues or pull requests, and contacting us.
 ## Team
 Our primary team members for b-Ocracy include:
 
