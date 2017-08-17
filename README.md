@@ -1,10 +1,10 @@
 # b-Ocracy
 The b-Fight-ing game! Fight the greatest uprising in the land of b-Ocracy.
 ## Links
+Play online at <https://bocracy.com>.
+
 [![Get it on iOS](http://svgur.com/i/2Gm.svg)](https://bocracy.com/ios)
 [![Get it on Android](http://svgur.com/i/2GC.svg)](https://bocracy.com/android)
-
-Play online at <https://bocracy.com>.
 ## Contributing
 Please read over the [contributing guidelines](CONTRIBUTING.md) for information like beta testing, submitting issues or pull requests, and contacting us.
 ## Team
