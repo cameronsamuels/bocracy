@@ -23,5 +23,9 @@ Our primary team members for b-Ocracy include:
 <a href="http://github.com/cooperlan"><img src="https://git.io/v7frh" title="Cooper Lan" alt="Cooper Lan"></a>
 <a href="http://github.com/jacobgelder"><img src="https://git.io/v7Joh" title="Jacob Gelder" alt="Jacob Gelder"></a>
 
-## License
+## About
+Made by The bClick Team from April 2016.
+### License
 b-Ocracy is distributed under the [Cameron Samuels License](LICENSE). The license restricts selling, sublicensing, and distribution.
+### Privacy policy
+The b-Ocracy privacy policy can be read in [policy.md](policy.md).
