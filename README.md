@@ -13,7 +13,7 @@ Play online at <https://bocracy.com>.
 - Made for mobile and desktop
 - Free with no ads or in-app purchases
 ## Contributing
-Please read over the [contributing guidelines](CONTRIBUTING.md) for information like beta testing, submitting issues or pull requests, and contacting us.
+Please read over the [contributing guidelines](.github/CONTRIBUTING.md) for information like beta testing, submitting issues or pull requests, and contacting us.
 ## Team
 Our primary team members for b-Ocracy include:
 
