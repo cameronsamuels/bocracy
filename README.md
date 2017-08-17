@@ -5,6 +5,13 @@ Play online at <https://bocracy.com>.
 
 [![Get it on iOS](http://svgur.com/i/2Gm.svg)](https://bocracy.com/ios)
 [![Get it on Android](http://svgur.com/i/2GC.svg)](https://bocracy.com/android)
+## Features
+- Quick addictive battles
+- Different ways to play including multiplayer, endless, and boss modes
+- A store to purchase characters
+- Beautiful high resolution graphics and animations
+- Made for mobile and desktop
+- Free with no ads or in-app purchases
 ## Contributing
 Please read over the [contributing guidelines](CONTRIBUTING.md) for information like beta testing, submitting issues or pull requests, and contacting us.
 ## Team
