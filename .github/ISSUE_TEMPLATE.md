@@ -1,0 +1,8 @@
+# Issue Guidelines
+- Don't submit issues that change the game very differently so it has a different purpose.
+- If your issue has to do with only the apps for iOS, Android, or any other platform, please submit the issue in the appropriate repo (e.g. "*add iOS stickers*" would go under the iOS app repo)
+- Make sure to include enough information as needed.
+- Make sure to be available to respond if needed.
+
+**Thanks for contributing!**
+- The bClick Team (*on behalf of The b-Ocracy Team*)
