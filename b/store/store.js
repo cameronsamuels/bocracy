@@ -18,7 +18,7 @@ function refreshStore(){
 	if (m.innerHTML == "") m.innerHTML = "<div id='unlockedAll'><h2>You have unlocked all the characters!</h2><h3>Come back soon!</h3><img width='100' src='http://blib.tk/boc/img/merchant.svg'></div>";
 }
 function showAlert() {
-    $('unlockedPopupText').innerHTML = "Insufficient redbacks";
+    $('unlockedPopupText').innerHTML = "Insufficient<br>redbacks";
     $('unlockedPopupImg').style.display = "none";
     $('unlockedPopup').style.height = "110px";
     $('unlockedPopup').style.top = "calc(50% - 120px)";
