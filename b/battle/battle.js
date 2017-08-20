@@ -79,7 +79,10 @@ var game = { on : 'false',
 				$('bSword').style.animationName = "bSword";
 				$('clickToStart').style.display = 'none';
 				clearTimeout(bSword);
-				bSword = setTimeout("$('bSword').style.display = 'none';$('bSword').style.animationName = '';", 150);
+				bSword = setTimeout(function(){
+					$('bSword').style.display = 'none';
+					$('bSword').style.animationName = '';
+				}, 150);
 				clicks++;
 				if (a.health == 0) game.win('green');
 				bgPos -= 10;
@@ -95,7 +98,10 @@ var game = { on : 'false',
 				$('aSword').style.display = "block";
 				$('aSword').style.animationName = "aSword";
 				clearTimeout(aSword);
-				aSword = setTimeout("$('aSword').style.display = 'none';$('aSword').style.animationName = '';", 100);
+				aSword = setTimeout(function(){
+					$('aSword').style.display = 'none';
+					$('aSword').style.animationName = '';
+				}, 100);
 				if (b.health == 0) game.win('red');
 				bgPos += 10;
 				if (bgPos > 0) bgPos = 0;
