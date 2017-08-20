@@ -5,7 +5,7 @@ ExpiresDefault "access 1 month"
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-ErrorDocument 404 /
+ErrorDocument 404 /b
 Redirect 301 /2 http://bocracy.tk
 Redirect 301 /index.html /b
 Redirect 301 /ios https://appsto.re/us/OUwGib.i
