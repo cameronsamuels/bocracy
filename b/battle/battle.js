@@ -228,6 +228,6 @@ function neatTime(time) {
 	return time;
 }
 load();
-setInterval('game.attack("red");game.heal("red")', a.speed);
+setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
 game.refresh.all();
 document.body.ontouchmove=function(e){e.preventDefault()}
