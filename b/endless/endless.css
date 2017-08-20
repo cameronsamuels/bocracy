@@ -95,7 +95,7 @@ h2 {
     display: inline-block;
     cursor: pointer;
     width: calc(16.66% - 8px);
-    border: 1px transparent solid;
+    border: 1px #930005 solid;
 }
 #bg div:active  {
 	padding: 0.7% 0;
