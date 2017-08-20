@@ -175,7 +175,7 @@ function load() {
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
 		clearTimeout(presentTimeout);
-		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 3000);
+		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 2000);
 	};
 	img.onerror = function() {
 		$('bSection').style.backgroundImage = '';
