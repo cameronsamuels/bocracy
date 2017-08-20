@@ -57,6 +57,9 @@ body, html {
 		line-height: 100vw;
 		font-size: 16vw;
 	}
+	#clickToStart {
+		font-size: 5vw;
+    	line-height: 5vw;
 }
 @media screen and (orientation:landscape) {	
 	#bButton, #aButton { margin-top: 15vh }
