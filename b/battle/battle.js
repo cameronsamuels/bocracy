@@ -227,17 +227,17 @@ function neatTime(time) {
 	time += s;
 	return time;
 }
-$('bButton').addEventListener('ontouchend', function(){game.heal('green')});
-$('aButton').addEventListener('ontouchend', function(){game.attack('green')});
-$('clickToStart').addEventListener('ontouchend', function(){
+$('bButton').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
+$('aButton').addEventListener(mob()?'touchend':'click', function(){game.attack('green')});
+$('clickToStart').addEventListener(mob()?'touchend':'click', function(){
 	game.on = 'true';
 	game.attack('green');
 	base = new Date().getTime();
 	$('refreshButton').style.display = 'none';
 });
-$('restartText').addEventListener('ontouchend', function(){restart()});
-$('backButton').addEventListener('ontouchend', function(){history.back()});
-$('refreshButton').addEventListener('ontouchend', function(){restart()});
+$('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
+$('backButton').addEventListener(mob()?'touchend':'click', function(){history.back()});
+$('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
 load();
 setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
 game.refresh.all();
