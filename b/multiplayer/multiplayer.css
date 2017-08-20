@@ -13,6 +13,7 @@ body, html {
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
+    -webkit-touch-callout: none;
 }
 .clear { clear: both }
 @media screen and (orientation:landscape) {	

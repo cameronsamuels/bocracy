@@ -10,6 +10,7 @@ body, html {
     -webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
     overflow: hidden;
+    -webkit-touch-callout: none;
 }
 body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #content, #adContainer, #contentElement, #popupOverlay { width: 100% }
 #content, #adContainer, #confirmPopup, #unlockedPopup, #confirmPopup footer, #unlockedPopup footer, #popupOverlay { position: absolute }
