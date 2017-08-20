@@ -59,7 +59,9 @@ body, html {
 	}
 	#clickToStart {
 		font-size: 5vw;
+    	padding: calc(25% - 5vw) 0;
     	line-height: 5vw;
+	}
 }
 @media screen and (orientation:landscape) {	
 	#bButton, #aButton { margin-top: 15vh }
@@ -94,13 +96,17 @@ body, html {
 		line-height: 100vh;
 		font-size: 16vh;
 	}
+	#clickToStart {
+		font-size: 5vh;
+    	padding: calc(25% - 5vh) 0;
+    	line-height: 5vh;
+	}
 }
 .clear { clear: both }
-a { cursor: pointer}
-@media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
-@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
-@media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(30% - 7.5px) 0 !important; } }
-@media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(30% - 6px) 0 !important; } }
+@media screen and (max-height: 500px) {
+	#aButton,#bButton{margin-top:50px!important}
+	#clickToStart{top:50px!important}
+}
 #present {
 	top: 0;
 	left: 0;
@@ -121,30 +127,41 @@ a { cursor: pointer}
 	position: absolute;
 	top: 0;
 	z-index: 4;
+	cursor: pointer;
 }
 #refreshButton { right: 2px }
 #backButton { left: 2px }
-section { width: 50%; height: 100%; float: left; position: relative;background-size: 300%;background-repeat: no-repeat;transition:background-position 1s }
-#bSection { background-color: #64DD17;background-position: 0% 80% }
-#aSection { background-color: #b30005;background-position: 50% 80% }
-#aButton, #bButton, #clickToStart {
-    width: 60%;
-    padding: 30% 0;
-    background: #fff 100%/cover no-repeat;
-    margin-left: 20%;
+section {
+	width: 50%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background-size: 300%;
+	background-repeat: no-repeat;
+	transition:background-position 1s
+}
+#bSection {
+	background-color: #64DD17;
+	background-position: 0% 80%
+}
+#aSection {
+	background-color: #b30005;
+	background-position: 50% 80%
+}
+#aButton, #bButton, #clickToStart { width: 50% }
+#aButton, #bButton {
+	background: #fff 100%/cover no-repeat;
+    margin-left: 25%;
+    padding: 25% 0;
 }
 #aButton { transform: scaleX(-1) }
 #clickToStart {
     position: absolute;
-    left: 20%;
+    left: 25%;
     opacity: 0.5;
-    background-color: #000;
-    color: white;
+    background: #000;
+    color: #fff;
     font-weight: 800;
-    margin: 0;
-    font-size: 20px;
-    padding: calc(30% - 10px) 0;
-    line-height: 20px;
 }
 #aHealth, #bHealth {
 	margin: auto;
@@ -165,7 +182,12 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     vertical-align: middle;
     font-weight: 900;
 }
-#aName, #bName { margin: 5px 0;font-weight:900;display:inline-block;padding:4px }
+#aName, #bName {
+	margin: 5px 0;
+	font-weight:900;
+	display:inline-block;
+	padding:4px;
+}
 #aName { background:#b30005}
 #bName { background:#64DD17}
 #overlay {
@@ -176,8 +198,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
-	z-index: 10;
+    color: #fff;
+	z-index: 6;
 }
 #overlay img, #overlayStats span {
     margin: 5px 0px;
@@ -188,12 +210,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
     height: 26.56px;
 	display: inline-block;
 }
-#overlayStats h5:last-child {
-	margin-right: 0px;
-}
-#overlay div:not(#restartText) {
-    width: 100%;
-}
+#overlayStats h5:last-child { margin-right: 0 }
+#overlay div:not(#restartText) { width: 100% }
 #overlayText div:first-child {
     font-size: 100px;
     margin-top: 10px;
@@ -212,9 +230,7 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 	cursor: pointer;
 	animation: f 1s;
 }
-#restartText:hover {
-	background-color: #53CC16;
-}
+#restartText:hover { background: #53CC16 }
 @keyframes f { 0% { opacity: 0 } }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
