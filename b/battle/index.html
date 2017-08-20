@@ -17,24 +17,24 @@
 </head>
 <body id="body">
 	<header id="header">
-		<a ontouchend="history.back()"><img id="backButton" src="http://blib.tk/boc/btn/back.svg"></a>
-		<a ontouchend="restart()"><img id="refreshButton" src="http://blib.tk/boc/btn/refresh.svg"></a>
+		<a><img id="backButton" src="http://blib.tk/boc/btn/back.svg"></a>
+		<a><img id="refreshButton" src="http://blib.tk/boc/btn/refresh.svg"></a>
 	</header>
 	<section id="bSection">
-		<div id="bButton" ontouchend="game.heal('green')"></div>
+		<div id="bButton"></div>
 		<div id="bName"></div>
 		<div id="bHealth"><div id="bHealthBar"></div><p></p></div>
 	</section>
 	<section id="aSection">
-		<div id="aButton" ontouchend="game.attack('green')"></div>
-		<div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div>
+		<div id="aButton"></div>
+		<div id="clickToStart">Click to start</div>
 		<div id="aName"></div>
 		<div id="aHealth"><div id="aHealthBar"></div><p></p></div>
 	</section>
 	<div class="clear"></div>
 	<div id="overlay">
 		<div id="overlayText"></div>
-		<div id="restartText" ontouchend="restart()">PLAY AGAIN</div>
+		<div id="restartText">PLAY AGAIN</div>
 	</div>
 	<div id="present"></div>
 	<div class="theSword" id="bSword"></div>
