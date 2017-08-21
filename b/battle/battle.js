@@ -248,7 +248,7 @@ document.addEventListener(mob()?'touchend':'click', function(e){
 		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
 		$("backButton").style.display = "none";
 	}
-	else history.back();
+	else location = "../";
 });
 $('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
 load();

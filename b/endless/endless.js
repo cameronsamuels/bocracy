@@ -37,3 +37,4 @@ $('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>
 var e = document.createEvent('MouseEvents');
 mob()?e.initEvent("touchstart", true, true):e.initEvent("mousedown", true, true);
 document.querySelector('#bg div').dispatchEvent(e);
+$("backButton").addEventListener(mob()?'touchend':'click', function(){location="../"});

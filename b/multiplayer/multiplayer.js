@@ -118,3 +118,4 @@ function restart() {
 load();
 game.refresh.all();
 document.ontouchmove=function(e){e.preventDefault()}
+$("backButton").addEventListener(mob()?'touchend':'click', function(){location="../"});
