@@ -1,4 +1,4 @@
-var bSword, aSword, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bSword, aSword, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -242,7 +242,14 @@ $('clickToStart').addEventListener(mob()?'touchend':'click', function(){
 	$('refreshButton').style.display = 'none';
 });
 $('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
-$('backButton').addEventListener(mob()?'touchend':'click', function(){history.back()});
+document.addEventListener(mob()?'touchend':'click', function(e){
+	if (e.target.id != "backButton") {
+		clearTimeout(backButtonTimeout);
+		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
+		$("backButton").style.display = "none";
+	}
+	else history.back();
+});
 $('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
 load();
 setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
