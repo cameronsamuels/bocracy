@@ -51,6 +51,7 @@ header div { display: inline-block }
     top: 5px;
     left: 0;
     position: absolute;
+    cursor: pointer;
 }
 #redbacksImg, #backButton { height: 30px }
 #playButton {
