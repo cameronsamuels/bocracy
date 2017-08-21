@@ -59,9 +59,14 @@ body, html {
 	}
 	#clickToStart {
 		font-size: 5vw;
-    	padding: calc(25% - 5vw) 0;
+    	padding: 20vw 0;
     	line-height: 5vw;
 	}
+	#bButton, #aButton, #clickToStart {
+		width: 50vw;
+		margin-left: calc(50% - 25vw);
+	}
+	#bButton, #aButton { height: 50vw }
 }
 @media screen and (orientation:landscape) {	
 	#bButton, #aButton { margin-top: 15vh }
@@ -98,9 +103,14 @@ body, html {
 	}
 	#clickToStart {
 		font-size: 5vh;
-    	padding: calc(25% - 5vh) 0;
+    	padding: 20vh 0;
     	line-height: 5vh;
 	}
+	#bButton, #aButton, #clickToStart {
+		width: 50vh;
+		margin-left: calc(50% - 25vh);
+	}
+	#bButton, #aButton { height: 50vh }
 }
 .clear { clear: both }
 @media screen and (max-height: 500px) {
@@ -148,16 +158,10 @@ section {
 	background-color: #b30005;
 	background-position: 50% 80%
 }
-#aButton, #bButton, #clickToStart { width: 50% }
-#aButton, #bButton {
-	background: #fff 100%/cover no-repeat;
-    margin-left: 25%;
-    padding: 25% 0;
-}
+#aButton, #bButton { background: #fff 100%/cover no-repeat }
 #aButton { transform: scaleX(-1) }
 #clickToStart {
     position: absolute;
-    left: 25%;
     opacity: 0.5;
     background: #000;
     color: #fff;
