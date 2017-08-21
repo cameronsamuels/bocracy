@@ -177,7 +177,7 @@ function load() {
 		$('aSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
-		$('present').style.background = "url(http://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #b30005";
+		$('present').style.background = "url(http://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
 		clearTimeout(presentTimeout);
