@@ -29,7 +29,7 @@ var game = { on : 'false',
 					endless.c = Math.round(endless.c * endless.t);
 					if (ls.redbacks == undefined) ls.redbacks = endless.c;
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
-					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').setAttribute("ontouchend", "location='../index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
@@ -54,7 +54,7 @@ var game = { on : 'false',
 			else var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (ls.redbacks == undefined) ls.redbacks = redbacksEarned;
 			else ls.redbacks = parseFloat(ls.redbacks) + redbacksEarned;
-			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="http://blib.tk/boc/img/rbo.svg"/>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
@@ -173,11 +173,11 @@ function load() {
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
 	img.onload = function() {
-		$('bSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
-		$('aSection').style.backgroundImage = 'url(http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('bSection').style.backgroundImage = 'url(https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('aSection').style.backgroundImage = 'url(https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
-		$('present').style.background = "url(http://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
+		$('present').style.background = "url(https://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
 		clearTimeout(presentTimeout);
@@ -189,7 +189,7 @@ function load() {
 		$('aButton').style.backgroundColor = '';
 		$('bButton').style.backgroundColor = '';
 	};
-	img.src = 'http://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
+	img.src = 'https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
 	$('refreshButton').style.display = "";
 	updateCharacter();
 }
@@ -200,8 +200,8 @@ function updateCharacter() {
 	var aName = a.name;
 	aName = aName.replace('D', '.').replace('__', '^').replace('--', '^').replace('_', ' ').replace('_', ' ').replace('-', ' ').replace('-', ' ').replace('^', '-').replace('Boss', ' boss');
 	$('aName').innerHTML = aName + ' ' + badNames.url;
-		$('bButton').style.backgroundImage = 'url(http://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('aButton').style.backgroundImage = 'url(http://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+		$('bButton').style.backgroundImage = 'url(https://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(https://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
 	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
 	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
@@ -213,8 +213,8 @@ function updateCharacter() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
 	} catch (ex){}
-	$('bSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + bw + '.svg")';
-	$('aSword').style.backgroundImage = 'url("http://blib.tk/boc/wpn/' + aw + '.svg")';
+	$('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + bw + '.svg")';
+	$('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
 	game.on = 'false';
