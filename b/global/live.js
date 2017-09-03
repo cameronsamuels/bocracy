@@ -5,6 +5,10 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-50194959-4', 'auto');
 ga('send', 'pageview');
 
+if (document.documentMode==(11||10))
+	alert("This browser is unsupported for b-Ocracy. Get a newer browser"),
+	location = "http://google.com/chrome/browser/desktop";
+
 var $ = function(e) { return document.getElementById(e) }
 function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
 document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=https://blib.tk/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
