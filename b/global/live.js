@@ -112,7 +112,7 @@ good.iceanaut_2D0 = new c('iceanaut_2D0', [35, 2000, 5], ['alinar', 'true', 1200
 good.eskimo_goblins = new c('eskimo_goblins', [45, 2500, 10], ['alinar', 'true', 1600, 'a', 'eskimo_goblins']);
 good.mammoth = new c('mammoth', [40, 2500, 15], ['alinar', 'true', 1600, 'a', 'mammoth']);
 
-bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch', 'missile']);
+bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch']);
 bad.abomination = new c('abomination', [30, 1800, 15], ['alinar', 'false', 900, 'a', 'abomination']);
 bad.b__torv_snowtrooper = new c('b__torv_snowtrooper', [35, 1800, 15], ['alinar', 'false', 1000, 'a', 'b__torv_snowtrooper']);
 bad.cyclops = new c('cyclops', [40, 2000, 20], ['alinar', 'false', 1200, 'a', 'cyclops']);
