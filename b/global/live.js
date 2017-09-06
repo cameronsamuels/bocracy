@@ -96,7 +96,7 @@ good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', 'true', 10
 good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', 'true', 600, 'b', 'giant_orthocone']);
 good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', 'true', 700, 'b', 'alligator_gar']);
 good.archelon = new c('archelon', [30, 2500, 12], ['dericil', 'true', 800, 'b', 'archelon']);
-good.gar_school = new c('gar_school', [40, 2000, 20], ['dericil', 'true', 1400, 'b', 'gar_school']);
+good.ichthyosaur = new c('ichthyosaur', [35, 2000, 15], ['dericil', 'true', 1200, 'b', 'ichthyosaur']);
 good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', 'true', 1600, 'b', 'helicoprion']);
 
 bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', 'false', 900, 'b', 'coelacanth']);
