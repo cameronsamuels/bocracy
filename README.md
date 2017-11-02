@@ -22,4 +22,4 @@ Please read over the [contributing guidelines](.github/CONTRIBUTING.md) for info
 ## License
 b-Ocracy is distributed under the [Cameron Samuels License](LICENSE).
 ## Privacy policy
-The b-Ocracy privacy policy can be read in [policy.md](policy.md).
+The b-Ocracy privacy policy can be read in [.github/PRIVACY_POLICY.md](.github/PRIVACY_POLICY.md).
