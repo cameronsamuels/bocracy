@@ -3,7 +3,6 @@ The b-Fight-ing game made by The bClick Team since 2016! Fight the greatest upri
 ## Links
 Play online at <https://bocracy.com>.<br>
 [![Get it on iOS](http://svgur.com/i/2Gm.svg)](https://bocracy.com/ios)
-[![Get it on Android](http://svgur.com/i/2GC.svg)](https://bocracy.com/android)
 ## Features
 - Quick addictive battles
 - Different ways to play including multiplayer, endless, and boss modes
