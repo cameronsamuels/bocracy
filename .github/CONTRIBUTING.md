@@ -22,7 +22,7 @@ Please feel free to contact the following information for any questions or feedb
 The bClick Team
 Katy, TX 77494
 United States
-team@bocracy.com
+b@xel.company
 1 (409) 422-5425
 
 Cameron Samuels
