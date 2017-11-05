@@ -1,3 +1,14 @@
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-50194959-4', 'auto');
+ga('send', 'pageview');
+
+if (document.documentMode==(11||10))
+	alert("This browser is unsupported for b-Ocracy. Get a newer browser"),
+	location = "http://google.com/chrome/browser/desktop";
+
 var $ = function(e) { return document.getElementById(e) }
 function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
 document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=https://blib.tk/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
@@ -85,7 +96,7 @@ good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', 'true', 10
 good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', 'true', 600, 'b', 'giant_orthocone']);
 good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', 'true', 700, 'b', 'alligator_gar']);
 good.archelon = new c('archelon', [30, 2500, 12], ['dericil', 'true', 800, 'b', 'archelon']);
-good.gar_school = new c('gar_school', [40, 2000, 20], ['dericil', 'true', 1400, 'b', 'gar_school']);
+good.ichthyosaur = new c('ichthyosaur', [35, 2000, 15], ['dericil', 'true', 1200, 'b', 'ichthyosaur']);
 good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', 'true', 1600, 'b', 'helicoprion']);
 
 bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', 'false', 900, 'b', 'coelacanth']);
@@ -101,7 +112,7 @@ good.iceanaut_2D0 = new c('iceanaut_2D0', [35, 2000, 5], ['alinar', 'true', 1200
 good.eskimo_goblins = new c('eskimo_goblins', [45, 2500, 10], ['alinar', 'true', 1600, 'a', 'eskimo_goblins']);
 good.mammoth = new c('mammoth', [40, 2500, 15], ['alinar', 'true', 1600, 'a', 'mammoth']);
 
-bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch', 'missile']);
+bad.sasquatch = new c('sasquatch', [25, 1600, 15], ['alinar', 'false', 800, 'a', 'sasquatch']);
 bad.abomination = new c('abomination', [30, 1800, 15], ['alinar', 'false', 900, 'a', 'abomination']);
 bad.b__torv_snowtrooper = new c('b__torv_snowtrooper', [35, 1800, 15], ['alinar', 'false', 1000, 'a', 'b__torv_snowtrooper']);
 bad.cyclops = new c('cyclops', [40, 2000, 20], ['alinar', 'false', 1200, 'a', 'cyclops']);

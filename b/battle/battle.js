@@ -232,14 +232,15 @@ function neatTime(time) {
 	time += s;
 	return time;
 }
-$('bButton').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
-$('aButton').addEventListener(mob()?'touchend':'click', function(){game.attack('green')});
-$('clickToStart').addEventListener(mob()?'touchend':'click', function(){
-	clickedToStart = true;
-	game.on = 'true';
-	game.attack('green');
-	base = new Date().getTime();
-	$('refreshButton').style.display = 'none';
+$('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
+$('aSection').addEventListener(mob()?'touchend':'click', function(){
+	if ($('clickToStart').style.display == "none") game.attack('green');
+	else {
+		game.on = 'true';
+		game.attack('green');
+		base = new Date().getTime();
+		$('refreshButton').style.display = 'none';
+	}
 });
 $('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
 document.addEventListener(mob()?'touchend':'click', function(e){
