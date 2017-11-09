@@ -1,4 +1,4 @@
-var bSword, aSword, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var bSword, aSword, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -30,7 +30,8 @@ var game = { on : 'false',
 					if (ls.redbacks == undefined) ls.redbacks = endless.c;
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
-					$('restartText').setAttribute("ontouchend", "location='../index.html'");
+					$('restartText').innerHTML = "Continue";
+					$('restartText').setAttribute("ontouchend", "location='../endless'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
@@ -124,7 +125,7 @@ var game = { on : 'false',
 	}
 };
 function load() {
-	clicks = 0;
+	clicks = 0, clickedToStart = false;
 	if (!window.location.hash.includes('#') || window.location.hash == '#endless') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
 		case "aonarchy": badNames.url = "b"; goodNames.url = "a"; break;
@@ -143,7 +144,6 @@ function load() {
 		var bName = b.name;
 		do {
 			b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)];
-			
 		} while (b.name == bName);
 	}
 	endless.c = 0;
@@ -251,6 +251,22 @@ document.addEventListener(mob()?'touchend':'click', function(e){
 		$("backButton").style.display = "none";
 	}
 	else location = "../";
+});
+document.addEventListener('keyup', function(e){
+	var k = e.keyCode || e.which;
+	if (k == 74 && $('overlay').style.display != "block" && $('present').style.display != "block") {
+		if (clickedToStart) game.attack('green');
+		else {
+			clickedToStart = true;
+			game.on = 'true';
+			game.attack('green');
+			base = new Date().getTime();
+			$('refreshButton').style.display = 'none';
+		}
+	}
+	if (k == 68) game.heal('green');
+	if (k == 46 || k == 32) restart();
+	if (k == 27) location = "../";
 });
 $('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
 load();
