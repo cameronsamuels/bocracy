@@ -1,36 +1,45 @@
 <!DOCTYPE html><html>
-	<head>
-		<title>b-Ocracy</title>
-	  	<link rel=stylesheet href=multiplayer.css>
-	  	<meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-	</head>
-	<body>
-		<img id=backButton src=https://blib.tk/boc/btn/back.svg>
-		<section id=bSection>
-			<div id=bButton></div>
-			<div id=bName></div>
-			<div id=bHealth><div id=bHealthBar></div><p></p></div>
-			<div id=bActions>
-				<div id=bAttack ontouchend="game.attack('green')">Attack</div>
-				<div id=bHeal ontouchend="game.heal('green')">Heal</div>
-				<div class=clear></div>
-			</div>
-		</section>
-		<section id=aSection>
-			<div id=aButton></div>
-			<div id=aName></div>
-			<div id=aHealth><div id=aHealthBar></div><p></p></div>
-			<div id=aActions>
-				<div id=aAttack ontouchend="game.attack('red')">Attack</div>
-				<div id=aHeal ontouchend="game.heal('red')">Heal</div>
-				<div class=clear></div>
-			</div>
-		</section>
-		<div class=clear></div>
-		<div id=background></div>
-		<div id=overlay><div id=overlayText></div><div id=restartText ontouchend=restart()>PLAY AGAIN</div></div>
-		<div class=theSword id=bSword></div><div class=theSword id=aSword></div>
-	</body>
-	<script src=../global/live.js></script>
-	<script src=multiplayer.js></script>
-</html>
+<head>
+	<title>b-Ocracy</title>
+	<link rel="stylesheet" href="multiplayer.css">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+</head>
+<body>
+	<img id="backButton" src="https://blib.tk/boc/btn/back.svg">
+	<section id="bSection">
+		<div id="bButton"></div>
+		<div id="bName"></div>
+		<div id="bHealth">
+			<div id="bHealthBar"></div>
+			<p></p>
+		</div>
+		<div id="bActions">
+			<div id="bAttack" ontouchend="game.attack('green')">Attack</div>
+			<div id="bHeal" ontouchend="game.heal('green')">Heal</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<section id="aSection">
+		<div id="aButton"></div>
+		<div id="aName"></div>
+		<div id="aHealth">
+			<div id="aHealthBar"></div>
+			<p></p>
+		</div>
+		<div id="aActions">
+			<div id="aAttack" ontouchend="game.attack('red')">Attack</div>
+			<div id="aHeal" ontouchend="game.heal('red')">Heal</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<div class="clear"></div>
+	<div id="background"></div>
+	<div id="overlay">
+		<div id="overlayText"></div>
+		<div id="restartText" ontouchend="restart()">PLAY AGAIN</div>
+	</div>
+	<div class="theSword" id="bSword"></div>
+	<div class="theSword" id="aSword"></div>
+	<script src="../global/live.js"></script>
+	<script src="multiplayer.js"></script>
+</body></html>
