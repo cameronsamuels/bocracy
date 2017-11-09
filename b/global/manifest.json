@@ -1,0 +1,15 @@
+{
+  "short_name": "b-Ocracy",
+  "name": "b-Ocracy",
+  "icons": [
+    {
+      "src": "https://blib.tk/boc/ico/icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "background_color": "#b30005",
+  "theme_color": "#b30005",
+  "display": "standalone",
+  "orientation": "landscape"
+}
