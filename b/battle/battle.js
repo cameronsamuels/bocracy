@@ -30,7 +30,8 @@ var game = { on : 'false',
 					if (ls.redbacks == undefined) ls.redbacks = endless.c;
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
-					$('restartText').setAttribute("ontouchend", "location='../index.html'");
+					$('restartText').innerHTML = "Continue";
+					$('restartText').setAttribute("ontouchend", "location='../endless'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
