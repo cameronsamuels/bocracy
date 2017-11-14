@@ -57,9 +57,13 @@ var game = { on : 'false',
 			else ls.redbacks = parseFloat(ls.redbacks) + redbacksEarned;
 			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
+
+			injectStyles('#restartText:hover {background-color: #53CC16;} #restartText {background-color: #42bb05;}');
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#b30005';
+
+			injectStyles('#restartText:hover { background-color: #960000; } #restartText {background-color: #600000;}');
 		}
 		$('restartText').style.display = "none";
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
@@ -138,7 +142,7 @@ function load() {
 	if (ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
 		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
 		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
-	} 
+	}
 	if (endless.w) b.name = ls.b1;
 	else {
 		var bName = b.name;
@@ -221,6 +225,7 @@ function restart() {
 	$('clickToStart').style.display = 'block';
 	$('overlay').style.display = 'none';
 	load();
+	$('injectedStyle').remove();
 }
 function neatTime(time) {
 	var h = Math.floor(time / 3600000);
@@ -233,6 +238,13 @@ function neatTime(time) {
 	time += s;
 	return time;
 }
+
+function injectStyles(rule) {
+  var div = document.createElement('div');
+  div.innerHTML = '&shy;<style id="injectedStyle">' + rule + '</style>';
+  document.body.appendChild(div.childNodes[1]);
+}
+
 $('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
 $('aSection').addEventListener(mob()?'touchend':'click', function(){
 	if ($('clickToStart').style.display == "none") game.attack('green');
