@@ -70,7 +70,7 @@ h2 {
 	}
 }
 .btn {
-	background: #64DD17;
+	background: #960000;
 	margin: 2.5px auto;
 	color: #fff;
 	width: 80%;
@@ -80,7 +80,7 @@ h2 {
 	left: 0;
 	right: 0;
 }
-.btn:hover { background: #42bb05 }
+.btn:hover { background: #a00000 }
 @media screen and (min-width: 750px) and (orientation:landscape) { .btn { padding:2.5vh } }
 @media screen and (min-height: 750px) and (orientation:portrait) { .btn { padding:2.5vw } }
 #ne {

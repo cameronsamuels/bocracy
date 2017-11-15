@@ -15,7 +15,7 @@ body, html {
     overflow: hidden;
     -webkit-touch-callout: none;
 }
-@media screen and (orientation:portrait) {	
+@media screen and (orientation:portrait) {
 	html {
 		transform: rotate(-90deg);
 		transform-origin: left top;
@@ -68,7 +68,7 @@ body, html {
 	}
 	#bButton, #aButton { height: 50vw }
 }
-@media screen and (orientation:landscape) {	
+@media screen and (orientation:landscape) {
 	#bButton, #aButton { margin-top: 15vh }
 	#clickToStart { top: 15vh }
 	#overlay img, #overlayStats span {
@@ -222,7 +222,6 @@ section {
 }
 #restartText {
     line-height: 40px;
-	background: #42bb05;
     margin: 2.5px 9px;
     border-radius: 6px;
     color: #fff;
@@ -234,7 +233,6 @@ section {
 	cursor: pointer;
 	animation: f 1s;
 }
-#restartText:hover { background: #53CC16 }
 @keyframes f { 0% { opacity: 0 } }
 @media screen and (max-height: 450px) {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
