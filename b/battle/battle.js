@@ -217,7 +217,6 @@ function updateCharacter() {
 	$('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
-	game.on = 'false';
 	$('clickToStart').style.display = 'block';
 	$('overlay').style.display = 'none';
 	load();
@@ -265,7 +264,7 @@ document.addEventListener('keyup', function(e){
 		}
 	}
 	if (k == 68) game.heal('green');
-	if (k == 46 || k == 32) restart();
+	if ((k == 46 || k == 32) && game.on == "false") restart();
 	if (k == 27) location = "../";
 });
 $('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
