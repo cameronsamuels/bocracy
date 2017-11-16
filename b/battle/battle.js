@@ -31,7 +31,7 @@ var game = { on : 'false',
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').innerHTML = "Continue";
-					injectStyles('#restartText:hover { background-color: #a00000; } #restartText {background-color: #960000;}');
+					injectStyles('#restartText { background: #960000 } #restartText:hover { background: #a00000 }');
 					$('restartText').setAttribute("ontouchend", "location='../endless'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
@@ -58,13 +58,11 @@ var game = { on : 'false',
 			else ls.redbacks = parseFloat(ls.redbacks) + redbacksEarned;
 			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="https://blib.tk/boc/img/rbo.svg"/>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
-
-			injectStyles('#restartText:hover {background-color: #53CC16;} #restartText {background-color: #42bb05;}');
+			injectStyles('#restartText { background: #42bb05 } #restartText:hover { background: #53CC16 }');
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#b30005';
-
-			injectStyles('#restartText:hover { background-color: #a00000; } #restartText {background-color: #960000;}');
+			injectStyles('#restartText { background: #960000 } #restartText:hover { background: #a00000 }');
 		}
 		$('restartText').style.display = "none";
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
