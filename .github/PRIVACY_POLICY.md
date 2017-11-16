@@ -1,29 +1,37 @@
 # b-Ocracy Privacy Policy
-### 1a. **What information do we collect from the people that visit our website or use our app?**
-When using b-Ocracy owned products, you will not be asked to enter any information.
 
-\**We never ask for credit card numbers or passwords.*
-### 1b. **Why don't we collect information?**
-b-Ocracy is a game without any interaction with other users. Because of this, we do not need users to provide accounts, usernames, personal information, or other details.
-### 2\. **Do we use 'cookies'?**
-We do not use cookies for anything, but our third party companies use them for uses such as tracking purposes, and advertisement information.
-### 3a. **Third-party disclosure**
-We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information. We only use third party software for monetization, publishing, and tracking.
-### 3b. **Third-party links**
-Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
-### 3c. **Advertisements**
-Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en 
+## 1. Collecting Information
+### 1a. What information is collected from the people that visit the b-Ocracy website or app?
+When using b-Ocracy products, you will not be asked to enter any information.
+### 1b. Why doesn't b-Ocracy collect information from users?
+b-Ocracy is a game without any interaction with other users. Because of this, there is no need for users to provide usernames, passwords, personal information, or other details.
 
-We currently have Google AdSense for Games & Google IMA3 enabled and used on our site for producing video ads for users to watch to receive virtual goods. These ads will only appear on the user's request. 
+## 2. Does b-Ocracy use 'cookies'?
+b-Ocracy does not use cookies of any sort, but third-party companies may use them.
 
-We also do not use Google AdMobs, Google AdWords, Vast, or any other form of advertisements except for Google Adsense, Google IMA3, and Kiip, but may use them in the future.
+## 3. Third-party disclosure 
+### 3a. Third-party links
+Occasionally, at our discretion, we may include or offer third-party products or services on b-Ocracy. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
+### 3b. Advertisements
+b-Ocracy uses Google AdSense for providing ads to the users. These ads will only appear upon request from the user. These ads are used to provide videos of other products and by watching them, the user may earn virtual currency in b-Ocracy.
+<br><br>Google's advertising requirements can be summed up by [Google's Advertising Principles](https://support.google.com/adwordspolicy/answer/1316548?hl=en). They are put in place to provide a positive experience for users.
+### 3c. Analytics Tracking
+b-Ocracy uses Google Analytics to track the user's page views. It never tracks the user's personal information.
+We use tracking to make b-Ocracy a better app.
+
 # Contacting Us
 If there are any questions regarding this privacy policy, you may contact us using the information below.
 <pre>
-The bClick Team
-Katy, TX 77494
+Xeleration
+Houston, TX 77494
 United States
-team@bocracy.com
+hello@xel.company
+1 (409) 422-5425
+
+The bClick Team
+Houston, TX 77494
+United States
+b@xel.company
 1 (409) 422-5425
 
 Cameron Samuels
@@ -31,4 +39,4 @@ Katy, TX 77494
 United States
 biz@cameronsamuels.com
 </pre>
-Last edited on Wednesday, July 26, 2017.
+Last edited on Saturday, November 11, 2017.
