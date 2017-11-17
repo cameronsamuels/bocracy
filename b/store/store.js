@@ -40,7 +40,7 @@ function unlock(item) {
 			return;
 		}
 		var unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
-		while (ls[unlocked] == 'true') unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
+		while (ls[unlocked] == "true") unlocked = goodNames[item][Math.floor(Math.random() * goodNames[item].length)];
 		ls.redbacks -= 700;
 	} else {
 		var unlocked = item.toString().split('.')[1];
@@ -50,7 +50,7 @@ function unlock(item) {
 		}
 		ls.redbacks -= good[unlocked].info[2];
 	}
-	ls[unlocked] = 'true';
+	ls[unlocked] = true;
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
 	$('unlockedPopupText').innerHTML = "<p>You unlocked</p>" + characterName;
 	$('unlockedPopupImg').style.display = "";
