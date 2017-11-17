@@ -2,7 +2,7 @@ var bSword, aSword, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
-var game = { on : 'false',
+var game = { on : false,
 	refresh : { all : function() {
 		$('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		$('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
@@ -37,7 +37,7 @@ var game = { on : 'false',
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
 					$('overlay').style.display = "block";
-					game.on = 'false';
+					game.on = false;
 					endless.t = 1;
 					endless.k = 0;
 					return;
@@ -50,7 +50,7 @@ var game = { on : 'false',
 				updateCharacter();
 			}
 		} else {
-		game.on = 'false';
+		game.on = false;
 		if (side == 'green') {
 			if (current.includes('+')) var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*30, 25));
 			else var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
@@ -72,7 +72,7 @@ var game = { on : 'false',
 		bgPos = 0;
 		}
 	}, attack : function(atk) {
-		if (game.on == 'true') {
+		if (game.on == true) {
 			if (atk == 'green') {
 				a.health -= b.attack;
 				a.health = Math.max(0, a.health);
@@ -116,7 +116,7 @@ var game = { on : 'false',
 			document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 		}
 	}, heal : function(side) {
-		if (game.on == 'true') {
+		if (game.on == true) {
 			if (side == 'green') {
 				b.health += b.heal; b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
@@ -139,8 +139,8 @@ function load() {
 		default: badNames.url = "b"; goodNames.url = "b";
 	}
 	if (ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] == undefined) {
-		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = 'true';
-		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = 'true';
+		ls[goodNames[current][Math.floor(Math.random()*goodNames[current].length)]] = true;
+		ls['has' + current.toString().charAt(0).toUpperCase() + current.toString().substring(1).replace('+', '')] = true;
 	}
 	if (endless.w) b.name = ls.b1;
 	else {
@@ -154,7 +154,7 @@ function load() {
 	do {
 		a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
 	} while (a.name == aName);
-	while (ls[b.name] == 'false') { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
+	while (ls[b.name] == "false") { b.name = goodNames[current.replace('+', 'Boss')][Math.floor(Math.random() * goodNames[current.replace('+', 'Boss')].length)]; }
 	a.health = bad[a.name].stats[1];
 	a.attack = bad[a.name].stats[0];
 	a.heal = bad[a.name].stats[2];
@@ -246,7 +246,7 @@ $('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('g
 $('aSection').addEventListener(mob()?'touchend':'click', function(){
 	if ($('clickToStart').style.display == "none") game.attack('green');
 	else {
-		game.on = 'true';
+		game.on = true;
 		game.attack('green');
 		base = new Date().getTime();
 		$('refreshButton').style.display = 'none';
@@ -267,14 +267,14 @@ document.addEventListener('keyup', function(e){
 		if (clickedToStart) game.attack('green');
 		else {
 			clickedToStart = true;
-			game.on = 'true';
+			game.on = true;
 			game.attack('green');
 			base = new Date().getTime();
 			$('refreshButton').style.display = 'none';
 		}
 	}
 	if (k == 68) game.heal('green');
-	if ((k == 46 || k == 32) && game.on == "false") restart();
+	if ((k == 46 || k == 32) && game.on == false) restart();
 	if (k == 27) location = "../";
 });
 $('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
