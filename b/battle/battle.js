@@ -237,13 +237,12 @@ function neatTime(time) {
 	time += s;
 	return time;
 }
-
-function injectStyles(rule) {
-  var div = document.createElement('div');
-  div.innerHTML = '&shy;<style id="injectedStyle">' + rule + '</style>';
-  document.body.appendChild(div.childNodes[1]);
+function injectStyles(rules) {
+  var style = document.createElement('style');
+  style.id = 'injectedStyle';
+  style.innerHTML = rules;
+  document.head.appendChild(style);
 }
-
 $('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
 $('aSection').addEventListener(mob()?'touchend':'click', function(){
 	if ($('clickToStart').style.display == "none") game.attack('green');
