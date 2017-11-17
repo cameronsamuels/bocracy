@@ -30,7 +30,6 @@ h2 {
 }
 @media screen and (orientation:landscape) {
 	#bg div {
-		padding: 1vw 0;
 		font-size:2.8vh
 	}
 	#ch div div {
@@ -55,7 +54,6 @@ h2 {
 		left: 0;
 	}
 	#bg div {
-		padding: 1vh 0;
 		font-size: 2.8vw;
 	}
 	#ch div div {
@@ -84,12 +82,13 @@ h2 {
 @media screen and (min-width: 750px) and (orientation:landscape) { .btn { padding:2.5vh } }
 @media screen and (min-height: 750px) and (orientation:portrait) { .btn { padding:2.5vw } }
 #ne {
-	background: #930005;
+	background: #960000;
 	display: none
 }
 #ne, #sp { animation: p 1s }
 @keyframes p { 0% { opacity:0 } }
 #bg div {
+	padding: 1% 0;
 	margin: 1% 2px;
     background: #930005;
     display: inline-block;
