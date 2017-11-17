@@ -2,7 +2,7 @@ var newStats, a = { name: '', health: 0, attack: 0 },
 b = { name: '', health: 0, attack: 0 },
 current = battles[Math.floor(Math.random() * battles.length)];
 if (window.location.hash != '') current = window.location.hash.toString().replace('#', '');
-var game = { on : 'false',
+var game = { on : false,
 	refresh : { display : function() {
 		$('bHealthBar').style.width = (b.health / b.orig_health)*100 + '%';
 		$('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
@@ -14,9 +14,9 @@ var game = { on : 'false',
 		$('restartText').style.display = "none";
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
 		$('overlay').style.display = "block";
-		game.on = 'false';
+		game.on = false;
 	}, attack : function(atk) {
-		if (game.on == 'true') { if (atk == 'green') {
+		if (game.on == true) { if (atk == 'green') {
 			a.health -= b.attack; a.health = Math.max(0, a.health); a.health = Math.min(a.orig_health, a.health);
 			$('bSword').style.display = "block";
 			$('bSword').style.animationName = "bSword";
@@ -32,7 +32,7 @@ var game = { on : 'false',
 		document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 		document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	}}, heal : function(side) {
-		if (game.on == 'true') { if (side == 'green') {
+		if (game.on == true) { if (side == 'green') {
 			b.health += b.heal;
 			b.health = Math.max(0, b.health);
 			b.health = Math.min(b.orig_health, b.health);
@@ -46,12 +46,12 @@ var game = { on : 'false',
 function load() {
 	if (!window.location.toString().includes('#')) current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
-		case "aonarchy": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "alief": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "ammunist": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "alinar": newStats = 'false'; badNames.url = "b"; goodNames.url = "a"; break;
-		case "eora": newStats = 'true'; badNames.url = "b"; goodNames.url = "a"; break;
-		default: newStats = 'false'; badNames.url = "b"; goodNames.url = "b";
+		case "aonarchy": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
+		case "alief": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
+		case "ammunist": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
+		case "alinar": newStats = false; badNames.url = "b"; goodNames.url = "a"; break;
+		case "eora": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
+		default: newStats = false; badNames.url = "b"; goodNames.url = "b";
 	}
 	a.name = badNames[current.replace('+', 'Boss')][Math.floor(Math.random() * badNames[current.replace('+', 'Boss')].length)];
 	a.health = Math.min(Math.random() * 2250, 2000);
@@ -64,7 +64,7 @@ function load() {
 	b.orig_health = a.orig_health;
 	b.attack = a.attack;
 	b.heal = a.heal;
-	game.on = 'true';
+	game.on = true;
 	var bName = b.name;
 	while (bName.includes('_') || bName.includes('-')) { bName = bName.toString().replace('_', '-').replace('--', '^').replace('-', ' '); }
 	while (bName.includes('^')) { bName = bName.replace('^', '-'); }
@@ -87,10 +87,10 @@ function load() {
 	$('bButton').style.backgroundImage = 'url(https://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('aButton').style.backgroundImage = 'url(https://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
-	if (newStats == 'true') { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
+	if (newStats == true) { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
 	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('aSword').style.backgroundImage) $('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	var weapon  = 'sword';
-	if (newStats == 'true')	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
+	if (newStats == true)	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
 	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('bSword').style.backgroundImage) $('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
@@ -111,7 +111,7 @@ function load() {
 	img.src = 'https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
 }
 function restart() {
-	game.on = 'false';
+	game.on = false;
 	$('overlay').style.display = 'none';
 	load();
 }
