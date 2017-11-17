@@ -97,9 +97,9 @@ h2 {
     border: 1px #930005 solid;
 }
 #bg div:active  {
-	padding: 0.7% 0;
-	width: calc(16.66% - 10px);
-	margin: 1.2% 3px;
+	padding: 0.8% 0;
+	width: calc(16.66% - 28px);
+	margin: 1.2% 12px;
 }
 #bg { border-bottom: 4px #fff solid }
 #ch {
