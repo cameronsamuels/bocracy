@@ -82,7 +82,7 @@ h2 {
 @media screen and (min-width: 750px) and (orientation:landscape) { .btn { padding:2.5vh } }
 @media screen and (min-height: 750px) and (orientation:portrait) { .btn { padding:2.5vw } }
 #ne {
-	background: #930005;
+	background: #960000;
 	display: none
 }
 #ne, #sp { animation: p 1s }
