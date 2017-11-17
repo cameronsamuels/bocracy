@@ -16,13 +16,13 @@ Start playing now on any device, ad-free!
 ## Contributing
 Please read over the [contributing guidelines](.github/CONTRIBUTING.md) for information like beta testing, submitting issues & pull requests, and contacting us.
 
+You can be in the credits after contributing.
+
 ## Team
-[Cameron Samuels](https://cameronsamuels.com) - Project Manager, Lead Developer
-<br>[Ethan Choo](https://ethanchoo.ml) - Lead Graphic Designer, Storyline Writer
-<br>[Faith Tsang](https://github.com/faithtsang) - Developer
-<br>[Vishwam R](http://github.com/vishwamr) - Developer
-<br>[Cooper Lan](https://github.com/cooperlan) - Graphic Designer
-<br>[Ted Kwee-Bintoro](https://github.com/tedkweebintoro) - Part-time Graphic Designer
+[Cameron Samuels](https://cameronsamuels.com) - CEO @ Xeleration, lead developer
+<br>[Ethan Choo](https://ethanchoo.ml) - Executive @ The bClick Team, graphic designer
+<br>[Lex Kilpatrick](https://git.io/v554S) - COO @ Xeleration
+<br>More team members and contributors are available in the [credits](https://bocracy.com/credits).
 
 ## Legal
 b-Ocracy is distributed under the [Cameron Samuels License](LICENSE).
