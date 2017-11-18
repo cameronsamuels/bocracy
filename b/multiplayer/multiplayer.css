@@ -16,16 +16,33 @@ body, html {
     -webkit-touch-callout: none;
 }
 .clear { clear: both }
-@media screen and (orientation:landscape) {	
-	html {
-		transform: rotate(-90deg);
-		transform-origin: left top;
-		width: 100vh;
-		height: 100vw;
-		position: absolute;
-		top: 100%;
-		left: 0;
-	}
+@media screen and (orientation:landscape) { 
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    #logo {
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+}
+@media screen and (orientation:portrait) { 
+    #logo {
+        width: 100vh !important;
+        height: 100vw !important;
+    }
+}
+#logo {
+    transform: rotate(90deg);
+    transform-origin: top right;
+    position: absolute;
+    right: 0%;
+    top: 100%;
 }
 #backButton {
     width: 30px;
