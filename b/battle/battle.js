@@ -254,12 +254,12 @@ $('aSection').addEventListener(mob()?'touchend':'click', function(){
 });
 $('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
 document.addEventListener(mob()?'touchend':'click', function(e){
-	if (e.target.id != "backButton") {
+	if (e.target.id != "backButton" && game.on == true) {
 		clearTimeout(backButtonTimeout);
 		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
 		$("backButton").style.display = "none";
 	}
-	else location = "../";
+	else if (e.target.id == "backButton") location = "../";
 });
 document.addEventListener('keyup', function(e){
 	var k = e.keyCode || e.which;
