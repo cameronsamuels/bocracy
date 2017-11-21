@@ -92,18 +92,18 @@ good.cactus = new c('cactus', [35, 1750, 25], ['eora', true, 1000, 'a', 'thorns'
 good.scavenger = new c('scavenger', [40, 2222, 15], ['eora', true, 1000, 'a', 'scavenger_sword']);
 good.mountain_jetpack = new c('mountain_jetpack', [30, 2222, 15], ['eora', true, 800, 'a', 'fireball']);
 
-good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', true, 1000, 'b']);
-good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', true, 600, 'b']);
-good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', true, 700, 'b']);
-good.archelon = new c('archelon', [30, 2500, 12], ['dericil', true, 800, 'b']);
-good.ichthyosaur = new c('ichthyosaur', [35, 2000, 15], ['dericil', true, 1200, 'b']);
-good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', true, 1600, 'b']);
+good.elasmosaurus = new c('elasmosaurus', [35, 1800, 15], ['dericil', true, 1000, 'b', 'slash']);
+good.giant_orthocone = new c('giant_orthocone', [25, 1800, 15], ['dericil', true, 600, 'b', 'slash']);
+good.alligator_gar = new c('alligator_gar', [35, 1500, 15], ['dericil', true, 700, 'b', 'slash']);
+good.archelon = new c('archelon', [30, 2500, 12], ['dericil', true, 800, 'b', 'slash']);
+good.ichthyosaur = new c('ichthyosaur', [35, 2000, 15], ['dericil', true, 1200, 'b', 'slash']);
+good.helicoprion = new c('helicoprion', [40, 2500, 15], ['dericil', true, 1600, 'b', 'slash']);
 
-bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', false, 900, 'b']);
-bad.sea_scorpion = new c('sea_scorpion', [38, 2000, 15], ['dericil', false, 1500, 'b']);
-bad.leedsichthys = new c('leedsichthys', [35, 2200, 15], ['dericil', false, 1300, 'b']);
-bad.mosasaur = new c('mosasaur', [40, 2500, 15], ['dericil', false, 1500, 'b']);
-bad.megalodon = new c('megalodon', [50, 3000, 12], ['dericil', false, 1800, 'b']);
+bad.coelacanth = new c('coelacanth', [25, 1800, 20], ['dericil', false, 900, 'b', 'slash']);
+bad.sea_scorpion = new c('sea_scorpion', [38, 2000, 15], ['dericil', false, 1500, 'b', 'slash']);
+bad.leedsichthys = new c('leedsichthys', [35, 2200, 15], ['dericil', false, 1300, 'b', 'slash']);
+bad.mosasaur = new c('mosasaur', [40, 2500, 15], ['dericil', false, 1500, 'b', 'slash']);
+bad.megalodon = new c('megalodon', [50, 3000, 12], ['dericil', false, 1800, 'b', 'slash']);
 
 good.flame_archer = new c('flame_archer', [35, 1700, 5], ['alinar', true, 900, 'a']);
 good.reindeer = new c('reindeer', [25, 1700, 10], ['alinar', true, 750, 'a']);
