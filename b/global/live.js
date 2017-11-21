@@ -9,8 +9,8 @@ if (document.documentMode==(11||10))
 	alert("This browser is unsupported for b-Ocracy. Get a newer browser"),
 	location = "http://google.com/chrome/browser/desktop";
 
-var $ = function(e) { return document.getElementById(e) }
-function mob() { return navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i) }
+var $ = function(e) { return document.getElementById(e) },
+isMobile = navigator.userAgent.match(/Android|IEMobile|iPhone|iPad|iPod/i);
 document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=https://blib.tk/boc/ico/banner.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
 var goodNames = { url : '', aonarchy : [], aonarchyBoss : [], alief : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
 badNames = { url : '', aonarchy : [], alief : [], aonarchyBoss : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
@@ -128,7 +128,7 @@ bad.b__2_mobile_cannon = new c('b__2_mobile_cannon', [50, 2500, 12], ['alinar', 
 // good.rogue = new c('rogue', [60, 2500, 10], ['alinar', true, 1500, 'a', 'rogue']);
 
 function t() {
-	if (!mob()) {
+	if (!isMobile) {
 		var clickables = document.querySelectorAll('[ontouchend]');
 		for (i = 0; i < clickables.length; i++) clickables[i].setAttribute('onclick', clickables[i].getAttribute('ontouchend')), clickables[i].removeAttribute('ontouchend');
 		requestAnimationFrame(t);
