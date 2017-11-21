@@ -211,10 +211,10 @@ function updateCharacter() {
 	$('bName').style.fontSize = Math.min((30-$('bName').innerHTML.length)/5,$('aName').style.fontSize.replace('vw', '')) + 'vw';
 	var aw  = 'sword', bw = 'sword';
 	try {
-		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
 	} catch (ex) {}
 	try {
-		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
 	} catch (ex){}
 	$('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + bw + '.svg")';
 	$('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
