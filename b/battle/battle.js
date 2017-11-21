@@ -183,6 +183,9 @@ function load() {
 		$('present').style.background = "url(https://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
+		$('present').style.animation = "none";
+		$('present').offsetHeight;
+		$('present').style.animation = ""; 
 		clearTimeout(presentTimeout);
 		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 2000);
 	};
