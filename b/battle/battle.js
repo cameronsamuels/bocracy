@@ -106,6 +106,8 @@ var game = { on : false,
 					$('aSword').style.display = 'none';
 					$('aSword').style.animationName = '';
 				}, 100);
+				if (b.health <= b.orig_health / 7) $('lowHealthOverlay').style.display = "block";
+				else $('lowHealthOverlay').style.display = "";
 				if (b.health == 0) game.win('red');
 				bgPos += 10;
 				if (bgPos > 0) bgPos = 0;
@@ -128,6 +130,7 @@ var game = { on : false,
 	}
 };
 function load() {
+	$('lowHealthOverlay').style.display = "";
 	clicks = 0, clickedToStart = false;
 	if (!window.location.hash.includes('#') || window.location.hash == '#endless') current = battles[Math.floor(Math.random() * battles.length)];
 	switch (current.replace('+', '')) {
