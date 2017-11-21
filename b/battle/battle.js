@@ -161,7 +161,7 @@ function load() {
 	b.health = good[b.name].stats[1];
 	b.attack = good[b.name].stats[0];
 	b.heal = good[b.name].stats[2];
-	if (mob()) a.speed = 300;
+	if (isMobile) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
@@ -242,8 +242,8 @@ function injectStyles(rules) {
   style.innerHTML = rules;
   document.head.appendChild(style);
 }
-$('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
-$('aSection').addEventListener(mob()?'touchend':'click', function(){
+$('bSection').addEventListener(isMobile?'touchend':'click', function(){game.heal('green')});
+$('aSection').addEventListener(isMobile?'touchend':'click', function(){
 	if ($('clickToStart').style.display == "none") game.attack('green');
 	else {
 		game.on = true;
@@ -252,8 +252,8 @@ $('aSection').addEventListener(mob()?'touchend':'click', function(){
 		$('refreshButton').style.display = 'none';
 	}
 });
-$('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
-document.addEventListener(mob()?'touchend':'click', function(e){
+$('restartText').addEventListener(isMobile?'touchend':'click', function(){restart()});
+document.addEventListener(isMobile?'touchend':'click', function(e){
 	if (e.target.id != "backButton") {
 		clearTimeout(backButtonTimeout);
 		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
@@ -277,7 +277,7 @@ document.addEventListener('keyup', function(e){
 	if ((k == 46 || k == 32) && game.on == false) restart();
 	if (k == 27) location = "../";
 });
-$('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
+$('refreshButton').addEventListener(isMobile?'touchend':'click', function(){restart()});
 load();
 setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
 game.refresh.all();

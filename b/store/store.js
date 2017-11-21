@@ -64,5 +64,5 @@ function unlock(item) {
 }
 $('confirmNoBtn').onclick = function(){$('confirmPopup').style.display='';$('popupOverlay').style.display=''},
 $('unlockedPopupBtn').onclick = function(){$('unlockedPopup').style.display='';$('popupOverlay').style.display=''};
-$("backButton").addEventListener(mob()?'touchend':'click', function(){location="../"});
+$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../"});
 refreshStore();
