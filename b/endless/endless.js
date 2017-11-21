@@ -31,10 +31,10 @@ function sp() {
 	ls.sc = ch.length; location = "../battle/#endless" + b;
 }
 $('sp').style.display = 'none';
-if (mob()) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
+if (isMobile) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
 else $('bg').onmousedown = bg, $('ch').onmousedown = ch;
 $('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>eora</div><div>alinar</div><div>dericil</div>";
 var e = document.createEvent('MouseEvents');
-mob()?e.initEvent("touchstart", true, true):e.initEvent("mousedown", true, true);
+isMobile?e.initEvent("touchstart", true, true):e.initEvent("mousedown", true, true);
 document.querySelector('#bg div').dispatchEvent(e);
-$("backButton").addEventListener(mob()?'touchend':'click', function(){location="../"});
+$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../"});

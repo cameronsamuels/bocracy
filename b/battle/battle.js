@@ -161,7 +161,7 @@ function load() {
 	b.health = good[b.name].stats[1];
 	b.attack = good[b.name].stats[0];
 	b.heal = good[b.name].stats[2];
-	if (mob()) a.speed = 300;
+	if (isMobile) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;
 	a.orig_health = a.health;
@@ -183,6 +183,9 @@ function load() {
 		$('present').style.background = "url(https://blib.tk/boc/bg/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
+		$('present').style.animation = "none";
+		$('present').offsetHeight;
+		$('present').style.animation = ""; 
 		clearTimeout(presentTimeout);
 		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 2000);
 	};
@@ -211,10 +214,10 @@ function updateCharacter() {
 	$('bName').style.fontSize = Math.min((30-$('bName').innerHTML.length)/5,$('aName').style.fontSize.replace('vw', '')) + 'vw';
 	var aw  = 'sword', bw = 'sword';
 	try {
-		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
 	} catch (ex) {}
 	try {
-		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[5];
+		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
 	} catch (ex){}
 	$('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + bw + '.svg")';
 	$('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
@@ -242,8 +245,8 @@ function injectStyles(rules) {
   style.innerHTML = rules;
   document.head.appendChild(style);
 }
-$('bSection').addEventListener(mob()?'touchend':'click', function(){game.heal('green')});
-$('aSection').addEventListener(mob()?'touchend':'click', function(){
+$('bSection').addEventListener(isMobile?'touchend':'click', function(){game.heal('green')});
+$('aSection').addEventListener(isMobile?'touchend':'click', function(){
 	if ($('clickToStart').style.display == "none") game.attack('green');
 	else {
 		game.on = true;
@@ -252,8 +255,8 @@ $('aSection').addEventListener(mob()?'touchend':'click', function(){
 		$('refreshButton').style.display = 'none';
 	}
 });
-$('restartText').addEventListener(mob()?'touchend':'click', function(){restart()});
-document.addEventListener(mob()?'touchend':'click', function(e){
+$('restartText').addEventListener(isMobile?'touchend':'click', function(){restart()});
+document.addEventListener(isMobile?'touchend':'click', function(e){
 	if (e.target.id != "backButton" && game.on == true) {
 		clearTimeout(backButtonTimeout);
 		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
@@ -277,7 +280,7 @@ document.addEventListener('keyup', function(e){
 	if ((k == 46 || k == 32) && game.on == false) restart();
 	if (k == 27) location = "../";
 });
-$('refreshButton').addEventListener(mob()?'touchend':'click', function(){restart()});
+$('refreshButton').addEventListener(isMobile?'touchend':'click', function(){restart()});
 load();
 setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
 game.refresh.all();

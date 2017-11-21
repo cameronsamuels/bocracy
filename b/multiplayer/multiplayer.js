@@ -87,10 +87,10 @@ function load() {
 	$('bButton').style.backgroundImage = 'url(https://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('aButton').style.backgroundImage = 'url(https://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
-	if (newStats == true) { if (bad[a.name].info[5] != undefined) weapon = bad[a.name].info[5] }
+	if (newStats == true) { if (bad[a.name].info[4] != undefined) weapon = bad[a.name].info[4] }
 	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('aSword').style.backgroundImage) $('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	var weapon  = 'sword';
-	if (newStats == true)	{ if (good[b.name].info[5] != undefined) weapon = good[b.name].info[5]; }
+	if (newStats == true)	{ if (good[b.name].info[4] != undefined) weapon = good[b.name].info[4]; }
 	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('bSword').style.backgroundImage) $('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
@@ -118,4 +118,4 @@ function restart() {
 load();
 game.refresh.all();
 document.ontouchmove=function(e){e.preventDefault()}
-$("backButton").addEventListener(mob()?'touchend':'click', function(){location="../"});
+$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../"});
