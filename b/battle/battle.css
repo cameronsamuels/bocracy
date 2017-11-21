@@ -167,10 +167,12 @@ section {
     color: #fff;
     font-weight: 800;
 }
+@keyframes heal { 50% { border-color: #42bc07 } }
 #aHealth, #bHealth {
 	margin: auto;
 	background: #b30005;
 	position: relative;
+	animation: .5s;
 }
 #aHealthBar, #bHealthBar {
     width: 100%;
