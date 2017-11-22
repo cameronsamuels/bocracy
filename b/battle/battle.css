@@ -36,12 +36,12 @@ body, html {
 		margin-right: 10vw;
 		font-size: 5vw;
 	}
-	.theSword {
+	#leftWeapon, #rightWeapon {
 		width: 23vw;
 		height: 13vw;
 	}
-	#bSword { top: 45vw }
-	#aSword { top: 20vw }
+	#leftWeapon { top: 45vw }
+	#rightWeapon { top: 20vw }
 	#aHealth, #bHealth {
 		width: 40vw;
 		height: 5vw;
@@ -74,12 +74,12 @@ body, html {
 		margin-right: 10vh;
 		font-size: 5vh;
 	}
-	.theSword {
+	#leftWeapon, #rightWeapon {
 		width: 23vh;
 		height: 13vh;
 	}
-	#bSword { top: 45vh }
-	#aSword { top: 20vh }
+	#leftWeapon { top: 45vh }
+	#rightWeapon { top: 20vh }
 	#aHealth, #bHealth {
 		width: 40vh;
 		height: 5vh;
@@ -228,16 +228,16 @@ section {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
     #overlayText div:not(#overlayStats) { font-size: 75px !important; }
 }
-.theSword {
+#leftWeapon, #rightWeapon {
     display: none;
     position: absolute;
     background: 100%/cover no-repeat;
     animation-duration: 150ms;
 }
-#bSword { left: calc(75% - 125px)}
-#aSword {
+#leftWeapon { left: calc(75% - 125px)}
+#rightWeapon {
     left: calc(25% + 125px);
     transform: rotate(180deg)
 }
-@keyframes bSword { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
-@keyframes aSword { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
+@keyframes leftWeapon { from { left: calc(50% - 50px) } to { left: calc(50% + 50px) } }
+@keyframes rightWeapon { from { left: calc(50% + 50px) } to { left: calc(50% - 50px) }}
