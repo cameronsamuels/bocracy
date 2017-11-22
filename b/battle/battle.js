@@ -120,6 +120,9 @@ var game = { on : false,
 			if (side == 'green') {
 				b.health += b.heal; b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
+				$('bHealth').style.animationName = "";
+				$('bHealth').offsetHeight;
+				$('bHealth').style.animationName = "heal";
 			} else if (side == 'red') {
 				a.health += a.heal; a.health = Math.max(0, a.health);
 				a.health = Math.min(a.orig_health, a.health);
