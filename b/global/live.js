@@ -37,7 +37,7 @@ good.a87_cannon = new c('a87_cannon', [60, 2500, 10], ['aonarchy', true, 1500, '
 
 bad.sharkanator = new c('sharkanator', [100, 5000, 0], ['aonarchy', false, 2500, 'a', 'cannonball']);
 bad.bentacrabb_2D1 = new c('bentacrabb_2D1', [50, 3200, 5], ['aonarchy', false, 1500, 'a', 'cannonball']);
-bad.bylo_ken = new c('bylo_ken', [45, 2200, 20], ['aonarchy', false, 800, 'a', 'bylo_ken', 'saber']);
+bad.bylo_ken = new c('bylo_ken', [45, 2200, 20], ['aonarchy', false, 800, 'a', 'saber']);
 bad.d15_cannon = new c('d15_cannon', [60, 2200, 5], ['aonarchy', false, 1500, 'a', 'cannonball']);
 bad.byter = new c('byter', [40, 1500, 20], ['aonarchy', false, 750, 'a', 'missile']);
 
