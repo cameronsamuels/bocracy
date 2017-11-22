@@ -228,6 +228,19 @@ section {
     #overlay div:not(#overlayStats) { font-size: 32px !important; }
     #overlayText div:not(#overlayStats) { font-size: 75px !important; }
 }
+@keyframes flash { 50% { opacity: 0 } }
+#lowHealthOverlay {
+	opacity: .7;
+	animation: flash infinite 1s;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+	background: #b30005;
+	pointer-events: none;
+}
 .theSword {
     display: none;
     position: absolute;
