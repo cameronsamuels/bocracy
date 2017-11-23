@@ -6,7 +6,7 @@ ga('create', 'UA-50194959-4', 'auto');
 ga('send', 'pageview');
 
 if (document.documentMode==(11||10))
-	alert("This browser is unsupported for b-Ocracy. Get a newer browser"),
+	alert("This browser is not supported by b-Ocracy. Download Google Chrome"),
 	location = "http://google.com/chrome/browser/desktop";
 
 var $ = function(e) { return document.getElementById(e) },
