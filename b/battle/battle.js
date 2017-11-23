@@ -265,7 +265,7 @@ document.addEventListener(isMobile?'touchend':'click', function(e){
 });
 document.addEventListener('keyup', function(e){
 	var k = e.keyCode || e.which;
-	if (k == 74 && $('overlay').style.display != "block" && $('present').style.display != "block") {
+	if ((k == 74 || k == 39 || k == 68) && $('overlay').style.display != "block" && $('present').style.display != "block") {
 		if (clickedToStart) game.attack('green');
 		else {
 			clickedToStart = true;
@@ -275,7 +275,7 @@ document.addEventListener('keyup', function(e){
 			$('refreshButton').style.display = 'none';
 		}
 	}
-	if (k == 68) game.heal('green');
+	if (k == 70 || k == 37 || k == 65) game.heal('green');
 	if ((k == 46 || k == 32) && game.on == false) restart();
 	if (k == 27) location = "../";
 });
