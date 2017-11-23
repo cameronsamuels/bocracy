@@ -1,4 +1,4 @@
-var bSword, aSword, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var leftWeapon, rightWeapon, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -77,15 +77,15 @@ var game = { on : false,
 				a.health -= b.attack;
 				a.health = Math.max(0, a.health);
 				a.health = Math.min(a.orig_health, a.health);
-				var newone = $('bSword').cloneNode(true);
-				$('bSword').parentNode.replaceChild(newone, $('bSword'));
-				$('bSword').style.display = "block";
-				$('bSword').style.animationName = "bSword";
+				var newone = $('leftWeapon').cloneNode(true);
+				$('leftWeapon').parentNode.replaceChild(newone, $('leftWeapon'));
+				$('leftWeapon').style.display = "block";
+				$('leftWeapon').style.animationName = "leftWeapon";
 				$('clickToStart').style.display = 'none';
-				clearTimeout(bSword);
-				bSword = setTimeout(function(){
-					$('bSword').style.display = 'none';
-					$('bSword').style.animationName = '';
+				clearTimeout(leftWeapon);
+				leftWeapon = setTimeout(function(){
+					$('leftWeapon').style.display = 'none';
+					$('leftWeapon').style.animationName = '';
 				}, 150);
 				clicks++;
 				if (a.health == 0) game.win('green');
@@ -97,14 +97,14 @@ var game = { on : false,
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
-				var newone = $('aSword').cloneNode(true);
-				$('aSword').parentNode.replaceChild(newone, $('aSword'));
-				$('aSword').style.display = "block";
-				$('aSword').style.animationName = "aSword";
-				clearTimeout(aSword);
-				aSword = setTimeout(function(){
-					$('aSword').style.display = 'none';
-					$('aSword').style.animationName = '';
+				var newone = $('rightWeapon').cloneNode(true);
+				$('rightWeapon').parentNode.replaceChild(newone, $('rightWeapon'));
+				$('rightWeapon').style.display = "block";
+				$('rightWeapon').style.animationName = "rightWeapon";
+				clearTimeout(rightWeapon);
+				rightWeapon = setTimeout(function(){
+					$('rightWeapon').style.display = 'none';
+					$('rightWeapon').style.animationName = '';
 				}, 100);
 				if (b.health == 0) game.win('red');
 				bgPos += 10;
@@ -219,8 +219,8 @@ function updateCharacter() {
 	try {
 		if (good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) bw = good[b.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
 	} catch (ex){}
-	$('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + bw + '.svg")';
-	$('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
+	$('leftWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + bw + '.svg")';
+	$('rightWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + aw + '.svg")';
 }
 function restart() {
 	$('clickToStart').style.display = 'block';
@@ -229,15 +229,14 @@ function restart() {
 	$('injectedStyle').remove();
 }
 function neatTime(time) {
-	var h = Math.floor(time / 3600000);
-	var m = Math.floor(time / 60000) - (h * 60);
-	var s = Math.floor(time / 1000) - (m * 60);
-          if (h > 0) s = s - (m * 60);
+	var h = Math.floor(time / 3600000),
+	m = Math.floor(time / 60000) - (h * 60),
+	s = Math.floor(time / 1000) - (m * 60);
+	if (h > 0) s = s - (m * 60);
 	time = '';
-	if (h >= 1) { time = h + ':' }
-	if (m >= 1) { time += m + ':' }
-	time += s;
-	return time;
+	if (h >= 1) time = h + ':';
+	if (m >= 1) time += m + ':';
+	return time + s;
 }
 function injectStyles(rules) {
   var style = document.createElement('style');

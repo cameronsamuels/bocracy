@@ -190,29 +190,29 @@ section {
     #overlay div { font-size: 32px !important; }
     #overlayText div { font-size: 75px !important; }
 }
-.theSword {
+#leftWeapon, #rightWeapon {
     display: none;
     position: absolute;
-    background: url(img/sword.png) 100%/cover no-repeat;
+    background: 100%/cover no-repeat;
     width: 100px;
     height: 50px;
     animation-duration: 0.1s;
 }
-#bSword {
+#leftWeapon {
     left: -10px;
     top: 225px;
     transform: rotate(90deg)
 }
-#aSword {
+#rightWeapon {
     right: -10px;
     bottom: 195px;
     transform: rotate(-90deg)
 }
-@keyframes bSword {
+@keyframes leftWeapon {
     from { top: 225px }
     to { top: calc(100% - 195px) }
 }
-@keyframes aSword {
+@keyframes rightWeapon {
     from { bottom: 225px }
     to { bottom: calc(100% - 195px) }
 }

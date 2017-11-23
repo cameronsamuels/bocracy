@@ -18,15 +18,15 @@ var game = { on : false,
 	}, attack : function(atk) {
 		if (game.on == true) { if (atk == 'green') {
 			a.health -= b.attack; a.health = Math.max(0, a.health); a.health = Math.min(a.orig_health, a.health);
-			$('bSword').style.display = "block";
-			$('bSword').style.animationName = "bSword";
-			setTimeout("$('bSword').style.display = 'none';$('bSword').style.animationName = ''", 100);
+			$('leftWeapon').style.display = "block";
+			$('leftWeapon').style.animationName = "leftWeapon";
+			setTimeout("$('leftWeapon').style.display = 'none';$('leftWeapon').style.animationName = ''", 100);
 		} else if (atk == 'red') {
 			b.health -= a.attack; b.health = Math.max(0, b.health);
 			b.health = Math.min(b.orig_health, b.health);
-			$('aSword').style.display = "block";
-			$('aSword').style.animationName = "aSword";
-			setTimeout("$('aSword').style.display = 'none';$('aSword').style.animationName = ''", 100);
+			$('rightWeapon').style.display = "block";
+			$('rightWeapon').style.animationName = "rightWeapon";
+			setTimeout("$('rightWeapon').style.display = 'none';$('rightWeapon').style.animationName = ''", 100);
 		}
 		if (b.health == 0 || a.health == 0) game.win(atk);
 		document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
@@ -88,10 +88,10 @@ function load() {
 	$('aButton').style.backgroundImage = 'url(https://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
 	if (newStats == true) { if (bad[a.name].info[4] != undefined) weapon = bad[a.name].info[4] }
-	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('aSword').style.backgroundImage) $('aSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
+	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('rightWeapon').style.backgroundImage) $('rightWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	var weapon  = 'sword';
 	if (newStats == true)	{ if (good[b.name].info[4] != undefined) weapon = good[b.name].info[4]; }
-	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('bSword').style.backgroundImage) $('bSword').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
+	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('leftWeapon').style.backgroundImage) $('leftWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
