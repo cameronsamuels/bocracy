@@ -155,7 +155,7 @@ section {
     height: 100%;
     opacity: 0.5;
     background: #000;
-    background: #000 url(https://blib.tk/boc/img/click.svg) center/contain no-repeat;
+    background: #000 url(../assets/images/tap-icon.svg) center/contain no-repeat;
 }
 #aHealth, #bHealth {
 	margin: auto;

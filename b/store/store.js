@@ -4,18 +4,18 @@ function refreshStore(){
 	m.innerHTML = "";
 	for (i = 0; i < battlegrounds.length; i++) {
 		var html = "";
-		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(https://blib.tk/boc/img/shuffle.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
+		html = html + "<section><h1>" + battlegrounds[i] + "</h1><div style='background-image:url(../assets/images/random-icon.svg)' onclick='purchase(\"" + battlegrounds[i] + "\")'></div>";
 		for (j = 0; j < goodNames[battlegrounds[i]].length; j++) {
 			if (ls[good[goodNames[battlegrounds[i]][j]].name] != "true") {
 				var characterName = good[goodNames[battlegrounds[i]][j]].name.replace('D', '.').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('__', '-');
-				html += "<div style='background-image:url(https://blib.tk/boc/" + good[goodNames[battlegrounds[i]][j]].info[3] + "/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'></div>";
+				html += "<div style='background-image:url(../assets/characters/" + good[goodNames[battlegrounds[i]][j]].name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.') + ".png)' onclick='purchase(\"" + battlegrounds[i] + "." + good[goodNames[battlegrounds[i]][j]].name + "\")'></div>";
 			}
 		}
 		if (!html.includes("</div><div")) html = "";
 		html += "</section>";
 		m.innerHTML += html;
 	}
-	if (m.innerHTML == "") m.innerHTML = "<div id='unlockedAll'><h2>You have unlocked all the characters!</h2><h3>Come back soon!</h3><img width='100' src='https://blib.tk/boc/img/merchant.svg'></div>";
+	if (m.innerHTML == "") m.innerHTML = "<div id='unlockedAll'><h2>You have unlocked all the characters!</h2><h3>Come back soon!</h3><img width='100' src='../assets/images/merchant.svg'></div>";
 }
 function showAlert() {
     $('unlockedPopupText').innerHTML = "Insufficient<br>redbacks";
@@ -54,7 +54,7 @@ function unlock(item) {
 	var characterName = unlocked.toString().replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('D', '.').replace('Boss', '');	
 	$('unlockedPopupText').innerHTML = "<p>You unlocked</p>" + characterName;
 	$('unlockedPopupImg').style.display = "";
-	$('unlockedPopupImg').src = 'https://blib.tk/boc/' + good[unlocked].info[3] + '/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
+	$('unlockedPopupImg').src = '../assets/characters/' + unlocked.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + ".png";
 	$('unlockedPopup').style.height = "300px";
     $('unlockedPopup').style.top = "calc(50% - 210px)";
 	$('unlockedPopup').style.display = "block";

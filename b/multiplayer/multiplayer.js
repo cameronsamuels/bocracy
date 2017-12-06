@@ -84,21 +84,21 @@ function load() {
 		$('bName').style.fontSize = "2vh";
 		$('aName').style.fontSize = "2vh";
 	}
-	$('bButton').style.backgroundImage = 'url(https://blib.tk/boc/' + goodNames.url + '/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('aButton').style.backgroundImage = 'url(https://blib.tk/boc/' + badNames.url + '/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('bButton').style.backgroundImage = 'url(../assets/characters/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
+	$('aButton').style.backgroundImage = 'url(../assets/characters/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	var weapon  = 'sword';
 	if (newStats == true) { if (bad[a.name].info[4] != undefined) weapon = bad[a.name].info[4] }
-	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('rightWeapon').style.backgroundImage) $('rightWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
+	if (('url("../assets/weapons/' + weapon + '.svg")') != $('rightWeapon').style.backgroundImage) $('rightWeapon').style.backgroundImage = 'url("../assets/weapons/' + weapon + '.svg")';
 	var weapon  = 'sword';
 	if (newStats == true)	{ if (good[b.name].info[4] != undefined) weapon = good[b.name].info[4]; }
-	if (('url("https://blib.tk/boc/wpn/' + weapon + '.svg")') != $('leftWeapon').style.backgroundImage) $('leftWeapon').style.backgroundImage = 'url("https://blib.tk/boc/wpn/' + weapon + '.svg")';
+	if (('url("../assets/weapons/' + weapon + '.svg")') != $('leftWeapon').style.backgroundImage) $('leftWeapon').style.backgroundImage = 'url("../assets/weapons/' + weapon + '.svg")';
 	document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
 	img.onload = function() {
 		$('bSection').style.background = 'transparent';
 		$('aSection').style.background = 'transparent';
-		$('background').style.backgroundImage = 'url(https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg)';
+		$('background').style.backgroundImage = 'url(../assets/backgrounds/' + current.replace('+', '') + '.svg)';
 		$('aButton').style.backgroundColor = 'transparent';
 		$('bButton').style.backgroundColor = 'transparent';
 	};
@@ -108,7 +108,7 @@ function load() {
 		$('aButton').style.backgroundColor = '';
 		$('bButton').style.backgroundColor = '';
 	};
-	img.src = 'https://blib.tk/boc/bg/' + current.replace('+', '') + '.svg';
+	img.src = '../assets/backgrounds/' + current.replace('+', '') + '.svg';
 }
 function restart() {
 	game.on = false;
