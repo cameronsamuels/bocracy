@@ -51,7 +51,7 @@ bad.f87_cannon = new c('f87_cannon', [40, 1250, 20], ['alief', false, 750, 'a', 
 bad.dark_knight = new c('dark_knight', [60, 2000, 5], ['alief', false, 1500, 'a', 'dark_sword']);
 bad.scubbars = new c('scubbars', [50, 1500, 25], ['alief', false, 1000, 'a', 'scorpion_spikes']);
 bad.boverr_1D2 = new c('boverr_1D2', [50, 2000, 10], ['alief', false, 1000, 'a', 'scorpion_spikes']);
-bad.batalifor_general = new c('batalifor_general', [40, 2000, 15], ['alief', false, 1000, 'a', 'green_fluid_sword']);
+bad.batalifor_captain = new c('batalifor_captain', [40, 2000, 15], ['alief', false, 1000, 'a', 'green_fluid_sword']);
 
 good.siren = new c('siren', [35, 1500, 20], ['ammunist', true, 600, 'a', 'sound_waves']);
 good.princess = new c('princess', [30, 1500, 35], ['ammunist', true, 1000, 'a', 'fairy_dust']);
