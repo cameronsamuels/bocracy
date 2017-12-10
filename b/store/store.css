@@ -3,178 +3,178 @@
   src: url('../global/syncopate.woff') format('woff');
 }
 body, html {
-    background: url('../assets/backgrounds/store.svg') #654620;
-    text-align: center;
-    font-family: s, sans-serif;
-    user-select: none;
-    -webkit-user-select: none;
-	-webkit-tap-highlight-color: transparent;
-    overflow: hidden;
-    -webkit-touch-callout: none;
-}
-body, html, #confirmPopup footer, #unlockedPopup footer, #mainContainer, #content, #adContainer, #contentElement, #popupOverlay { width: 100% }
-#content, #adContainer, #confirmPopup, #unlockedPopup, #confirmPopup footer, #unlockedPopup footer, #popupOverlay { position: absolute }
-#confirmPopup h3, body, html { margin: 0 }
-.button, header a, main section div { cursor: pointer }
-#content, #adContainer, #popupOverlay { top: 0 }
-#content, #adContainer, main .button, #popupOverlay { left: 0 }
-#content, #adContainer, #mainContainer, #contentElement, body, html, #popupOverlay { height: 100% }
-.button {
-    border: 1px #2E40A4 solid;
-    background: #3F51B5;
-    display: inline-block;
-    margin: 2.5px 9px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 12px;
-    padding: 8px;
-    width: calc(100% - 50px);
-}
-.button:hover {
-    background: #2E40A4;
-    border: 1px #3F51B5 solid;
-}
-header {
-    height: 30px;
-    font-size: 30px;
-    padding: 5px;
-    width: calc(100% - 10px);
-    text-align: right;
-    white-space: pre;
-}
-header div { display: inline-block }
-#redbacks {
-    vertical-align: top;
-    color: #fff;
-}
-#backButton {
-    top: 5px;
-    left: 0;
-    position: absolute;
-    cursor: pointer;
-}
-#redbacksImg, #backButton { height: 30px }
-#playButton {
-	width: 175px;
-    margin: auto;
-    text-align: center;
-    height: 14px;
-    line-height: 14px;
-    font-size: 14px;
-    position: absolute;
-    top: 5px;
-    left: calc(50% - 96.5px);
-}
-#mainContainer {
-    position: relative;
-    display: none;
-    background: #000;
-}
-#contentElement {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
-#mainContainer {
-    z-index: 10;
+body {
+  background: #7f6349;
+  font-family: s, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
+/* Main container */
 main {
-	overflow-y: scroll;
-	height: calc(100% - 50px);
-	width: 100vw;
-	bottom: 0;
-	position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 50% 30%/40% no-repeat;
 }
-main section {
-    clear: both;
-    float: none;
-    color: white;
-    margin-bottom: 15px;
+/* Back button */
+main>img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  cursor: pointer;
 }
-main section div {
-    border: 2px #fff solid;
-    margin: 5px;
-    border-radius: 22%;
-    padding: 5px;
-    display: inline-block;
-    background: #563f22 no-repeat 100%/cover;
+/* Both halfs */
+main>section {
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
-main section h1 {
-	margin: 0;
-    font-size: 1.5em;
+/* Areas in info areas */
+main>section>div>div {
+  width: 100%;
 }
-@media screen and (max-width: 400px) {
-    main section div {
-        width: calc(33vw - 24px);
-        height: calc(33vw - 24px);
-    }
-    #playButton { display: none }
+/* Info areas */
+main>section:first-child>div {
+  position: absolute;
+  top: 2vh;
+  width: 30vw;
+  height: calc(84vh - 13.83vw);;
+  max-width: calc(84vh - 13.83vw);
+  max-height: 30vw;
+  background: #452f1e;
+  border-radius: 3%;
+  z-index: 1;
 }
-@media screen and (min-width: 401px) {
-    main section div {
-        width: calc(16.6666vw - 24px);
-        height: calc(16.6666vw - 24px);
-    }
+/* Info area h2's */
+main>section:first-child>div h2 {
+  text-align: center;
+  font-size: 5vh;
+  margin: .5em 0;
 }
-::-webkit-scrollbar { width: 0 }
-#confirmPopup, #unlockedPopup {
-    background-color: #FFF !important;
-    border-radius: 25px;
-    z-index: 1;
-    display: none;
+/* Left info area */
+main>section:first-child>div:first-child {
+  left: 40px;
 }
-#confirmPopup {
-    height: 200px;
-    width: 250px;
-    top: calc(50% - 160px);
-    left: calc(50% - 125px);
+/* Stat rows */
+main>section:first-child>div:first-child>div {
+  box-sizing: border-box;
+  width: 75%;
+  height: 20%;
+  margin: 5% auto;
+  padding: 5% 25%;
+  background: #7f6349 5%/8vh no-repeat;
+  border-radius: 100vh;
+  font-size: 5vh;
+  line-height: 5vh;
+  vertical-align: middle;
 }
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    #unlockedPopup {
-        zoom: 70%;
-		top: calc(50% - 168px);
-    }
-    #confirmPopup { zoom: 80% }
+main>section:first-child>div:first-child>div:nth-child(2) {
+  background-image: url(../assets/images/attack-stat.svg);
 }
-#unlockedPopup {
-    width: 250px;
-    left: calc(50% - 125px);
+main>section:first-child>div:first-child>div:nth-child(3) {
+  background-image: url(../assets/images/health-stat.svg);
 }
-#confirmPopup footer, #unlockedPopup footer { bottom: 5px }
-#unlockedPopupImg { margin: 0px calc(50% - 62.5px); }
-#confirmYesBtn, #confirmNoBtn {
-    width: calc(42.5% - 30px) !important;
-    margin: 1px calc(1% - 0.5px) !important;
+main>section:first-child>div:first-child>div:nth-child(4) {
+  background-image: url(../assets/images/healing-stat.svg);
 }
-#confirmPopup p, #unlockedPopup p {
-	font-size: 90%;
-	color: #555;
+/* Right info area */
+main>section:first-child>div:nth-child(2) {
+  right: 40px;
 }
-#popupOverlay {
-    background: #2a2a2a;
-    opacity: 0.5;
-    display: none;
+/* Purchase area */
+main>section:first-child>div:nth-child(2)>div:nth-child(2) {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
 }
-#confirmPopup:before, #unlockedPopup:before {
-  content:"";
-  position:absolute;
-  bottom:-30px;
-  right:40px;
-  border-width:0 0 30px 50px;
-  border-style:solid;
-  border-color:transparent #fff;
-  display:block;
-  width:0;
+/* Purchase buttons */
+main>section:first-child>div:nth-child(2)>div:nth-child(2)>div {
+  box-sizing: border-box;
+  width: 50%;
+  height: 8vh;
+  margin: 3%;
+  padding: 0 19%;
+  background: #7f6349 5% 1vh/6vh no-repeat;
+  border-radius: 100vh;
+  font-size: 4vh;
+  line-height: 8vh;
+  vertical-align: middle;
+  cursor: pointer;
 }
-#confirmPopup:after, #unlockedPopup:after {
-	content: '';
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: -110px;
-	right: 100px;
-    border-radius: 22%;
-	background: #fff url('../assets/images/merchant.svg') no-repeat 100%/cover;
+/* Purchase buttons on hold down */
+main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:active {
+  opacity: .3;
 }
-#unlockedAll {
-    color: #fff;
-    margin: 10vh 0
+/* Purchase with redbacks button */
+main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+  margin: 3% auto;
+  background-image: url(../assets/images/redbacks.svg);
+}
+/* Bottom half */
+main>section:nth-child(2) {
+  background: #452f1e;
+  bottom: 0;
+  text-align: center;
+  z-index: 1;
+}
+/* Battleground heading */
+main>section:nth-child(2) h1 {
+  font-size: 6vh;
+  margin: .3em 0 0;
+}
+/* Character box overlays container */
+main>section:nth-child(2)>div:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* Character boxes & overlays */
+main>section:nth-child(2) div div {
+  display: inline-block;
+  width: calc(98.4vw / 7);
+  height: calc(98.4vw / 7);
+}
+/* Character boxes */
+main>section:nth-child(2) div:nth-child(2) div {
+  margin: .5%;
+  background: #7f6349 center 20%/80% no-repeat;
+  border: .3vw solid;
+  border-radius: 22%;
+  font-size: 2.15vh;
+  line-height: calc(98.4vw / 3.5 - 5vh);
+  opacity: .5;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/* Character box overlays */
+main>section:nth-child(2) div:nth-child(3)>div {
+  margin: 0 .5%;
+  background: center/cover no-repeat;
+  border: .3vw transparent solid;
+}
+/* Change battleground buttons */
+main>section:nth-child(2) img {
+  position: absolute;
+  top: 5px;
+  height: 8vh;
+  cursor: pointer;
+}
+/* Previous battleground button */
+main>section:nth-child(2) img:nth-child(4) {
+  left: 5px;
+}
+/* Next battleground button */
+main>section:nth-child(2) img:nth-child(5) {
+  right: 5px;
+  transform: scale(-1);
 }
