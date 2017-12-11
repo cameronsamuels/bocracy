@@ -28,7 +28,7 @@ function sp() {
 	if (ls.redbacks >= ct) ls.redbacks -= ct;
 	var ch = $('ch').querySelectorAll('#selected div');
 	for (i = 0; i < ch.length; i++) ls['b' + (i+1)] = ch[i].title.replace('.', 'D').replace('-', '__').replace(' ', '_').replace(' ', '_').replace(' ', '_');
-	ls.sc = ch.length; location = "../battle/#endless" + b;
+	ls.sc = ch.length; location = "../battle/index.html#endless" + b;
 }
 $('sp').style.display = 'none';
 if (isMobile) $('bg').addEventListener('touchstart', bg), $('ch').addEventListener('touchstart', ch);
@@ -37,4 +37,4 @@ $('bg').innerHTML = "<div>aonarchy</div><div>ammunist</div><div>alief</div><div>
 var e = document.createEvent('MouseEvents');
 isMobile?e.initEvent("touchstart", true, true):e.initEvent("mousedown", true, true);
 document.querySelector('#bg div').dispatchEvent(e);
-$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../"});
+$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../index.html"});
