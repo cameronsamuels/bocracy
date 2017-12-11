@@ -39,13 +39,5 @@ if (document.documentMode == 11 || document.documentMode == 10) {
 	// Redirect to download Chrome
 	location = "https://google.com/chrome/browser/desktop";
 }
-// Add page load event
-document.addEventListener('DOMContentLoaded', function() {
-	// Execute after 1 second
-	setTimeout(function() {
-		// Hide the loading logo
-		document.querySelector("body>img").style.display = "none";
-	}, 1000);
-});
 // Disable touch moving (scrolling)
 document.addEventListener("touchmove", function(e){ e.preventDefault() });

@@ -16,19 +16,6 @@ body {
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
-/* Loading logo */
-body>img {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100vmax;
-	margin: auto;
-	z-index: 1;
-}
 /* Bottom buttons container */
 section {
 	position: absolute;
