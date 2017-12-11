@@ -32,17 +32,17 @@ main>img {
   cursor: pointer;
 }
 /* Both halfs */
-main>section {
+section {
   position: absolute;
   left: 0;
   width: 100%;
 }
 /* Areas in info areas */
-main>section>div>div {
+section>div>div {
   width: 100%;
 }
 /* Info areas */
-main>section:first-child>div {
+section:first-child>div {
   position: absolute;
   top: 2vmin;
   width: 30vmax;
@@ -54,17 +54,17 @@ main>section:first-child>div {
   z-index: 1;
 }
 /* Info area h2's */
-main>section:first-child>div h2 {
+section:first-child>div h2 {
   text-align: center;
   font-size: 5vmin;
   margin: .5em 0;
 }
 /* Left info area */
-main>section:first-child>div:first-child {
+section:first-child>div:first-child {
   left: 40px;
 }
 /* Stat rows */
-main>section:first-child>div:first-child>div {
+section:first-child>div:first-child>div {
   box-sizing: border-box;
   width: 75%;
   height: 20%;
@@ -76,27 +76,27 @@ main>section:first-child>div:first-child>div {
   line-height: 5vmin;
   vertical-align: middle;
 }
-main>section:first-child>div:first-child>div:nth-child(2) {
+section:first-child>div:first-child>div:nth-child(2) {
   background-image: url(../assets/images/attack-stat.svg);
 }
-main>section:first-child>div:first-child>div:nth-child(3) {
+section:first-child>div:first-child>div:nth-child(3) {
   background-image: url(../assets/images/health-stat.svg);
 }
-main>section:first-child>div:first-child>div:nth-child(4) {
+section:first-child>div:first-child>div:nth-child(4) {
   background-image: url(../assets/images/healing-stat.svg);
 }
 /* Right info area */
-main>section:first-child>div:nth-child(2) {
+section:first-child>div:nth-child(2) {
   right: 40px;
 }
 /* Purchase area */
-main>section:first-child>div:nth-child(2)>div:nth-child(2) {
+section:first-child>div:nth-child(2)>div:nth-child(2) {
   position: absolute;
   bottom: 3%;
   left: 0;
 }
 /* Purchase buttons */
-main>section:first-child>div:nth-child(2)>div:nth-child(2)>div {
+section:first-child>div:nth-child(2)>div:nth-child(2)>div {
   box-sizing: border-box;
   width: 50%;
   height: 8vmin;
@@ -110,28 +110,28 @@ main>section:first-child>div:nth-child(2)>div:nth-child(2)>div {
   cursor: pointer;
 }
 /* Purchase buttons on hold down */
-main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:active {
+section:first-child>div:nth-child(2)>div:nth-child(2)>div:active {
   opacity: .3;
 }
 /* Purchase with redbacks button */
-main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
   margin: 3% auto;
   background-image: url(../assets/images/redbacks.svg);
 }
 /* Bottom half */
-main>section:nth-child(2) {
+section:nth-child(2) {
   background: #452f1e;
   bottom: 0;
   text-align: center;
   z-index: 1;
 }
 /* Battleground heading */
-main>section:nth-child(2) h1 {
+section:nth-child(2) h1 {
   font-size: 6vmin;
   margin: .3em 0 0;
 }
 /* Character box overlays container */
-main>section:nth-child(2)>div:nth-child(3) {
+section:nth-child(2)>div:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -139,13 +139,13 @@ main>section:nth-child(2)>div:nth-child(3) {
   pointer-events: none;
 }
 /* Character boxes & overlays */
-main>section:nth-child(2) div div {
+section:nth-child(2) div div {
   display: inline-block;
   width: calc(98.4vmax / 7);
   height: calc(98.4vmax / 7);
 }
 /* Character boxes */
-main>section:nth-child(2) div:nth-child(2) div {
+section:nth-child(2) div:nth-child(2) div {
   margin: .5%;
   background: #7f6349 center 20%/80% no-repeat;
   border: .3vmax solid;
@@ -157,24 +157,24 @@ main>section:nth-child(2) div:nth-child(2) div {
   white-space: nowrap;
 }
 /* Character box overlays */
-main>section:nth-child(2) div:nth-child(3)>div {
+section:nth-child(2) div:nth-child(3)>div {
   margin: 0 .5%;
   background: center/cover no-repeat;
   border: .3vmax transparent solid;
 }
 /* Change battleground buttons */
-main>section:nth-child(2) img {
+section:nth-child(2) img {
   position: absolute;
   top: 5px;
   height: 8vmin;
   cursor: pointer;
 }
 /* Previous battleground button */
-main>section:nth-child(2) img:nth-child(4) {
+section:nth-child(2) img:nth-child(4) {
   left: 5px;
 }
 /* Next battleground button */
-main>section:nth-child(2) img:nth-child(5) {
+section:nth-child(2) img:nth-child(5) {
   right: 5px;
   transform: scale(-1);
 }

@@ -5,13 +5,13 @@ character;
 // Function for refreshing the layout
 function refresh(boxToSelect) {
 	// Character boxes container
-	var m = document.querySelector("main>section:nth-child(2)>div"),
+	var m = document.querySelector("section:nth-child(2)>div"),
 	// Character box overlays container
-	n = document.querySelectorAll("main>section:nth-child(2)>div")[1],
+	n = document.querySelectorAll("section:nth-child(2)>div")[1],
 	// Define which event to trigger when selecting a character box
 	event = new Event(isMobile?"touchend":"click");
 	// Set battleground name in bottom half
-	document.querySelectorAll("main>section")[1].querySelector("h1").textContent = battleground;
+	document.querySelectorAll("section")[1].querySelector("h1").textContent = battleground;
 	// Delete all previous character boxes
 	m.innerHTML = "";
 	// Delete all previous character box overlays
@@ -46,7 +46,7 @@ function refresh(boxToSelect) {
 		if (boxToSelect == goodNames[battleground][i]) boxToSelect = e;
 	}
 	// If no box to select, select the first box
-	if (!boxToSelect) boxToSelect = document.querySelector("main>section:nth-child(2)>div>div");
+	if (!boxToSelect) boxToSelect = document.querySelector("section:nth-child(2)>div>div");
 	// Click the character box needed to be clicked
 	boxToSelect.dispatchEvent(event);
 }
@@ -54,7 +54,7 @@ function select(e) {
 	// Set variable name of character name
 	character = e.target.textContent.replace("-", "__").replace(" ", "_").replace(" ", "_").replace(" ", "_").replace(".", "D");
 	// Define character boxes container element
-	var c = document.querySelectorAll("main>section:nth-child(2) div>div"),
+	var c = document.querySelectorAll("section:nth-child(2) div>div"),
 	// Set the url of the character image
 	url = e.target.textContent.replace("-", "--").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace("D", ".");
 	// For every character box
@@ -67,9 +67,9 @@ function select(e) {
 	// Set the character preview image
 	document.querySelector("main").style.backgroundImage = "url(../assets/characters/" + url + ".png)";
 	// Define purchase button element
-	var purchaseButton = document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)"),
+	var purchaseButton = document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)"),
 	// Define character stats area
-	characterStats = document.querySelector("main>section:first-child>div:first-child");
+	characterStats = document.querySelector("section:first-child>div:first-child");
 	// Reset purchase button visibility back to default
 	purchaseButton.style.display = "";
 	// Set the character cost button text
@@ -86,7 +86,7 @@ function select(e) {
 		// Hide purchase buttons
 		purchaseButton.style.display = "none";
 		// Set text of purchase heading to "Unlocked"
-		document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
+		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
 	}
 	// If character is not unlocked and user has enough redbacks
 	else {
@@ -96,7 +96,7 @@ function select(e) {
 		purchaseButton.style.backgroundColor = "";
 	}
 	// If not unlocked, set text of purchase heading to "Purchase"
-	if (ls[character] != "true") document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Purchase";
+	if (ls[character] != "true") document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Purchase";
 	// Set attack stat element text to character's attack
 	characterStats.children[1].textContent = good[character].stats[0],
 	// Set health stat element text to character's health
@@ -113,9 +113,9 @@ function changeBattleground(changeInIndex) {
 // Refresh layout on page load
 refresh();
 // Add a purchase button click event
-document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").addEventListener(isMobile?"touchend":"click", function() {
+document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").addEventListener(isMobile?"touchend":"click", function() {
 	// Define the character box element
-	var characterBox = document.querySelector("main>section:nth-child(2) div div[style*=border]"),
+	var characterBox = document.querySelector("section:nth-child(2) div div[style*=border]"),
 	// Define the character purchase cost
 	cost = good[character].info[2];
 	// If the user has enough redbacks
@@ -127,9 +127,9 @@ document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(
 		// Set opacity of character box to opaque
 		characterBox.style.opacity = 1;
 		// Hide purchase buttons
-		document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").style.display = "none";
+		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").style.display = "none";
 		// Set text of purchase heading to "Unlocked"
-		document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
+		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
 		// Refresh the layout
 		refresh(character);
 	}
@@ -137,8 +137,8 @@ document.querySelector("main>section:first-child>div:nth-child(2)>div:nth-child(
 // Add a back button click event
 document.querySelector("main>img").addEventListener(isMobile?"touchend":"click", function(){ location = "../index.html" });
 // Add a change to previous battleground click event
-document.querySelector("main>section:nth-child(2) img:nth-child(4)").addEventListener(isMobile?"touchend":"click", function(){ changeBattleground(-1) });
+document.querySelector("section:nth-child(2) img:nth-child(4)").addEventListener(isMobile?"touchend":"click", function(){ changeBattleground(-1) });
 // Add a change to next battleground click event
-document.querySelector("main>section:nth-child(2) img:nth-child(5)").addEventListener(isMobile?"touchend":"click", function(){ changeBattleground(1) });
+document.querySelector("section:nth-child(2) img:nth-child(5)").addEventListener(isMobile?"touchend":"click", function(){ changeBattleground(1) });
 // Disable dragging of images
 document.ondragstart = function(){ return false };
