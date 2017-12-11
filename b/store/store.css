@@ -3,8 +3,8 @@
   src: url('../global/syncopate.woff') format('woff');
 }
 body, html {
-  width: 100%;
-  height: 100%;
+  width: 100vmax;
+  height: 100vmin;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -44,11 +44,11 @@ main>section>div>div {
 /* Info areas */
 main>section:first-child>div {
   position: absolute;
-  top: 2vh;
-  width: 30vw;
-  height: calc(84vh - 13.83vw);;
-  max-width: calc(84vh - 13.83vw);
-  max-height: 30vw;
+  top: 2vmin;
+  width: 30vmax;
+  height: calc(84vmin - 13.83vmax);;
+  max-width: calc(84vmin - 13.83vmax);
+  max-height: 30vmax;
   background: #452f1e;
   border-radius: 3%;
   z-index: 1;
@@ -56,7 +56,7 @@ main>section:first-child>div {
 /* Info area h2's */
 main>section:first-child>div h2 {
   text-align: center;
-  font-size: 5vh;
+  font-size: 5vmin;
   margin: .5em 0;
 }
 /* Left info area */
@@ -70,10 +70,10 @@ main>section:first-child>div:first-child>div {
   height: 20%;
   margin: 5% auto;
   padding: 5% 25%;
-  background: #7f6349 5%/8vh no-repeat;
-  border-radius: 100vh;
-  font-size: 5vh;
-  line-height: 5vh;
+  background: #7f6349 5%/8vmin no-repeat;
+  border-radius: 100vmin;
+  font-size: 5vmin;
+  line-height: 5vmin;
   vertical-align: middle;
 }
 main>section:first-child>div:first-child>div:nth-child(2) {
@@ -99,13 +99,13 @@ main>section:first-child>div:nth-child(2)>div:nth-child(2) {
 main>section:first-child>div:nth-child(2)>div:nth-child(2)>div {
   box-sizing: border-box;
   width: 50%;
-  height: 8vh;
+  height: 8vmin;
   margin: 3%;
   padding: 0 19%;
-  background: #7f6349 5% 1vh/6vh no-repeat;
-  border-radius: 100vh;
-  font-size: 4vh;
-  line-height: 8vh;
+  background: #7f6349 5% 1vmin/6vmin no-repeat;
+  border-radius: 100vmin;
+  font-size: 4vmin;
+  line-height: 8vmin;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -127,7 +127,7 @@ main>section:nth-child(2) {
 }
 /* Battleground heading */
 main>section:nth-child(2) h1 {
-  font-size: 6vh;
+  font-size: 6vmin;
   margin: .3em 0 0;
 }
 /* Character box overlays container */
@@ -141,17 +141,17 @@ main>section:nth-child(2)>div:nth-child(3) {
 /* Character boxes & overlays */
 main>section:nth-child(2) div div {
   display: inline-block;
-  width: calc(98.4vw / 7);
-  height: calc(98.4vw / 7);
+  width: calc(98.4vmax / 7);
+  height: calc(98.4vmax / 7);
 }
 /* Character boxes */
 main>section:nth-child(2) div:nth-child(2) div {
   margin: .5%;
   background: #7f6349 center 20%/80% no-repeat;
-  border: .3vw solid;
+  border: .3vmax solid;
   border-radius: 22%;
-  font-size: 2.15vh;
-  line-height: calc(98.4vw / 3.5 - 5vh);
+  font-size: 2.15vmin;
+  line-height: calc(98.4vmax / 3.5 - 5vmin);
   opacity: .5;
   cursor: pointer;
   white-space: nowrap;
@@ -160,13 +160,13 @@ main>section:nth-child(2) div:nth-child(2) div {
 main>section:nth-child(2) div:nth-child(3)>div {
   margin: 0 .5%;
   background: center/cover no-repeat;
-  border: .3vw transparent solid;
+  border: .3vmax transparent solid;
 }
 /* Change battleground buttons */
 main>section:nth-child(2) img {
   position: absolute;
   top: 5px;
-  height: 8vh;
+  height: 8vmin;
   cursor: pointer;
 }
 /* Previous battleground button */
@@ -177,4 +177,14 @@ main>section:nth-child(2) img:nth-child(4) {
 main>section:nth-child(2) img:nth-child(5) {
   right: 5px;
   transform: scale(-1);
+}
+/* For making portrait ratio screen sizes look like landscape */
+@media screen and (orientation:portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }
