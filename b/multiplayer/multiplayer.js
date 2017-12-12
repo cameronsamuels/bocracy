@@ -118,4 +118,4 @@ function restart() {
 load();
 game.refresh.all();
 document.ontouchmove=function(e){e.preventDefault()}
-$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../"});
+$("backButton").addEventListener(isMobile?'touchend':'click', function(){location="../index.html"});

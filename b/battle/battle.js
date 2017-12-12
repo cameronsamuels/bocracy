@@ -32,7 +32,7 @@ var game = { on : false,
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="../assets/images/redbacks.svg">' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').innerHTML = "Continue";
 					injectStyles('#restartText { background: #960000 } #restartText:hover { background: #a00000 }');
-					$('restartText').setAttribute("ontouchend", "location='../endless'");
+					$('restartText').setAttribute("ontouchend", "location='../endless/index.html'");
 					$('overlay').style.backgroundColor = '#b30005';
 					$('restartText').style.display = "none";
 					setTimeout(function(){$('restartText').style.display = "block"}, 750);
@@ -261,7 +261,7 @@ document.addEventListener(isMobile?'touchend':'click', function(e){
 		backButtonTimeout = setTimeout(function(){$("backButton").style.display=""}, 1000);
 		$("backButton").style.display = "none";
 	}
-	else if (e.target.id == "backButton") location = "../";
+	else if (e.target.id == "backButton") location = "../index.html";
 });
 document.addEventListener('keyup', function(e){
 	var k = e.keyCode || e.which;
@@ -277,7 +277,7 @@ document.addEventListener('keyup', function(e){
 	}
 	if (k == 70 || k == 37 || k == 65) game.heal('green');
 	if ((k == 46 || k == 32) && game.on == false) restart();
-	if (k == 27) location = "../";
+	if (k == 27) location = "../index.html";
 });
 $('refreshButton').addEventListener(isMobile?'touchend':'click', function(){restart()});
 load();
