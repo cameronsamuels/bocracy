@@ -20,7 +20,9 @@ You can be in the credits after contributing.
 
 ## Team
 [Cameron Samuels](https://cameronsamuels.com) - CEO @ Xeleration, lead developer
-<br>[Ethan Choo](https://ethanchoo.ml) - Executive @ The bClick Team, graphic designer
+<br>[Ethan Choo](https://git.io/v5rCl) - Executive @ The bClick Team, graphic designer
+<br>[Vishwam R](https://git.io/v5XbQ) - Graphic designer
+<br>[Stone J](https://git.io/vbEpA) - Graphic designer
 <br>[Lex Kilpatrick](https://git.io/v554S) - COO @ Xeleration
 <br>More team members and contributors are available in the [credits](https://bocracy.com/credits).
 
