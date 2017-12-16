@@ -43,10 +43,11 @@ var game = { on : false,
 					return;
 				}
 				b.name = ls['b' + endless.t];
-				b.health = good[b.name].stats[1];
+				var upgrades = (ls[b.name + "Upgrades"] || "0:0:0").split(":");
+				b.health = good[b.name].stats[1] * ((upgrades[1] * 0.2) + 1);
 				b.orig_health = b.health;
-				b.attack = good[b.name].stats[0];
-				b.heal = good[b.name].stats[2];
+				b.attack = good[b.name].stats[0] * ((upgrades[0] * 0.2) + 1);
+				b.heal = good[b.name].stats[2] * ((upgrades[2] * 0.2) + 1);
 				updateCharacter();
 			}
 		} else {
@@ -158,9 +159,10 @@ function load() {
 	a.health = bad[a.name].stats[1];
 	a.attack = bad[a.name].stats[0];
 	a.heal = bad[a.name].stats[2];
-	b.health = good[b.name].stats[1];
-	b.attack = good[b.name].stats[0];
-	b.heal = good[b.name].stats[2];
+	var upgrades = (ls[b.name + "Upgrades"] || "0:0:0").split(":");
+	b.health = good[b.name].stats[1] * ((upgrades[1] * 0.2) + 1);
+	b.attack = good[b.name].stats[0] * ((upgrades[0] * 0.2) + 1);
+	b.heal = good[b.name].stats[2] * ((upgrades[2] * 0.2) + 1);
 	if (isMobile) a.speed = 300;
 	else a.speed = 450;
 	b.orig_health = b.health;

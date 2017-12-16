@@ -50,6 +50,7 @@ function refresh(boxToSelect) {
 	// Click the character box needed to be clicked
 	boxToSelect.dispatchEvent(event);
 }
+// Function for the click event when selecting a character
 function select(e) {
 	// Set variable name of character name
 	character = e.target.textContent.replace("-", "__").replace(" ", "_").replace(" ", "_").replace(" ", "_").replace(".", "D");
@@ -70,8 +71,6 @@ function select(e) {
 	var purchaseButton = document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)"),
 	// Define character stats area
 	characterStats = document.querySelector("section:first-child>div:first-child");
-	// Reset purchase button visibility back to default
-	purchaseButton.style.display = "";
 	// Set the character cost button text
 	purchaseButton.textContent = good[character].info[2];
 	// If not enough redbacks
@@ -83,10 +82,25 @@ function select(e) {
 	}
 	// If character is unlocked
 	else if (ls[character] == "true") {
-		// Hide purchase buttons
+		// Hide purchase button
 		purchaseButton.style.display = "none";
 		// Set text of purchase heading to "Unlocked"
 		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
+		// For every upgradeable stat
+		for (i = 0; i < 3; i++) {
+			// Define the upgrade button element
+			var upgradeButton = document.querySelectorAll("section:first-child>div:nth-child(2)>div:first-child>div")[i],
+			// Define the stat value
+			stats = (ls[character + "Upgrades"] || "0:0:0").split(":");
+			// If not enough redbacks to upgrade, fade the upgrade button
+			if (ls.redbacks < stats[i] * 100 + 100) upgradeButton.style.opacity = .25;
+			// If enough redbacks to upgrade, make the upgrade button opaque
+			else upgradeButton.style.opacity = "";
+			// Show the upgrade button
+			upgradeButton.style.display = "";
+			// Set text of the upgrade button to the cost to upgrade
+			upgradeButton.textContent = stats[i] * 100 + 100;
+		}
 	}
 	// If character is not unlocked and user has enough redbacks
 	else {
@@ -95,19 +109,73 @@ function select(e) {
 		// Set background color of purchase button to default
 		purchaseButton.style.backgroundColor = "";
 	}
-	// If not unlocked, set text of purchase heading to "Purchase"
-	if (ls[character] != "true") document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Purchase";
+	// If character is not unlocked
+	if (ls[character] != "true") {
+		// Set text of purchase heading to "Purchase"
+		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Purchase";
+		// Show the purchase button
+		purchaseButton.style.display = "";
+		// For every upgradeable stat
+		for (i = 0; i < 3; i++) {
+			// Hide the upgrade button
+			document.querySelectorAll("section:first-child>div:nth-child(2)>div:first-child>div")[i].style.display = "none";
+		}
+	}
+	// Define the stats of the character
+	var stats = (ls[character + "Upgrades"] || "0:0:0").split(":");
 	// Set attack stat element text to character's attack
-	characterStats.children[1].textContent = good[character].stats[0],
+	characterStats.children[1].textContent = good[character].stats[0] * ((stats[0] * 0.2) + 1),
 	// Set health stat element text to character's health
-	characterStats.children[2].textContent = good[character].stats[1],
+	characterStats.children[2].textContent = good[character].stats[1] * ((stats[1] * 0.2) + 1),
 	// Set healing stat element text to character's healing
-	characterStats.children[3].textContent = good[character].stats[2];
+	characterStats.children[3].textContent = good[character].stats[2] * ((stats[2] * 0.2) + 1);
 }
+// Function for the click event when upgrading a character
+function upgrade(e) {
+	// Define which stat to upgrade
+	var statToUpgrade = e.target.title.toLowerCase(),
+	// Define existing stats
+	upgrades = (ls[character + "Upgrades"] || "0:0:0").split(":"),
+	// Define an array with the names of the stats
+	upgradesList = ["attack", "health", "healing"],
+	// Define the existing value of the stat that is being upgraded
+	valueOfStat = parseFloat(upgrades[upgradesList.indexOf(statToUpgrade)]),
+	// Define the redbacks needed to upgrade
+	costToUpgrade = valueOfStat * 100 + 100;
+	// If the user has enough redbacks
+	if (ls.redbacks >= costToUpgrade) {
+		// Take away the redbacks used
+		ls.redbacks -= costToUpgrade;
+		// Set the stat to the upgraded value
+		upgrades[upgradesList.indexOf(statToUpgrade)] = valueOfStat + 1;
+		// Store new stat values in localStorage
+		ls[character + "Upgrades"] = upgrades[0] + ":" + upgrades[1] + ":"+ upgrades[2];
+		// Update the upgrade button text to the new cost
+		e.target.textContent = costToUpgrade + 100;
+		// If not enough redbacks to upgrade again, fade the button
+		if (ls.redbacks < costToUpgrade + 100) e.target.style.opacity = .25;
+		// For every upgradeable stat
+		for (i = 0; i < 3; i++) {
+			// Define the upgrade button element
+			var upgradeButton = document.querySelectorAll("section:first-child>div:nth-child(2)>div:first-child>div")[i],
+			// Define the stat value
+			stats = (ls[character + "Upgrades"] || "0:0:0").split(":");
+			// If not enough redbacks to upgrade, fade the upgrade button
+			if (ls.redbacks < stats[i] * 100 + 100) upgradeButton.style.opacity = .25;
+		}
+		// Trigger event to track in Google Analytics
+		ga("send", "event", "store", "upgraded-character", "pre-release");
+	}
+}
+// Function for the click event when changing the battleground
 function changeBattleground(changeInIndex) {
+	// Set the battleground to what the user selected
 	battleground = battles[battles.indexOf(battleground) + changeInIndex];
+	// If needed, select the array item from the other end
 	if (!battleground && changeInIndex == 1) battleground = battles[0];
+	// If needed, select the array item from the other end
 	else if (!battleground && changeInIndex == -1) battleground = battles[battles.length - 1];
+	// Refresh the layout
 	refresh();
 }
 // Refresh layout on page load
@@ -124,16 +192,17 @@ document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>di
 		ls.redbacks -= cost;
 		// Unlock the character
 		ls[character] = true;
-		// Set opacity of character box to opaque
-		characterBox.style.opacity = 1;
-		// Hide purchase buttons
-		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").style.display = "none";
-		// Set text of purchase heading to "Unlocked"
-		document.querySelector("section:first-child>div:nth-child(2)>div:nth-child(2)>h2").textContent = "Unlocked";
+		// Trigger event to track in Google Analytics
+		ga("send", "event", "store", "unlocked-character", "pre-release");
 		// Refresh the layout
 		refresh(character);
 	}
 });
+// For every upgradeable stat
+for (i = 0; i < 3; i++) {
+	// Add a upgrade button click event
+	document.querySelectorAll("section:first-child>div:nth-child(2)>div:first-child>div")[i].addEventListener(isMobile?"touchend":"click", upgrade);
+}
 // Add a back button click event
 document.querySelector("main>img").addEventListener(isMobile?"touchend":"click", function(){ location = "../index.html" });
 // Add a change to previous battleground click event
@@ -141,4 +210,4 @@ document.querySelector("section:nth-child(2) img:nth-child(4)").addEventListener
 // Add a change to next battleground click event
 document.querySelector("section:nth-child(2) img:nth-child(5)").addEventListener(isMobile?"touchend":"click", function(){ changeBattleground(1) });
 // Disable dragging of images
-document.ondragstart = function(){ return false };
+document.addEventListener("dragstart", function(){ return false });

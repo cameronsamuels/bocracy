@@ -51,11 +51,11 @@ section:first-child>div {
   max-height: 30vmax;
   background: #452f1e;
   border-radius: 3%;
+  text-align: center;
   z-index: 1;
 }
 /* Info area h2's */
 section:first-child>div h2 {
-  text-align: center;
   font-size: 5vmin;
   margin: .5em 0;
 }
@@ -76,18 +76,47 @@ section:first-child>div:first-child>div {
   line-height: 5vmin;
   vertical-align: middle;
 }
+/* Attack stat row */
 section:first-child>div:first-child>div:nth-child(2) {
   background-image: url(../assets/images/attack-stat.svg);
 }
+/* Health stat row */
 section:first-child>div:first-child>div:nth-child(3) {
   background-image: url(../assets/images/health-stat.svg);
 }
+/* Healing stat row */
 section:first-child>div:first-child>div:nth-child(4) {
   background-image: url(../assets/images/healing-stat.svg);
 }
 /* Right info area */
 section:first-child>div:nth-child(2) {
   right: 40px;
+}
+/* Upgrade buttons */
+section:first-child>div:nth-child(2)>div:first-child>div {
+  display: inline-block;
+  width: 28%;
+  height: 20vmin;
+  background: #7f6349 center 95%/8vmin no-repeat;
+  border-radius: 4vmin;
+  font-size: 4vmin;
+  line-height: 14vmin;
+}
+/* Upgrade buttons on hold down */
+section:first-child>div:nth-child(2)>div:first-child>div:active {
+  opacity: .3;
+}
+/* Attack upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(2) {
+  background-image: url(../assets/images/attack-stat.svg);
+}
+/* Health upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(3) {
+  background-image: url(../assets/images/health-stat.svg);
+}
+/* Healing upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(4) {
+  background-image: url(../assets/images/healing-stat.svg);
 }
 /* Purchase area */
 section:first-child>div:nth-child(2)>div:nth-child(2) {
