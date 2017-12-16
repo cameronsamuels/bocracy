@@ -8,6 +8,11 @@ var game = { on : false,
 		$('aHealthBar').style.width = (a.health / a.orig_health)*100 + '%';
 		window.requestAnimationFrame(game.refresh.all);
 	}}, win : function(side) {
+		if (Math.round(innerWidth / innerHeight * 3) == 4
+			|| Math.round(innerHeight / innerWidth * 4) == 3
+			|| Math.round(innerWidth / innerHeight * 4) == 3
+			|| Math.round(innerHeight / innerWidth * 3) == 4)
+			$("overlay").style.zoom = .7;
 		if (endless.w) {
 			if (side == 'green') {
 				endless.c = parseFloat(endless.c) + Math.round(Math.max((a.attack/b.attack)*20, 10));
@@ -29,7 +34,7 @@ var game = { on : false,
 					endless.c = Math.round(endless.c * endless.t);
 					if (ls.redbacks == undefined) ls.redbacks = endless.c;
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
-					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="../assets/images/redbacks.svg">' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
+					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span redbacks></span>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
 					$('restartText').innerHTML = "Continue";
 					injectStyles('#restartText { background: #960000 } #restartText:hover { background: #a00000 }');
 					$('restartText').setAttribute("ontouchend", "location='../endless/index.html'");
@@ -56,7 +61,7 @@ var game = { on : false,
 			else var redbacksEarned = Math.round(Math.max((a.attack/b.attack)*20, 10));
 			if (ls.redbacks == undefined) ls.redbacks = redbacksEarned;
 			else ls.redbacks = parseFloat(ls.redbacks) + redbacksEarned;
-			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><img src="../assets/images/redbacks.svg">' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
+			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span redbacks></span>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
 			injectStyles('#restartText { background: #42bb05 } #restartText:hover { background: #53CC16 }');
 		} else {
@@ -208,10 +213,10 @@ function updateCharacter() {
 	$('aName').innerHTML = aName + ' ' + badNames.url;
 		$('bButton').style.backgroundImage = 'url(../assets/characters/' + b.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
 	$('aButton').style.backgroundImage = 'url(../assets/characters/' + a.name.toString().replace('_', '-').replace('_', '-').replace('_', '-').replace('_', '-').replace('D', '.').replace('Boss', '') + '.png)';
-	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vw';
-	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vw', '')) + 'vw';
-	if ($('aName').style.fontSize.replace('vw', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vw', ''))+0.8) + 'vw';
-	$('bName').style.fontSize = Math.min((30-$('bName').innerHTML.length)/5,$('aName').style.fontSize.replace('vw', '')) + 'vw';
+	$('bName').style.fontSize = (30-$('bName').innerHTML.length)/5 + 'vmax';
+	$('aName').style.fontSize = Math.min((30-$('aName').innerHTML.length)/5,$('bName').style.fontSize.replace('vmax', '')) + 'vmax';
+	if ($('aName').style.fontSize.replace('vmax', '') < 1) $('aName').style.fontSize = (parseFloat($('aName').style.fontSize.replace('vmax', ''))+0.8) + 'vmax';
+	$('bName').style.fontSize = Math.min((30-$('bName').innerHTML.length)/5,$('aName').style.fontSize.replace('vmax', '')) + 'vmax';
 	var aw  = 'sword', bw = 'sword';
 	try {
 		if (bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4] != undefined) aw = bad[a.name.replace('--', '__').replace('-', '_').replace('-', '_').replace('-', '_')].info[4];
