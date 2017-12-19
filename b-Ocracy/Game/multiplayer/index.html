@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="multiplayer.css">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-50194959-4', { storage: 'none' });
+		ga("set", "checkProtocolTask", null);
+		ga("set", "checkStorageTask", null);
+		ga("set", "historyImportTask", null);
+		ga("send", "pageview", { location: "https://bocracy.com/ios" });
+	</script>
+</head>
+<body>
+	<img id="backButton" src="../assets/images/back-button.svg">
+	<section id="bSection">
+		<div id="bButton"></div>
+		<div id="bName"></div>
+		<div id="bHealth">
+			<div id="bHealthBar"></div>
+			<p></p>
+		</div>
+		<div id="bActions">
+			<div id="bAttack" ontouchend="game.attack('green')">Attack</div>
+			<div id="bHeal" ontouchend="game.heal('green')">Heal</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<section id="aSection">
+		<div id="aButton"></div>
+		<div id="aName"></div>
+		<div id="aHealth">
+			<div id="aHealthBar"></div>
+			<p></p>
+		</div>
+		<div id="aActions">
+			<div id="aAttack" ontouchend="game.attack('red')">Attack</div>
+			<div id="aHeal" ontouchend="game.heal('red')">Heal</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<div class="clear"></div>
+	<div id="background"></div>
+	<div id="overlay">
+		<div id="overlayText"></div>
+		<div id="restartText" ontouchend="restart()">PLAY AGAIN</div>
+	</div>
+	<div id="leftWeapon"></div>
+	<div id="rightWeapon"></div>
+	<script src="../global/live.js"></script>
+	<script src="multiplayer.js"></script>
+</body></html>

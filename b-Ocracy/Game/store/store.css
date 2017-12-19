@@ -1,0 +1,215 @@
+@font-face {
+  font-family: s;
+  src: url('../global/syncopate.woff') format('woff');
+}
+body, html {
+  width: 100vmax;
+  height: 100vmin;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background: #7f6349;
+  font-family: s, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+/* Main container */
+main {
+  width: 100%;
+  height: 100%;
+  background: 50% 30%/40% no-repeat;
+}
+/* Back button */
+main>img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+}
+/* Both halfs */
+section {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+/* Areas in info areas */
+section>div>div {
+  width: 100%;
+}
+/* Info areas */
+section:first-child>div {
+  position: absolute;
+  top: 2vmin;
+  width: 30vmax;
+  height: calc(84vmin - 13.83vmax);;
+  max-width: calc(84vmin - 13.83vmax);
+  max-height: 30vmax;
+  background: #452f1e;
+  border-radius: 3%;
+  text-align: center;
+  z-index: 1;
+}
+/* Info area h2's */
+section:first-child>div h2 {
+  font-size: 5vmin;
+  margin: .5em 0;
+}
+/* Left info area */
+section:first-child>div:first-child {
+  left: 40px;
+}
+/* Stat rows */
+section:first-child>div:first-child>div {
+  box-sizing: border-box;
+  width: 75%;
+  height: 20%;
+  margin: 5% auto;
+  padding: 5% 25%;
+  background: #7f6349 5%/8vmin no-repeat;
+  border-radius: 100vmin;
+  font-size: 5vmin;
+  line-height: 5vmin;
+  vertical-align: middle;
+}
+/* Attack stat row */
+section:first-child>div:first-child>div:nth-child(2) {
+  background-image: url(../assets/images/attack-stat.svg);
+}
+/* Health stat row */
+section:first-child>div:first-child>div:nth-child(3) {
+  background-image: url(../assets/images/health-stat.svg);
+}
+/* Healing stat row */
+section:first-child>div:first-child>div:nth-child(4) {
+  background-image: url(../assets/images/healing-stat.svg);
+}
+/* Right info area */
+section:first-child>div:nth-child(2) {
+  right: 40px;
+}
+/* Upgrade buttons */
+section:first-child>div:nth-child(2)>div:first-child>div {
+  display: inline-block;
+  width: 28%;
+  height: 20vmin;
+  background: #7f6349 center 95%/8vmin no-repeat;
+  border-radius: 4vmin;
+  font-size: 4vmin;
+  line-height: 14vmin;
+}
+/* Upgrade buttons on hold down */
+section:first-child>div:nth-child(2)>div:first-child>div:active {
+  opacity: .3;
+}
+/* Attack upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(2) {
+  background-image: url(../assets/images/attack-stat.svg);
+}
+/* Health upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(3) {
+  background-image: url(../assets/images/health-stat.svg);
+}
+/* Healing upgrade button */
+section:first-child>div:nth-child(2)>div:first-child>div:nth-child(4) {
+  background-image: url(../assets/images/healing-stat.svg);
+}
+/* Purchase area */
+section:first-child>div:nth-child(2)>div:nth-child(2) {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+}
+/* Purchase buttons */
+section:first-child>div:nth-child(2)>div:nth-child(2)>div {
+  box-sizing: border-box;
+  width: 50%;
+  height: 8vmin;
+  margin: 3%;
+  padding: 0 19%;
+  background: #7f6349 5% 1vmin/6vmin no-repeat;
+  border-radius: 100vmin;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  vertical-align: middle;
+}
+/* Purchase buttons on hold down */
+section:first-child>div:nth-child(2)>div:nth-child(2)>div:active {
+  opacity: .3;
+}
+/* Purchase with redbacks button */
+section:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+  margin: 3% auto;
+  background-image: url(../assets/images/redbacks.svg);
+}
+/* Bottom half */
+section:nth-child(2) {
+  background: #452f1e;
+  bottom: 0;
+  text-align: center;
+  z-index: 1;
+}
+/* Battleground heading */
+section:nth-child(2) h1 {
+  font-size: 6vmin;
+  margin: .3em 0 0;
+}
+/* Character box overlays container */
+section:nth-child(2)>div:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* Character boxes & overlays */
+section:nth-child(2) div div {
+  display: inline-block;
+  width: calc(98.4vmax / 7);
+  height: calc(98.4vmax / 7);
+}
+/* Character boxes */
+section:nth-child(2) div:nth-child(2) div {
+  margin: .5%;
+  background: #7f6349 center 20%/80% no-repeat;
+  border: .3vmax solid;
+  border-radius: 22%;
+  font-size: 2.15vmin;
+  line-height: calc(98.4vmax / 3.5 - 5vmin);
+  opacity: .5;
+  white-space: nowrap;
+}
+/* Character box overlays */
+section:nth-child(2) div:nth-child(3)>div {
+  margin: 0 .5%;
+  background: center/cover no-repeat;
+  border: .3vmax transparent solid;
+}
+/* Change battleground buttons */
+section:nth-child(2) img {
+  position: absolute;
+  top: 5px;
+  height: 8vmin;
+}
+/* Previous battleground button */
+section:nth-child(2) img:nth-child(4) {
+  left: 5px;
+}
+/* Next battleground button */
+section:nth-child(2) img:nth-child(5) {
+  right: 5px;
+  transform: scale(-1);
+}
+/* For making portrait ratio screen sizes look like landscape */
+@media screen and (orientation:portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
