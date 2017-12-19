@@ -15,6 +15,7 @@ var game = { on : false,
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
 		$('overlay').style.display = "block";
 		game.on = false;
+		ga("send", "event", "pvp", "completed-battle", "pre-release");
 	}, attack : function(atk) {
 		if (game.on == true) { if (atk == 'green') {
 			a.health -= b.attack; a.health = Math.max(0, a.health); a.health = Math.min(a.orig_health, a.health);

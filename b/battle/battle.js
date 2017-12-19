@@ -1,4 +1,4 @@
-var leftWeapon, rightWeapon, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var heals = 0, keypresses = 0, leftWeapon, rightWeapon, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -45,6 +45,7 @@ var game = { on : false,
 					game.on = false;
 					endless.t = 1;
 					endless.k = 0;
+					ga("send", "event", "battle", "lost-endless-battle", "pre-release");
 					return;
 				}
 				b.name = ls['b' + endless.t];
@@ -64,10 +65,12 @@ var game = { on : false,
 			$('overlayText').innerHTML = '<div>VICTORY</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span redbacks></span>' + redbacksEarned + '</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#64DD17';
 			injectStyles('#restartText { background: #42bb05 } #restartText:hover { background: #53CC16 }');
+			ga("send", "event", "battle", "won-battle", "pre-release");
 		} else {
 			$('overlayText').innerHTML = '<div>DEFEAT</div><div id="overlayStats"><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span>' + clicks + '</span>clk</h5></div>';
 			$('overlay').style.backgroundColor = '#b30005';
 			injectStyles('#restartText { background: #960000 } #restartText:hover { background: #a00000 }');
+			ga("send", "event", "battle", "lost-battle", "pre-release");
 		}
 		$('restartText').style.display = "none";
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
@@ -125,6 +128,8 @@ var game = { on : false,
 			if (side == 'green') {
 				b.health += b.heal; b.health = Math.max(0, b.health);
 				b.health = Math.min(b.orig_health, b.health);
+				heals++;
+				if (heals == 10) ga("send", "event", "battle", "tenth-heal", "pre-release");
 			} else if (side == 'red') {
 				a.health += a.heal; a.health = Math.max(0, a.health);
 				a.health = Math.min(a.orig_health, a.health);
@@ -269,6 +274,8 @@ document.addEventListener(isMobile?'touchend':'click', function(e){
 	else if (e.target.id == "backButton") location = "../index.html";
 });
 document.addEventListener('keyup', function(e){
+	keypresses++;
+	if (keypresses == 1) ga("send", "event", "battle", "first-keypress", "pre-release");
 	var k = e.keyCode || e.which;
 	if ((k == 74 || k == 39 || k == 68) && $('overlay').style.display != "block" && $('present').style.display != "block") {
 		if (clickedToStart) game.attack('green');
@@ -281,10 +288,16 @@ document.addEventListener('keyup', function(e){
 		}
 	}
 	if (k == 70 || k == 37 || k == 65) game.heal('green');
-	if ((k == 46 || k == 32) && game.on == false) restart();
+	if ((k == 46 || k == 32) && game.on == false) {
+		ga("send", "event", "battle", "restarted-battle", "pre-release");
+		restart();
+	}
 	if (k == 27) location = "../index.html";
 });
-$('refreshButton').addEventListener(isMobile?'touchend':'click', function(){restart()});
+$('refreshButton').addEventListener(isMobile?'touchend':'click', function() {
+	ga("send", "event", "battle", "restarted-battle", "pre-release");
+	restart();
+});
 load();
 setInterval(function(){game.attack("red");game.heal("red")}, a.speed);
 game.refresh.all();
