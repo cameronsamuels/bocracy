@@ -18,32 +18,67 @@
 	<meta name="theme-color" content="#b30005">
 	<link rel="manifest" href="../global/manifest.json">
 </head>
-<body id="body">
-	<div id="mainContainer">
-		<div id="content"><video id="contentElement"></video></div>
-		<div id="adContainer"></div>
-	</div>
-	<header id="header"><!--
-		--><img id="redbacksImg" src="../assets/images/redbacks.svg"><div id="redbacks"></div>
-		<img id="backButton" src="../assets/images/back-button.svg">
-		<div class="button" id="playButton">FREE REDBACKS</div>
-	</header>
-	<main></main>
-	<div id="confirmPopup">
-		<h3 id="confirmText"></h3>
-		<footer>
-			<div class="button" id="confirmYesBtn">Yes</div>
-			<div class="button" id="confirmNoBtn">No</div>
-		</footer>
-	</div>
-	<div id="unlockedPopup">
-		<h3 id="unlockedPopupText"></h3>
-		<img id="unlockedPopupImg" width="125" height="125">
-		<footer><div class="button" id="unlockedPopupBtn">Okay</div></footer>
-	</div>
-	<div id="popupOverlay"></div>
+<body>
+	<main>
+		<!-- Top half -->
+		<section>
+			
+			<!-- Stats area -->
+			<div>
+				<!-- Stats heading -->
+				<h2>Stats</h2>
+				<!-- Attack stat -->
+				<div title="Attack"></div>
+				<!-- Health stat -->
+				<div title="Health"></div>
+				<!-- Healing stat -->
+				<div title="Healing"></div>
+			</div>
+
+			<!-- Right area -->
+			<div>
+				<!-- Upgrades area -->
+				<div>
+					<!-- Upgrades heading -->
+					<h2>Upgrades</h2>
+					<!-- Attack upgrade button -->
+					<div title="Attack"></div>
+					<!-- Health upgrade button -->
+					<div title="Health"></div>
+					<!-- Healing upgrade button -->
+					<div title="Healing"></div>
+				</div>
+
+				<!-- Purchase area -->
+				<div>
+					<!-- Purchase heading -->
+					<h2>Purchase</h2>
+					<!-- Purchase character with redbacks button -->
+					<div title="Purchase with redbacks"></div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Bottom half -->
+		<section>
+			<!-- Battleground heading -->
+			<h1></h1>
+			<!-- Character boxes -->
+			<div></div>
+			<!-- Character box overlays -->
+			<div></div>
+			<!-- Previous battleground button -->
+			<img alt="Previous Battleground" src="../assets/images/back-button.svg">
+			<!-- Next battleground button -->
+			<img alt="Next Battleground" src="../assets/images/back-button.svg">
+		</section>
+
+		<!-- Back button -->
+		<img src="../assets/images/back-button.svg">
+	</main>
+
+	<!-- Scripts -->
 	<script src="../global/live.js"></script>
 	<script src="store.js"></script>
-	<script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js" type="text/javascript"></script>
-	<script src="ads.js"></script>
 </body></html>
