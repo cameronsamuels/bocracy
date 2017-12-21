@@ -162,6 +162,8 @@ function upgrade(e) {
 			stats = (ls[character + "Upgrades"] || "0:0:0").split(":");
 			// If not enough redbacks to upgrade, fade the upgrade button
 			if (ls.redbacks < stats[i] * 100 + 100) upgradeButton.style.opacity = .25;
+			// Update stat value text
+			document.querySelector("section:first-child>div:first-child").children[i + 1].textContent = Math.round(good[character].stats[i] * ((stats[i] * 0.2) + 1));
 		}
 		// Trigger event to track in Google Analytics
 		ga("send", "event", "store", "upgraded-character", "pre-release");
