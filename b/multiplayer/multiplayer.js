@@ -45,7 +45,12 @@ var game = { on : false,
 	}}
 };
 function load() {
-	if (!window.location.toString().includes('#')) current = battles[Math.floor(Math.random() * battles.length)];
+	if (!window.location.toString().includes('#')) {
+		var previousBattleground = current;
+		do {
+			current = battles[Math.floor(Math.random() * battles.length)];
+		} while (current == previousBattleground);
+	}
 	switch (current.replace('+', '')) {
 		case "aonarchy": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
 		case "alief": newStats = true; badNames.url = "b"; goodNames.url = "a"; break;
