@@ -124,11 +124,11 @@ function select(e) {
 	// Define the stats of the character
 	var stats = (ls[character + "Upgrades"] || "0:0:0").split(":");
 	// Set attack stat element text to character's attack
-	characterStats.children[1].textContent = good[character].stats[0] * ((stats[0] * 0.2) + 1),
+	characterStats.children[1].textContent = Math.round(good[character].stats[0] * ((stats[0] * 0.2) + 1)),
 	// Set health stat element text to character's health
-	characterStats.children[2].textContent = good[character].stats[1] * ((stats[1] * 0.2) + 1),
+	characterStats.children[2].textContent = Math.round(good[character].stats[1] * ((stats[1] * 0.2) + 1)),
 	// Set healing stat element text to character's healing
-	characterStats.children[3].textContent = good[character].stats[2] * ((stats[2] * 0.2) + 1);
+	characterStats.children[3].textContent = Math.round(good[character].stats[2] * ((stats[2] * 0.2) + 1));
 }
 // Function for the click event when upgrading a character
 function upgrade(e) {
