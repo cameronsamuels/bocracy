@@ -140,7 +140,12 @@ var game = { on : false,
 };
 function load() {
 	clicks = 0, clickedToStart = false;
-	if (!window.location.hash.includes('#') || window.location.hash == '#endless') current = battles[Math.floor(Math.random() * battles.length)];
+	if (!window.location.hash.includes('#') || window.location.hash == '#endless') {
+		var previousBattleground = current;
+		do {
+			current = battles[Math.floor(Math.random() * battles.length)];
+		} while (current == previousBattleground);
+	}
 	switch (current.replace('+', '')) {
 		case "aonarchy": badNames.url = "b"; goodNames.url = "a"; break;
 		case "alief": badNames.url = "b"; goodNames.url = "a"; break;
