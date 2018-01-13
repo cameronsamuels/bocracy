@@ -207,6 +207,22 @@ section:nth-child(2) img:nth-child(5) {
   right: 5px;
   transform: scale(-1);
 }
+/* Inventory bar */
+main>div {
+  box-sizing: border-box;
+  position: absolute;
+  top: 2vmin;
+  left: 42%;
+  width: 16%;
+  height: 4vmax;
+  padding-left: 3%;
+  background: #452f1e url(../assets/images/redbacks.svg) 5% .5vmax/3vmax no-repeat;
+  border-radius: 100vmin;
+  font-size: 4vmin;
+  text-align: center;
+  line-height: 4vmax;
+  vertical-align: middle;
+}
 /* For making portrait ratio screen sizes look like landscape */
 @media screen and (orientation:portrait) {
   html {
