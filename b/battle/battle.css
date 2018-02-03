@@ -54,7 +54,7 @@ body {
 	position: absolute;
 	top: 5px;
 	width: 35px;
-	z-index: 4;
+	z-index: 7;
 	cursor: pointer;
 }
 #refreshButton { right: 5px }
