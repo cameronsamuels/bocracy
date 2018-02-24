@@ -1,31 +1,30 @@
 # b-Ocracy
-The b-Fight-ing game made by The bClick Team!
+This repo is for the development of b-Ocracy, a game made by Xeleration.
 
-\- Enjoy quick addictive battles
-<br>\- Build your team by unlocking new characters
-<br>\- Grab a friend and play multiplayer
-<br>\- Play nonstop in endless mode
-<br>\- Challenge yourself in boss mode
-
-Start playing now on any device, ad-free!
+## Game Summary
+Enjoy quick addictive battles while building your team by unlocking new characters.
+Play by tapping to attack and defend while trying to stay alive and win.
+Earn rewards from victories to use towards unlocking powerful friends.
+When in a party, grab a friend to play multiplayer.
+Available for free on iOS and the web.
 
 ## Links
-[Web](https://bocracy.com) - For any platform
-<br>[App Store](https://bocracy.com/ios) - For iPhone & iPad
+[Web](https://bocracy.com) - The online website
+<br>[App Store](https://bocracy.com/ios) - The iOS App Store page
 
 ## Contributing
-Please read over the [contributing guidelines](.github/CONTRIBUTING.md) for information like beta testing, submitting issues & pull requests, and contacting us.
-
-You can be in the credits after contributing.
+Please read over the [contributing guidelines](.github/CONTRIBUTING.md) for information such as
+beta testing, submitting issues & pull requests, contacting us, and other ways to contribute.
+After contributing, you can have the opportunity to be in the b-Ocracy credits.
 
 ## Team
-[Cameron Samuels](https://cameronsamuels.com) - CEO @ Xeleration, lead developer
-<br>[Ethan Choo](https://git.io/v5rCl) - Executive @ The bClick Team, graphic designer
-<br>[Vishwam R](https://git.io/v5XbQ) - Graphic designer
-<br>[Stone J](https://git.io/vbEpA) - Graphic designer
-<br>[Lex Kilpatrick](https://git.io/v554S) - COO @ Xeleration
-<br>More team members and contributors are available in the [credits](https://bocracy.com/credits).
+Cameron Samuels - Lead developer
+<br>Ethan Choo - Graphic designer
+<br>Vishwam R - Graphic designer
+<br>Stone Jess - Graphic designer
+<br>View more in the [credits](https://bocracy.com/credits).
 
 ## Legal
 b-Ocracy is distributed under the [Cameron Samuels License](LICENSE).
-The privacy policy can be read in [.github/PRIVACY_POLICY.md](.github/PRIVACY_POLICY.md).
+b-Ocracy's [privacy policy](.github/PRIVACY_POLICY.md) can be read if needed.
+Xeleration and its team members will not be liable for any causes by b-Ocracy.
