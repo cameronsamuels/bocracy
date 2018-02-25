@@ -4,6 +4,8 @@ var battleground = "aonarchy",
 character;
 // Function for refreshing the layout
 function refresh(boxToSelect) {
+	// Set the inventory bar text to the user's redbacks
+	document.querySelector("main>div").textContent = ls.redbacks;
 	// Character boxes container
 	var m = document.querySelector("section:nth-child(2)>div"),
 	// Character box overlays container
@@ -146,6 +148,8 @@ function upgrade(e) {
 	if (ls.redbacks >= costToUpgrade) {
 		// Take away the redbacks used
 		ls.redbacks -= costToUpgrade;
+		// Set the inventory bar text to the user's redbacks
+		document.querySelector("main>div").textContent = ls.redbacks;
 		// Set the stat to the upgraded value
 		upgrades[upgradesList.indexOf(statToUpgrade)] = valueOfStat + 1;
 		// Store new stat values in localStorage
