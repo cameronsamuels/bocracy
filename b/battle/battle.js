@@ -31,7 +31,7 @@ var game = { on : false,
 			} else {
 				endless.t++;
 				if (endless.t > ls.sc) {
-					endless.c = Math.round(endless.c * endless.t);
+					endless.c = Math.min(Math.round(endless.c * endless.t), 1500);
 					if (ls.redbacks == undefined) ls.redbacks = endless.c;
 					else ls.redbacks = parseFloat(ls.redbacks) + endless.c;
 					$('overlayText').innerHTML = '<div>GAME OVER</div><div id="overlayStats"><h5><span>' + endless.k + '</span>kls</h5><h5><span>' + neatTime(new Date().getTime() - base) + '</span>sec</h5><h5><span redbacks></span>' + endless.c + '</h5><h5><span>' + clicks + '</span>clk</h5><h5><span>' + ls.sc + '</span>dth</h5></div>';
