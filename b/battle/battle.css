@@ -9,6 +9,7 @@ body, html {
 	overflow: hidden;
 }
 body {
+	background: 0% 80%/300% no-repeat;
 	font-family: s, sans-serif;
 	text-align: center;
 	user-select: none;
@@ -31,7 +32,7 @@ body {
 	width: 50vmin;
 	height: 50vmin;
 	margin: 15vmin 0 0 calc(50% - 25vmin);
-	background: #fff 100%/cover no-repeat;
+	background: 100%/cover no-repeat;
 }
 .clear { clear: both }
 #present {
@@ -64,17 +65,6 @@ section {
 	float: left;
 	width: 50%;
 	height: 100%;
-	background-size: 300%;
-	background-repeat: no-repeat;
-	transition: background-position 1s;
-}
-#bSection {
-	background-color: #64DD17;
-	background-position: 0% 80%;
-}
-#aSection {
-	background-color: #b30005;
-	background-position: 50% 80%;
 }
 #aButton { transform: scaleX(-1) }
 #clickToStart {
