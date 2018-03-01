@@ -18,10 +18,10 @@ beta testing, submitting issues & pull requests, contacting us, and other ways t
 After contributing, you can have the opportunity to be in the b-Ocracy credits.
 
 ## Team
-Cameron Samuels - Lead developer
-<br>Ethan Choo - Graphic designer
-<br>Vishwam R - Graphic designer
-<br>Stone Jess - Graphic designer
+**Cameron Samuels** - Lead developer
+<br>**Ethan Choo** - Graphic designer
+<br>**Vishwam R** - Graphic designer
+<br>**Stone Jess** - Graphic designer
 <br>View more in the [credits](https://bocracy.com/credits).
 
 ## Legal
