@@ -1,6 +1,6 @@
 var $ = function(e) { return document.getElementById(e) },
 isMobile = true;
-document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=https://bocracy.com/assets/backgrounds/title.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
+document.body.innerHTML="<div id=logo style='width:100%;height:100%;background:#343838'><img src=../assets/backgrounds/title.svg style='width:80%;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0'></div><div id=mainWrapper style='width:100%;height:100%;display:none'>"+document.body.innerHTML+"</div>";
 var goodNames = { url : '', aonarchy : [], aonarchyBoss : [], alief : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
 badNames = { url : '', aonarchy : [], alief : [], aonarchyBoss : [], ammunist : [], ammunistBoss : [], eora : [], dericil : [], alinar : [] },
 battles = ['aonarchy', 'ammunist', 'eora', 'alief', 'alinar', 'dericil'], good = { }, bad = { }, ls = localStorage;
