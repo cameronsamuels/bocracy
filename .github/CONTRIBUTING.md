@@ -6,9 +6,6 @@ You can play b-Ocracy at <https://bocracy.com> and send us feedback in any of th
 There is also a [dev release](https://dev.bocracy.com) that has specific unfinished changes (don't rely on it).
 For contributing in any form, you can be added to the [credits](https://bocracy.com/credits).
 
-## The Google Group
-b-Ocracy has a [Google Group](https://bocracy.com/betatest) for the beta testers that we use to send out announcements and game related information. Please join this group so you can be up to date with the game. When joining this group, you will be listed as a beta tester in the [credits](https://bocracy.com/credits) (first name & last initial unless asked otherwise).
-
 ## The GitHub repo
 We appreciate it when you star this repo, and/or follow our team members.
 
@@ -27,13 +24,6 @@ United States
 hello@xel.company
 1 (409) 422-5425
 https://xel.company
-
-The bClick Team
-Houston, TX 77494
-United States
-b@xel.company
-1 (409) 422-5425
-https://b.xel.company
 
 Cameron Samuels
 Katy, TX 77494
