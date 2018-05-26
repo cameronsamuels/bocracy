@@ -1,4 +1,4 @@
-var heals = 0, keypresses = 0, leftWeapon, rightWeapon, clickedToStart, backButtonTimeout, presentTimeout, bgPos = 0, a = { name: '', health: 0, attack: 0, speed: 0 },
+var heals = 0, keypresses = 0, leftWeapon, rightWeapon, clickedToStart, backButtonTimeout, presentTimeout, a = { name: '', health: 0, attack: 0, speed: 0 },
 b = { name: '', health: 0, attack: 0 }, base, clicks = 0,
 current = battles[Math.floor(Math.random() * battles.length)], endless = {w:window.location.hash.includes("endless"),t:1,c:0,k:0};
 if (window.location.hash != '' && window.location.hash != '#endless') current = window.location.hash.toString().replace('#', '').replace('endless','');
@@ -76,9 +76,6 @@ var game = { on : false,
 		$('restartText').style.display = "none";
 		setTimeout(function(){$('restartText').style.display = "block"}, 750);
 		$('overlay').style.display = "block";
-		$('bSection').style.backgroundPosition = '0% 80%';
-		$('aSection').style.backgroundPosition = '50% 80%';
-		bgPos = 0;
 		}
 	}, attack : function(atk) {
 		if (game.on == true) {
@@ -98,10 +95,6 @@ var game = { on : false,
 				}, 150);
 				clicks++;
 				if (a.health == 0) game.win('green');
-				bgPos -= 10;
-				if (bgPos < -(window.innerWidth/4)) bgPos = -(window.innerWidth/4);
-				$('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
-				$('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			} else if (atk == 'red') {
 				b.health -= a.attack;
 				b.health = Math.max(0, b.health);
@@ -116,10 +109,6 @@ var game = { on : false,
 					$('rightWeapon').style.animationName = '';
 				}, 100);
 				if (b.health == 0) game.win('red');
-				bgPos += 10;
-				if (bgPos > 0) bgPos = 0;
-				$('bSection').style.backgroundPosition = 'calc(0% + ' + bgPos + 'px) 80%';
-				$('aSection').style.backgroundPosition = 'calc(50% + ' + bgPos + 'px) 80%';
 			}
 			document.querySelector('#aHealth p').innerHTML = Math.round(a.health) + '/' + Math.round(a.orig_health);
 			document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
@@ -193,10 +182,8 @@ function load() {
 	document.querySelector('#bHealth p').innerHTML = Math.round(b.health) + '/' + Math.round(b.orig_health);
 	var img = new Image();
 	img.onload = function() {
-		$('bSection').style.backgroundImage = 'url(../assets/backgrounds/' + current.replace('+', '') + '.svg)';
-		$('aSection').style.backgroundImage = 'url(../assets/backgrounds/' + current.replace('+', '') + '.svg)';
-		$('aButton').style.backgroundColor = 'transparent';
-		$('bButton').style.backgroundColor = 'transparent';
+		document.body.style.backgroundImage = 'url(../assets/backgrounds/' + current.replace('+', '') + '.svg)';
+		document.body.style.backgroundPosition = (Math.random() * 100) + "% 80%";
 		$('present').style.background = "url(../assets/backgrounds/" + current.replace('+', '') + ".svg) no-repeat center/100% #3F51B5";
 		$('present').innerText = current.replace('+', ' BOSS');
 		$('present').style.display = "block";
@@ -207,10 +194,7 @@ function load() {
 		presentTimeout = setTimeout(function(){$('present').style.display = ""}, 2000);
 	};
 	img.onerror = function() {
-		$('bSection').style.backgroundImage = '';
-		$('aSection').style.backgroundImage = '';
-		$('aButton').style.backgroundColor = '';
-		$('bButton').style.backgroundColor = '';
+		document.body.style.backgroundImage = '';
 	};
 	img.src = '../assets/backgrounds/' + current.replace('+', '') + '.svg';
 	$('refreshButton').style.display = "";
