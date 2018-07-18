@@ -8,7 +8,7 @@ Available for free on iOS and the web.
 
 ## Links
 [Web](https://bocracy.com) - The online website
-<br>[App Store](https://bocracy.com/ios) - The iOS App Store page
+<br>[App Store](https://goo.gl/NnTu4Z) - The iOS App Store page
 
 ## Team
 **Cameron Samuels** - Lead developer
